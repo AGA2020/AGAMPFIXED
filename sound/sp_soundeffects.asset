@@ -1,0 +1,32 @@
+soundeffect = {
+	name = "nanjing"
+	sounds = {
+		sound = 
+			nanjing
+	}
+	volume = 1.0
+}
+soundeffect = {
+	name = "japan"
+	sounds = {
+		sound = 
+			japan
+	}
+	volume = 1.0
+}
+soundeffect = {
+	name = "dayofinfamy"
+	sounds = {
+		sound = 
+			dayofinfamy
+	}
+	volume = 1.0
+}
+soundeffect = {
+	name = "rhein"
+	sounds = {
+		sound = 
+			rhein
+	}
+	volume = 1.0
+}
