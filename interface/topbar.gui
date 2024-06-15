@@ -932,7 +932,7 @@ guiTypes = {
 					quadTextureSprite ="GFX_staff_office_button"
 					Orientation = "UPPER_LEFT"
 					shortcut = "shift+e"
-					clicksound = click_ledger_tab
+					clicksound = click_close
 					oversound = ui_menu_over
 				}
 			}
