@@ -20,7 +20,7 @@ soundeffect = {
 	sounds = {
 		sound = click_trade_tab_01
 	}
-	volume = 0.60
+	volume = 0.70
 }
 soundeffect = {
 	name = click_construction_tab
