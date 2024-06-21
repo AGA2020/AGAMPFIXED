@@ -627,7 +627,7 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_ideology_CZE_democratic_group"
-		texturefile = "gfx/interface/ideologies/CZE.dds"
+		texturefile = "gfx/interface/ideologies/CZED.dds"
 	}
 
 	spriteType = {
