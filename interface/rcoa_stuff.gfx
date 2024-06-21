@@ -161,6 +161,16 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_ideology_ENG_conservatism"
+		texturefile = "gfx/interface/ideologies/ENGC.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_ENG_liberalism"
+		texturefile = "gfx/interface/ideologies/ENGC.dds"
+	}	
+
+	spriteType = {
 		name = "GFX_ideology_USA_neutrality_group"
 		texturefile = "gfx/interface/ideologies/USA_neutrality.dds"
 	}
