@@ -182,12 +182,12 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_ideology_USA_conservatism"
-		texturefile = "gfx/interface/ideologies/USA/republican.dds"
+		texturefile = "gfx/interface/ideologies/republican.dds"
 	}
 	
 	spriteType = {
 		name = "GFX_ideology_USA_liberalism"
-		texturefile = "gfx/interface/ideologies/USA/democratic.dds"
+		texturefile = "gfx/interface/ideologies/democratic.dds"
 	}
 
 	spriteType = {
