@@ -1037,7 +1037,7 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_ideology_SAF_democratic_group"
-		texturefile = "gfx/interface/ideologies/SAF.dds"
+		texturefile = "gfx/interface/ideologies/SAF_democratic.dds"
 	}
 
 	spriteType = {
