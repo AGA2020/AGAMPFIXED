@@ -3866,6 +3866,9 @@ news_event = {
 	
 	immediate = {
 		set_global_flag = fall_of_berlin_usa
+			hidden_effect = {
+			sound_effect = berlin
+			}
 	}
 	
 	mean_time_to_happen = {
@@ -3909,6 +3912,9 @@ news_event = {
 	
 	immediate = {
 		set_global_flag = fall_of_berlin_eng
+			hidden_effect = {
+			sound_effect = berlin
+			}
 	}
 	
 	mean_time_to_happen = {
@@ -3952,6 +3958,9 @@ news_event = {
 	
 	immediate = {
 		set_global_flag = fall_of_berlin_fra
+			hidden_effect = {
+			sound_effect = berlin
+			}
 	}
 	
 	mean_time_to_happen = {
@@ -3995,6 +4004,9 @@ news_event = {
 	
 	immediate = {
 		set_global_flag = fall_of_berlin_pol
+			hidden_effect = {
+			sound_effect = berlin
+			}
 	}
 	
 	mean_time_to_happen = {
@@ -4433,6 +4445,9 @@ news_event = {
 	immediate = {
 		set_global_flag = fall_of_berlin_sov
 		play_victory_parade_effect = yes
+			hidden_effect = {
+			sound_effect = berlin
+			}
 	}
 	
 	mean_time_to_happen = {

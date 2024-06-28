@@ -18,3 +18,8 @@ sound =
 	name = "rhein"
 	file = "dfu_sound/rhein.wav"
 }
+sound =
+{
+	name = "berlin"
+	file = "dfu_sound/berlin.wav"
+}
