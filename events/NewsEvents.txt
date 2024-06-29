@@ -9647,39 +9647,6 @@ news_event = {
 
 	major = yes
 
-	immediate = {
-		hidden_effect = {
-			if = {
-				limit = {
-					tag = ROOT
-				}
-				if = {
-					limit = {
-						GER = { has_government = fascism }
-					}
-					set_global_flag = newspaper_yalta_conference
-				}
-				event_target:yalta_origin = {
-					set_variable = { global.yalta_origin = THIS.id }
-				}
-				event_target:yalta_partner = {
-					set_variable = { global.yalta_partner = THIS.id }
-				}
-				set_newspaper_special_edition = yes
-				set_temp_variable = { article_index = 5 }
-				if = {
-					limit = {
-						newspaper_any_special_article_is_in_article_slot = yes
-					}
-					choose_random_newspaper_side_article_slot = yes
-				}
-				set_temp_variable = { article_id = 132 }
-				set_id_for_article_index = yes
-				reload_current_newspaper_for_everyone = yes
-			}
-		}
-	}
-
 	option = {
 		name = news.236.a
 		trigger = {
