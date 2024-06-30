@@ -5832,6 +5832,112 @@ categories =  {
 		truck_attrition_factor = 0.2
 	}
 
+						
+	hills_Ancona = {
+		color = { 248 255 153 }
+		movement_cost = 1.5
+		#combat_width = -0.33
+		combat_width = 70
+		combat_support_width = 35
+		ai_terrain_importance_factor = 3.0
+		match_value = 2
+		sound_type = desert
+
+		units = {
+			attack = -0.25
+			#movement = -0.2
+		}
+		enemy_army_bonus_air_superiority_factor = -0.05
+		
+		supply_flow_penalty_factor = 0.1
+		
+		truck_attrition_factor = 0.2
+	}
+						
+	hills_Batumi = {
+		color = { 248 255 153 }
+		movement_cost = 1.5
+		#combat_width = -0.33
+		combat_width = 70
+		combat_support_width = 35
+		ai_terrain_importance_factor = 3.0
+		match_value = 2
+		sound_type = desert
+
+		units = {
+			attack = -0.25
+			#movement = -0.2
+		}
+		enemy_army_bonus_air_superiority_factor = -0.05
+		
+		supply_flow_penalty_factor = 0.1
+		
+		truck_attrition_factor = 0.2
+	}
+						
+	hills_Fiume = {
+		color = { 248 255 153 }
+		movement_cost = 1.5
+		#combat_width = -0.33
+		combat_width = 70
+		combat_support_width = 35
+		ai_terrain_importance_factor = 3.0
+		match_value = 2
+		sound_type = desert
+
+		units = {
+			attack = -0.25
+			#movement = -0.2
+		}
+		enemy_army_bonus_air_superiority_factor = -0.05
+		
+		supply_flow_penalty_factor = 0.1
+		
+		truck_attrition_factor = 0.2
+	}
+						
+	hills_Metz = {
+		color = { 248 255 153 }
+		movement_cost = 1.5
+		#combat_width = -0.33
+		combat_width = 70
+		combat_support_width = 35
+		ai_terrain_importance_factor = 3.0
+		match_value = 2
+		sound_type = desert
+
+		units = {
+			attack = -0.25
+			#movement = -0.2
+		}
+		enemy_army_bonus_air_superiority_factor = -0.05
+		
+		supply_flow_penalty_factor = 0.1
+		
+		truck_attrition_factor = 0.2
+	}
+						
+	hills_Opava = {
+		color = { 248 255 153 }
+		movement_cost = 1.5
+		#combat_width = -0.33
+		combat_width = 70
+		combat_support_width = 35
+		ai_terrain_importance_factor = 3.0
+		match_value = 2
+		sound_type = desert
+
+		units = {
+			attack = -0.25
+			#movement = -0.2
+		}
+		enemy_army_bonus_air_superiority_factor = -0.05
+		
+		supply_flow_penalty_factor = 0.1
+		
+		truck_attrition_factor = 0.2
+	}
+
 
 
 
@@ -7018,6 +7124,76 @@ categories =  {
 		
 		truck_attrition_factor = 1.0
 	}
+
+	mountain_Alexandroupoli = {
+		color = { 157 192 208 }
+		movement_cost = 2.0
+		attrition = 0.3
+		#combat_width = -0.66
+		combat_width = 50
+		combat_support_width = 25
+		ai_terrain_importance_factor = 10.0
+		match_value = 10
+		sound_type = desert
+
+		units = {
+			attack = -0.5
+			#movement = -0.4
+		}
+
+		enemy_army_bonus_air_superiority_factor = -0.10
+		
+		supply_flow_penalty_factor = 0.12
+		
+		truck_attrition_factor = 1.0
+	}
+
+	mountain_Skopje = {
+		color = { 157 192 208 }
+		movement_cost = 2.0
+		attrition = 0.3
+		#combat_width = -0.66
+		combat_width = 50
+		combat_support_width = 25
+		ai_terrain_importance_factor = 10.0
+		match_value = 10
+		sound_type = desert
+
+		units = {
+			attack = -0.5
+			#movement = -0.4
+		}
+
+		enemy_army_bonus_air_superiority_factor = -0.10
+		
+		supply_flow_penalty_factor = 0.12
+		
+		truck_attrition_factor = 1.0
+	}
+
+	mountain_Urumqi = {
+		color = { 157 192 208 }
+		movement_cost = 2.0
+		attrition = 0.3
+		#combat_width = -0.66
+		combat_width = 50
+		combat_support_width = 25
+		ai_terrain_importance_factor = 10.0
+		match_value = 10
+		sound_type = desert
+
+		units = {
+			attack = -0.5
+			#movement = -0.4
+		}
+
+		enemy_army_bonus_air_superiority_factor = -0.10
+		
+		supply_flow_penalty_factor = 0.12
+		
+		truck_attrition_factor = 1.0
+	}
+
 
 
 
@@ -8217,6 +8393,137 @@ categories =  {
 		sound_type = plains
 	}	
 						
+	plains_Brescia = {
+		color = { 255 129 66 }
+		movement_cost = 1.0
+		ai_terrain_importance_factor = 0.1
+		combat_width = 70
+		combat_support_width = 35
+		match_value = 0.5
+		sound_type = plains
+	}	
+						
+	plains_Chisinau = {
+		color = { 255 129 66 }
+		movement_cost = 1.0
+		ai_terrain_importance_factor = 0.1
+		combat_width = 70
+		combat_support_width = 35
+		match_value = 0.5
+		sound_type = plains
+	}
+	
+	plains_Dobrich = {
+		color = { 255 129 66 }
+		movement_cost = 1.0
+		ai_terrain_importance_factor = 0.1
+		combat_width = 70
+		combat_support_width = 35
+		match_value = 0.5
+		sound_type = plains
+	}
+	
+	plains_Edirne = {
+		color = { 255 129 66 }
+		movement_cost = 1.0
+		ai_terrain_importance_factor = 0.1
+		combat_width = 70
+		combat_support_width = 35
+		match_value = 0.5
+		sound_type = plains
+	}
+	
+	plains_Gent = {
+		color = { 255 129 66 }
+		movement_cost = 1.0
+		ai_terrain_importance_factor = 0.1
+		combat_width = 70
+		combat_support_width = 35
+		match_value = 0.5
+		sound_type = plains
+	}
+	
+	plains_Habana = {
+		color = { 255 129 66 }
+		movement_cost = 1.0
+		ai_terrain_importance_factor = 0.1
+		combat_width = 70
+		combat_support_width = 35
+		match_value = 0.5
+		sound_type = plains
+	}
+	
+	plains_Haikou = {
+		color = { 255 129 66 }
+		movement_cost = 1.0
+		ai_terrain_importance_factor = 0.1
+		combat_width = 70
+		combat_support_width = 35
+		match_value = 0.5
+		sound_type = plains
+	}
+	
+	plains_liege = {
+		color = { 255 129 66 }
+		movement_cost = 1.0
+		ai_terrain_importance_factor = 0.1
+		combat_width = 70
+		combat_support_width = 35
+		match_value = 0.5
+		sound_type = plains
+	}
+	
+	plains_Namur = {
+		color = { 255 129 66 }
+		movement_cost = 1.0
+		ai_terrain_importance_factor = 0.1
+		combat_width = 70
+		combat_support_width = 35
+		match_value = 0.5
+		sound_type = plains
+	}
+	
+	plains_Port_au_Prince = {
+		color = { 255 129 66 }
+		movement_cost = 1.0
+		ai_terrain_importance_factor = 0.1
+		combat_width = 70
+		combat_support_width = 35
+		match_value = 0.5
+		sound_type = plains
+	}
+	
+	plains_Santo_Domingo = {
+		color = { 255 129 66 }
+		movement_cost = 1.0
+		ai_terrain_importance_factor = 0.1
+		combat_width = 70
+		combat_support_width = 35
+		match_value = 0.5
+		sound_type = plains
+	}
+	
+	plains_Split = {
+		color = { 255 129 66 }
+		movement_cost = 1.0
+		ai_terrain_importance_factor = 0.1
+		combat_width = 70
+		combat_support_width = 35
+		match_value = 0.5
+		sound_type = plains
+	}
+	
+	plains_Verona = {
+		color = { 255 129 66 }
+		movement_cost = 1.0
+		ai_terrain_importance_factor = 0.1
+		combat_width = 70
+		combat_support_width = 35
+		match_value = 0.5
+		sound_type = plains
+	}	
+						
+
 
 #######################   desert   #########################################
 
@@ -8526,6 +8833,24 @@ categories =  {
 		
 		truck_attrition_factor = 0.5
 	}
+		
+	desert_Frunze = {
+		color = { 255 127 0 }
+		movement_cost = 1.05
+		attrition = 0.15
+		combat_width = 70
+		combat_support_width = 35
+		ai_terrain_importance_factor = 8.0
+		match_value = 8
+		sound_type = desert
+		
+		sickness_chance = 1.0
+		
+		supply_flow_penalty_factor = 0.14
+		
+		truck_attrition_factor = 0.5
+	}
+
 
 
 ####################  forest   ################################################
@@ -9566,6 +9891,73 @@ categories =  {
 		
 		truck_attrition_factor = 0.2
 	}
+
+	forest_Bautzen = {
+		color = { 89 199 85 }
+		movement_cost = 1.5
+		#combat_width = -0.20
+		combat_width = 60
+		combat_support_width = 30
+		ai_terrain_importance_factor = 5.0
+		match_value = 5
+		sound_type = forest
+
+		units = {
+			attack = -0.15
+			#movement = -0.2
+		}
+
+		enemy_army_bonus_air_superiority_factor = -0.1
+		
+		supply_flow_penalty_factor = 0.08
+		
+		truck_attrition_factor = 0.2
+	}
+		
+	forest_Bitburg = {
+		color = { 89 199 85 }
+		movement_cost = 1.5
+		#combat_width = -0.20
+		combat_width = 60
+		combat_support_width = 30
+		ai_terrain_importance_factor = 5.0
+		match_value = 5
+		sound_type = forest
+
+		units = {
+			attack = -0.15
+			#movement = -0.2
+		}
+
+		enemy_army_bonus_air_superiority_factor = -0.1
+		
+		supply_flow_penalty_factor = 0.08
+		
+		truck_attrition_factor = 0.2
+	}
+
+	forest_Charleroi = {
+		color = { 89 199 85 }
+		movement_cost = 1.5
+		#combat_width = -0.20
+		combat_width = 60
+		combat_support_width = 30
+		ai_terrain_importance_factor = 5.0
+		match_value = 5
+		sound_type = forest
+
+		units = {
+			attack = -0.15
+			#movement = -0.2
+		}
+
+		enemy_army_bonus_air_superiority_factor = -0.1
+		
+		supply_flow_penalty_factor = 0.08
+		
+		truck_attrition_factor = 0.2
+	}
+
 
 
 

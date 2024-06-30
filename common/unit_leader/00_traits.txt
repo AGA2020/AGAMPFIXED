@@ -1526,6 +1526,11 @@ leader_traits = {
 				attack = 0.1
 				defence = 0.1
 			}
+			desert_Frunze = {
+				movement = 0.05
+				attack = 0.1
+				defence = 0.1
+			}
 
 
 		}
@@ -1853,6 +1858,21 @@ leader_traits = {
 				attack = 0.1
 				defence = 0.1
 			}
+			mountain_Alexandroupoli = {
+				movement = 0.05
+				attack = 0.1
+				defence = 0.1
+			}
+			mountain_Skopje = {
+				movement = 0.05
+				attack = 0.1
+				defence = 0.1
+			}
+			mountain_Urumqi = {
+				movement = 0.05
+				attack = 0.1
+				defence = 0.1
+			}
 
 		}
 		
@@ -2076,6 +2096,31 @@ leader_traits = {
 				defence = 0.1
 			}
 			hills_Nicosia = {
+				movement = 0.05
+				attack = 0.1
+				defence = 0.1
+			}
+			hills_Ancona = {
+				movement = 0.05
+				attack = 0.1
+				defence = 0.1
+			}
+			hills_Batumi = {
+				movement = 0.05
+				attack = 0.1
+				defence = 0.1
+			}
+			hills_Fiume = {
+				movement = 0.05
+				attack = 0.1
+				defence = 0.1
+			}
+			hills_Metz = {
+				movement = 0.05
+				attack = 0.1
+				defence = 0.1
+			}
+			hills_Opava = {
 				movement = 0.05
 				attack = 0.1
 				defence = 0.1
@@ -2400,6 +2445,21 @@ leader_traits = {
 				defence = 0.1
 			}
 			forest_Richmond = {
+				movement = 0.05
+				attack = 0.1
+				defence = 0.1
+			}
+			forest_Bautzen = {
+				movement = 0.05
+				attack = 0.1
+				defence = 0.1
+			}
+			forest_Bitburg = {
+				movement = 0.05
+				attack = 0.1
+				defence = 0.1
+			}
+			forest_Charleroi = {
 				movement = 0.05
 				attack = 0.1
 				defence = 0.1
@@ -4012,6 +4072,10 @@ leader_traits = {
 			desert_Samarkand = {
 				movement = 0.1
 			}
+			desert_Frunze = {
+				movement = 0.1
+			}
+
 
 
 
@@ -4141,6 +4205,22 @@ leader_traits = {
 			hills_Nicosia = {
 				movement = 0.1
 			}
+			hills_Ancona = {
+				movement = 0.1
+			}
+			hills_Batumi = {
+				movement = 0.1
+			}
+			hills_Fiume = {
+				movement = 0.1
+			}
+			hills_Metz = {
+				movement = 0.1
+			}
+			hills_Opava = {
+				movement = 0.1
+			}
+
 
 
 
@@ -4288,6 +4368,16 @@ leader_traits = {
 			forest_Richmond = {
 				movement = 0.1
 			}
+			forest_Bautzen = {
+				movement = 0.1
+			}
+			forest_Bitburg = {
+				movement = 0.1
+			}
+			forest_Charleroi = {
+				movement = 0.1
+			}
+
 
 
 
@@ -4446,6 +4536,15 @@ leader_traits = {
 				movement = 0.1
 			}
 			mountain_Quito = {
+				movement = 0.1
+			}
+			mountain_Alexandroupoli = {
+				movement = 0.1
+			}
+			mountain_Skopje = {
+				movement = 0.1
+			}
+			mountain_Urumqi = {
 				movement = 0.1
 			}
 
@@ -4807,6 +4906,45 @@ leader_traits = {
 				movement = 0.1
 			}
 			plains_Tampere = {
+				movement = 0.1
+			}
+			plains_Brescia = {
+				movement = 0.1
+			}
+			plains_Chisinau = {
+				movement = 0.1
+			}
+			plains_Dobrich = {
+				movement = 0.1
+			}
+			plains_Edirne = {
+				movement = 0.1
+			}
+			plains_Gent = {
+				movement = 0.1
+			}
+			plains_Habana = {
+				movement = 0.1
+			}
+			plains_Haikou = {
+				movement = 0.1
+			}
+			plains_liege = {
+				movement = 0.1
+			}
+			plains_Namur = {
+				movement = 0.1
+			}
+			plains_Port_au_Prince = {
+				movement = 0.1
+			}
+			plains_Santo_Domingo = {
+				movement = 0.1
+			}
+			plains_Split = {
+				movement = 0.1
+			}
+			plains_Verona = {
 				movement = 0.1
 			}
 
