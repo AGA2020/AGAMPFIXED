@@ -10,11 +10,6 @@ sound =
 }
 sound =
 {
-	name = "dayofinfamy"
-	file = "dfu_sound/dayofinfamy.wav"
-}
-sound =
-{
 	name = "rhein"
 	file = "dfu_sound/rhein.wav"
 }
