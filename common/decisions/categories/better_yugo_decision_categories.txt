@@ -1,0 +1,436 @@
+
+YUG_balkan_defense_union_category = {
+
+	priority = 100
+	
+	icon = generic_fascism
+
+	allowed = {
+		original_tag = YUG
+	}
+
+	visible = {
+		has_completed_focus = YUG_balkan_defense_union
+	}
+}
+
+YUG_divide_greece_decisions_category = {
+	
+	icon = saf_anti_colonialist_crusade
+
+	allowed = {
+		original_tag = YUG
+	}
+
+	visible = {
+		has_completed_focus = YUG_divide_greece
+	}
+}
+
+YUG_balkan_war_plans_decisions_category = {
+	
+	icon = eng_move_to_secure_the_dominions
+
+	allowed = {
+		original_tag = YUG
+	}
+
+	visible = {
+		has_completed_focus = YUG_balkan_war_planning
+	}
+}
+
+YUG_greater_yugoslavia_decisions_category = {
+	
+	icon = generic_fascism
+	
+	picture = GFX_decision_cat_picture_greater_yugoslavia
+
+	allowed = {
+		original_tag = YUG
+	}
+
+	visible = {
+		has_completed_focus = YUG_dominate_the_balkans
+	}
+}
+
+YUG_power_balance_neutrality_category = {
+	
+	icon = spr_the_seeds_of_revolution
+
+	allowed = {
+		original_tag = YUG
+	}
+
+	visible = {
+		has_completed_focus = YUG_status_quo
+		has_country_leader = { character = YUG_milan_stojadinovic ruling_only = yes }
+	}
+}
+
+YUG_foreign_policy_category = {
+
+	picture = GFX_decision_cat_picture_foreign_policy
+	
+	priority = 500
+	
+	icon = generic_foreign_policy
+
+	allowed = {
+		original_tag = YUG
+	}
+
+	visible = {
+	}
+}
+
+YUG_prepare_return_of_the_monarchy_cat = {
+
+	priority = 1000
+	
+	icon = eng_appeal_to_imperial_loyalists
+
+	allowed = {
+		original_tag = YUG
+	}
+
+	visible = {
+		NOT = { has_global_flag = YUG_royal_coup_flag }
+	}
+}
+
+YUG_military_cooperation_cat = {
+
+	priority = 20
+	
+	icon = military_operation
+
+	allowed = {
+		original_tag = YUG
+	}
+
+	visible = {
+		has_completed_focus = YUG_joint_army_manoeuvres
+	}
+}
+
+YUG_federalization_cat = {
+
+	priority = 200
+	
+	icon = generic_political_actions
+
+	allowed = {
+		original_tag = YUG
+	}
+
+	visible = {
+	}
+}
+
+YUG_power_balance_centralization_category = {
+	
+	icon = generic_political_actions
+
+	allowed = {
+		original_tag = YUG
+	}
+	
+	visible = {
+		has_power_balance = { id = YUG_power_balance_centralization }
+	}
+	
+}
+
+YUG_spread_democracy_decision_cat = {
+
+	priority = 700
+	
+	icon = generic_democracy
+
+	allowed = {
+		original_tag = YUG
+	}
+
+	visible = {
+		has_completed_focus = YUG_free_balkan_nations
+	}
+}
+
+YUG_spread_democracy_in_danube_decision_cat = {
+
+	priority = 698
+	
+	icon = generic_democracy
+
+	allowed = {
+		original_tag = YUG
+	}
+
+	visible = {
+		has_completed_focus = YUG_free_the_danube
+	}
+}
+
+YUG_spread_democracy_in_east_europe_decision_cat = {
+
+	priority = 699
+	
+	icon = generic_democracy
+
+	allowed = {
+		original_tag = YUG
+	}
+
+	visible = {
+		has_completed_focus = YUG_eastern_european_cooperation
+	}
+}
+
+YUG_balkan_communist_federation_decision_cat = {
+
+	picture = GFX_decision_cat_picture_balkan_communist_federation
+
+	priority = 800
+	
+	icon = generic_communism
+
+	allowed = {
+		original_tag = YUG
+	}
+
+	visible = {
+		has_completed_focus = YUG_balkan_communist_federation
+	}
+}
+
+YUG_connect_the_country_decision_cat = {
+
+	priority = 800
+	
+	icon = SOV_merge_designers
+
+	allowed = {
+		original_tag = YUG
+	}
+
+	visible = {
+		has_completed_focus = YUG_connect_the_country
+	}
+}
+
+YUG_naval_expansion_decision_cat = {
+
+	priority = 400
+	
+	icon = ITA_cooperation_programs
+
+	allowed = {
+		original_tag = YUG
+	}
+
+	visible = {
+		has_completed_focus = YUG_expand_the_navy
+	}
+}
+
+YUG_resistance_to_occupation_decision_cat = {
+
+	priority = 1002
+	
+	icon = SOV_propaganda
+
+	allowed = {
+		original_tag = YUG
+	}
+
+	visible = {
+		has_completed_focus = YUG_prepare_for_the_inevitable
+	}
+}
+
+YUG_croatian_opposition_decision_cat = {
+
+	picture = GFX_decision_cat_picture_croatian_opposition
+
+	priority = 1001
+	
+	icon = GFX_decision_category_yug_croatian_opposition
+	
+	visible_when_empty = yes
+
+	allowed = {
+		original_tag = YUG
+	}
+
+	visible = {
+		any_owned_state = {
+			is_core_of = CRO
+		}
+	}
+}
+
+YUG_integration_of_bulgaria_decision_cat = {
+
+	priority = 1001
+	
+	icon = GFX_decision_category_YUG_integration_of_bulgaria
+
+	allowed = {
+		original_tag = YUG
+	}
+
+	visible = {
+		NOT = {
+			has_completed_focus = YUG_dominate_the_balkans
+			has_completed_focus = YUG_balkan_communist_federation
+		}
+	}
+}
+
+YUG_restore_byzantium_decision_cat = {
+
+	priority = 1002
+	
+	icon = generic_formable_nations
+	
+	picture = GFX_decision_cat_generic_byzantine_empire
+
+	allowed = {
+		original_tag = YUG
+	}
+
+	visible = {
+		has_completed_focus = YUG_heirs_of_byzantium
+	}
+}
+
+CRO_greater_croatia_decision_cat = {
+
+	priority = 1001
+	
+	icon = GFX_decision_category_yug_croatian_opposition
+
+	allowed = {
+		original_tag = CRO
+	}
+
+	visible = {
+		has_completed_focus = CRO_towards_greater_croatia
+	}
+} 
+
+CRO_restore_the_habsburg_dominion = {
+
+	priority = 1000
+	
+	picture = GFX_decision_cat_generic_austria_hungary
+	
+	icon = eng_appeal_to_imperial_loyalists
+	
+	visible_when_empty = yes
+
+	allowed = {
+		original_tag = CRO
+	}
+
+	visible = {
+		has_completed_focus = CRO_return_of_the_habsburgs
+	}
+}
+
+CRO_influence_austria_and_hungary_decision_cat = {
+
+	priority = 999
+	
+	icon = eng_appeal_to_imperial_loyalists
+
+	allowed = {
+		original_tag = CRO
+	}
+
+	visible = {
+		has_completed_focus = CRO_influence_austria_and_hungary
+	}
+}
+
+CRO_collapse_of_yugosslavia_decision_cat = {
+
+	priority = 999
+	
+	icon = generic_independence
+
+	allowed = {
+		original_tag = CRO
+	}
+
+	visible = {
+		has_global_flag = yugoslavia_is_dying_flag
+		YUG = { exists = yes }
+	}
+} 
+
+CRO_rally_monarchist_support_in_italy = {
+
+	priority = 1000
+	
+	icon = eng_appeal_to_imperial_loyalists
+
+	allowed = {
+		original_tag = CRO
+	}
+
+	visible = {
+		has_completed_focus = CRO_prepare_to_liberate_italy
+		ITA = {
+			exists = yes
+			NOT = { is_ally_with = ROOT }
+		}
+		NOT = { has_completed_focus = CRO_kingdom_of_italy_croatia }
+	}
+}
+
+CRO_balkan_democratic_organization_category = {
+
+	priority = 1002
+	
+	icon = generic_political_actions
+
+	allowed = {
+		original_tag = CRO
+	}
+
+	visible = {
+		has_completed_focus = CRO_balkan_democratic_cooperation
+	}
+} 
+
+CRO_reunification_of_yugoslavia_decision_cat = {
+
+	priority = 900
+	
+	icon = generic_formable_nations
+	
+	picture = GFX_decision_cat_picture_reunification_of_yugoslavia
+
+	allowed = {
+		original_tag = CRO
+	}
+
+	visible = {
+		has_completed_focus = CRO_reassemble_yugoslavia
+	}
+}
+
+YUG_chetnik_partisan_conflict_bop_decision_cat = {
+
+	priority = 900
+
+	allowed = {
+		original_tag = YUG
+	}
+
+	visible = {
+	}
+}

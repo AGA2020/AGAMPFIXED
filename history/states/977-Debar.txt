@@ -1,0 +1,27 @@
+state={
+	id=977
+	name="STATE_977"
+	
+	history={
+		add_dynamic_modifier = {
+			modifier = yug_widepsread_illiteracy
+		}
+		owner = YUG
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = YUG
+		add_core_of = MAC
+		add_core_of = SER
+#		add_claim_by = ALB #i hope i can find a way to make italy claim it through that focus
+	}
+	
+	provinces={
+		833 867
+	}
+	manpower=9000
+	buildings_max_level_factor=1.000
+	state_category=rural
+	
+	local_supplies=0.000
+}

@@ -1,0 +1,710 @@
+﻿add_namespace = yugo_news
+
+news_event = { #Ustashe Uprising
+	id = yugo_news.1
+	title = yugo_news.1.t
+	desc = yugo_news.1.d
+	picture = GFX_news_event_YUG_croatian_parliament
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yugo_news.1.a
+		trigger = {
+			NOT = {
+				TAG = YUG
+			}
+		}
+	}
+	option = {
+		name = yugo_news.1.b
+		trigger = { TAG = YUG }
+	}
+}
+
+news_event = { #Greater Yugoslavia
+	id = yugo_news.2
+	title = yugo_news.2.t
+	desc = yugo_news.2.d
+	picture = GFX_news_event_generic_parliament
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yugo_news.2.a
+		trigger = {
+			NOT = {
+				TAG = YUG
+			}
+		}
+	}
+	option = {
+		name = yugo_news.2.b
+		trigger = { TAG = YUG }
+	}
+}
+
+news_event = { #Third Balkan war
+	id = yugo_news.3
+	title = yugo_news.3.t
+	desc = yugo_news.3.d
+	picture = GFX_news_event_soldiers_marching
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yugo_news.3.a
+	}
+}
+
+news_event = { #second royal dictatorship
+	id = yugo_news.4
+	title = yugo_news.4.t
+	desc = yugo_news.4.d
+	picture = GFX_news_event_yugoslav_coup
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yugo_news.4.a
+		trigger = {
+			NOT = {
+				TAG = YUG
+			}
+		}
+	}
+	option = {
+		name = yugo_news.4.b
+		trigger = { TAG = YUG }
+	}
+}
+
+news_event = { #stojadinovic consolidates power
+	id = yugo_news.5
+	title = yugo_news.5.t
+	desc = yugo_news.5.d
+	picture = GFX_news_event_YUG_milan_stojadinovic
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yugo_news.5.a
+		trigger = {
+			NOT = {
+				TAG = YUG
+			}
+		}
+	}
+	option = {
+		name = yugo_news.5.b
+		trigger = { TAG = YUG }
+	}
+}
+
+news_event = { #the regency consolidates power
+	id = yugo_news.6
+	title = yugo_news.6.t
+	desc = yugo_news.6.d
+	picture = GFX_news_event_YUG_prince_paul
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yugo_news.6.a
+		trigger = {
+			NOT = {
+				TAG = YUG
+			}
+		}
+	}
+	option = {
+		name = yugo_news.6.b
+		trigger = { TAG = YUG }
+	}
+}
+
+news_event = { #stojadinovic suspends elections
+	id = yugo_news.7
+	title = yugo_news.7.t
+	desc = yugo_news.7.d
+	picture = GFX_news_event_YUG_stojadinovic_mussolini
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yugo_news.7.a
+		trigger = {
+			NOT = {
+				TAG = YUG
+			}
+		}
+	}
+	option = {
+		name = yugo_news.7.b
+		trigger = { TAG = YUG }
+	}
+}
+
+news_event = { #vladko macek wins elections
+	id = yugo_news.8
+	title = yugo_news.8.t
+	desc = yugo_news.8.d
+	picture = GFX_news_event_YUG_vladko_macek
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yugo_news.8.a
+		trigger = {
+			NOT = {
+				has_government = democratic
+			}
+		}
+	}
+	option = {
+		name = yugo_news.8.b
+		trigger = { has_government = democratic }
+	}
+}
+
+news_event = { #budisavljevic wins elections
+	id = yugo_news.9
+	title = yugo_news.9.t
+	desc = yugo_news.9.d
+	picture = GFX_news_event_YUG_srdjan_budisavljevic
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yugo_news.9.a
+		trigger = {
+			NOT = {
+				has_government = democratic
+			}
+		}
+	}
+	option = {
+		name = yugo_news.9.b
+		trigger = { has_government = democratic }
+	}
+}
+
+news_event = { #davidovic wins elections
+	id = yugo_news.10
+	title = yugo_news.10.t
+	desc = yugo_news.10.d
+	picture = GFX_news_event_YUG_ljubomir_davidovic
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yugo_news.10.a
+		trigger = {
+			NOT = {
+				has_government = democratic
+			}
+		}
+	}
+	option = {
+		name = yugo_news.10.b
+		trigger = { has_government = democratic }
+	}
+}
+
+news_event = { #grol wins elections
+	id = yugo_news.11
+	title = yugo_news.11.t
+	desc = yugo_news.11.d
+	picture = GFX_news_event_YUG_milan_grol
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yugo_news.11.a
+		trigger = {
+			NOT = {
+				has_government = democratic
+			}
+		}
+	}
+	option = {
+		name = yugo_news.11.b
+		trigger = { has_government = democratic }
+	}
+}
+
+news_event = { #consolidation of the little entente
+	id = yugo_news.12
+	title = yugo_news.12.t
+	desc = yugo_news.12.d
+	picture = GFX_news_event_YUG_little_entente
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yugo_news.12.a
+		trigger = {
+			is_in_faction_with = YUG
+		}
+	}
+	option = {
+		name = yugo_news.12.b
+		trigger = {
+			NOT = { is_in_faction_with = YUG }
+		}
+	}
+}
+
+news_event = { #consolidation of the balkan pact
+	id = yugo_news.13
+	title = yugo_news.13.t
+	desc = yugo_news.13.d
+	picture = GFX_news_event_YUG_balkan_pact
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yugo_news.13.a
+		trigger = {
+			is_in_faction_with = YUG
+		}
+	}
+	option = {
+		name = yugo_news.13.b
+		trigger = { 
+			NOT = { is_in_faction_with = YUG }
+		}
+	}
+}
+
+news_event = { #communist revolution
+	id = yugo_news.14
+	title = yugo_news.14.t
+	desc = yugo_news.14.d
+	picture = GFX_news_event_YUG_communist_partisans
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yugo_news.14.a
+		trigger = {
+			has_government = communism
+		}
+	}
+	option = {
+		name = yugo_news.14.b
+		trigger = { 
+			NOT = { has_government = communism }
+		}
+	}
+}
+
+news_event = { #eastern european treaty organization
+	id = yugo_news.15
+	title = yugo_news.15.t
+	desc = yugo_news.15.d
+	picture = GFX_news_event_YUG_eeto
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yugo_news.15.a
+		trigger = {
+			has_government = democratic
+		}
+	}
+	option = {
+		name = yugo_news.15.b
+		trigger = { 
+			NOT = { has_government = democratic }
+		}
+	}
+}
+
+news_event = { #anti-fascist coalition
+	id = yugo_news.16
+	title = yugo_news.16.t
+	desc = yugo_news.16.d
+	picture = GFX_news_event_YUG_anti_fascist_coalition
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yugo_news.16.a
+		trigger = {
+			has_government = fascism
+		}
+	}
+	option = {
+		name = yugo_news.16.b
+		trigger = { 
+			NOT = { has_government = fascism }
+		}
+	}
+}
+
+news_event = { #unification of the balkans
+	id = yugo_news.17
+	title = yugo_news.17.t
+	desc = yugo_news.17.d
+	picture = GFX_news_event_YUG_tito_dimitrov
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yugo_news.17.a
+		trigger = {
+			has_government = communism
+		}
+	}
+	option = {
+		name = yugo_news.17.b
+		trigger = { 
+			NOT = { has_government = communism }
+		}
+	}
+}
+
+news_event = { #balkan defense league
+	id = yugo_news.18
+	title = yugo_news.18.t
+	desc = yugo_news.18.d
+	picture = GFX_news_event_YUG_balkan_alliance_stojadinovic
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yugo_news.18.a
+		trigger = {
+			NOT = {
+				TAG = YUG
+			}
+		}
+	}
+	option = {
+		name = yugo_news.18.b
+		trigger = { TAG = YUG }
+	}
+}
+
+# The Fall of Rome (Yugoslavia)
+news_event = {
+	id = yugo_news.19
+	title = yugo_news.19.t
+	desc = yugo_news.19.d
+	picture = GFX_news_event_YUG_partisans_in_city
+	
+	major = yes
+	
+	trigger = {
+		2 = { is_controlled_by = YUG }
+		2 = { is_owned_by = ITA }
+		YUG = { has_war_with = ITA }
+		NOT = { has_global_flag = fall_of_rome_yug }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_rome_yug
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = yugo_news.19.a
+		trigger = {
+			NOT = {
+				TAG = YUG
+			}
+		}
+	}
+	option = {
+		name = yugo_news.19.b
+		trigger = { TAG = YUG }
+	}
+}
+
+# Germany invades Yugoslavia
+news_event = {
+	id = yugo_news.20
+	title = yugo_news.20.t
+	desc = yugo_news.20.d
+	picture = GFX_news_event_YUG_german_invasion
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yugo_news.20.a
+		trigger = {
+			NOT = {
+				TAG = YUG
+			}
+		}
+	}
+	option = {
+		name = yugo_news.20.b
+		trigger = { TAG = YUG }
+	}
+}
+
+# Italy invades Yugoslavia
+news_event = {
+	id = yugo_news.21
+	title = yugo_news.21.t
+	desc = yugo_news.21.d
+	picture = GFX_news_event_YUG_italian_invasion
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yugo_news.21.a
+		trigger = {
+			NOT = {
+				TAG = YUG
+			}
+		}
+	}
+	option = {
+		name = yugo_news.21.b
+		trigger = { TAG = YUG }
+	}
+}
+
+# Assassination of Ante Pavelic
+news_event = {
+	id = yugo_news.22
+	title = yugo_news.22.t
+	desc = yugo_news.22.d
+	picture = GFX_news_event_YUG_pavelic_with_crowd
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yugo_news.22.a
+		trigger = {
+			NOT = {
+				TAG = YUG
+			}
+		}
+	}
+	option = {
+		name = yugo_news.22.b
+		trigger = { TAG = YUG }
+	}
+}
+
+# Greater Croatia
+news_event = {
+	id = yugo_news.23
+	title = yugo_news.23.t
+	desc = yugo_news.23.d
+	picture = GFX_news_event_YUG_croatian_parliament
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yugo_news.23.a
+		trigger = {
+			NOT = {
+				TAG = CRO
+			}
+		}
+	}
+	option = {
+		name = yugo_news.23.b
+		trigger = { TAG = CRO }
+	}
+}
+
+# Austria-Hungary-Croatia
+news_event = {
+	id = yugo_news.24
+	title = yugo_news.24.t
+	desc = yugo_news.24.d
+	picture = GFX_news_event_generic_parliament
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yugo_news.24.a
+		trigger = {
+			NOT = {
+				TAG = CRO
+			}
+		}
+	}
+	option = {
+		name = yugo_news.24.b
+		trigger = { TAG = CRO }
+	}
+}
+
+# Danubian Federation
+news_event = {
+	id = yugo_news.25
+	title = yugo_news.25.t
+	desc = yugo_news.25.d
+	picture = GFX_news_event_generic_parliament
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yugo_news.25.a
+		trigger = {
+			NOT = {
+				TAG = CRO
+			}
+		}
+	}
+	option = {
+		name = yugo_news.25.b
+		trigger = { TAG = CRO }
+	}
+}
+
+# Croatian war of independence
+news_event = {
+	id = yugo_news.26
+	title = yugo_news.26.t
+	desc = yugo_news.26.d
+	picture = GFX_news_event_CRO_home_guard
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yugo_news.26.a
+	}
+}
+
+# unification of Italy-Croatia
+news_event = {
+	id = yugo_news.27
+	title = yugo_news.27.t
+	desc = yugo_news.27.d
+	picture = GFX_news_event_CRO_italian_soldiers
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yugo_news.27.a
+	}
+}
+
+# Organization of Free Balkan Nations
+news_event = {
+	id = yugo_news.28
+	title = yugo_news.28.t
+	desc = yugo_news.28.d
+	picture = GFX_news_event_YUG_vladko_macek
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yugo_news.28.a
+		trigger = {
+			NOT = {
+				TAG = CRO
+			}
+		}
+	}
+	option = {
+		name = yugo_news.28.b
+		trigger = { TAG = CRO }
+	}
+}
+
+# Tito reunifies Yugoslavia
+news_event = {
+	id = yugo_news.29
+	title = yugo_news.29.t
+	desc = yugo_news.29.d
+	picture = GFX_news_event_CRO_josip_broz_tito
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yugo_news.29.a
+		trigger = {
+			NOT = {
+				TAG = CRO
+			}
+		}
+	}
+	option = {
+		name = yugo_news.29.b
+		trigger = { TAG = CRO }
+	}
+}
+
+# collapse of Yugoslavia
+news_event = {
+	id = yugo_news.30
+	title = yugo_news.30.t
+	desc = yugo_news.30.d
+	picture = GFX_news_event_CRO_yugoslav_soldiers
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yugo_news.30.a
+	}
+}

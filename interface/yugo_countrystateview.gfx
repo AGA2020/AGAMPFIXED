@@ -1,0 +1,28 @@
+spriteTypes = { 
+
+	SpriteType = {
+		name = "GFX_modifiers_YUG_albanian_partisans"
+		textureFile = "gfx/interface/state_modifiers/modifiers_YUG_albanian_partisans.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_modifiers_YUG_chetnik_activity"
+		textureFile = "gfx/interface/state_modifiers/modifiers_YUG_chetnik_activity.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_modifiers_YUG_partisan_activity"
+		textureFile = "gfx/interface/state_modifiers/modifiers_YUG_partisan_activity.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_modifiers_YUG_banovina_of_croatia"
+		textureFile = "gfx/interface/state_modifiers/modifiers_YUG_banovina_of_croatia.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_modifiers_YUG_widespread_illiteracy"
+		textureFile = "gfx/interface/state_modifiers/modifiers_YUG_widespread_illiteracy.dds"
+	}
+
+}

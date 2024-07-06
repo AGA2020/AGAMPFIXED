@@ -1,0 +1,476 @@
+spriteTypes = { 
+
+	spriteType = {
+		name = "GFX_portrait_YUG_koca_popovic"
+		texturefile = "gfx/leaders/YUG/portrait_YUG_koca_popovic.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_YUG_slavko_rodic"
+		texturefile = "gfx/leaders/YUG/portrait_YUG_slavko_rodic.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_YUG_milutin_moraca"
+		texturefile = "gfx/leaders/YUG/portrait_YUG_milutin_moraca.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_YUG_peko_dapcevic_small"
+		texturefile = "gfx/interface/ideas/portrait_YUG_peko_dapcevic_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_YUG_peko_dapcevic"
+		texturefile = "gfx/leaders/YUG/portrait_YUG_peko_dapcevic.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_YUG_arso_jovanovic"
+		texturefile = "gfx/leaders/YUG/portrait_YUG_arso_jovanovic.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_YUG_dragisa_vasic"
+		texturefile = "gfx/leaders/YUG/portrait_YUG_dragisa_vasic.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_YUG_draza_mihailovic"
+		texturefile = "gfx/leaders/YUG/portrait_YUG_draza_mihailovic.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_YUG_zivko_topalovic_large"
+		texturefile = "gfx/leaders/YUG/portrait_YUG_zivko_topalovic_large.dds"
+	}
+
+	spriteType = {
+		name = GFX_portrait_Enver_Hoxha
+		texturefile = "gfx/leaders/ALB/portrait_ALB_enver_hoxha.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_YUG_milos_savcic"
+		texturefile = "gfx/interface/ideas/portrait_YUG_milos_savcic.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_YUG_nikola_stankovic"
+		texturefile = "gfx/interface/ideas/portrait_YUG_nikola_stankovic.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_YUG_zivko_topalovic"
+		texturefile = "gfx/interface/ideas/portrait_YUG_zivko_topalovic.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_YUG_george_musulin"
+		texturefile = "gfx/leaders/YUG/portrait_YUG_george_musulin.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_YUG_stevan_moljevic"
+		texturefile = "gfx/interface/ideas/portrait_YUG_stevan_moljevic.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_YUG_mladen_zujovic"
+		texturefile = "gfx/interface/ideas/portrait_YUG_mladen_zujovic.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_YUG_dragisa_vasic"
+		texturefile = "gfx/interface/ideas/portrait_YUG_dragisa_vasic.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_BOS_rodoljub_colakovic"
+		texturefile = "gfx/leaders/BOS/portrait_BOS_rodoljub_colakovic.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_SLV_boris_kidric"
+		texturefile = "gfx/leaders/SLV/portrait_SLV_boris_kidric.png"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_YUG_vyacheslav_naumenko"
+		texturefile = "gfx/leaders/YUG/portrait_YUG_vyacheslav_naumenko.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_YUG_ivo_andric"
+		texturefile = "gfx/interface/ideas/portrait_YUG_ivo_andric.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_CRO_franjo_simic"
+		texturefile = "gfx/leaders/CRO/portrait_CRO_franjo_simic.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_CRO_fedor_dragojlov"
+		texturefile = "gfx/leaders/CRO/portrait_CRO_fedor_dragojlov.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_CRO_matija_canic"
+		texturefile = "gfx/leaders/CRO/portrait_CRO_matija_canic.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_CRO_ante_vokic"
+		texturefile = "gfx/interface/ideas/portrait_CRO_ante_vokic.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_CRO_rafael_boban"
+		texturefile = "gfx/interface/ideas/portrait_CRO_rafael_boban.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_CRO_vladimir_laxa"
+		texturefile = "gfx/interface/ideas/portrait_CRO_vladimir_laxa.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_CRO_djuro_jakcin"
+		texturefile = "gfx/interface/ideas/portrait_CRO_djuro_jakcin.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_CRO_andro_vrkljan"
+		texturefile = "gfx/interface/ideas/portrait_CRO_andro_vrkljan.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_CRO_vladimir_kren"
+		texturefile = "gfx/interface/ideas/portrait_CRO_vladimir_kren.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_CRO_djuro_jakcin_large"
+		texturefile = "gfx/leaders/CRO/portrait_CRO_djuro_jakcin_large.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_CRO_vladimir_laxa_large"
+		texturefile = "gfx/leaders/CRO/portrait_CRO_vladimir_laxa_large.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_CRO_slavko_kvaternik"
+		texturefile = "gfx/interface/ideas/portrait_CRO_slavko_kvaternik.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_CRO_slavko_kvaternik_large"
+		texturefile = "gfx/leaders/CRO/portrait_CRO_slavko_kvaternik_large.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_CRO_miroslav_krleza"
+		texturefile = "gfx/interface/ideas/portrait_CRO_miroslav_krleza.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_CRO_aloysius_stepinac"
+		texturefile = "gfx/interface/ideas/portrait_CRO_aloysius_stepinac.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_CRO_ivan_subasic"
+		texturefile = "gfx/interface/ideas/portrait_CRO_ivan_subasic.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_CRO_andrija_artukovic"
+		texturefile = "gfx/interface/ideas/portrait_CRO_andrija_artukovic.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_CRO_ognjen_prica"
+		texturefile = "gfx/interface/ideas/portrait_CRO_ognjen_prica.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_CRO_vladimir_nazor"
+		texturefile = "gfx/interface/ideas/portrait_CRO_vladimir_nazor.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_CRO_ivan_mestrovic"
+		texturefile = "gfx/interface/ideas/portrait_CRO_ivan_mestrovic.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_CRO_vladimir_kosak"
+		texturefile = "gfx/interface/ideas/portrait_CRO_vladimir_kosak.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_CRO_stijepo_peric"
+		texturefile = "gfx/interface/ideas/portrait_CRO_stijepo_peric.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_CRO_dido_kvaternik"
+		texturefile = "gfx/interface/ideas/portrait_CRO_dido_kvaternik.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_CRO_august_kosutic"
+		texturefile = "gfx/interface/ideas/portrait_CRO_august_kosutic.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_CRO_dzafer_kulenovic"
+		texturefile = "gfx/interface/ideas/portrait_CRO_dzafer_kulenovic.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_CRO_eduard_bunic"
+		texturefile = "gfx/interface/ideas/portrait_CRO_eduard_bunic.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_CRO_ivanko_farolfi"
+		texturefile = "gfx/interface/ideas/portrait_CRO_ivanko_farolfi.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_CRO_julije_makanec"
+		texturefile = "gfx/interface/ideas/portrait_CRO_julije_makanec.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_CRO_ljudevit_tomasevic"
+		texturefile = "gfx/interface/ideas/portrait_CRO_ljudevit_tomasevic.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_CRO_mile_budak"
+		texturefile = "gfx/interface/ideas/portrait_CRO_mile_budak.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_CRO_mladen_lorkovic"
+		texturefile = "gfx/interface/ideas/portrait_CRO_mladen_lorkovic.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_MNT_novica_radovic"
+		texturefile = "gfx/leaders/MNT/portrait_MNT_novica_radovic.png"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_MNT_mihailo_I"
+		texturefile = "gfx/leaders/MNT/portrait_MNT_mihailo_I.png"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_MNT_blazo_jovanovic"
+		texturefile = "gfx/leaders/MNT/portrait_MNT_blazo_jovanovic.png"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_BOS_mehmed_spaho"
+		texturefile = "gfx/leaders/BOS/portrait_BOS_mehmed_spaho.png"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_SLV_anton_korosec"
+		texturefile = "gfx/leaders/SLV/portrait_SLV_anton_korosec.png"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_SLV_leon_rupnik"
+		texturefile = "gfx/leaders/SLV/portrait_SLV_leon_rupnik.png"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_SLV_marko_natlacen"
+		texturefile = "gfx/leaders/SLV/portrait_SLV_marko_natlacen.png"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_CRO_regency"
+		texturefile = "gfx/leaders/CRO/portrait_CRO_regency.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_YUG_dusan_simovic"
+		texturefile = "gfx/leaders/YUG/portrait_YUG_dusan_simovic.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_YUG_otokar_kersovani"
+		texturefile = "gfx/interface/ideas/portrait_YUG_otokar_kersovani.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_vladimir_cukavac"
+		texturefile = "gfx/leaders/YUG/portrait_vladimir_cukavac.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_YUG_jovan_naumovic"
+		texturefile = "gfx/leaders/YUG/portrait_YUG_jovan_naumovic.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_YUG_milan_nedic_large"
+		texturefile = "gfx/leaders/YUG/portrait_YUG_milan_nedic_large.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_YUG_ljubomir_davidovic"
+		texturefile = "gfx/leaders/YUG/portrait_YUG_ljubomir_davidovic.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_YUG_srdan_budisavljevic"
+		texturefile = "gfx/leaders/YUG/portrait_YUG_srdan_budisavljevic.png"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_YUG_dragisa_cvetkovic"
+		texturefile = "gfx/leaders/YUG/portrait_YUG_dragisa_cvetkovic.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_YUG_vladko_macek"
+		texturefile = "gfx/leaders/YUG/portrait_YUG_vladko_macek.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_YUG_edvard_kardelj"
+		texturefile = "gfx/interface/ideas/portrait_YUG_edvard_kardelj.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_YUG_dusan_letica"
+		texturefile = "gfx/interface/ideas/portrait_YUG_dusan_letica.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_YUG_aleksandar_rankovic"
+		texturefile = "gfx/interface/ideas/portrait_YUG_aleksandar_rankovic.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_YUG_milovan_djilas"
+		texturefile = "gfx/interface/ideas/idea_yug_milovan_djilas.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_YUG_milos_trifunovic"
+		texturefile = "gfx/interface/ideas/portrait_YUG_milos_trifunovic.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_YUG_milan_grol_small"
+		texturefile = "gfx/interface/ideas/idea_YUG_milan_grol.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_YUG_maksimilijan_bace"
+		texturefile = "gfx/interface/ideas/idea_generic_army_south_america_5.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_YUG_mosa_pijade"
+		texturefile = "gfx/interface/ideas/portrait_YUG_mosa_pijade.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_YUG_miha_krek"
+		texturefile = "gfx/interface/ideas/portrait_YUG_miha_krek.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_YUG_milan_gorkic"
+		texturefile = "gfx/leaders/YUG/portrait_YUG_milan_gorkic.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_YUG_bogoljub_jevtic"
+		texturefile = "gfx/interface/ideas/portrait_YUG_bogoljub_jevtic.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_YUG_drago_marusic"
+		texturefile = "gfx/interface/ideas/portrait_YUG_drago_marusic.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_YUG_mehmed_spaho"
+		texturefile = "gfx/interface/ideas/portrait_YUG_mehmed_spaho.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_YUG_anton_korosec"
+		texturefile = "gfx/interface/ideas/portrait_YUG_anton_korosec.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_YUG_draza_mihailovic_mod"
+		texturefile = "gfx/leaders/YUG/portrait_YUG_draza_mihailovic.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_YUG_slobodan_jovanovic_mod"
+		texturefile = "gfx/leaders/YUG/portrait_YUG_slobodan_jovanovic.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_YUG_milan_nedic_mod"
+		texturefile = "gfx/leaders/YUG/portrait_YUG_milan_nedic.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_YUG_dimitrije_ljotic_mod"
+		texturefile = "gfx/leaders/YUG/portrait_YUG_dimitrije_ljotic.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_YUG_ivo_lola_ribar_mod"
+		texturefile = "gfx/leaders/YUG/portrait_YUG_ivo_lola_ribar.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_YUG_ivan_ribar_mod"
+		texturefile = "gfx/leaders/YUG/portrait_YUG_ivan_ribar.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_Portrait_yugoslavia_danilo_kalafatovic"
+		texturefile = "gfx/leaders/YUG/portrait_danilo_kalafatovic.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_Portrait_yugoslavia_ivan_gosnjak"
+		texturefile = "gfx/leaders/YUG/portrait_ivan_gosnjak.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_Portrait_yugoslavia_marijan_polic"
+		texturefile = "gfx/leaders/YUG/portrait_marijan_polic.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_Portrait_yugoslavia_milutin_nedic"
+		texturefile = "gfx/leaders/YUG/portrait_milutin_nedic.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_Portrait_yugoslavia_petar_kosic"
+		texturefile = "gfx/leaders/YUG/portrait_petar_kosic.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_Portrait_yugoslavia_vladimir_cukavac"
+		texturefile = "gfx/leaders/YUG/portrait_vladimir_cukavac.dds"
+	}
+}

@@ -1,0 +1,11 @@
+YUG_anti_fascist_exiles = {
+	valid_relation_trigger = {
+		ROOT = {
+			OR = {
+				has_government = communism
+				has_government = democratic
+			}
+		}
+	}
+	compliance_gain = 0.25
+}

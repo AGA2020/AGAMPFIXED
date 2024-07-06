@@ -1,0 +1,31 @@
+
+
+###### Medals #######
+
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_YUG_medal_karadorde_star"
+		textureFile = "gfx/interface/medals/YUG_medal_karadorde_star.dds"
+	}
+
+	spriteType = {
+		name = "GFX_YUG_medal_peoples_hero"
+		texturefile = "gfx/interface/medals/YUG_medal_peoples_hero.dds"
+	}
+	
+	###Frames
+	
+	spriteType = {
+		name = "GFX_yug_medal_strip"
+		texturefile = "gfx/interface/medals/yug_medal_strip.dds"
+		noOfFrames = 2
+    }
+	
+	spriteType = {
+		name = "GFX_medal_yug_medal_strip_large"
+		texturefile = "gfx/interface/medals/yug_medal_strip_large.dds"
+		noOfFrames = 2
+    }
+
+}

@@ -1,0 +1,403 @@
+spriteTypes = { 
+
+	spriteType = {
+		name = "GFX_report_event_YUG_fort"
+		texturefile = "gfx/event_pictures/report_event_YUG_fort.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_YUG_trial_of_mihailovic"
+		texturefile = "gfx/event_pictures/report_event_YUG_trial_of_mihailovic.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_YUG_albanian_partisans"
+		texturefile = "gfx/event_pictures/report_event_YUG_albanian_partisans.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_YUG_desperey_cukavac"
+		texturefile = "gfx/event_pictures/report_event_YUG_desperey_cukavac.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_YUG_avnoj_3"
+		texturefile = "gfx/event_pictures/report_event_YUG_avnoj_3.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_YUG_avnoj_2"
+		texturefile = "gfx/event_pictures/report_event_YUG_avnoj_2.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_YUG_enver_hoxha_partisan"
+		texturefile = "gfx/event_pictures/report_event_YUG_enver_hoxha_partisan.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_YUG_avnoj"
+		texturefile = "gfx/event_pictures/report_event_YUG_avnoj.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_YUG_operation_kugelblitz"
+		texturefile = "gfx/event_pictures/report_event_YUG_operation_kugelblitz.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_YUG_partisans_in_foca"
+		texturefile = "gfx/event_pictures/report_event_YUG_partisans_in_foca.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_YUG_partisans_at_neretva"
+		texturefile = "gfx/event_pictures/report_event_YUG_partisans_at_neretva.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_YUG_partisans_at_sutjeska"
+		texturefile = "gfx/event_pictures/report_event_YUG_partisans_at_sutjeska.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_YUG_monument_to_the_unknown_hero"
+		texturefile = "gfx/event_pictures/report_event_YUG_monument_to_the_unknown_hero.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_YUG_sandzak_muslim_militia"
+		texturefile = "gfx/event_pictures/report_event_YUG_sandzak_muslim_militia.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_YUG_uprising_in_montenegro"
+		texturefile = "gfx/event_pictures/report_event_YUG_uprising_in_montenegro.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_YUG_uprising_in_serbia"
+		texturefile = "gfx/event_pictures/report_event_YUG_uprising_in_serbia.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_YUG_yugoslav_women_olympics"
+		texturefile = "gfx/event_pictures/report_event_YUG_yugoslav_women_olympics.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_YUG_ba_congress_6"
+		texturefile = "gfx/event_pictures/report_event_YUG_ba_congress_6.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_YUG_ba_congress_5"
+		texturefile = "gfx/event_pictures/report_event_YUG_ba_congress_5.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_YUG_ba_congress_4"
+		texturefile = "gfx/event_pictures/report_event_YUG_ba_congress_4.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_YUG_ba_congress_3"
+		texturefile = "gfx/event_pictures/report_event_YUG_ba_congress_3.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_YUG_ba_congress_2"
+		texturefile = "gfx/event_pictures/report_event_YUG_ba_congress_2.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_YUG_ba_congress"
+		texturefile = "gfx/event_pictures/report_event_YUG_ba_congress.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_YUG_momcilo_djujic"
+		texturefile = "gfx/event_pictures/report_event_YUG_momcilo_djujic.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_YUG_homogena_srbija"
+		texturefile = "gfx/event_pictures/report_event_YUG_homogena_srbija.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_YUG_kosta_pecanac"
+		texturefile = "gfx/event_pictures/report_event_YUG_kosta_pecanac.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_CRO_yugoslav_soldiers"
+		texturefile = "gfx/event_pictures/news_event_CRO_yugoslav_soldiers.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_CRO_josip_broz_tito"
+		texturefile = "gfx/event_pictures/news_event_CRO_josip_broz_tito.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_CRO_italian_soldiers"
+		texturefile = "gfx/event_pictures/news_event_CRO_italian_soldiers.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_CRO_crowd_cheering_zagreb"
+		texturefile = "gfx/event_pictures/report_event_CRO_crowd_cheering_zagreb.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_YUG_italians_leaving"
+		texturefile = "gfx/event_pictures/report_event_YUG_italians_leaving.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_CRO_tito"
+		texturefile = "gfx/event_pictures/report_event_CRO_tito.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_YUG_naumenko"
+		texturefile = "gfx/event_pictures/report_event_YUG_naumenko.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_YUG_russian_emigres"
+		texturefile = "gfx/event_pictures/report_event_YUG_russian_emigres.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_YUG_jrz"
+		texturefile = "gfx/event_pictures/report_event_YUG_jrz.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_YUG_ivo_andric"
+		texturefile = "gfx/event_pictures/report_event_YUG_ivo_andric.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_CRO_pavelic_with_army"
+		texturefile = "gfx/event_pictures/report_event_CRO_pavelic_with_army.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_CRO_home_guard"
+		texturefile = "gfx/event_pictures/news_event_CRO_home_guard.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_CRO_blagaj_massacre"
+		texturefile = "gfx/event_pictures/report_event_CRO_blagaj_massacre.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_CRO_gudovac_massacre"
+		texturefile = "gfx/event_pictures/report_event_CRO_gudovac_massacre.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_CRO_amedeo_with_soldiers"
+		texturefile = "gfx/event_pictures/report_event_CRO_amedeo_with_soldiers.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_CRO_vittorio_emanuele"
+		texturefile = "gfx/event_pictures/report_event_CRO_vittorio_emanuele.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_CRO_pavelic_with_a_muslim_guy"
+		texturefile = "gfx/event_pictures/report_event_CRO_pavelic_with_a_muslim_guy.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_YUG_pavelic_with_crowd"
+		texturefile = "gfx/event_pictures/news_event_YUG_pavelic_with_crowd.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_CRO_anton_korosec"
+		texturefile = "gfx/event_pictures/report_event_CRO_anton_korosec.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_YUG_churchill"
+		texturefile = "gfx/event_pictures/report_event_YUG_churchill.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_YUG_italian_invasion"
+		texturefile = "gfx/event_pictures/news_event_YUG_italian_invasion.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_YUG_german_invasion"
+		texturefile = "gfx/event_pictures/news_event_YUG_german_invasion.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_YUG_partisans_in_city"
+		texturefile = "gfx/event_pictures/news_event_YUG_partisans_in_city.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_YUG_tesla"
+		texturefile = "gfx/event_pictures/report_event_YUG_tesla.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_YUG_croatian_opposition"
+		texturefile = "gfx/event_pictures/report_event_YUG_croatian_opposition.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_YUG_balkan_alliance_stojadinovic"
+		texturefile = "gfx/event_pictures/news_event_YUG_balkan_alliance_stojadinovic.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_YUG_chetniks"
+		texturefile = "gfx/event_pictures/report_event_YUG_chetniks.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_YUG_pavelic_with_hitler"
+		texturefile = "gfx/event_pictures/report_event_YUG_pavelic_with_hitler.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_YUG_ante_pavelic"
+		texturefile = "gfx/event_pictures/report_event_YUG_ante_pavelic.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_YUG_partisans"
+		texturefile = "gfx/event_pictures/report_event_YUG_partisans.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_YUG_royal_yugoslav_navy"
+		texturefile = "gfx/event_pictures/report_event_YUG_royal_yugoslav_navy.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_YUG_tito_dimitrov"
+		texturefile = "gfx/event_pictures/report_event_YUG_tito_dimitrov.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_YUG_tito_dimitrov"
+		texturefile = "gfx/event_pictures/news_event_YUG_tito_dimitrov.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_YUG_anti_fascist_coalition"
+		texturefile = "gfx/event_pictures/news_event_YUG_anti_fascist_coalition.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_YUG_eeto"
+		texturefile = "gfx/event_pictures/news_event_YUG_eeto.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_news_event_YUG_anti_communist_alliance"
+		texturefile = "gfx/event_pictures/news_event_YUG_anti_communist_alliance.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_YUG_communist_partisans"
+		texturefile = "gfx/event_pictures/news_event_YUG_communist_partisans.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_YUG_balkan_pact"
+		texturefile = "gfx/event_pictures/news_event_YUG_balkan_pact.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_news_event_YUG_little_entente"
+		texturefile = "gfx/event_pictures/news_event_YUG_little_entente.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_YUG_milan_grol"
+		texturefile = "gfx/event_pictures/news_event_YUG_milan_grol.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_YUG_ljubomir_davidovic"
+		texturefile = "gfx/event_pictures/news_event_YUG_ljubomir_davidovic.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_YUG_srdjan_budisavljevic"
+		texturefile = "gfx/event_pictures/news_event_YUG_srdjan_budisavljevic.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_YUG_vladko_macek"
+		texturefile = "gfx/event_pictures/news_event_YUG_vladko_macek.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_YUG_stojadinovic_mussolini"
+		texturefile = "gfx/event_pictures/news_event_YUG_stojadinovic_mussolini.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_YUG_tito"
+		texturefile = "gfx/event_pictures/report_event_YUG_tito.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_YUG_milan_stojadinovic"
+		texturefile = "gfx/event_pictures/news_event_YUG_milan_stojadinovic.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_YUG_prince_paul"
+		texturefile = "gfx/event_pictures/news_event_YUG_prince_paul.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_YUG_croatian_parliament"
+		texturefile = "gfx/event_pictures/news_event_YUG_croatian_parliament.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_YUG_vladko_macek"
+		texturefile = "gfx/event_pictures/report_event_YUG_vladko_macek.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_YUG_dragisa_cvetkovic"
+		texturefile = "gfx/event_pictures/report_event_YUG_dragisa_cvetkovic.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_YUG_prince_paul"
+		texturefile = "gfx/event_pictures/report_event_YUG_prince_paul.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_YUG_orthodox_church"
+		texturefile = "gfx/event_pictures/report_event_YUG_orthodox_church.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_YUG_croatian_parliament"
+		texturefile = "gfx/event_pictures/report_event_YUG_croatian_parliament.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_YUG_ustashe"
+		texturefile = "gfx/event_pictures/report_event_YUG_ustashe.dds"
+	}
+
+}

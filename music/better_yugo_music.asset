@@ -1,0 +1,32 @@
+music = {
+	name = "uz_marsala_tita"
+	file = "uz_marsala_tita.ogg"
+}
+music = {
+	name = "po_sumama_i_gorama"
+	file = "po_sumama_i_gorama.ogg"
+}
+music = {
+	name = "mars_na_drinu"
+	file = "mars_na_drinu.ogg"
+}
+music = {
+	name = "marsirala_kralja_petra_garda"
+	file = "marsirala_kralja_petra_garda.ogg"
+}
+music = {
+	name = "croatia_national_anthem"
+	file = "croatia_national_anthem.ogg"
+}
+music = {
+	name = "hej_sloveni"
+	file = "hej_sloveni.ogg"
+}
+music = {
+	name = "himna_kraljevine_jugoslavije"
+	file = "himna_kraljevine_jugoslavije.ogg"
+}
+music = {
+	name = "sokolovi_sivi_tici"
+	file = "sokolovi_sivi_tici.ogg"
+}

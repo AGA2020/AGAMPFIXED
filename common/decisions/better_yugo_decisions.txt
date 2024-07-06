@@ -1,0 +1,11779 @@
+YUG_balkan_defense_union_category = {
+	
+	# Romania
+
+	YUG_fifth_column_in_romania = {
+
+		icon = decision_hol_exchange_intelligence_data
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+			NOT = {
+				ROM = {
+					has_country_flag = YUG_has_fifth_column
+				}
+			}
+		}
+	
+		visible = {
+			original_tag = YUG
+			any_country = {
+				original_tag = ROM
+				exists = yes
+			}
+			NOT = {
+				ROM = {
+					OR = {
+						has_government = fascism
+						has_country_flag = banned_fascism_flag
+						has_civil_war = yes
+					}
+				}
+			}
+		}
+
+		cost = 50
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+		}
+
+		complete_effect = {
+			every_country = {
+				limit = {
+					original_tag = ROM
+				}
+				country_event = better_yugo.5 #oh no yugoslavia is supporting fascists
+				
+				hidden_effect = {
+					set_country_flag = YUG_has_fifth_column
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_fascist_propaganda_in_romania = {
+
+		icon = generic_speech
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+
+		}
+	
+		targets = {
+			ROM
+		}
+	
+		visible = {
+			original_tag = YUG
+			any_country = {
+				original_tag = ROM
+				exists = yes
+			}
+			NOT = {
+				FROM = {
+					OR = {
+						has_government = fascism
+						has_country_flag = banned_fascism_flag
+						has_civil_war = yes
+					}
+				}
+			}
+			has_completed_focus = YUG_support_fascist_romania
+		}
+
+		cost = 25
+		
+		fire_only_once = yes
+		
+		days_remove = 15
+		
+		remove_effect = {
+			FROM = {
+				add_timed_idea = { idea = fascist_influence days = 730 }
+			}
+		}
+
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+	}
+	
+	YUG_fascist_propaganda_in_romania_2 = {
+
+		icon = generic_political_rally
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+
+		}
+	
+		targets = {
+			ROM
+		}
+	
+		visible = {
+			original_tag = YUG
+			any_country = {
+				original_tag = ROM
+				exists = yes
+			}
+			NOT = {
+				FROM = {
+					OR = {
+						has_government = fascism
+						has_country_flag = banned_fascism_flag
+						has_civil_war = yes
+					}
+				}
+			}
+			has_completed_focus = YUG_support_fascist_romania
+		}
+
+		cost = 50
+		
+		fire_only_once = no
+		
+		days_remove = 30
+		
+		remove_effect = {
+			FROM = {
+				add_popularity = {
+			    ideology = fascism
+			    popularity = 0.1
+				}
+			}
+		}
+
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+	}
+	
+	YUG_infiltrate_romanian_government = {
+
+		icon = generic_political_discourse
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+
+		}
+	
+		targets = {
+			ROM
+		}
+	
+		visible = {
+			original_tag = YUG
+			any_country = {
+				original_tag = ROM
+				exists = yes
+			}
+			NOT = {
+				FROM = {
+					OR = {
+						has_government = fascism
+						has_country_flag = banned_fascism_flag
+						has_civil_war = yes
+					}
+				}
+			}
+			has_completed_focus = YUG_support_fascist_romania
+		}
+
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25
+		
+		fire_only_once = no
+		
+		days_remove = 15
+		
+		remove_effect = {
+			FROM = {
+				add_popularity = {
+			    ideology = fascism
+			    popularity = 0.05
+				}
+			}
+		}
+
+		complete_effect = {
+		hidden_effect = {
+		add_command_power = -25
+		}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+	}
+	
+	YUG_arm_romanian_paramilitarists = {
+
+		icon = generic_military
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+
+		}
+	
+		targets = {
+			ROM
+		}
+	
+		visible = {
+			original_tag = YUG
+			any_country = {
+				original_tag = ROM
+				exists = yes
+			}
+			NOT = {
+				FROM = {
+					OR = {
+						has_government = fascism
+						has_country_flag = banned_fascism_flag
+						has_civil_war = yes
+					}
+				}
+			}
+			has_completed_focus = YUG_support_fascist_romania
+		}
+		
+		fire_only_once = yes
+		
+		days_remove = 15
+		
+		remove_effect = {
+			FROM = {
+				add_timed_idea = { idea = YUG_fascist_pramilitarists days = 365 }
+			}
+		}
+
+		custom_cost_trigger = {
+			has_equipment = { infantry_equipment > 999 }
+		}
+		custom_cost_text = decision_cost_ie_1000
+		
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+	}
+	
+	YUG_fascist_coup_in_romania = {
+
+		icon = generic_prepare_civil_war
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+		ROM = {
+		fascism > 0.4
+		}
+		}
+	
+		targets = {
+			ROM
+		}
+	
+		visible = {
+			original_tag = YUG
+			any_country = {
+				original_tag = ROM
+				exists = yes
+			}
+			NOT = {
+				FROM = {
+					OR = {
+						has_government = fascism
+						has_country_flag = banned_fascism_flag
+						has_civil_war = yes
+					}
+				}
+			}
+			has_completed_focus = YUG_support_fascist_romania
+		}
+		
+		fire_only_once = yes
+		
+		days_remove = 10
+		
+		remove_effect = {
+			FROM = {
+				country_event = better_yugo.12
+			}
+		}
+
+		cost = 100
+		
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+	}
+	
+	YUG_invite_romania_fascist = {
+
+		icon = hol_exchange_intelligence_data
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+			ROM = {
+				has_government = fascism
+				is_in_faction = no
+				is_subject = no
+				has_civil_war = no
+			}
+		}
+		
+		targets = {
+			ROM
+		}
+	
+		visible = {
+			original_tag = YUG
+			ROM = {
+				exists = yes
+			}
+		}
+
+		cost = 10
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+		}
+
+		complete_effect = {
+			FROM = {
+				country_event = generic.5 #invite to faction
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	# Bulgaria
+
+	YUG_fifth_column_in_bulgaria = {
+
+		icon = decision_hol_exchange_intelligence_data
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+			NOT = {
+				BUL = {
+					has_country_flag = YUG_has_fifth_column
+				}
+			}
+		}
+	
+		visible = {
+			original_tag = YUG
+			BUL = {
+				exists = yes
+			}
+			NOT = {
+				BUL = {
+					OR = {
+						has_government = fascism
+						has_country_flag = banned_fascism_flag
+					}
+				}
+			}
+		}
+
+		cost = 50
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+		}
+
+		complete_effect = {
+			every_country = {
+				limit = {
+					original_tag = BUL
+				}
+				country_event = better_yugo.5 #oh no yugoslavia is supporting fascists
+				
+				hidden_effect = {
+					set_country_flag = YUG_has_fifth_column
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_fascist_propaganda_in_bulgaria = {
+
+		icon = generic_speech
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+
+		}
+	
+		targets = {
+			BUL
+		}
+	
+		visible = {
+			original_tag = YUG
+			any_country = {
+				original_tag = BUL
+				exists = yes
+			}
+			NOT = {
+				FROM = {
+					OR = {
+						has_government = fascism
+						has_country_flag = banned_fascism_flag
+						has_civil_war = yes
+					}
+				}
+			}
+			has_completed_focus = YUG_support_fascist_bulgaria
+		}
+
+		cost = 25
+		
+		fire_only_once = yes
+		
+		days_remove = 15
+		
+		remove_effect = {
+			FROM = {
+				add_timed_idea = { idea = fascist_influence days = 365 }
+			}
+		}
+
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+	}
+	
+	YUG_fascist_propaganda_in_bulgaria_2 = {
+
+		icon = generic_political_rally
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+
+		}
+	
+		targets = {
+			BUL
+		}
+	
+		visible = {
+			original_tag = YUG
+			any_country = {
+				original_tag = BUL
+				exists = yes
+			}
+			NOT = {
+				FROM = {
+					OR = {
+						has_government = fascism
+						has_country_flag = banned_fascism_flag
+						has_civil_war = yes
+					}
+				}
+			}
+			has_completed_focus = YUG_support_fascist_bulgaria
+		}
+
+		cost = 50
+		
+		fire_only_once = no
+		
+		days_remove = 30
+		
+		remove_effect = {
+			FROM = {
+				add_popularity = {
+			    ideology = fascism
+			    popularity = 0.1
+				}
+			}
+		}
+
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+	}
+	
+	YUG_infiltrate_bulgarian_government = {
+
+		icon = generic_political_discourse
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+
+		}
+	
+		targets = {
+			BUL
+		}
+	
+		visible = {
+			original_tag = YUG
+			any_country = {
+				original_tag = BUL
+				exists = yes
+			}
+			NOT = {
+				FROM = {
+					OR = {
+						has_government = fascism
+						has_country_flag = banned_fascism_flag
+						has_civil_war = yes
+					}
+				}
+			}
+			has_completed_focus = YUG_support_fascist_bulgaria
+		}
+
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25
+		
+		fire_only_once = no
+		
+		days_remove = 15
+		
+		remove_effect = {
+			FROM = {
+				add_popularity = {
+			    ideology = fascism
+			    popularity = 0.05
+				}
+			}
+		}
+
+		complete_effect = {
+		hidden_effect = {
+		add_command_power = -25
+		}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+	}
+	
+	YUG_arm_bulgarian_paramilitarists = {
+
+		icon = generic_military
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+
+		}
+	
+		targets = {
+			BUL
+		}
+	
+		visible = {
+			original_tag = YUG
+			any_country = {
+				original_tag = BUL
+				exists = yes
+			}
+			NOT = {
+				FROM = {
+					OR = {
+						has_government = fascism
+						has_country_flag = banned_fascism_flag
+						has_civil_war = yes
+					}
+				}
+			}
+			has_completed_focus = YUG_support_fascist_bulgaria
+		}
+		
+		fire_only_once = yes
+		
+		days_remove = 15
+		
+		remove_effect = {
+			FROM = {
+				add_timed_idea = { idea = YUG_fascist_pramilitarists days = 365 }
+			}
+		}
+
+		custom_cost_trigger = {
+			has_equipment = { infantry_equipment > 999 }
+		}
+		custom_cost_text = decision_cost_ie_1000
+		
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+	}
+	
+	YUG_fascist_coup_in_bulgaria = {
+
+		icon = generic_prepare_civil_war
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+		BUL = {
+		fascism > 0.4
+		}
+		}
+	
+		targets = {
+			BUL
+		}
+	
+		visible = {
+			original_tag = YUG
+			any_country = {
+				original_tag = BUL
+				exists = yes
+			}
+			NOT = {
+				FROM = {
+					OR = {
+						has_government = fascism
+						has_country_flag = banned_fascism_flag
+						has_civil_war = yes
+					}
+				}
+			}
+			has_completed_focus = YUG_support_fascist_bulgaria
+		}
+		
+		fire_only_once = yes
+		
+		days_remove = 10
+		
+		remove_effect = {
+			FROM = {
+				country_event = better_yugo.12
+			}
+		}
+
+		cost = 100
+		
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+	}
+	
+	YUG_invite_bulgaria_fascist = {
+
+		icon = hol_exchange_intelligence_data
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+			BUL = {
+				has_government = fascism
+				is_in_faction = no
+				is_subject = no
+				has_civil_war = no
+			}
+#			has_completed_focus = #TODO
+		}
+	
+		visible = {
+			original_tag = YUG
+			BUL = {
+				exists = yes
+			}
+		}
+
+		cost = 10
+		
+		targets = {
+		BUL
+		}
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+		}
+
+		complete_effect = {
+			every_country = {
+				limit = {
+					original_tag = BUL
+				}
+				country_event = generic.5 #invite to faction
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	# Greece
+
+	YUG_fifth_column_in_greece = {
+
+		icon = decision_hol_exchange_intelligence_data
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+			NOT = {
+				GRE = {
+					has_country_flag = YUG_has_fifth_column
+				}
+			}
+		}
+	
+		visible = {
+			original_tag = YUG
+			GRE = {
+				exists = yes
+			}
+			NOT = {
+				GRE = {
+					OR = {
+						has_government = fascism
+						has_country_flag = banned_fascism_flag
+					}
+				}
+			}
+		}
+
+		cost = 50
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+		}
+
+		complete_effect = {
+			every_country = {
+				limit = {
+					original_tag = GRE
+				}
+				country_event = better_yugo.5 #oh no yugoslavia is supporting fascists
+				
+				hidden_effect = {
+					set_country_flag = YUG_has_fifth_column
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_fascist_propaganda_in_greece = {
+
+		icon = generic_speech
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+
+		}
+	
+		targets = {
+			GRE
+		}
+	
+		visible = {
+			original_tag = YUG
+			any_country = {
+				original_tag = GRE
+				exists = yes
+			}
+			NOT = {
+				FROM = {
+					OR = {
+						has_government = fascism
+						has_country_flag = banned_fascism_flag
+						has_civil_war = yes
+					}
+				}
+			}
+			has_completed_focus = YUG_support_fascist_greece
+		}
+
+		cost = 25
+		
+		fire_only_once = yes
+		
+		days_remove = 15
+		
+		remove_effect = {
+			FROM = {
+				add_timed_idea = { idea = fascist_influence days = 730 }
+			}
+		}
+
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+	}
+	
+	YUG_fascist_propaganda_in_greece_2 = {
+
+		icon = generic_political_rally
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+
+		}
+	
+		targets = {
+			GRE
+		}
+	
+		visible = {
+			original_tag = YUG
+			any_country = {
+				original_tag = GRE
+				exists = yes
+			}
+			NOT = {
+				FROM = {
+					OR = {
+						has_government = fascism
+						has_country_flag = banned_fascism_flag
+						has_civil_war = yes
+					}
+				}
+			}
+			has_completed_focus = YUG_support_fascist_greece
+		}
+
+		cost = 50
+		
+		fire_only_once = no
+		
+		days_remove = 30
+		
+		remove_effect = {
+			FROM = {
+				add_popularity = {
+			    ideology = fascism
+			    popularity = 0.1
+				}
+			}
+		}
+
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+	}
+	
+	YUG_infiltrate_greek_government = {
+
+		icon = generic_political_discourse
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+
+		}
+	
+		targets = {
+			GRE
+		}
+	
+		visible = {
+			original_tag = YUG
+			any_country = {
+				original_tag = GRE
+				exists = yes
+			}
+			NOT = {
+				FROM = {
+					OR = {
+						has_government = fascism
+						has_country_flag = banned_fascism_flag
+						has_civil_war = yes
+					}
+				}
+			}
+			has_completed_focus = YUG_support_fascist_greece
+		}
+
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25
+		
+		fire_only_once = no
+		
+		days_remove = 15
+		
+		remove_effect = {
+			FROM = {
+				add_popularity = {
+			    ideology = fascism
+			    popularity = 0.05
+				}
+			}
+		}
+
+		complete_effect = {
+		hidden_effect = {
+		add_command_power = -25
+		}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+	}
+	
+	YUG_arm_greek_paramilitarists = {
+
+		icon = generic_military
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+
+		}
+	
+		targets = {
+			GRE
+		}
+	
+		visible = {
+			original_tag = YUG
+			any_country = {
+				original_tag = GRE
+				exists = yes
+			}
+			NOT = {
+				FROM = {
+					OR = {
+						has_government = fascism
+						has_country_flag = banned_fascism_flag
+						has_civil_war = yes
+					}
+				}
+			}
+			has_completed_focus = YUG_support_fascist_greece
+		}
+		
+		fire_only_once = yes
+		
+		days_remove = 15
+		
+		remove_effect = {
+			FROM = {
+				add_timed_idea = { idea = YUG_fascist_pramilitarists days = 365 }
+			}
+		}
+
+		custom_cost_trigger = {
+			has_equipment = { infantry_equipment > 999 }
+		}
+		custom_cost_text = decision_cost_ie_1000
+		
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+	}
+	
+	YUG_fascist_coup_in_greece = {
+
+		icon = generic_prepare_civil_war
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+		GRE = {
+		fascism > 0.4
+		}
+		}
+	
+		targets = {
+			GRE
+		}
+	
+		visible = {
+			original_tag = YUG
+			any_country = {
+				original_tag = GRE
+				exists = yes
+			}
+			NOT = {
+				FROM = {
+					OR = {
+						has_government = fascism
+						has_country_flag = banned_fascism_flag
+						has_civil_war = yes
+					}
+				}
+			}
+			has_completed_focus = YUG_support_fascist_greece
+		}
+		
+		fire_only_once = yes
+		
+		days_remove = 10
+		
+		remove_effect = {
+			FROM = {
+				country_event = better_yugo.12
+			}
+		}
+
+		cost = 100
+		
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+	}
+	
+	YUG_invite_greece_fascist = {
+
+		icon = hol_exchange_intelligence_data
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+			GRE = {
+				has_government = fascism
+				is_in_faction = no
+				is_subject = no
+				has_civil_war = no
+			}
+#			has_completed_focus = #TODO
+		}
+	
+		visible = {
+			original_tag = YUG
+			GRE = {
+				exists = yes
+			}
+		}
+
+		targets = {
+		GRE
+		}
+
+		cost = 10
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+		}
+
+		complete_effect = {
+			every_country = {
+				limit = {
+					original_tag = GRE
+				}
+				country_event = generic.5 #invite to faction
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+}
+
+YUG_divide_greece_decisions_category = {
+	
+	YUG_invite_BUL_to_partition_greece = {
+
+		icon = hol_exchange_intelligence_data
+
+		allowed = {
+			original_tag = YUG
+		}
+		
+		targets = {
+		BUL
+		}
+
+		available = {
+			GRE = {
+				owns_state = 184
+			}
+			BUL = {
+			NOT = {
+				is_in_faction_with = GRE
+				}
+			}
+		}
+	
+		visible = {
+			NOT = {
+			BUL = { has_war_with = ROOT }
+			}
+		}
+
+		cost = 25
+		
+		days_remove = 10
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+			BUL = {
+				country_event = better_yugo.6
+			}
+		}
+
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_invite_TUR_to_partition_greece = {
+
+		icon = hol_exchange_intelligence_data
+
+		allowed = {
+			original_tag = YUG
+		}
+		
+		targets = {
+			TUR
+		}
+
+		available = {
+			GRE = {
+				owns_state = 187
+			}
+			TUR = {
+			NOT = {
+				is_in_faction_with = GRE
+				}
+			}
+		}
+	
+		visible = {
+			NOT = {
+			TUR = { has_war_with = ROOT }
+			}
+		}
+
+		cost = 25
+		
+		days_remove = 10
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+			TUR = {
+				country_event = better_yugo.6
+			}
+		}
+
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_invite_ITA_to_partition_greece = {
+
+		icon = hol_exchange_intelligence_data
+
+		allowed = {
+			original_tag = YUG
+		}
+		
+		targets = {
+			ITA
+		}
+
+		available = {
+			GRE = {
+				owns_state = 185
+			}
+			ITA = {
+				NOT = {
+					is_in_faction_with = GRE
+				}
+			}
+			OR = {
+				ITA = {
+					owns_state = 44
+					owns_state = 805
+				}
+				ALB = {
+					is_subject_of = ITA
+					owns_state = 44
+					owns_state = 805
+				}
+			}
+		}
+	
+		visible = {
+			NOT = {
+				ITA = { has_war_with = ROOT }
+			}
+		}
+
+		cost = 25
+		
+		days_remove = 10
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+			ITA = {
+				country_event = better_yugo.6
+			}
+		}
+
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_ultimatum_to_greece = {
+
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			original_tag = YUG
+		}
+		
+		targets = {
+			GRE
+		}
+
+		available = {
+			any_country = {
+			has_country_flag = agreed_to_divide_greece
+			}
+		}
+	
+		visible = {
+			NOT = {
+			GRE = { has_war_with = ROOT }
+			}
+		}
+
+		cost = 100
+		
+		days_remove = 25
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+			GRE = {
+				country_event = better_yugo.9
+			}
+		}
+
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+}
+
+YUG_balkan_war_plans_decisions_category = {
+	YUG_balkan_war_plan = {
+
+		icon = hol_draw_up_staff_plans
+
+		allowed = {
+			original_tag = YUG
+		}
+		
+		targets = {
+			ITA HUN ROM BUL GRE ALB
+		}
+
+		available = {
+			FROM = {
+				has_war_with = ROOT
+			}
+		}
+	
+		visible = {
+			has_completed_focus = YUG_balkan_war_planning
+		}
+
+		cost = 100
+		
+		days_remove = 90
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+		}
+
+		complete_effect = {
+		}
+		
+		targeted_modifier = {
+			tag = FROM
+			attack_bonus_against = 0.15
+			defense_bonus_against = 0.1
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_balkan_war_plan_not_neighbors = {
+
+		icon = hol_draw_up_staff_plans
+
+		allowed = {
+			original_tag = YUG
+		}
+		
+		targets = {
+			GER TUR SOV
+		}
+
+		available = {
+			FROM = {
+				has_war_with = ROOT
+			}
+		}
+	
+		visible = {
+			has_completed_focus = YUG_balkan_war_planning
+			FROM = {
+				is_neighbor_of = ROOT
+			}
+		}
+
+		cost = 100
+		
+		days_remove = 90
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+		}
+
+		complete_effect = {
+		}
+		
+		targeted_modifier = {
+			tag = FROM
+			attack_bonus_against = 0.15
+			defense_bonus_against = 0.1
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+}
+
+YUG_greater_yugoslavia_decisions_category = {
+	YUG_integrate_bulgaria = {
+
+		icon = generic_nationalism
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+			48 = {
+				controller = {
+					OR = {
+						is_subject_of = ROOT
+						tag = ROOT
+					}
+				}
+			}
+			212 = {
+				controller = {
+					OR = {
+						is_subject_of = ROOT
+						tag = ROOT
+					}
+				}
+			}
+			801 = {
+				controller = {
+					OR = {
+						is_subject_of = ROOT
+						tag = ROOT
+					}
+				}
+			}
+			211 = {
+				controller = {
+					OR = {
+						is_subject_of = ROOT
+						tag = ROOT
+					}
+				}
+			}
+			if = {
+				limit = {
+					BUL = { is_subject_of = ROOT }
+				}
+				BUL = { has_stability > 0.7 }
+			}
+			else = {
+				core_compliance = {
+					occupied_country_tag = BUL
+					value > 30
+				}
+			}
+		}
+	
+		visible = {
+			has_completed_focus = YUG_dominate_the_balkans
+		}
+
+		cost = 50
+		
+		days_remove = 90
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						state = 48
+						state = 212
+						state = 801
+						state = 211
+					}
+				}
+				add_core_of = ROOT
+				hidden_effect = {
+					remove_claim_by = ROOT
+				}
+			}
+			if = {
+				limit = {
+					BUL = {
+						is_subject_of = ROOT
+					}
+				}
+				annex_country = { target = BUL transfer_troops = yes }
+				if = {
+				limit = { has_completed_focus = YUG_utilize_bulgarian_nationalism }
+				add_state_claim = 77
+				add_state_claim = 972
+				add_state_claim = 184
+				}
+			}
+			clr_country_flag = yug_integrating_bulgaria
+		}
+
+		complete_effect = {
+			set_country_flag = yug_integrating_bulgaria
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_work_with_bulgarian_administartion = {
+
+		icon = generic_nationalism
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+			NOT = { has_country_flag = yug_integrating_bulgaria }
+		}
+	
+		visible = {
+			has_completed_focus = YUG_dominate_the_balkans
+			any_state = {
+				is_core_of = BUL
+				controller = {
+					OR = {
+						is_subject_of = ROOT
+						tag = ROOT
+					}
+				}
+				NOT = { is_core_of = ROOT }
+			}
+		}
+
+		cost = 40
+		
+		days_remove = 60
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+			every_controlled_state = {
+				limit = {
+					is_core_of = BUL
+				}
+				add_compliance = 10
+			}
+		}
+		
+		modifier = {
+			political_power_gain = -0.1
+		}
+
+		complete_effect = {
+			if = {
+				limit = {
+					BUL = { is_subject_of = ROOT }
+				}
+				BUL = { add_timed_idea = { idea = YUG_aid_from_yugoslavia days = 60 } }
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_integrate_albania = {
+
+		icon = generic_nationalism
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+			44 = { is_controlled_by = ROOT }
+			805 = { is_controlled_by = ROOT }
+		}
+	
+		visible = {
+		48 = {
+		is_core_of = ROOT
+		}
+		}
+
+		cost = 0
+		
+		days_remove = 10
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+		44 = { add_core_of = ROOT }
+		805 = { add_core_of = ROOT }
+		}
+
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_integrate_carinthia = {
+
+		icon = generic_nationalism
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+			973 = { is_controlled_by = ROOT }
+		}
+	
+		visible = {
+		48 = {
+		is_core_of = ROOT
+		}
+		}
+
+		cost = 0
+		
+		days_remove = 10
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+		973 = { add_core_of = ROOT }
+		}
+
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_integrate_dobrudja = {
+
+		icon = generic_nationalism
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+			972 = { is_controlled_by = ROOT }
+			77 = { is_controlled_by = ROOT }
+		}
+	
+		visible = {
+		48 = {
+		is_core_of = ROOT
+		}
+		}
+
+		cost = 0
+		
+		days_remove = 10
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+		972 = { add_core_of = ROOT }
+		77 = { add_core_of = ROOT }
+		}
+
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_integrate_greek_territories = {
+
+		icon = generic_nationalism
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+			731 = { is_controlled_by = ROOT }
+			184 = { is_controlled_by = ROOT }
+		}
+	
+		visible = {
+		48 = {
+		is_core_of = ROOT
+		}
+		}
+
+		cost = 0
+		
+		days_remove = 10
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+		731 = { add_core_of = ROOT }
+		184 = { add_core_of = ROOT }
+		}
+
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_integrate_tsarigrad = {
+
+		icon = generic_nationalism
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+			341 = { is_controlled_by = ROOT }
+			797 = { is_controlled_by = ROOT }
+		}
+	
+		visible = {
+		48 = {
+		is_core_of = ROOT
+		}
+		}
+
+		cost = 0
+		
+		days_remove = 10
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+			341 = { add_core_of = ROOT }
+			797 = { add_core_of = ROOT }
+			if = {
+				limit = {
+					NOT = { has_completed_focus = YUG_heirs_of_byzantium }
+				}
+				set_province_name = { id = 9833 name = tsarigrad_name }
+				hidden_effect = { 797 = { set_state_name = tsarigrad_name } }
+			}
+		}
+
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_proclaim_greater_yugoslavia = {
+
+		icon = generic_form_nation
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+			48 = {
+				controller = {
+					OR = {
+						is_subject_of = ROOT
+						tag = ROOT
+					}
+				}
+			}
+			212 = {
+				controller = {
+					OR = {
+						is_subject_of = ROOT
+						tag = ROOT
+					}
+				}
+			}
+			801 = {
+				controller = {
+					OR = {
+						is_subject_of = ROOT
+						tag = ROOT
+					}
+				}
+			}
+			211 = {
+				controller = {
+					OR = {
+						is_subject_of = ROOT
+						tag = ROOT
+					}
+				}
+			}
+		}
+	
+		visible = {
+		has_completed_focus = YUG_subjugate_bulgaria
+		}
+
+		cost = 0
+		
+#		days_remove = 10
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+		}
+
+		complete_effect = {
+			set_global_flag = formed_greater_yugoslavia
+			set_cosmetic_tag = YUG_greater_yugoslavia
+			add_stability = 0.1
+			add_war_support = 0.05
+			set_country_flag = has_proclaimed_greater_yugo
+			hidden_effect = {
+				news_event = yugo_news.2
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+}
+
+YUG_power_balance_neutrality_category = {
+	
+	YUG_empower_the_prime_ministry = {
+
+		icon = generic_speech
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+		}
+	
+		visible = {
+		}
+
+		cost = 50
+		
+		days_remove = 0
+		
+		fire_only_once = no
+		
+		days_re_enable = 90
+		
+		remove_effect = {
+		}
+
+		complete_effect = {
+		add_power_balance_value = {
+				id = YUG_power_balance_neutrality
+				value = -0.1
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_empower_the_regency = {
+
+		icon = generic_political_discourse
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+		}
+	
+		visible = {
+		}
+
+		cost = 50
+		
+		days_remove = 0
+		
+		fire_only_once = no
+		
+		days_re_enable = 90
+		
+		remove_effect = {
+		}
+
+		complete_effect = {
+			add_power_balance_value = {
+				id = YUG_power_balance_neutrality
+				value = 0.1
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_army_parade = {
+
+		icon = generic_military
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+		}
+	
+		visible = {
+		}
+
+		cost = 100
+		
+		days_remove = 0
+		
+		fire_only_once = no
+		
+		days_re_enable = 90
+		
+		remove_effect = {
+		}
+
+		complete_effect = {
+			add_power_balance_value = {
+				id = YUG_power_balance_neutrality
+				value = -0.15
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_royal_tour = {
+
+		icon = generic_monarchy
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+		}
+	
+		visible = {
+		}
+
+		cost = 100
+		
+		days_remove = 0
+		
+		fire_only_once = no
+		
+		days_re_enable = 90
+		
+		remove_effect = {
+		}
+
+		complete_effect = {
+			add_power_balance_value = {
+				id = YUG_power_balance_neutrality
+				value = 0.15
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_improve_relations_allies = {
+
+		icon = hol_exchange_intelligence_data
+
+		allowed = {
+			original_tag = YUG
+		}
+		
+		targets = {
+		FRA ENG
+		}
+
+		available = {
+		}
+	
+		visible = {
+		}
+
+		cost = 25
+		
+		days_remove = 100
+		
+		fire_only_once = no
+		
+		remove_effect = {
+		}
+
+		complete_effect = {
+			add_power_balance_value = {
+				id = YUG_power_balance_neutrality
+				value = 0.05
+			}
+			FROM = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = YUG_diplomatic_effort_2
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+	}
+	
+	YUG_improve_relations_axis = {
+
+		icon = hol_exchange_intelligence_data
+
+		allowed = {
+			original_tag = YUG
+		}
+		
+		targets = {
+		GER ITA
+		}
+
+		available = {
+		}
+	
+		visible = {
+		}
+
+		cost = 25
+		
+		days_remove = 100
+		
+		fire_only_once = no
+		
+		remove_effect = {
+		}
+
+		complete_effect = {
+			add_power_balance_value = {
+				id = YUG_power_balance_neutrality
+				value = -0.05
+			}
+			FROM = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = YUG_diplomatic_effort_2
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+	}
+}
+
+YUG_foreign_policy_category = {
+
+	YUG_request_zadar = {
+
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			original_tag = YUG
+		}
+		
+		target_trigger = {
+			FROM = {
+				owns_state = 163
+				NOT = { original_tag = YUG }
+			}
+		}
+
+		available = {
+			FROM = {
+				controls_state = 163
+			}
+			is_subject = no
+		}
+	
+		visible = {
+			is_in_faction_with = FROM
+		}
+
+		cost = 25
+		
+		days_remove = 0
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+		}
+
+		complete_effect = {
+			FROM = { country_event = better_yugo.42 }
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+	}
+	
+	YUG_capture_zadar = {
+
+		icon = generic_operation
+
+		allowed = {
+			original_tag = YUG
+		}
+		
+		target_trigger = {
+			FROM = {
+				owns_state = 163
+			}
+		}
+
+		available = {
+			FROM = {
+				has_war_with_major = yes
+				controls_state = 163
+			}
+			is_subject = no
+			controls_state = 103
+		}
+	
+		visible = {
+			NOT = {  
+				is_in_faction_with = FROM
+				has_war_with = FROM
+			}
+			FROM = {
+				has_war_with_major = yes
+				has_civil_war = no
+			}
+		}
+
+		cost = 25
+		
+		days_remove = 10
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = 103
+					num_provinces = 2
+					on_win = better_yugo_border_conflict.1
+					on_lose = better_yugo_border_conflict.2
+					on_cancel = better_yugo_border_conflict.3
+				}	
+				defender = {
+					state = 163
+					num_provinces = 1
+					on_win = better_yugo_border_conflict.4
+					on_lose = better_yugo_border_conflict.5
+					on_cancel = better_yugo_border_conflict.3
+				}
+			}
+			custom_effect_tooltip = italy_might_go_to_war_tt
+		}
+
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+	}
+	
+	YUG_claim_greek_macedonia = {
+
+		icon = infiltrate_state
+		
+		state_target = yes
+
+		allowed = {
+			original_tag = YUG
+		}
+		
+		target_trigger = { 
+			FROM = {
+				state = 731
+			}
+		}
+		
+		on_map_mode = map_and_decisions_view
+
+		available = {
+			controls_state = 731
+		}
+	
+		visible = {
+			NOT = { 731 = { is_claimed_by = ROOT } }
+			731 = {
+				controller = { has_war_with = ROOT }
+			}
+		}
+
+		cost = 40
+		
+		days_remove = 0
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+		}
+
+		complete_effect = {
+			add_state_claim = 731
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+	}
+	
+	YUG_invite_balkan_countries_to_anti_fascist_pact = {
+
+		icon = eng_trade_unions_support
+
+		allowed = {
+			original_tag = YUG
+		}
+		
+		targets = { ROM GRE ALB TUR }
+
+		available = {
+			FROM = { is_in_faction = no }
+		}
+	
+		visible = {
+			NOT = { FROM = { is_in_faction_with = ROOT } }
+			has_completed_focus = YUG_seek_allies_in_the_balkans
+			FROM = {
+				is_subject = no
+				OR = {
+					has_government = communism
+					has_government = democratic
+				}
+			}
+		}
+
+		cost = 25
+		
+		days_remove = 0
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+		}
+
+		complete_effect = {
+			FROM = { country_event = generic.5 }
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_non_aggression_pact_ITA = {
+
+		icon = generic_speech
+
+		allowed = {
+			original_tag = YUG
+		}
+		
+		targets = { ITA }
+
+		available = {
+		}
+	
+		visible = {
+			has_completed_focus = YUG_frienship_treaties_with_italy
+			NOT = { is_ally_with = FROM }
+			NOT = { has_war_with = FROM }
+		}
+
+		cost = 75
+		
+		days_remove = 0
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+		}
+
+		complete_effect = {
+		FROM = { country_event = better_yugo.25 }
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_non_aggression_pact_GER = {
+
+		icon = generic_speech
+
+		allowed = {
+			original_tag = YUG
+		}
+		
+		targets = { GER }
+
+		available = {
+		}
+	
+		visible = {
+			has_completed_focus = YUG_erase_anti_german_sentiment
+			NOT = { is_ally_with = FROM }
+			NOT = { has_war_with = FROM }
+		}
+
+		cost = 75
+		
+		days_remove = 0
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+		}
+
+		complete_effect = {
+			FROM = { country_event = better_yugo.25 }
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_purchase_italian_aircraft = {
+
+		icon = generic_air
+
+		allowed = {
+			original_tag = YUG
+		}
+		
+		targets = { ITA }
+
+		available = {
+			is_in_faction_with = FROM
+		}
+	
+		visible = {
+			has_completed_focus = YUG_italian_fighters
+			FROM = { has_capitulated = no }
+		}
+
+		cost = 50
+		
+		days_remove = 150
+		
+		fire_only_once = no
+		
+		remove_effect = {
+			FROM = {
+				remove_ideas = { YUG_profits_from_yugoslavia }
+			}
+			air_experience = 10
+			add_equipment_to_stockpile = {
+				type = small_plane_airframe
+				amount = 100
+				producer = ITA
+			}
+		}
+
+		complete_effect = {
+			FROM = {
+				add_ideas = { YUG_profits_from_yugoslavia }
+			}
+		}
+		
+		modifier = {
+			consumer_goods_factor = 0.06
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_purchase_german_armor = {
+
+		icon = generic_tank
+
+		allowed = {
+			original_tag = YUG
+		}
+		
+		targets = { GER }
+
+		available = {
+			is_in_faction_with = FROM
+			FROM = { has_capitulated = no }
+		}
+	
+		visible = {
+			has_completed_focus = YUG_italian_fighters
+		}
+
+		cost = 50
+		
+		days_remove = 150
+		
+		fire_only_once = no
+		
+		remove_effect = {
+			FROM = {
+				remove_ideas = { YUG_profits_from_yugoslavia }
+			}
+			army_experience = 10
+			if = {
+				limit = {
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = medium_tank_chassis_1
+					amount = 150
+					producer = YUG
+				}
+			}
+			else = {
+				add_equipment_to_stockpile = {
+					type = medium_tank_chassis_1
+					amount = 150
+					producer = GER
+					variant_name = "ST M39"
+				}
+			}
+		}
+
+		complete_effect = {
+			FROM = {
+				add_ideas = { YUG_profits_from_yugoslavia }
+			}
+		}
+		
+		modifier = {
+			consumer_goods_factor = 0.06
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_purchase_french_guns = {
+
+		icon = generic_prepare_civil_war
+
+		allowed = {
+			original_tag = YUG
+		}
+		
+		targets = { FRA }
+
+		available = {
+			is_in_faction_with = FROM
+			FROM = { has_capitulated = no }
+		}
+	
+		visible = {
+			has_completed_focus = YUG_french_guns
+		}
+
+		cost = 50
+		
+		days_remove = 150
+		
+		fire_only_once = no
+		
+		remove_effect = {
+			FROM = {
+				remove_ideas = { YUG_profits_from_yugoslavia }
+			}
+			army_experience = 10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = 5000
+				producer = FRA
+			}
+		}
+
+		complete_effect = {
+			FROM = {
+				add_ideas = { YUG_profits_from_yugoslavia }
+			}
+		}
+		
+		modifier = {
+			consumer_goods_factor = 0.06
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_purchase_french_artillery = {
+
+		icon = generic_prepare_civil_war
+
+		allowed = {
+			original_tag = YUG
+		}
+		
+		targets = { FRA }
+
+		available = {
+			is_in_faction_with = FROM
+			FROM = { has_capitulated = no }
+		}
+	
+		visible = {
+			has_completed_focus = YUG_french_guns
+		}
+
+		cost = 50
+		
+		days_remove = 150
+		
+		fire_only_once = no
+		
+		remove_effect = {
+			FROM = {
+				remove_ideas = { YUG_profits_from_yugoslavia }
+			}
+			army_experience = 10
+			add_equipment_to_stockpile = { 
+				type = artillery_equipment
+				amount = 500
+				producer = FRA
+			}
+		}
+
+		complete_effect = {
+			FROM = {
+				add_ideas = { YUG_profits_from_yugoslavia }
+			}
+		}
+		
+		modifier = {
+			consumer_goods_factor = 0.06
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_purchase_french_support_equipment = {
+
+		icon = generic_prepare_civil_war
+
+		allowed = {
+			original_tag = YUG
+		}
+		
+		targets = { FRA }
+
+		available = {
+			is_in_faction_with = FROM
+			FROM = { has_capitulated = no }
+		}
+	
+		visible = {
+			has_completed_focus = YUG_french_guns
+		}
+
+		cost = 50
+		
+		days_remove = 150
+		
+		fire_only_once = no
+		
+		remove_effect = {
+			FROM = {
+				remove_ideas = { YUG_profits_from_yugoslavia }
+			}
+			army_experience = 10
+			add_equipment_to_stockpile = { 
+				type = support_equipment
+				amount = 500
+				producer = FRA
+			}
+		}
+
+		complete_effect = {
+			FROM = {
+				add_ideas = { YUG_profits_from_yugoslavia }
+			}
+		}
+		
+		modifier = {
+			consumer_goods_factor = 0.06
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_purchase_british_ships = {
+
+		icon = generic_naval
+
+		allowed = {
+			original_tag = YUG
+		}
+		
+		targets = { ENG }
+
+		available = {
+			is_in_faction_with = FROM
+			FROM = { has_capitulated = no }
+		}
+	
+		visible = {
+			has_completed_focus = YUG_british_ships
+		}
+
+		cost = 50
+		
+		days_remove = 150
+		
+		fire_only_once = no
+		
+		remove_effect = {
+			FROM = {
+				remove_ideas = { YUG_profits_from_yugoslavia }
+			}
+			navy_experience = 10
+			if = {
+				limit = { has_dlc = "Man the Guns" }
+				if = { 
+					limit = {
+						ENG = { has_tech = advanced_ship_hull_light }
+					}
+					hidden_effect = { add_manpower = 1000 }
+						create_equipment_variant = {
+							name = "Kotor Class"	
+							type = ship_hull_light_4
+							name_group = YUG_DD_HISTORICAL
+							parent_version = 0
+							modules = {
+								fixed_ship_battery_slot = ship_light_battery_1
+								fixed_ship_anti_air_slot = ship_anti_air_1
+								fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+								fixed_ship_radar_slot = empty
+								fixed_ship_engine_slot = light_ship_engine_2
+								fixed_ship_torpedo_slot = ship_torpedo_1
+								mid_1_custom_slot = ship_mine_layer_1
+								rear_1_custom_slot = ship_depth_charge_1
+							}
+						}
+					create_ship = { type = ship_hull_light_4 equipment_variant = "Kotor Class" creator = YUG }
+					create_ship = { type = ship_hull_light_4 equipment_variant = "Kotor Class" creator = YUG }
+					create_ship = { type = ship_hull_light_4 equipment_variant = "Kotor Class" creator = YUG }
+				}
+				else_if = {
+					limit = {
+						ENG = { has_tech = improved_ship_hull_light }
+					}
+					hidden_effect = { add_manpower = 800 }
+						create_equipment_variant = {
+							name = "Kotor Class"	
+							type = ship_hull_light_3
+							name_group = YUG_DD_HISTORICAL
+							parent_version = 0
+							modules = {
+								fixed_ship_battery_slot = ship_light_battery_1
+								fixed_ship_anti_air_slot = ship_anti_air_1
+								fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+								fixed_ship_radar_slot = empty
+								fixed_ship_engine_slot = light_ship_engine_2
+								fixed_ship_torpedo_slot = ship_torpedo_1
+								mid_1_custom_slot = ship_mine_layer_1
+								rear_1_custom_slot = ship_depth_charge_1
+							}
+						}
+					create_ship = { type = ship_hull_light_3 equipment_variant = "Kotor Class" creator = YUG }
+					create_ship = { type = ship_hull_light_3 equipment_variant = "Kotor Class" creator = YUG }
+					create_ship = { type = ship_hull_light_3 equipment_variant = "Kotor Class" creator = YUG }
+				}
+				else = {
+					hidden_effect = { add_manpower = 650 }
+						create_equipment_variant = {
+							name = "Kotor Class"	
+							type = ship_hull_light_2
+							name_group = YUG_DD_HISTORICAL
+							parent_version = 0
+							modules = {
+								fixed_ship_battery_slot = ship_light_battery_1
+								fixed_ship_anti_air_slot = ship_anti_air_1
+								fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+								fixed_ship_radar_slot = empty
+								fixed_ship_engine_slot = light_ship_engine_2
+								fixed_ship_torpedo_slot = ship_torpedo_1
+								mid_1_custom_slot = ship_mine_layer_1
+								rear_1_custom_slot = ship_depth_charge_1
+							}
+						}
+					create_ship = { type = ship_hull_light_2 equipment_variant = "Kotor Class" creator = YUG }
+					create_ship = { type = ship_hull_light_2 equipment_variant = "Kotor Class" creator = YUG }
+					create_ship = { type = ship_hull_light_2 equipment_variant = "Kotor Class" creator = YUG }
+				}
+			}
+			else = { #NO MTG
+				if = {
+					limit = {
+						ENG = { has_tech = advanced_destroyer }
+					}
+					hidden_effect = { add_manpower = 500 }
+						create_equipment_variant = {
+							name = "Kotor Class"
+							type = destroyer_4
+							upgrades = {
+								ship_torpedo_upgrade = 4
+								destroyer_engine_upgrade = 2
+								ship_ASW_upgrade = 3
+								ship_anti_air_upgrade = 3
+							}
+						}
+					create_ship = { type = destroyer_4 equipment_variant = "Kotor Class" creator = YUG }
+					create_ship = { type = destroyer_4 equipment_variant = "Kotor Class" creator = YUG }
+					create_ship = { type = destroyer_4 equipment_variant = "Kotor Class" creator = YUG }
+				}
+				else_if = {
+					limit = {
+						ENG = { has_tech = improved_destroyer }
+					}
+					hidden_effect = { add_manpower = 400 }
+						create_equipment_variant = {
+							name = "Kotor Class"
+							type = destroyer_3
+							upgrades = {
+								ship_torpedo_upgrade = 3
+								destroyer_engine_upgrade = 2
+								ship_ASW_upgrade = 2
+								ship_anti_air_upgrade = 3
+							}
+						}
+					create_ship = { type = destroyer_3 equipment_variant = "Kotor Class" creator = YUG }
+					create_ship = { type = destroyer_3 equipment_variant = "Kotor Class" creator = YUG }
+					create_ship = { type = destroyer_3 equipment_variant = "Kotor Class" creator = YUG }
+				}
+				else = {
+					hidden_effect = { add_manpower = 325 }
+						create_equipment_variant = {
+							name = "Kotor Class"
+							type = destroyer_2
+							upgrades = {
+								ship_torpedo_upgrade = 2
+								destroyer_engine_upgrade = 1
+								ship_ASW_upgrade = 2
+								ship_anti_air_upgrade = 3
+							}
+						}
+					create_ship = { type = destroyer_2 equipment_variant = "Kotor Class" creator = YUG }
+					create_ship = { type = destroyer_2 equipment_variant = "Kotor Class" creator = YUG }
+					create_ship = { type = destroyer_2 equipment_variant = "Kotor Class" creator = YUG }
+				}
+			}
+		}
+
+		complete_effect = {
+			FROM = {
+				add_ideas = { YUG_profits_from_yugoslavia }
+			}
+		}
+		
+		modifier = {
+			consumer_goods_factor = 0.06
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_ask_for_guarantee = {
+
+		icon = eng_trade_unions_support
+
+		allowed = {
+			original_tag = YUG
+		}
+		
+		targets = { GER ITA FRA ENG }
+
+		available = {
+			NOT = { has_war_with = FROM }
+		}
+	
+		visible = {
+			has_completed_focus = YUG_obtain_foreign_guarantees
+		}
+
+		cost = 85
+		
+		days_remove = 25
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+			FROM = { country_event = better_yugo.30 }
+		}
+
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_ally_italy = {
+
+		icon = eng_trade_unions_support
+
+		allowed = {
+			original_tag = YUG
+		}
+		
+		targets = { ITA }
+
+		available = {
+			is_subject = no
+			is_in_faction = no
+			NOT = { has_war_with = FROM }
+			FROM = {
+				is_faction_leader = yes
+			}
+			OR = {
+				AND = {
+					has_government = communism
+					FROM = { has_government = communism }
+				}
+				AND = {
+					has_government = democratic
+					FROM = { has_government = democratic }
+				}
+			}
+		}
+	
+		visible = {
+			FROM = {
+				is_faction_leader = yes
+			}
+			OR = {
+				AND = {
+					has_government = communism
+					FROM = { has_government = communism }
+				}
+				AND = {
+					has_government = democratic
+					FROM = { has_government = democratic }
+				}
+			}
+		}
+
+		cost = 50
+		
+		days_remove = 0
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+		}
+
+		complete_effect = {
+			FROM = {
+				country_event = { id = generic.2 hours = 8 }
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_ally_france = {
+
+		icon = eng_trade_unions_support
+
+		allowed = {
+			original_tag = YUG
+		}
+		
+		targets = { FRA }
+
+		available = {
+			is_subject = no
+			is_in_faction = no
+			NOT = { has_war_with = FROM }
+			FROM = {
+				is_faction_leader = yes
+			}
+			OR = {
+				AND = {
+					has_government = communism
+					FROM = { has_government = communism }
+				}
+				AND = {
+					has_government = fascism
+					FROM = { has_government = fascism }
+				}
+			}
+		}
+	
+		visible = {
+			FROM = {
+				is_faction_leader = yes
+			}
+			OR = {
+				AND = {
+					has_government = communism
+					FROM = { has_government = communism }
+				}
+				AND = {
+					has_government = fascism
+					FROM = { has_government = fascism }
+				}
+			}
+		}
+
+		cost = 50
+		
+		days_remove = 0
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+		}
+
+		complete_effect = {
+			FROM = {
+				country_event = { id = generic.2 hours = 8 }
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_ally_britain = {
+
+		icon = eng_trade_unions_support
+
+		allowed = {
+			original_tag = YUG
+		}
+		
+		targets = { ENG }
+
+		available = {
+			is_subject = no
+			is_in_faction = no
+			NOT = { has_war_with = FROM }
+			FROM = {
+				is_faction_leader = yes
+			}
+			OR = {
+				AND = {
+					has_government = communism
+					FROM = { has_government = communism }
+				}
+				AND = {
+					has_government = fascism
+					FROM = { has_government = fascism }
+				}
+			}
+		}
+	
+		visible = {
+			FROM = {
+				is_faction_leader = yes
+			}
+			OR = {
+				AND = {
+					has_government = communism
+					FROM = { has_government = communism }
+				}
+				AND = {
+					has_government = fascism
+					FROM = { has_government = fascism }
+				}
+			}
+		}
+
+		cost = 50
+		
+		days_remove = 0
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+		}
+
+		complete_effect = {
+			FROM = {
+				country_event = { id = generic.2 hours = 8 }
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_ally_russia = {
+
+		icon = eng_trade_unions_support
+
+		allowed = {
+			original_tag = YUG
+		}
+		
+		targets = { SOV }
+
+		available = {
+			is_subject = no
+			is_in_faction = no
+			NOT = { has_war_with = FROM }
+			FROM = {
+				is_faction_leader = yes
+			}
+			OR = {
+				AND = {
+					has_government = neutrality
+					FROM = { has_government = neutrality }
+				}
+				AND = {
+					has_government = fascism
+					FROM = { has_government = fascism }
+				}
+			}
+		}
+	
+		visible = {
+			FROM = {
+				is_faction_leader = yes
+			}
+			OR = {
+				AND = {
+					has_government = neutrality
+					FROM = { has_government = neutrality }
+				}
+				AND = {
+					has_government = fascism
+					FROM = { has_government = fascism }
+				}
+			}
+		}
+
+		cost = 50
+		
+		days_remove = 0
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+		}
+
+		complete_effect = {
+			FROM = {
+				country_event = { id = generic.2 hours = 8 }
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_ally_germany = {
+
+		icon = eng_trade_unions_support
+
+		allowed = {
+			original_tag = YUG
+		}
+		
+		targets = { GER }
+
+		available = {
+			is_subject = no
+			is_in_faction = no
+			NOT = { has_war_with = FROM }
+			FROM = {
+				is_faction_leader = yes
+			}
+			has_government = democratic
+			FROM = { has_government = democratic }
+		}
+	
+		visible = {
+			FROM = {
+				is_faction_leader = yes
+			}
+			has_government = democratic
+			FROM = { has_government = democratic }
+		}
+
+		cost = 50
+		
+		days_remove = 0
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+		}
+
+		complete_effect = {
+			FROM = {
+				country_event = { id = generic.2 hours = 8 }
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_attack_minor_commies = {
+
+		icon = generic_prepare_civil_war
+
+		allowed = {
+			original_tag = YUG
+		}
+		
+		target_trigger = {
+			FROM = {
+				has_government = communism
+				is_major = no
+				is_subject = no
+				capital_scope = { is_on_continent = europe }
+				NOT = { has_war_with = ROOT }
+			}
+		}
+
+		available = {
+			any_country = {
+				has_government = communism
+				is_major = no
+				is_subject = no
+				NOT = { is_in_faction_with = ROOT }
+			}
+		}
+	
+		visible = {
+			is_subject = no
+			has_completed_focus = YUG_the_external_threats
+		}
+
+		cost = 25
+		
+		days_remove = 10
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = FROM
+			}
+		}
+
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+	}
+	
+	YUG_attack_minor_fascists = {
+
+		icon = generic_prepare_civil_war
+
+		allowed = {
+			original_tag = YUG
+		}
+		
+		target_trigger = {
+			FROM = {
+				has_government = fascism
+				is_major = no
+				is_subject = no
+				capital_scope = { is_on_continent = europe }
+				NOT = { has_war_with = ROOT }
+			}
+		}
+
+		available = {
+			any_country = {
+				has_government = fascism
+				is_major = no
+				is_subject = no
+				NOT = { is_in_faction_with = ROOT }
+			}
+		}
+	
+		visible = {
+			is_subject = no
+			has_completed_focus = YUG_finish_fascism
+		}
+
+		cost = 25
+		
+		days_remove = 10
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = FROM
+			}
+		}
+
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+	}
+	
+}
+
+YUG_prepare_return_of_the_monarchy_cat = {
+
+	YUG_royal_tour_focus = {
+
+		icon = eng_propaganda_campaigns
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+		}
+	
+		visible = {
+			has_completed_focus = YUG_assemble_the_regency_council
+		}
+
+		cost = 50
+		
+		days_remove = 20
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+			add_to_variable = {
+				var = yug_monarchy_support
+				value = 20
+				tooltip = add_20_support_tt
+			}
+		}
+
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_discredit_stojadinovic = {
+
+		icon = generic_speech
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+		}
+	
+		visible = {
+			has_completed_focus = YUG_assemble_the_regency_council
+		}
+
+		cost = 30
+		
+		days_remove = 15
+		
+		fire_only_once = no
+		
+		remove_effect = {
+			add_to_variable = {
+				var = yug_monarchy_support
+				value = 10
+				tooltip = add_10_support_tt
+			}
+		}
+
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_support_united_opposition = {
+
+		icon = SWI_swiss_democratic_tradition_campaign
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+		}
+	
+		visible = {
+			has_completed_focus = YUG_assemble_the_regency_council
+		}
+
+		cost = 40
+		
+		days_remove = 20
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+			add_to_variable = {
+				var = yug_monarchy_support
+				value = 15
+				tooltip = add_15_support_tt
+			}
+			add_popularity = {
+			    ideology = democratic
+			    popularity = 0.1
+			}
+		}
+		
+		modifier = {
+			political_power_gain = -0.05
+		}
+
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_concessions_to_croatians = {
+
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+		}
+	
+		visible = {
+			has_completed_focus = YUG_assemble_the_regency_council
+		}
+
+		cost = 50
+		
+		days_remove = 30
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+			add_to_variable = {
+				var = yug_monarchy_support
+				value = 20
+				tooltip = add_20_support_tt
+			}
+			YUG_croatian_down_effect = yes
+		}
+		
+		modifier = {
+			political_power_gain = -0.15
+		}
+
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_seek_sympathies_within_the_government = {
+
+		icon = generic_political_discourse
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+		}
+	
+		visible = {
+			has_completed_focus = YUG_assemble_the_regency_council
+		}
+
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25
+		
+		days_remove = 15
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+			add_to_variable = {
+				var = yug_monarchy_support
+				value = 15
+				tooltip = add_15_support_tt
+			}
+		}
+
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_royal_coup = {
+
+		icon = eng_support_imperialist_coup
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = need_90_support_tt
+				check_variable = {
+					var = yug_monarchy_support
+					value = 90
+					compare = greater_than_or_equals
+				}
+			}
+		}
+	
+		visible = {
+			has_completed_focus = YUG_assemble_the_regency_council
+		}
+
+		cost = 10
+		
+		days_remove = 0
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+		}
+		
+		modifier = {
+		}
+
+		complete_effect = {
+		YUG_milan_stojadinovic = { retire = yes }
+			add_country_leader_role = {
+				character = YUG_prince_paul
+				promote_leader = yes
+				country_leader = {
+					ideology = despotism
+					expire = "1965.1.1.1"
+				}
+			}
+			add_trait = {
+				character = YUG_prince_paul
+				ideology = despotism
+				trait = provisional_regent
+			}
+			remove_ideas = YUG_prince_regent_paul
+			set_global_flag = YUG_royal_coup_flag
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+
+}
+	
+YUG_military_cooperation_cat = {
+
+	YUG_army_excercises = {
+
+		icon = generic_military
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+			has_war = no
+			FROM = { has_war = no }
+			NOT = { has_global_flag = YUG_army_excercise }
+		}
+	
+		target_trigger = {
+			FROM = {
+				is_in_faction_with = YUG
+			}
+		}
+	
+		visible = {
+			original_tag = YUG
+			any_country = { is_in_faction_with = ROOT }
+		}
+		
+		fire_only_once = yes
+		
+		days_remove = 50
+		
+		days_re_enable = 180
+		
+		remove_effect = {
+		}
+
+		ai_hint_pp_cost = 25
+		custom_cost_trigger = {
+			has_political_power > 24
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25_pp_25
+		
+		modifier = {
+			experience_gain_army = 0.5
+		}
+		
+		complete_effect = {
+			hidden_effect = {
+				add_political_power = -25
+				add_command_power = -25
+			}
+			set_global_flag = YUG_army_excercise
+			FROM = {
+				add_timed_idea = { idea = YUG_army_excercises_with_yugo days = 50 }
+			}
+		}
+		
+		remove_effect = {
+			clr_global_flag = YUG_army_excercise
+		}
+		
+		cancel_trigger = {
+			OR = {
+				has_war = yes
+				FROM = {
+					has_war = yes
+				}
+			}
+		}
+
+		cancel_effect = {
+			FROM = {
+				remove_ideas = YUG_army_excercises_with_yugo
+			}
+			clr_global_flag = YUG_army_excercise
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+	}
+	
+	YUG_air_excercises = {
+
+		icon = generic_air
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+			has_war = no
+			FROM = { has_war = no }
+			NOT = { has_global_flag = YUG_air_excercise }
+		}
+	
+		target_trigger = {
+			FROM = {
+				is_in_faction_with = YUG
+			}
+		}
+	
+		visible = {
+			original_tag = YUG
+			any_country = { is_in_faction_with = ROOT }
+		}
+		
+		fire_only_once = yes
+		
+		days_remove = 50
+		
+		days_re_enable = 180
+		
+		remove_effect = {
+		}
+
+		ai_hint_pp_cost = 25
+		custom_cost_trigger = {
+			has_political_power > 24
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25_pp_25
+		
+		modifier = {
+			experience_gain_air = 0.5
+		}
+		
+		complete_effect = {
+			hidden_effect = {
+				add_political_power = -25
+				add_command_power = -25
+			}
+			set_global_flag = YUG_air_excercise
+			FROM = {
+				add_timed_idea = { idea = YUG_air_excercises_with_yugo days = 50 }
+			}
+		}
+		
+		remove_effect = {
+			clr_global_flag = YUG_air_excercise
+		}
+		
+		cancel_trigger = {
+			OR = {
+				has_war = yes
+				FROM = {
+					has_war = yes
+				}
+			}
+		}
+
+		cancel_effect = {
+			FROM = {
+				remove_ideas = YUG_air_excercises_with_yugo
+			}
+			clr_global_flag = YUG_air_excercise
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+	}
+	
+	YUG_naval_excercises = {
+
+		icon = generic_naval
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+			has_war = no
+			FROM = { 
+				has_war = no
+				any_owned_state = { is_coastal = yes }
+			}
+			NOT = { has_global_flag = YUG_naval_excercise }
+		}
+	
+		target_trigger = {
+			FROM = {
+				is_in_faction_with = YUG
+			}
+		}
+	
+		visible = {
+			original_tag = YUG
+			any_country = { is_in_faction_with = ROOT }
+		}
+		
+		fire_only_once = yes
+		
+		days_remove = 50
+		
+		days_re_enable = 180
+		
+		remove_effect = {
+		}
+
+		ai_hint_pp_cost = 25
+		custom_cost_trigger = {
+			has_political_power > 24
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25_pp_25
+		
+		modifier = {
+			experience_gain_navy = 0.5
+		}
+		
+		complete_effect = {
+			hidden_effect = {
+				add_political_power = -25
+				add_command_power = -25
+			}
+			set_global_flag = YUG_naval_excercise
+			FROM = {
+				add_timed_idea = { idea = YUG_naval_excercises_with_yugo days = 50 }
+			}
+		}
+		
+		remove_effect = {
+			clr_global_flag = YUG_naval_excercise
+		}
+		
+		cancel_trigger = {
+			OR = {
+				has_war = yes
+				FROM = {
+					has_war = yes
+				}
+			}
+		}
+
+		cancel_effect = {
+			FROM = {
+				remove_ideas = YUG_naval_excercises_with_yugo
+			}
+			clr_global_flag = YUG_naval_excercise
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+	}
+}
+
+YUG_federalization_cat = {
+
+	YUG_federalization_mission = {
+
+		allowed = { tag = YUG }
+
+		icon = generic_civil_support
+
+		available = {
+			hidden_trigger = { always = no }
+		}
+
+		days_mission_timeout = 150
+		is_good = no
+		fire_only_once = yes
+
+		cancel_trigger = {
+			has_completed_focus = YUG_start_federalization_reforms
+		}
+		
+		activation = {
+			OR = {
+				has_completed_focus = YUG_rewrite_the_constitution
+				has_completed_focus = YUG_the_peoples_revolution
+			}
+		}
+
+		visible = {
+		}
+		
+		cancel_effect = {
+			add_political_power = 50
+		}
+
+		timeout_effect = {
+			add_stability = -0.1
+			add_political_power = -50
+		}
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+
+}
+
+YUG_power_balance_centralization_category = {
+
+	YUG_promote_regional_culture = {
+
+		icon = generic_political_discourse
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+		}
+	
+		visible = {
+		}
+
+		cost = 25
+		
+		days_remove = 20
+		
+		fire_only_once = no
+		
+		remove_effect = {
+			add_power_balance_value = {
+				id = YUG_power_balance_centralization
+				value = -0.05
+			}
+		}
+
+		complete_effect = {	
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_promote_yugoslavism = {
+
+		icon = generic_civil_support
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+		}
+	
+		visible = {
+		}
+
+		cost = 25
+		
+		days_remove = 20
+		
+		fire_only_once = no
+		
+		remove_effect = {
+			add_power_balance_value = {
+				id = YUG_power_balance_centralization
+				value = 0.05
+			}
+		}
+
+		complete_effect = {	
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_empower_local_governors = {
+
+		icon = generic_political_discourse
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+		}
+	
+		visible = {
+		}
+
+		cost = 50
+		
+		days_remove = 25
+		
+		fire_only_once = no
+		
+		remove_effect = {
+			add_power_balance_value = {
+				id = YUG_power_balance_centralization
+				value = -0.1
+			}
+		}
+
+		complete_effect = {	
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_praise_the_leader = {
+
+		icon = generic_speech
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+		}
+	
+		visible = {
+		}
+
+		cost = 50
+		
+		days_remove = 25
+		
+		fire_only_once = no
+		
+		remove_effect = {
+			add_power_balance_value = {
+				id = YUG_power_balance_centralization
+				value = 0.1
+			}
+		}
+
+		complete_effect = {	
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_guarantee_religious_freedoms = {
+
+		icon = generic_nationalism
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+		}
+	
+		visible = {
+			has_government = democratic
+		}
+
+		cost = 40
+		
+		days_remove = 0
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+		}
+
+		complete_effect = {
+			add_power_balance_value = {
+				id = YUG_power_balance_centralization
+				value = -0.1
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_support_minority_organizations = {
+
+		icon = generic_political_rally
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+		}
+	
+		visible = {
+			has_government = democratic
+		}
+
+		cost = 25
+		
+		days_remove = 0
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+		}
+
+		complete_effect = {
+			add_power_balance_value = {
+				id = YUG_power_balance_centralization
+				value = -0.05
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_praise_the_ruling_party = {
+
+		icon = eng_propaganda_campaigns
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+		}
+	
+		visible = {
+			has_government = democratic
+		}
+
+		cost = 25
+		
+		days_remove = 0
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+		}
+
+		complete_effect = {
+			add_power_balance_value = {
+				id = YUG_power_balance_centralization
+				value = 0.05
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_enact_a_liberal_reform = {
+
+		icon = eng_trade_unions_support
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+		}
+	
+		visible = {
+			has_government = democratic
+		}
+
+		cost = 40
+		
+		days_remove = 0
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+		}
+
+		complete_effect = {
+			add_power_balance_value = {
+				id = YUG_power_balance_centralization
+				value = 0.1
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_increase_trade_union_autonomy = {
+
+		icon = generic_merge_plant_materiel
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+		}
+	
+		visible = {
+			has_government = communism
+		}
+
+		cost = 40
+		
+		days_remove = 0
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+		}
+
+		complete_effect = {
+			add_power_balance_value = {
+				id = YUG_power_balance_centralization
+				value = -0.1
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_support_regional_socialist_parties = {
+
+		icon = generic_political_discourse
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+		}
+	
+		visible = {
+			has_government = communism
+		}
+
+		cost = 25
+		
+		days_remove = 0
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+		}
+
+		complete_effect = {
+			add_power_balance_value = {
+				id = YUG_power_balance_centralization
+				value = -0.05
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_combat_opposition = {
+
+		icon = oppression
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+		}
+	
+		visible = {
+			has_government = communism
+		}
+
+		cost = 25
+		
+		days_remove = 0
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+		}
+
+		complete_effect = {
+			add_power_balance_value = {
+				id = YUG_power_balance_centralization
+				value = 0.05
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_combat_monopolies = {
+
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+		}
+	
+		visible = {
+			has_government = communism
+		}
+
+		cost = 40
+		
+		days_remove = 0
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+		}
+
+		complete_effect = {
+			add_power_balance_value = {
+				id = YUG_power_balance_centralization
+				value = 0.1
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_full_decentralization = {
+
+		icon = generic_civil_support
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+		}
+	
+		visible = {
+			has_global_flag = YUG_full_decentralization_decision
+		}
+
+		cost = 40
+		
+		days_remove = 0
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = YUG_full_decentralization_tt
+			if = {
+				limit = { SLV = { exists = no } }
+				release_puppet = SLV 
+				set_autonomy = { target = SLV autonomy_state = autonomy_integrated_puppet }
+				SLV = { save_event_target_as = released_nation_target }
+			}
+			else = {
+				create_dynamic_country = {
+					original_tag = SLV
+					
+					save_event_target_as = released_nation_target
+					PREV = {
+						every_owned_state = {
+							limit = { is_core_of = SLV }
+							PREV.PREV = { transfer_state = PREV }
+						}
+					}
+					PREV = {
+						puppet = PREV
+						set_autonomy = { target = PREV autonomy_state = autonomy_integrated_puppet }
+					}
+				}
+			}
+			if = {
+				limit = { CRO = { exists = no } }
+				release_puppet = CRO 
+				set_autonomy = { target = CRO autonomy_state = autonomy_integrated_puppet }
+				CRO = { save_event_target_as = released_nation_target }
+			}
+			else = {
+				create_dynamic_country = {
+					original_tag = CRO
+					
+					save_event_target_as = released_nation_target
+					PREV = {
+						every_owned_state = {
+							limit = { is_core_of = CRO }
+							PREV.PREV = { transfer_state = PREV }
+						}
+					}
+					PREV = {
+						puppet = PREV
+						set_autonomy = { target = PREV autonomy_state = autonomy_integrated_puppet }
+					}
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = YUG_divided_bosnia } }
+				if = {
+					limit = { BOS = { exists = no } }
+					release_puppet = BOS 
+					set_autonomy = { target = BOS autonomy_state = autonomy_integrated_puppet }
+					BOS = { save_event_target_as = released_nation_target }
+				}
+				else = {
+					create_dynamic_country = {
+						original_tag = BOS
+						
+						save_event_target_as = released_nation_target
+						PREV = {
+							every_owned_state = {
+								limit = { is_core_of = BOS }
+								PREV.PREV = { transfer_state = PREV }
+							}
+						}
+						PREV = {
+							puppet = PREV
+							set_autonomy = { target = PREV autonomy_state = autonomy_integrated_puppet }
+						}
+					}
+				}
+			}
+			if = {
+				limit = { has_global_flag = YUG_montenegro_exists }
+				if = {
+					limit = { MNT = { exists = no } }
+					release_puppet = MNT 
+					set_autonomy = { target = MNT autonomy_state = autonomy_integrated_puppet }
+					MNT = { save_event_target_as = released_nation_target }
+				}
+				else = {
+					create_dynamic_country = {
+						original_tag = MNT
+						
+						save_event_target_as = released_nation_target
+						PREV = {
+							every_owned_state = {
+								limit = { is_core_of = MNT }
+								PREV.PREV = { transfer_state = PREV }
+							}
+						}
+						PREV = {
+							puppet = PREV
+							set_autonomy = { target = PREV autonomy_state = autonomy_integrated_puppet }
+						}
+					}
+				}
+			}
+			if = {
+				limit = { has_global_flag = YUG_macedonia_exists }
+				if = {
+					limit = { MAC = { exists = no } }
+					release_puppet = MAC 
+					set_autonomy = { target = MAC autonomy_state = autonomy_integrated_puppet }
+					MAC = { save_event_target_as = released_nation_target }
+				}
+				else = {
+					create_dynamic_country = {
+						original_tag = MAC
+						
+						save_event_target_as = released_nation_target
+						PREV = {
+							every_owned_state = {
+								limit = { is_core_of = MAC }
+								PREV.PREV = { transfer_state = PREV }
+							}
+						}
+						PREV = {
+							puppet = PREV
+							set_autonomy = { target = PREV autonomy_state = autonomy_integrated_puppet }
+						}
+					}
+				}
+			}
+			if = {
+				limit = { has_global_flag = YUG_kosovo_exists }
+				if = {
+					limit = { KOS = { exists = no } }
+					release_puppet = KOS 
+					set_autonomy = { target = KOS autonomy_state = autonomy_integrated_puppet }
+					KOS = { save_event_target_as = released_nation_target }
+				}
+				else = {
+					create_dynamic_country = {
+						original_tag = KOS
+						
+						save_event_target_as = released_nation_target
+						PREV = {
+							every_owned_state = {
+								limit = { is_core_of = KOS }
+								PREV.PREV = { transfer_state = PREV }
+							}
+						}
+						PREV = {
+							puppet = PREV
+							set_autonomy = { target = PREV autonomy_state = autonomy_integrated_puppet }
+						}
+					}
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = vojvodina_doesnt_exist } }
+				if = {
+					limit = { VOJ = { exists = no } }
+					release_puppet = VOJ 
+					set_autonomy = { target = VOJ autonomy_state = autonomy_integrated_puppet }
+					VOJ = { save_event_target_as = released_nation_target }
+				}
+				else = {
+					create_dynamic_country = {
+						original_tag = VOJ
+						
+						save_event_target_as = released_nation_target
+						PREV = {
+							every_owned_state = {
+								limit = { is_core_of = VOJ }
+								PREV.PREV = { transfer_state = PREV }
+							}
+						}
+						PREV = {
+							puppet = PREV
+							set_autonomy = { target = PREV autonomy_state = autonomy_integrated_puppet }
+						}
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+	}
+
+}
+
+YUG_spread_democracy_decision_cat = {
+
+	YUG_invite_democratic_balkan_countries = {
+
+		icon = generic_civil_support
+
+		allowed = {
+			original_tag = YUG
+		}
+		
+		targets = {
+			ROM BUL GRE TUR ALB
+		}
+
+		available = {
+			is_faction_leader = yes
+			has_government = democratic
+			FROM = {
+				has_civil_war = no
+			}
+		}
+	
+		visible = {
+			any_country = {
+				original_tag = FROM
+				has_government = democratic
+				is_subject = no
+				NOT = { is_in_faction_with = ROOT }
+			}
+		}
+
+		cost = 25
+		
+		days_remove = 10
+		
+		fire_only_once = no
+		
+		remove_effect = {
+			FROM = {
+				country_event = generic.5
+			}
+			custom_effect_tooltip = more_democracy_higher_chance_tt
+		}
+
+		complete_effect = {	
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_support_democratic_opposition_in_balkans = {
+
+		icon = SWI_swiss_democratic_tradition_campaign
+
+		allowed = {
+			original_tag = YUG
+		}
+		
+		targets = {
+			ROM BUL GRE TUR ALB
+		}
+
+		available = {
+			is_faction_leader = yes
+			has_government = democratic
+			FROM = {
+				has_civil_war = no
+			}
+		}
+	
+		visible = {
+			FROM = {
+				NOT = { has_government = democratic }
+				NOT = { has_country_flag = YUG_spread_democracy_flag }
+			}
+		}
+
+		cost = 40
+		
+		days_remove = 90
+		
+		fire_only_once = no
+		
+		remove_effect = {
+			FROM = {
+				remove_ideas = YUG_democratic_opposition
+			}
+		}
+		
+		modifier = {
+			political_power_gain = -0.15
+		}
+
+		complete_effect = {
+			FROM = {
+				add_ideas = YUG_democratic_opposition
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_organize_protests_in_balkans = {
+
+		icon = generic_political_rally
+
+		allowed = {
+			original_tag = YUG
+		}
+		
+		targets = {
+			ROM BUL GRE TUR ALB
+		}
+
+		available = {
+			is_faction_leader = yes
+			has_government = democratic
+			FROM = {
+				has_civil_war = no
+			}
+		}
+	
+		visible = {
+			FROM = {
+				NOT = { has_government = democratic }
+				NOT = { has_country_flag = YUG_spread_democracy_flag }
+			}
+		}
+
+		cost = 35
+		
+		days_remove = 15
+		
+		fire_only_once = no
+		
+		remove_effect = {
+			FROM = {
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.05
+				}
+			}
+		}
+		
+		modifier = {
+		}
+
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_democratic_propaganda_in_balkans = {
+
+		icon = eng_propaganda_campaigns
+
+		allowed = {
+			original_tag = YUG
+		}
+		
+		targets = {
+			ROM BUL GRE TUR ALB
+		}
+
+		available = {
+			is_faction_leader = yes
+			has_government = democratic
+			FROM = {
+				has_civil_war = no
+			}
+		}
+	
+		visible = {
+			FROM = {
+				NOT = { has_government = democratic }
+				NOT = { has_country_flag = YUG_spread_democracy_flag }
+			}
+		}
+
+		cost = 45
+		
+		days_remove = 20
+		
+		fire_only_once = no
+		
+		remove_effect = {
+			FROM = {
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.1
+				}
+			}
+		}
+		
+		modifier = {
+		}
+
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_demand_democratic_referendum_in_balkans = {
+
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			original_tag = YUG
+		}
+		
+		targets = {
+			ROM BUL GRE TUR ALB
+		}
+
+		available = {
+			is_faction_leader = yes
+			has_government = democratic
+			FROM = {
+				democratic > 0.4
+			}
+			FROM = {
+				has_civil_war = no
+			}
+		}
+	
+		visible = {
+			FROM = {
+				NOT = { has_government = democratic }
+				NOT = { has_country_flag = YUG_spread_democracy_flag }
+			}
+		}
+
+		cost = 15
+		
+		days_remove = 10
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+			FROM = {
+				country_event = better_yugo.50
+				set_country_flag = YUG_spread_democracy_flag
+			}
+		}
+		
+		modifier = {
+		}
+
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+}
+
+YUG_spread_democracy_in_danube_decision_cat = {
+
+	YUG_invite_democratic_danube_countries = {
+
+		icon = generic_civil_support
+
+		allowed = {
+			original_tag = YUG
+		}
+		
+		targets = {
+			AUS HUN SLO
+		}
+
+		available = {
+			is_faction_leader = yes
+			has_government = democratic
+			FROM = {
+				has_civil_war = no
+			}
+		}
+	
+		visible = {
+			any_country = {
+				original_tag = FROM
+				has_government = democratic
+				is_subject = no
+				NOT = { is_in_faction_with = ROOT }
+			}
+		}
+
+		cost = 25
+		
+		days_remove = 10
+		
+		fire_only_once = no
+		
+		remove_effect = {
+			FROM = {
+				country_event = generic.5
+			}
+			custom_effect_tooltip = more_democracy_higher_chance_tt
+		}
+
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_support_democratic_opposition_in_danube = {
+
+		icon = SWI_swiss_democratic_tradition_campaign
+
+		allowed = {
+			original_tag = YUG
+		}
+		
+		targets = {
+			AUS HUN SLO
+		}
+
+		available = {
+			is_faction_leader = yes
+			has_government = democratic
+			FROM = {
+				has_civil_war = no
+			}
+		}
+	
+		visible = {
+			FROM = {
+				NOT = { has_government = democratic }
+				NOT = { has_country_flag = YUG_spread_democracy_flag }
+			}
+		}
+
+		cost = 40
+		
+		days_remove = 90
+		
+		fire_only_once = no
+		
+		remove_effect = {
+			FROM = {
+				remove_ideas = YUG_democratic_opposition
+			}
+		}
+		
+		modifier = {
+			political_power_gain = -0.15
+		}
+
+		complete_effect = {
+			FROM = {
+				add_ideas = YUG_democratic_opposition
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_organize_protests_in_danube = {
+
+		icon = generic_political_rally
+
+		allowed = {
+			original_tag = YUG
+		}
+		
+		targets = {
+			AUS HUN SLO
+		}
+
+		available = {
+			is_faction_leader = yes
+			has_government = democratic
+			FROM = {
+				has_civil_war = no
+			}
+		}
+	
+		visible = {
+			FROM = {
+				NOT = { has_government = democratic }
+				NOT = { has_country_flag = YUG_spread_democracy_flag }
+			}
+		}
+
+		cost = 35
+		
+		days_remove = 15
+		
+		fire_only_once = no
+		
+		remove_effect = {
+			FROM = {
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.05
+				}
+			}
+		}
+		
+		modifier = {
+		}
+
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_democratic_propaganda_in_danube = {
+
+		icon = eng_propaganda_campaigns
+
+		allowed = {
+			original_tag = YUG
+		}
+		
+		targets = {
+			AUS HUN SLO
+		}
+
+		available = {
+			is_faction_leader = yes
+			has_government = democratic
+			FROM = {
+				has_civil_war = no
+			}
+		}
+	
+		visible = {
+			FROM = {
+				NOT = { has_government = democratic }
+				NOT = { has_country_flag = YUG_spread_democracy_flag }
+			}
+		}
+
+		cost = 45
+		
+		days_remove = 20
+		
+		fire_only_once = no
+		
+		remove_effect = {
+			FROM = {
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.1
+				}
+			}
+		}
+		
+		modifier = {
+		}
+
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_demand_democratic_referendum_in_danube = {
+
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			original_tag = YUG
+		}
+		
+		targets = {
+			AUS HUN SLO
+		}
+
+		available = {
+			is_faction_leader = yes
+			has_government = democratic
+			FROM = {
+				democratic > 0.4
+			}
+			FROM = {
+				has_civil_war = no
+			}
+		}
+	
+		visible = {
+			FROM = {
+				NOT = { has_government = democratic }
+				NOT = { has_country_flag = YUG_spread_democracy_flag }
+			}
+		}
+
+		cost = 15
+		
+		days_remove = 10
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+			FROM = {
+				country_event = better_yugo.50
+				set_country_flag = YUG_spread_democracy_flag
+			}
+		}
+		
+		modifier = {
+		}
+
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+}
+
+YUG_spread_democracy_in_east_europe_decision_cat = {
+
+	YUG_liberate_belarus = {
+
+		icon = generic_civil_support
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+			is_faction_leader = yes
+			has_government = democratic
+			206 = { owner = { has_war_with = ROOT } }
+			controls_state = 206
+			BLR = { exists = no } 
+		}
+	
+		visible = {
+			has_completed_focus = YUG_eliminate_the_soviet_menace
+		}
+
+		cost = 0
+		
+		days_remove = 0
+		
+		fire_only_once = no
+		
+		remove_effect = {
+		}
+
+		complete_effect = {
+			BLR = { transfer_state = 206 }
+			puppet = BLR
+			every_controlled_state = {
+				limit = {
+					is_core_of = BLR
+				}
+				BLR = { transfer_state = PREV }
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+
+	YUG_liberate_ukraine = {
+
+		icon = generic_civil_support
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+			is_faction_leader = yes
+			has_government = democratic
+			202 = { owner = { has_war_with = ROOT } }
+			controls_state = 202
+			UKR = { exists = no } 
+		}
+	
+		visible = {
+			has_completed_focus = YUG_eliminate_the_soviet_menace
+		}
+
+		cost = 0
+		
+		days_remove = 0
+		
+		fire_only_once = no
+		
+		remove_effect = {
+		}
+
+		complete_effect = {
+			UKR = { transfer_state = 202 }
+			puppet = UKR
+			every_controlled_state = {
+				limit = {
+					is_core_of = UKR
+				}
+				UKR = { transfer_state = PREV }
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+
+	YUG_invite_democratic_east_european_countries = {
+
+		icon = generic_civil_support
+
+		allowed = {
+			original_tag = YUG
+		}
+		
+		targets = {
+			POL CZE UKR BLR
+		}
+
+		available = {
+			is_faction_leader = yes
+			has_government = democratic
+			FROM = {
+				has_civil_war = no
+			}
+		}
+	
+		visible = {
+			any_country = {
+				original_tag = FROM
+				has_government = democratic
+				is_subject = no
+				NOT = { is_in_faction_with = ROOT }
+			}
+		}
+
+		cost = 25
+		
+		days_remove = 10
+		
+		fire_only_once = no
+		
+		remove_effect = {
+			FROM = {
+				country_event = generic.5
+			}
+			custom_effect_tooltip = more_democracy_higher_chance_tt
+		}
+
+		complete_effect = {	
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_support_democratic_opposition_in_east_europe = {
+
+		icon = SWI_swiss_democratic_tradition_campaign
+
+		allowed = {
+			original_tag = YUG
+		}
+		
+		targets = {
+			POL CZE UKR BLR
+		}
+
+		available = {
+			is_faction_leader = yes
+			has_government = democratic
+			FROM = {
+				has_civil_war = no
+			}
+		}
+	
+		visible = {
+			FROM = {
+				NOT = { has_government = democratic }
+				NOT = { has_country_flag = YUG_spread_democracy_flag }
+			}
+		}
+
+		cost = 40
+		
+		days_remove = 90
+		
+		fire_only_once = no
+		
+		remove_effect = {
+			FROM = {
+				remove_ideas = YUG_democratic_opposition
+			}
+		}
+		
+		modifier = {
+			political_power_gain = -0.15
+		}
+
+		complete_effect = {
+			FROM = {
+				add_ideas = YUG_democratic_opposition
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_organize_protests_in_east_europe = {
+
+		icon = generic_political_rally
+
+		allowed = {
+			original_tag = YUG
+		}
+		
+		targets = {
+			POL CZE UKR BLR
+		}
+
+		available = {
+			is_faction_leader = yes
+			has_government = democratic
+			FROM = {
+				has_civil_war = no
+			}
+		}
+	
+		visible = {
+			FROM = {
+				NOT = { has_government = democratic }
+				NOT = { has_country_flag = YUG_spread_democracy_flag }
+			}
+		}
+
+		cost = 35
+		
+		days_remove = 15
+		
+		fire_only_once = no
+		
+		remove_effect = {
+			FROM = {
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.05
+				}
+			}
+		}
+		
+		modifier = {
+		}
+
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_democratic_propaganda_in_east_europe = {
+
+		icon = eng_propaganda_campaigns
+
+		allowed = {
+			original_tag = YUG
+		}
+		
+		targets = {
+			POL CZE UKR BLR
+		}
+
+		available = {
+			is_faction_leader = yes
+			has_government = democratic
+			FROM = {
+				has_civil_war = no
+			}
+		}
+	
+		visible = {
+			FROM = {
+				NOT = { has_government = democratic }
+				NOT = { has_country_flag = YUG_spread_democracy_flag }
+			}
+		}
+
+		cost = 45
+		
+		days_remove = 20
+		
+		fire_only_once = no
+		
+		remove_effect = {
+			FROM = {
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.1
+				}
+			}
+		}
+		
+		modifier = {
+		}
+
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_demand_democratic_referendum_in_east_europe = {
+
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			original_tag = YUG
+		}
+		
+		targets = {
+			POL CZE UKR BLR
+		}
+
+		available = {
+			is_faction_leader = yes
+			has_government = democratic
+			FROM = {
+				democratic > 0.4
+			}
+			FROM = {
+				has_civil_war = no
+			}
+		}
+	
+		visible = {
+			FROM = {
+				NOT = { has_government = democratic }
+				NOT = { has_country_flag = YUG_spread_democracy_flag }
+			}
+		}
+
+		cost = 15
+		
+		days_remove = 10
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+			FROM = {
+				country_event = better_yugo.50
+				set_country_flag = YUG_spread_democracy_flag
+			}
+		}
+		
+		modifier = {
+		}
+
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+}
+
+YUG_balkan_communist_federation_decision_cat = {
+
+	YUG_invite_to_commie_balkan_federation = {
+
+		icon = hol_exchange_intelligence_data
+
+		allowed = {
+			original_tag = YUG
+		}
+		
+		targets = {
+			ALB BUL GRE ROM TUR
+		}
+
+		available = {
+			is_faction_leader = yes
+			has_government = communism
+			FROM = {
+				has_civil_war = no
+			}
+		}
+	
+		visible = {
+			any_country = {
+				original_tag = FROM
+				has_government = communism
+				is_subject = no
+				NOT = { is_in_faction_with = ROOT }
+				NOT = { has_war_with = ROOT }
+			}
+		}
+
+		cost = 10
+		
+		days_remove = 10
+		
+		fire_only_once = no
+		
+		remove_effect = {
+			FROM = {
+				country_event = generic.5
+			}
+#			custom_effect_tooltip = more_democracy_higher_chance_tt
+		}
+
+		complete_effect = {	
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_communist_ultimatum_to_rom_gre_bul = {
+
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			original_tag = YUG
+		}
+		
+		targets = {
+			GRE ROM BUL
+		}
+
+		available = {
+			is_subject = no
+			has_government = communism
+			FROM = {
+				communism > 0.4
+			}
+		}
+	
+		visible = {
+			has_completed_focus = YUG_work_with_the_revolutionary_organizations
+			FROM = {
+				NOT = { has_government = communism }
+				NOT = { has_country_flag = YUG_communist_balkan_federation_flag }
+			}
+		}
+
+		cost = 50
+		
+		days_remove = 10
+		
+		fire_only_once = no
+		
+		remove_effect = {
+			FROM = {
+				country_event = better_yugo.65
+			}
+			FROM = {
+				set_country_flag = YUG_communist_balkan_federation_flag
+			}
+		}
+
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_organize_workers_strikes = {
+
+		icon = generic_merge_plant_materiel
+
+		allowed = {
+			original_tag = YUG
+		}
+		
+		targets = {
+			BUL GRE ROM
+		}
+
+		available = {
+			is_subject = no
+			has_government = communism
+		}
+	
+		visible = {
+			has_completed_focus = YUG_work_with_the_revolutionary_organizations
+			FROM = {
+				NOT = { has_government = communism }
+				NOT = { has_country_flag = YUG_communist_balkan_federation_flag }
+			}
+		}
+
+		cost = 50
+		
+		days_remove = 90
+		
+		fire_only_once = no
+		
+		modifier = {
+			political_power_gain = -0.15
+		}
+		
+		remove_effect = {
+		}
+
+		complete_effect = {
+			FROM = {
+				add_timed_idea = { idea = YUG_worker_strikes days = 90 }
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_panslavic_propaganda_in_bulgaria = {
+
+		icon = eng_propaganda_campaigns
+
+		allowed = {
+			original_tag = YUG
+		}
+		
+		targets = {
+			BUL
+		}
+
+		available = {
+			is_subject = no
+			has_government = communism
+		}
+	
+		visible = {
+			has_completed_focus = YUG_work_with_the_revolutionary_organizations
+			FROM = {
+				NOT = { has_government = communism }
+				NOT = { has_country_flag = YUG_communist_balkan_federation_flag }
+			}
+		}
+
+		cost = 40
+		
+		days_remove = 90
+		
+		fire_only_once = no
+		
+		remove_effect = {
+		}
+
+		complete_effect = {
+			FROM = {
+				add_timed_idea = { idea = YUG_panslavic_propaganda days = 90 }
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_panbalkan_propaganda_in_rom_gre = {
+
+		icon = eng_propaganda_campaigns
+
+		allowed = {
+			original_tag = YUG
+		}
+		
+		targets = {
+			ROM GRE
+		}
+
+		available = {
+			is_subject = no
+			has_government = communism
+		}
+	
+		visible = {
+			has_completed_focus = YUG_work_with_the_revolutionary_organizations
+			FROM = {
+				NOT = { has_government = communism }
+				NOT = { has_country_flag = YUG_communist_balkan_federation_flag }
+			}
+		}
+
+		cost = 35
+		
+		days_remove = 90
+		
+		fire_only_once = no
+		
+		remove_effect = {
+		}
+
+		complete_effect = {
+			FROM = {
+				add_timed_idea = { idea = YUG_panbalkan_propaganda days = 90 }
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_support_communist_party_in_rom_gre_bul = {
+
+		icon = generic_civil_support
+
+		allowed = {
+			original_tag = YUG
+		}
+		
+		targets = {
+			GRE ROM BUL
+		}
+
+		available = {
+			is_subject = no
+			has_government = communism
+		}
+	
+		visible = {
+			has_completed_focus = YUG_work_with_the_revolutionary_organizations
+			FROM = {
+				NOT = { has_government = communism }
+				NOT = { has_country_flag = YUG_communist_balkan_federation_flag }
+			}
+		}
+
+		cost = 25
+		
+		days_remove = 20
+		
+		fire_only_once = no
+		
+		remove_effect = {
+			FROM = {
+				add_popularity = {
+					ideology = communism
+					popularity = 0.05
+				}
+			}
+		}
+
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_communist_ultimatum_to_albania = {
+
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			original_tag = YUG
+		}
+		
+		targets = {
+			ALB
+		}
+
+		available = {
+			is_subject = no
+			has_government = communism
+			FROM = {
+				communism > 0.4
+			}
+		}
+	
+		visible = {
+			has_completed_focus = YUG_establish_the_albanian_communist_party
+			FROM = {
+				NOT = { has_government = communism }
+				NOT = { has_country_flag = YUG_communist_balkan_federation_flag }
+			}
+		}
+
+		cost = 50
+		
+		days_remove = 10
+		
+		fire_only_once = no
+		
+		remove_effect = {
+			FROM = {
+				country_event = better_yugo.65
+			}
+			FROM = {
+				set_country_flag = YUG_communist_balkan_federation_flag
+			}
+		}
+
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_organize_workers_strikes_in_albania = {
+
+		icon = generic_merge_plant_materiel
+
+		allowed = {
+			original_tag = YUG
+		}
+		
+		targets = {
+			ALB
+		}
+
+		available = {
+			is_subject = no
+			has_government = communism
+		}
+	
+		visible = {
+			has_completed_focus = YUG_establish_the_albanian_communist_party
+			FROM = {
+				NOT = { has_government = communism }
+				NOT = { has_country_flag = YUG_communist_balkan_federation_flag }
+			}
+		}
+
+		cost = 50
+		
+		days_remove = 90
+		
+		fire_only_once = no
+		
+		modifier = {
+			political_power_gain = -0.15
+		}
+		
+		remove_effect = {
+		}
+
+		complete_effect = {
+			FROM = {
+				add_timed_idea = { idea = YUG_worker_strikes days = 90 }
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_panbalkan_propaganda_in_albania = {
+
+		icon = eng_propaganda_campaigns
+
+		allowed = {
+			original_tag = YUG
+		}
+		
+		targets = {
+			ALB
+		}
+
+		available = {
+			is_subject = no
+			has_government = communism
+		}
+	
+		visible = {
+			has_completed_focus = YUG_establish_the_albanian_communist_party
+			FROM = {
+				NOT = { has_government = communism }
+				NOT = { has_country_flag = YUG_communist_balkan_federation_flag }
+			}
+		}
+
+		cost = 35
+		
+		days_remove = 90
+		
+		fire_only_once = no
+		
+		remove_effect = {
+		}
+
+		complete_effect = {
+			FROM = {
+				add_timed_idea = { idea = YUG_panbalkan_propaganda days = 90 }
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_support_communist_party_in_albania = {
+
+		icon = generic_civil_support
+
+		allowed = {
+			original_tag = YUG
+		}
+		
+		targets = {
+			ALB
+		}
+
+		available = {
+			is_subject = no
+			has_government = communism
+		}
+	
+		visible = {
+			has_completed_focus = YUG_establish_the_albanian_communist_party
+			FROM = {
+				NOT = { has_government = communism }
+				NOT = { has_country_flag = YUG_communist_balkan_federation_flag }
+			}
+		}
+
+		cost = 25
+		
+		days_remove = 20
+		
+		fire_only_once = no
+		
+		remove_effect = {
+			FROM = {
+				add_popularity = {
+					ideology = communism
+					popularity = 0.05
+				}
+			}
+		}
+
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_communist_ultimatum_to_turkey = {
+
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			original_tag = YUG
+		}
+		
+		targets = {
+			TUR
+		}
+
+		available = {
+			is_subject = no
+			has_government = communism
+			FROM = {
+				communism > 0.4
+			}
+		}
+	
+		visible = {
+			has_completed_focus = YUG_influence_the_turks
+			FROM = {
+				NOT = { has_government = communism }
+				NOT = { has_country_flag = YUG_communist_balkan_federation_flag }
+			}
+		}
+
+		cost = 50
+		
+		days_remove = 10
+		
+		fire_only_once = no
+		
+		remove_effect = {
+			FROM = {
+				country_event = better_yugo.65
+			}
+			FROM = {
+				set_country_flag = YUG_communist_balkan_federation_flag
+			}
+		}
+
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_organize_workers_strikes_in_turkey = {
+
+		icon = generic_merge_plant_materiel
+
+		allowed = {
+			original_tag = YUG
+		}
+		
+		targets = {
+			TUR
+		}
+
+		available = {
+			is_subject = no
+			has_government = communism
+		}
+	
+		visible = {
+			has_completed_focus = YUG_influence_the_turks
+			FROM = {
+				NOT = { has_government = communism }
+				NOT = { has_country_flag = YUG_communist_balkan_federation_flag }
+			}
+		}
+
+		cost = 50
+		
+		days_remove = 90
+		
+		fire_only_once = no
+		
+		modifier = {
+			political_power_gain = -0.15
+		}
+		
+		remove_effect = {
+		}
+
+		complete_effect = {
+			FROM = {
+				add_timed_idea = { idea = YUG_worker_strikes days = 90 }
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_panbalkan_propaganda_in_turkey = {
+
+		icon = eng_propaganda_campaigns
+
+		allowed = {
+			original_tag = YUG
+		}
+		
+		targets = {
+			TUR
+		}
+
+		available = {
+			is_subject = no
+			has_government = communism
+		}
+	
+		visible = {
+			has_completed_focus = YUG_influence_the_turks
+			FROM = {
+				NOT = { has_government = communism }
+				NOT = { has_country_flag = YUG_communist_balkan_federation_flag }
+			}
+		}
+
+		cost = 35
+		
+		days_remove = 90
+		
+		fire_only_once = no
+		
+		remove_effect = {
+		}
+
+		complete_effect = {
+			FROM = {
+				add_timed_idea = { idea = YUG_panbalkan_propaganda days = 90 }
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_support_communist_party_in_turkey = {
+
+		icon = generic_civil_support
+
+		allowed = {
+			original_tag = YUG
+		}
+		
+		targets = {
+			TUR
+		}
+
+		available = {
+			is_subject = no
+			has_government = communism
+		}
+	
+		visible = {
+			has_completed_focus = YUG_influence_the_turks
+			FROM = {
+				NOT = { has_government = communism }
+				NOT = { has_country_flag = YUG_communist_balkan_federation_flag }
+			}
+		}
+
+		cost = 25
+		
+		days_remove = 20
+		
+		fire_only_once = no
+		
+		remove_effect = {
+			FROM = {
+				add_popularity = {
+					ideology = communism
+					popularity = 0.05
+				}
+			}
+		}
+
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_invite_country_to_balkan_economic_integration = {
+
+		icon = eng_trade_unions_support
+
+		allowed = {
+			original_tag = YUG
+		}
+		
+		targets = {
+			ROM BUL GRE ALB TUR
+		}
+
+		available = {
+			is_subject = no
+			has_government = communism
+		}
+	
+		visible = {
+			has_completed_focus = YUG_economic_integration
+			FROM = {
+				is_in_faction_with = ROOT
+				NOT = { has_idea = YUG_balkan_economic_integration }
+			}
+		}
+
+		cost = 50
+		
+		days_remove = 20
+		
+		fire_only_once = no
+		
+		modifier = {
+			political_power_gain = -0.1
+		}
+		
+		remove_effect = {
+			FROM = {
+				add_ideas = YUG_balkan_economic_integration
+			}
+		}
+
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_invite_country_to_balkan_political_integration = {
+
+		icon = eng_trade_unions_support
+
+		allowed = {
+			original_tag = YUG
+		}
+		
+		targets = {
+			ROM BUL GRE ALB TUR
+		}
+
+		available = {
+			is_subject = no
+			has_government = communism
+			is_faction_leader = yes
+		}
+	
+		visible = {
+			has_completed_focus = YUG_political_integration
+			FROM = {
+				is_in_faction_with = ROOT
+				NOT = { has_idea = YUG_balkan_political_integration }
+			}
+		}
+
+		cost = 50
+		
+		days_remove = 20
+		
+		fire_only_once = no
+		
+		modifier = {
+			political_power_gain = -0.1
+		}
+		
+		remove_effect = {
+			FROM = {
+				add_ideas = YUG_balkan_political_integration
+			}
+		}
+
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_invite_country_to_balkan_military_integration = {
+
+		icon = eng_trade_unions_support
+
+		allowed = {
+			original_tag = YUG
+		}
+		
+		targets = {
+			ROM BUL GRE ALB TUR
+		}
+
+		available = {
+			is_subject = no
+			has_government = communism
+			is_faction_leader = yes
+		}
+	
+		visible = {
+			has_completed_focus = YUG_military_integration
+			FROM = {
+				is_in_faction_with = ROOT
+				NOT = { has_idea = YUG_balkan_military_integration }
+			}
+		}
+
+		cost = 50
+		
+		days_remove = 20
+		
+		fire_only_once = no
+		
+		modifier = {
+			political_power_gain = -0.1
+		}
+		
+		remove_effect = {
+			FROM = {
+				add_ideas = YUG_balkan_military_integration
+			}
+		}
+
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_integrate_balkan_country = {
+
+		icon = generic_civil_support
+
+		allowed = {
+			original_tag = YUG
+		}
+		
+		targets = {
+			ROM BUL GRE ALB TUR
+		}
+
+		available = {
+			is_subject = no
+			has_government = communism
+			is_faction_leader = yes
+		}
+	
+		visible = {
+			has_completed_focus = YUG_unification_of_the_balkans
+			FROM = {
+				is_in_faction_with = ROOT
+				has_government = communism
+				has_idea = YUG_balkan_military_integration
+				has_idea = YUG_balkan_economic_integration
+				has_idea = YUG_balkan_political_integration
+			}
+		}
+
+		cost = 100
+		
+		days_remove = 120
+		
+		fire_only_once = no
+		
+		modifier = {
+			political_power_gain = -0.4
+		}
+		
+		remove_effect = {
+			annex_country = {
+				target = FROM
+				transfer_troops = yes
+			}
+			if = {
+				limit = { FROM = { original_tag = TUR } }
+				every_state = {
+					limit = { is_core_of = TUR }
+					hidden_effect = {
+						ROOT = { add_state_core = PREV }
+					}
+				}
+			}
+		}
+
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+}
+
+YUG_connect_the_country_decision_cat = {
+
+	YUG_belgrade_sarajevo_railway = {
+
+		icon = SWI_isolate_switzerland
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+			has_full_control_of_state = 107
+			has_full_control_of_state = 104
+		}
+	
+		visible = {
+		}
+
+		cost = 15
+		
+		days_remove = 15
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+			build_railway = {
+				level = 2
+				path = { 11586 9599 797 11741 11899 }
+				start_province = 11586
+				target_province = 11899
+			}
+			set_global_flag = YUG_belgrade_sarajevo_railway_flag
+		}
+
+		complete_effect = {	
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_zagreb_sarajevo_railway = {
+
+		icon = SWI_isolate_switzerland
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+			has_full_control_of_state = 109
+			has_full_control_of_state = 104
+		}
+	
+		visible = {
+		}
+
+		cost = 15
+		
+		days_remove = 15
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+			build_railway = {
+				level = 2
+				build_only_on_allied = yes
+				start_province = 11581
+				target_province = 11899
+			}
+			set_global_flag = YUG_zagreb_sarajevo_railway_flag
+		}
+
+		complete_effect = {	
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_adriatic_railway = {
+
+		icon = SWI_isolate_switzerland
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+			has_full_control_of_state = 103
+			has_full_control_of_state = 105
+		}
+	
+		visible = {
+		}
+
+		cost = 15
+		
+		days_remove = 15
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+			build_railway = {
+				level = 2
+				build_only_on_allied = yes
+				path = { 3924 11816 6889 9821 9809 }
+				start_province = 3924
+				target_province = 9809
+			}
+			set_global_flag = YUG_adriatic_railway_flag
+		}
+
+		complete_effect = {	
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_sarajevo_dubrovnik_railway = {
+
+		icon = SWI_isolate_switzerland
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+			has_full_control_of_state = 104
+			has_full_control_of_state = 103
+		}
+	
+		visible = {
+		}
+
+		cost = 15
+		
+		days_remove = 15
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+			build_railway = {
+				level = 2
+				build_only_on_allied = yes
+				start_province = 11899
+				target_province = 6889
+			}
+			set_global_flag = YUG_sarajevo_dubrovnik_railway_flag
+		}
+
+		complete_effect = {	
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_podgorica_prishtina_railway = {
+
+		icon = SWI_isolate_switzerland
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+			has_full_control_of_state = 105
+			has_full_control_of_state = 802
+		}
+	
+		visible = {
+		}
+
+		cost = 15
+		
+		days_remove = 15
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+			build_railway = {
+				level = 2
+				build_only_on_allied = yes
+				start_province = 9809
+				target_province = 6940
+			}
+			set_global_flag = YUG_podgorica_prishtina_railway_flag
+		}
+
+		complete_effect = {	
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_a_second_belgrade_skopje_railway = {
+
+		icon = SWI_isolate_switzerland
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+			has_full_control_of_state = 107
+			has_full_control_of_state = 802
+			has_full_control_of_state = 106
+		}
+	
+		visible = {
+		}
+
+		cost = 15
+		
+		days_remove = 15
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+			build_railway = {
+				level = 2
+				build_only_on_allied = yes
+				start_province = 11586
+				target_province = 6940
+			}
+			build_railway = {
+				level = 2
+				build_only_on_allied = yes
+				start_province = 6940
+				target_province = 3882
+			}
+			set_global_flag = YUG_belgrade_skopje_railway_flag
+		}
+
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_finish_railway_network_expansion = {
+
+		icon = eng_trade_unions_support
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = has_built_all_railways_tt
+				has_global_flag = YUG_belgrade_skopje_railway_flag
+				has_global_flag = YUG_podgorica_prishtina_railway_flag
+				has_global_flag = YUG_belgrade_sarajevo_railway_flag
+				has_global_flag = YUG_adriatic_railway_flag
+				has_global_flag = YUG_sarajevo_dubrovnik_railway_flag
+				has_global_flag = YUG_zagreb_sarajevo_railway_flag
+			}
+		}
+	
+		visible = {
+		}
+
+		cost = 50
+		
+		days_remove = 0
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+		}
+
+		complete_effect = {
+			country_event = better_yugo.78
+			add_ideas = YUG_efficient_railway_network
+			custom_effect_tooltip = unlocks_decisions_to_connect_to_other_countries_tt
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_connect_to_tirana = {
+
+		icon = SWI_isolate_switzerland
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+			44 = {
+				is_controlled_by_ROOT_or_ally = yes
+			}
+		}
+	
+		visible = {
+			has_idea = YUG_efficient_railway_network
+		}
+
+		cost = 15
+		
+		days_remove = 15
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+			build_railway = {
+				level = 2
+				start_province = 9809
+				target_province = 9914
+			}
+			build_railway = {
+				level = 2
+				start_province = 3882
+				path = { 3882 867 11762 9914 }
+				target_province = 9914
+			}
+		}
+
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+}
+
+YUG_naval_expansion_decision_cat = {
+	
+	YUG_comission_french_destroyers = {
+
+		icon = generic_merge_plant_ship
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		targets = { FRA }
+
+		available = {
+			NOT = { has_war_with = FROM }
+		}
+	
+		visible = {
+		}
+
+		cost = 50
+		
+		days_remove = 180
+		
+		fire_only_once = yes
+		
+		modifier = {
+			consumer_goods_factor = 0.06
+		}
+		
+		remove_effect = {
+			if = {
+				limit = { has_dlc = "Man the Guns" }
+					create_equipment_variant = {
+						name = "Beograd Class"
+						type = ship_hull_light_2
+						name_group = POR_DD_HISTORICAL
+						parent_version = 0
+						allow_without_tech = yes
+						modules = {
+							fixed_ship_battery_slot = ship_light_battery_1
+							fixed_ship_anti_air_slot = ship_anti_air_1
+							fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+							fixed_ship_radar_slot = empty
+							fixed_ship_engine_slot = light_ship_engine_2
+							fixed_ship_torpedo_slot = ship_torpedo_1
+							mid_1_custom_slot = ship_mine_layer_1
+							rear_1_custom_slot = empty
+						}
+					}
+				hidden_effect = { add_manpower = 650 }
+				hidden_effect = {
+					create_ship = { type = ship_hull_light_2 equipment_variant = "Beograd Class" creator = YUG name = "KB Beograd" }
+					create_ship = { type = ship_hull_light_2 equipment_variant = "Beograd Class" creator = YUG name = "KB Zagreb" }
+					create_ship = { type = ship_hull_light_2 equipment_variant = "Beograd Class" creator = YUG name = "KB Ljubljana" }
+				}
+				custom_effect_tooltip = YUG_create_three_destroyers_tt
+			}
+			else = {
+				create_equipment_variant = {
+					name = "Beograd Class"
+					type = destroyer_2
+					upgrades = {
+						ship_torpedo_upgrade = 2
+						destroyer_engine_upgrade = 1
+						ship_ASW_upgrade = 2
+						ship_anti_air_upgrade = 2
+					}
+				}
+				hidden_effect = { add_manpower = 650 }
+				hidden_effect = {
+					create_ship = { type = destroyer_2 equipment_variant = "Beograd Class" creator = YUG name = "KB Beograd" }
+					create_ship = { type = destroyer_2 equipment_variant = "Beograd Class" creator = YUG name = "KB Zagreb" }
+					create_ship = { type = destroyer_2 equipment_variant = "Beograd Class" creator = YUG name = "KB Ljubljana" }
+				}
+				custom_effect_tooltip = YUG_create_three_destroyers_tt
+			}
+			navy_experience = 10
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				FRA = {
+					if = {
+						limit = { has_dlc = "Man the Guns" }
+						create_equipment_variant = {
+							name = "Beograd Class"	
+							type = ship_hull_light_2
+							name_group = YUG_DD_HISTORICAL
+							parent_version = 0
+							modules = {
+								fixed_ship_battery_slot = ship_medium_battery_1
+								fixed_ship_anti_air_slot = ship_anti_air_1
+								fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+								fixed_ship_radar_slot = empty
+								fixed_ship_engine_slot = light_ship_engine_2
+								fixed_ship_torpedo_slot = ship_torpedo_1
+								mid_1_custom_slot = ship_mine_layer_1
+								rear_1_custom_slot = empty
+							}
+						}
+					}
+					else = {
+						create_equipment_variant = {
+							name = "Beograd Class"
+							type = destroyer_2
+							upgrades = {
+								ship_torpedo_upgrade = 2
+								destroyer_engine_upgrade = 1
+								ship_ASW_upgrade = 2
+								ship_anti_air_upgrade = 2
+							}
+						}
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+}
+
+YUG_resistance_to_occupation_decision_cat = {
+	
+	YUG_cooperate_with_partisans_in_state = {
+		
+		name = YUG_cooperate_with_chetniks_in_state
+
+		icon = generic_prepare_civil_war
+
+		state_target = yes
+
+		available = {
+			NOT = { has_country_flag = YUG_raising_resistance_flag }
+		}
+		
+		target_trigger = { 
+			FROM = {
+				is_core_of = ROOT
+			}
+		}
+
+		visible = {
+			has_country_flag = yug_playing_as_partisans_flag
+		}
+
+		cancel_trigger = {
+			FROM = {
+				controller = { tag = ROOT }
+			}
+		}
+
+		fire_only_once = no
+		
+		custom_cost_trigger = {
+			has_political_power > 34
+			has_equipment = { infantry_equipment > 199 }
+		}
+		custom_cost_text = decision_cost_pp_35_ie_200
+
+		days_remove = 30
+		
+		on_map_mode = map_only
+		
+		complete_effect = {
+			set_country_flag = YUG_raising_resistance_flag
+			if = {
+				limit = {
+					FROM = { is_core_of = FROM.controller }
+				}
+				FROM = {
+					remove_core_of = FROM.controller
+					force_enable_resistance = YUG
+					start_resistance = YUG
+				}
+			}
+		}
+
+		remove_effect = {
+			clr_country_flag = YUG_raising_resistance_flag
+			FROM = { add_resistance = 5 }
+			add_power_balance_value = {
+				id = YUG_chetnik_partisan_conflict
+				value = 0.03
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	YUG_p_intensify_resistance_efforts = {
+		
+		name = YUG_inetnsify_resistance_efforts
+
+		icon = generic_civil_support
+
+		state_target = yes
+
+		available = {
+			NOT = {
+				any_state = {
+					has_dynamic_modifier = {
+						modifier = YUG_local_partisan_activity
+					}
+				}
+			}
+		}
+		
+		target_trigger = { 
+			FROM = {
+				is_core_of = ROOT
+			}
+		}
+
+		visible = {
+			has_country_flag = yug_playing_as_partisans_flag
+		}
+
+		cancel_trigger = {
+			FROM = {
+				controller = { tag = ROOT }
+			}
+		}
+
+		fire_only_once = no
+		
+		cost = 75
+
+		days_remove = 60
+		
+		on_map_mode = map_only
+		
+		complete_effect = {
+			FROM = {
+				add_dynamic_modifier = {
+					modifier = YUG_local_partisan_activity
+					days = 60
+				}
+			}
+		}
+		
+		modifier = {
+			communism_drift = 0.02
+		}
+
+		remove_effect = {
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	YUG_cooperate_with_chetniks_in_state = {
+
+		icon = generic_prepare_civil_war
+
+		state_target = yes
+
+		available = {
+			NOT = {
+				any_state = {
+					has_dynamic_modifier = {
+						modifier = YUG_local_partisan_activity
+					}
+				}
+			}
+		}
+		
+		target_trigger = { 
+			FROM = { # serbian and montenegrin states
+				OR = {
+					state = 45
+					state = 764
+					state = 970
+					state = 107
+					state = 108
+					state = 802
+					state = 803
+					state = 106
+					state = 977
+					state = 975
+					state = 976
+					state = 105
+				}
+			}
+		}
+
+		visible = {
+			has_country_flag = yug_playing_as_chetniks_flag
+		}
+
+		cancel_trigger = {
+			FROM = {
+				controller = { tag = ROOT }
+			}
+		}
+
+		fire_only_once = no
+		
+		custom_cost_trigger = {
+			has_political_power > 34
+			has_equipment = { infantry_equipment > 199 }
+		}
+		custom_cost_text = decision_cost_pp_35_ie_200
+
+		days_remove = 40
+		
+		on_map_mode = map_only
+		
+		complete_effect = {
+			set_country_flag = YUG_raising_resistance_flag
+			if = {
+				limit = {
+					FROM = { is_core_of = FROM.controller }
+				}
+				FROM = {
+					remove_core_of = FROM.controller
+					force_enable_resistance = YUG
+					start_resistance = YUG
+				}
+			}
+		}
+
+		remove_effect = {
+			clr_country_flag = YUG_raising_resistance_flag
+			if = {
+				limit = {
+					has_completed_focus = YUG_denounce_the_collaborators
+				}
+				FROM = {
+					add_resistance = 10
+					add_compliance = -5
+				}
+			}
+			else = {
+				FROM = { add_resistance = 5 }
+			}
+			add_power_balance_value = {
+				id = YUG_chetnik_partisan_conflict
+				value = -0.03
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	YUG_c_intensify_resistance_efforts = {
+		
+		name = YUG_inetnsify_resistance_efforts
+
+		icon = generic_civil_support
+
+		state_target = yes
+
+		available = {
+			all_state = {
+				NOT = {
+					has_dynamic_modifier = {
+						modifier = YUG_local_chetnik_activity
+					}
+				}
+			}
+		}
+		
+		target_trigger = { 
+			FROM = {
+				OR = {
+					state = 45
+					state = 764
+					state = 970
+					state = 107
+					state = 108
+					state = 802
+					state = 803
+					state = 106
+					state = 977
+					state = 975
+					state = 976
+					state = 105
+				}
+			}
+		}
+
+		visible = {
+			has_country_flag = yug_playing_as_chetniks_flag
+		}
+
+		cancel_trigger = {
+			FROM = {
+				controller = { tag = ROOT }
+			}
+		}
+
+		fire_only_once = no
+		
+		cost = 75
+
+		days_remove = 60
+		
+		on_map_mode = map_only
+		
+		complete_effect = {
+			FROM = {
+				add_dynamic_modifier = {
+					modifier = YUG_local_chetnik_activity
+					days = 60
+				}
+			}
+		}
+
+		remove_effect = {
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	YUG_cooperate_with_chetniks_in_bosnian_states = {
+	
+		name = YUG_cooperate_with_chetniks_in_state
+
+		icon = generic_prepare_civil_war
+
+		state_target = yes
+
+		available = {
+			NOT = { has_country_flag = YUG_raising_resistance_flag }
+		}
+		
+		target_trigger = { 
+			FROM = {
+				OR = {
+					state = 104
+					state = 804
+				}
+				owner = { tag = ROOT }
+				controller = { has_war_with = ROOT }
+			}
+		}
+
+		visible = {
+			has_country_flag = yug_playing_as_chetniks_flag
+		}
+
+		cancel_trigger = {
+			FROM = {
+				controller = { tag = ROOT }
+			}
+		}
+
+		fire_only_once = no
+		
+		custom_cost_trigger = {
+			has_political_power > 39
+			has_equipment = { infantry_equipment > 299 }
+		}
+		custom_cost_text = decision_cost_pp_40_ie_300
+
+		days_remove = 40
+		
+		on_map_mode = map_only
+		
+		complete_effect = {
+			set_country_flag = YUG_raising_resistance_flag
+#			FROM = {
+#				add_dynamic_modifier = {
+#					modifier = YUG_local_chetnik_activity
+#					days = 30
+#				}
+#			}
+		}
+
+		remove_effect = {
+			clr_country_flag = YUG_raising_resistance_flag
+			if = {
+				limit = {
+					has_completed_focus = YUG_denounce_the_collaborators
+				}
+				FROM = {
+					add_resistance = 10
+					add_compliance = -5
+				}
+			}
+			else = {
+				FROM = { add_resistance = 5 }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	YUG_chetnik_resistance_in_dalmatia = {
+	
+		name = YUG_cooperate_with_chetniks_in_state
+
+		icon = generic_prepare_civil_war
+
+		state_target = yes
+
+		available = {
+			NOT = { has_country_flag = YUG_raising_resistance_flag }
+		}
+		
+		target_trigger = { 
+			FROM = {
+				state = 103
+				owner = { tag = ROOT }
+				controller = { has_war_with = ROOT }
+			}
+		}
+
+		visible = {
+			has_country_flag = yug_playing_as_chetniks_flag
+			has_completed_focus = YUG_recruit_chetniks_in_dalmatia
+		}
+
+		cancel_trigger = {
+			FROM = {
+				controller = { tag = ROOT }
+			}
+		}
+
+		fire_only_once = no
+		
+		custom_cost_trigger = {
+			has_political_power > 39
+			has_equipment = { infantry_equipment > 299 }
+		}
+		custom_cost_text = decision_cost_pp_40_ie_300
+
+		days_remove = 40
+		
+		on_map_mode = map_only
+		
+		complete_effect = {
+			set_country_flag = YUG_raising_resistance_flag
+#			FROM = {
+#				add_dynamic_modifier = {
+#					modifier = YUG_local_chetnik_activity
+#					days = 30
+#				}
+#			}
+		}
+
+		remove_effect = {
+			clr_country_flag = YUG_raising_resistance_flag
+			if = {
+				limit = {
+					has_completed_focus = YUG_denounce_the_collaborators
+				}
+				FROM = {
+					add_resistance = 10
+					add_compliance = -5
+				}
+			}
+			else = {
+				FROM = { add_resistance = 5 }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+	YUG_chetnik_resistance_in_slovenia = {
+	
+		name = YUG_cooperate_with_chetniks_in_state
+
+		icon = generic_prepare_civil_war
+
+		state_target = yes
+
+		available = {
+			NOT = { has_country_flag = YUG_raising_resistance_flag }
+		}
+		
+		target_trigger = { 
+			FROM = {
+				OR = {
+					state = 853
+					state = 102
+				}
+				owner = { tag = ROOT }
+				controller = { has_war_with = ROOT }
+			}
+		}
+
+		visible = {
+			has_country_flag = yug_playing_as_chetniks_flag
+			has_completed_focus = YUG_the_slovene_chetniks
+		}
+
+		cancel_trigger = {
+			FROM = {
+				controller = { tag = ROOT }
+			}
+		}
+
+		fire_only_once = no
+		
+		custom_cost_trigger = {
+			has_political_power > 39
+			has_equipment = { infantry_equipment > 299 }
+		}
+		custom_cost_text = decision_cost_pp_40_ie_300
+
+		days_remove = 40
+		
+		on_map_mode = map_only
+		
+		complete_effect = {
+			set_country_flag = YUG_raising_resistance_flag
+#			FROM = {
+#				add_dynamic_modifier = {
+#					modifier = YUG_local_chetnik_activity
+#					days = 30
+#				}
+#			}
+		}
+
+		remove_effect = {
+			clr_country_flag = YUG_raising_resistance_flag
+			if = {
+				limit = {
+					has_completed_focus = YUG_denounce_the_collaborators
+				}
+				FROM = {
+					add_resistance = 10
+					add_compliance = -5
+				}
+			}
+			else = {
+				FROM = { add_resistance = 5 }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+}
+
+YUG_croatian_opposition_decision_cat = {
+
+	YUG_concessions_to_croatian_opposition = {
+
+		icon = eng_trade_unions_support
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = croatian_medium_or_higher
+				OR = {
+					has_idea = YUG_croatian_opposition_3
+					has_idea = YUG_croatian_opposition_4
+					has_idea = YUG_croatian_opposition_5
+				}
+			}
+		}
+	
+		visible = {
+			NOT = { has_global_flag = no_croat_opposition }
+		}
+
+		cost = 50
+		
+		days_remove = 35
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+			YUG_croatian_down_effect = yes
+		}
+
+		complete_effect = {
+		}
+		
+		modifier = {
+			political_power_gain = -0.15
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_prepare_an_assassination_of_pavelic = {
+
+		icon = generic_assassination
+
+		allowed = {
+			original_tag = YUG
+			has_dlc = "La Resistance"
+		}
+
+		available = {
+			has_intelligence_agency = yes
+		}
+	
+		visible = {
+			NOT = { has_global_flag = no_croat_opposition }
+		}
+
+		cost = 65
+		
+		days_remove = 0
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+		}
+
+		complete_effect = {
+			set_country_flag = pavelic_assassination_available_flag
+			custom_effect_tooltip = YUG_prepare_an_assassination_of_pavelic_tt
+		}
+		
+		modifier = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_imprison_croatian_leaders = {
+
+		icon = generic_independence
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+		}
+	
+		visible = {
+			OR = {
+				has_completed_focus = YUG_integral_yugoslavism
+				has_completed_focus = YUG_purge_the_opposition
+			}
+		}
+
+		cost = 35
+		
+		days_remove = 80
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+			set_global_flag = yug_allow_destroy_croatians
+			unlock_decision_tooltip = YUG_destroy_the_croatian_opposition
+		}
+
+		complete_effect = {
+		}
+		
+		modifier = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_destroy_the_croatian_opposition = {
+
+		icon = oppression
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+		}
+	
+		visible = {
+			has_global_flag = yug_allow_destroy_croatians
+		}
+
+		cost = 150
+		
+		days_remove = 0
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+		}
+
+		complete_effect = {
+			YUG_remove_croatian_opposition_effect = yes
+		
+			set_global_flag = no_croat_opposition
+			
+			custom_effect_tooltip = YUG_no_croat_opposition_tt
+		}
+		
+		modifier = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+}
+
+YUG_integration_of_bulgaria_decision_cat = {
+	YUG_annex_bulgaria = {
+
+		icon = generic_form_nation
+
+		allowed = {
+			original_tag = YUG
+		}
+		
+		target_trigger = {
+			FROM = {
+				has_event_target = YUG_puppet_bulgaria_event_target
+				original_tag = BUL
+			}
+		}
+
+		available = {
+			FROM = {
+				has_stability > 0.9
+				has_opinion = {
+					target = ROOT
+					value > 79
+				}
+			}
+		}
+	
+		visible = { 
+			has_country_flag = allow_integration_of_bulgaria_flag
+			FROM = { is_subject_of = ROOT }
+		}
+
+		cost = 100
+		
+		days_remove = 15
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+			annex_country = { target = FROM transfer_troops = yes }
+			set_country_flag = annexed_bulgaria_flag
+		}
+
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_stabilize_bulgaria = {
+
+		icon = SWI_support_humanitarian_efforts
+
+		allowed = {
+			original_tag = YUG
+		}
+		
+		target_trigger = {
+			FROM = {
+				has_event_target = YUG_puppet_bulgaria_event_target
+				original_tag = BUL
+			}
+		}
+
+		available = {
+		}
+	
+		visible = { 
+			has_country_flag = allow_integration_of_bulgaria_flag
+			FROM = { is_subject_of = ROOT }
+		}
+
+		cost = 40
+		
+		days_remove = 30
+		
+		fire_only_once = no
+		
+		remove_effect = {
+			FROM = { add_stability = 0.1 }
+		}
+		
+		modifier = {
+			political_power_gain = -0.1
+		}
+
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_integrate_bulgarian_state = {
+
+		icon = infiltrate_state
+
+		state_target = yes
+
+		available = {
+			FROM = {
+				compliance > 20
+			}
+		}
+		
+		target_trigger = { 
+			FROM = {
+				is_core_of = BUL
+				owner = { tag = ROOT }
+				controller = { tag = ROOT }
+				NOT = { is_core_of = ROOT }
+			}
+		}
+
+		visible = {
+			has_country_flag = annexed_bulgaria_flag
+		}
+
+		cancel_trigger = {
+		}
+
+		fire_only_once = yes
+		
+		cost = 50
+
+		days_remove = 30
+		
+		on_map_mode = map_and_decisions_view
+		
+		complete_effect = {
+		}
+		
+		modifier = {
+			political_power_factor = -0.1
+		}
+
+		remove_effect = {
+			add_state_core = FROM
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	} 
+	
+	YUG_referendum_on_unification = {
+
+		allowed = { always = no }
+
+		icon = generic_form_nation
+
+		available = {
+			hidden_trigger = { always = no }
+		}
+
+		days_mission_timeout = 180
+		is_good = yes
+		fire_only_once = yes
+
+		cancel_trigger = {
+			BUL = {
+				OR = {
+					exists = no
+					has_war_with = ROOT
+				}
+			}
+		}
+		
+		activation = {
+		}
+
+		visible = {
+		}
+		
+		cancel_effect = {
+		}
+
+		timeout_effect = {
+			clr_country_flag = yug_referendum_in_bulgaria
+			random_list = {
+				yug_bul_referendum_1 = {
+					country_event = better_yugo.124
+				}
+				yug_bul_referendum_2 = {
+					country_event = better_yugo.125
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+	
+	YUG_pro_unification_propaganda = {
+
+		icon = eng_propaganda_campaigns
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+		}
+	
+		visible = { 
+			has_country_flag = yug_referendum_in_bulgaria
+			check_variable = {
+				yug_bul_referendum_1 < 100
+			}
+		}
+
+		cost = 20
+		
+		days_remove = 20
+		
+		fire_only_once = no
+		
+		remove_effect = {
+			add_to_variable = {
+				var = yug_bul_referendum_1
+				value = 10
+				tooltip = add_10_support_for_referendum_tt
+			}
+			add_to_variable = {
+				var = yug_bul_referendum_2
+				value = -10
+			}
+		}
+		
+		modifier = {
+		}
+
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+}
+
+YUG_restore_byzantium_decision_cat = {
+
+	YUG_revive_byzantium = {
+
+		icon = generic_form_nation
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+			# Greece
+			custom_trigger_tooltip = {
+				tooltip = form_country_greece_required_states_tt
+				controls_state = 185
+				controls_state = 731
+				controls_state = 47
+				controls_state = 186
+				controls_state = 184
+				controls_state = 187
+				controls_state = 182
+			}
+			# Turkey
+			custom_trigger_tooltip = {
+				tooltip = form_country_turkey_required_states_tt
+				controls_state = 797
+				controls_state = 341
+				controls_state = 340
+				controls_state = 339
+				controls_state = 342
+				controls_state = 343
+				controls_state = 347
+				controls_state = 49
+				controls_state = 798
+				controls_state = 346
+				controls_state = 345
+				controls_state = 356
+				controls_state = 348
+				controls_state = 344
+				controls_state = 355
+				controls_state = 349
+				controls_state = 350
+				controls_state = 354
+				controls_state = 353
+				controls_state = 352
+				controls_state = 800
+			}
+		}
+	
+		visible = {
+		}
+
+		cost = 0
+		
+		days_remove = 0
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+		}
+		
+		modifier = {
+		}
+
+		complete_effect = {
+			# Greece
+			custom_effect_tooltip = form_country_greece_coring_states_tt
+			hidden_effect = {
+				185 = { add_core_of = ROOT }
+				731 = { add_core_of = ROOT }
+				47 = { add_core_of = ROOT }
+				186 = { add_core_of = ROOT }
+				184 = { add_core_of = ROOT }
+				187 = { add_core_of = ROOT }
+				182 = { add_core_of = ROOT }
+			}
+			# Turkey
+			custom_effect_tooltip = form_country_turkey_coring_states_tt
+			hidden_effect = {
+				341 = { add_core_of = ROOT }
+				340 = { add_core_of = ROOT }
+				339 = { add_core_of = ROOT }
+				342 = { add_core_of = ROOT }
+				343 = { add_core_of = ROOT }
+				347 = { add_core_of = ROOT }
+				49 = { add_core_of = ROOT }
+				346 = { add_core_of = ROOT }
+				345 = { add_core_of = ROOT }
+				356 = { add_core_of = ROOT }
+				348 = { add_core_of = ROOT }
+				344 = { add_core_of = ROOT }
+				355 = { add_core_of = ROOT }
+				349 = { add_core_of = ROOT }
+				798 = { add_core_of = ROOT }
+				350 = { add_core_of = ROOT }
+				354 = { add_core_of = ROOT }
+				353 = { add_core_of = ROOT }
+				352 = { add_core_of = ROOT }
+				800 = { add_core_of = ROOT }
+				799 = { add_core_of = ROOT }
+			}
+			set_cosmetic_tag = BYZ_UNIFIED
+			set_capital = { state = 797 }
+			set_character_name = {
+				character = YUG_milan_stojadinovic
+				name = YUG_milan_emperor
+			}
+			custom_effect_tooltip = milan_will_become_emperor_tt
+			set_party_name = {
+				ideology = neutrality
+				long_name = YUG_house_of_stojadinovic
+				name = YUG_house_of_stojadinovic
+			}
+			set_party_name = {
+				ideology = communism
+				long_name = YUG_byz_communism_party_long
+				name = YUG_byz_communism_party
+			}
+			set_party_name = {
+				ideology = fascism
+				long_name = YUG_byz_fascism_party_long
+				name = YUG_byz_fascism_party
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+
+}
+
+###### CROATIA ########
+
+CRO_greater_croatia_decision_cat = {
+
+	CRO_proclaim_greater_croatia = {
+
+		icon = generic_form_nation
+
+		allowed = {
+			original_tag = CRO
+		}
+
+		available = {
+			controls_state = 104
+			controls_state = 804
+			controls_state = 45
+			controls_state = 975
+			controls_state = 976
+			controls_state = 852
+			controls_state = 163
+		}
+	
+		visible = {
+		}
+
+		cost = 0
+		
+		days_remove = 0
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+		}
+		
+		modifier = {
+		}
+
+		complete_effect = {
+			add_state_core = 104
+			add_state_core = 804
+			add_state_core = 45
+			add_state_core = 975
+			add_state_core = 976
+			set_cosmetic_tag = CRO_greater_croatia
+			hidden_effect = {
+				news_event = yugo_news.23
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+
+}
+
+CRO_restore_the_habsburg_dominion = {
+
+	CRO_move_capital_to_vienna = {
+
+		icon = generic_form_nation
+
+		allowed = {
+			original_tag = CRO
+		}
+
+		available = {
+			4 = { is_owned_and_controlled_by = ROOT }
+		}
+	
+		visible = {
+		}
+
+		cost = 0
+		
+		days_remove = 0
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+		}
+		
+		modifier = {
+		}
+
+		complete_effect = {
+			add_stability = 0.05
+			set_capital = {state = 4}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	CRO_integrate_czechia = {
+
+		icon = generic_nationalism
+
+		allowed = {
+			original_tag = CRO
+		}
+
+		available = {
+			controls_state = 9
+			controls_state = 75
+			controls_state = 69
+			controls_state = 74
+		}
+	
+		visible = {
+			has_completed_focus = CRO_reclaim_imperial_territories
+		}
+
+		cost = 10
+		
+		days_remove = 0
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+		}
+		
+		modifier = {
+		}
+
+		complete_effect = {
+			add_state_core = 9
+			add_state_core = 75
+			add_state_core = 69
+			add_state_core = 74
+			add_state_core = 72
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	CRO_integrate_slovakia = {
+
+		icon = generic_nationalism
+
+		allowed = {
+			original_tag = CRO
+		}
+
+		available = {
+			controls_state = 70
+			controls_state = 71
+			controls_state = 664
+			controls_state = 73
+		}
+	
+		visible = {
+			has_completed_focus = CRO_reclaim_imperial_territories
+		}
+
+		cost = 10
+		
+		days_remove = 0
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+		}
+		
+		modifier = {
+		}
+
+		complete_effect = {
+			add_state_core = 70
+			add_state_core = 71
+			add_state_core = 664
+			add_state_core = 73
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	CRO_integrate_galicia = {
+
+		icon = generic_nationalism
+
+		allowed = {
+			original_tag = CRO
+		}
+
+		available = {
+			controls_state = 88
+			controls_state = 89
+			controls_state = 91
+		}
+	
+		visible = {
+			has_completed_focus = CRO_reclaim_imperial_territories
+		}
+
+		cost = 10
+		
+		days_remove = 0
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+		}
+		
+		modifier = {
+		}
+
+		complete_effect = {
+			add_state_core = 88
+			add_state_core = 89
+			add_state_core = 91
+			add_state_core = 80
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	CRO_integrate_south_tyrol = {
+
+		icon = generic_nationalism
+
+		allowed = {
+			original_tag = CRO
+		}
+
+		available = {
+			controls_state = 39
+			controls_state = 850
+		}
+	
+		visible = {
+			has_completed_focus = CRO_reclaim_imperial_territories
+		}
+
+		cost = 10
+		
+		days_remove = 0
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+		}
+		
+		modifier = {
+		}
+
+		complete_effect = {
+			add_state_core = 39
+			add_state_core = 850
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	CRO_integrate_bosnia_and_vojvodina = {
+
+		icon = generic_nationalism
+
+		allowed = {
+			original_tag = CRO
+		}
+
+		available = {
+			controls_state = 104
+			controls_state = 804
+			controls_state = 45
+			controls_state = 764
+		}
+	
+		visible = {
+			has_completed_focus = CRO_reclaim_imperial_territories
+		}
+
+		cost = 10
+		
+		days_remove = 0
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+		}
+		
+		modifier = {
+		}
+
+		complete_effect = {
+			add_state_core = 104
+			add_state_core = 804
+			add_state_core = 45
+			add_state_core = 764
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	CRO_integrate_transylvania = {
+
+		icon = generic_nationalism
+
+		allowed = {
+			original_tag = CRO
+		}
+
+		available = {
+			controls_state = 82
+			controls_state = 83
+			controls_state = 76
+			controls_state = 84
+		}
+	
+		visible = {
+			has_completed_focus = CRO_reclaim_imperial_territories
+		}
+
+		cost = 10
+		
+		days_remove = 0
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+		}
+		
+		modifier = {
+		}
+
+		complete_effect = {
+			add_state_core = 82
+			add_state_core = 83
+			add_state_core = 76
+			add_state_core = 84
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	CRO_integrate_istria = {
+
+		icon = generic_nationalism
+
+		allowed = {
+			original_tag = CRO
+		}
+
+		available = {
+			controls_state = 736
+		}
+	
+		visible = {
+			has_completed_focus = CRO_reclaim_imperial_territories
+		}
+
+		cost = 10
+		
+		days_remove = 0
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+		}
+		
+		modifier = {
+		}
+
+		complete_effect = {
+			add_state_core = 736
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+
+}
+
+CRO_influence_austria_and_hungary_decision_cat = {
+
+	CRO_raise_habsburg_support_in_austria_hungary = {
+
+		icon = generic_civil_support
+
+		allowed = {
+			original_tag = CRO
+		}
+		
+		targets = {
+			AUS HUN
+		}
+
+		available = {
+			FROM = {
+				NOT = {
+					has_war_with = ROOT
+				}
+			}
+			is_subject = no
+		}
+	
+		visible = {
+			FROM = {
+				check_variable = {
+					my_var < 100
+				}
+			}
+		}
+
+		cost = 50
+		
+		days_remove = 15
+		
+		fire_only_once = no
+		
+		remove_effect = {
+			FROM = {
+				add_to_variable = {
+					var = cro_habsburg_support
+					value = 15
+					tooltip = add_15_habsburg_support_tt
+				}
+				clamp_variable = {
+					var = my_var
+					max = 100
+				}
+			}
+		}
+		
+		modifier = {
+		}
+
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	CRO_pro_habsburg_propaganda = {
+
+		icon = eng_propaganda_campaigns
+
+		allowed = {
+			original_tag = CRO
+		}
+		
+		targets = {
+			AUS HUN
+		}
+
+		available = {
+			FROM = {
+				NOT = {
+					has_war_with = ROOT
+				}
+			}
+			is_subject = no
+		}
+	
+		visible = {
+			FROM = {
+				check_variable = {
+					my_var < 100
+				}
+			}
+		}
+
+		cost = 30
+		
+		days_remove = 15
+		
+		fire_only_once = no
+		
+		remove_effect = {
+			FROM = {
+				add_to_variable = {
+					var = cro_habsburg_support
+					value = 10
+					tooltip = add_10_habsburg_support_tt
+				}
+				clamp_variable = {
+					var = my_var
+					max = 100
+				}
+			}
+		}
+		
+		modifier = {
+		}
+
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	CRO_influence_the_government = {
+
+		icon = generic_political_discourse
+
+		allowed = {
+			original_tag = CRO
+		}
+		
+		targets = {
+			AUS HUN
+		}
+
+		available = {
+			FROM = {
+				NOT = {
+					has_war_with = ROOT
+				}
+			}
+			is_subject = no
+		}
+	
+		visible = {
+			FROM = {
+				check_variable = {
+					my_var < 100
+				}
+			}
+		}
+
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25
+		
+		days_remove = 15
+		
+		fire_only_once = no
+		
+		remove_effect = {
+			FROM = {
+				add_to_variable = {
+					var = cro_habsburg_support
+					value = 10
+					tooltip = add_10_habsburg_support_tt
+				}
+				clamp_variable = {
+					var = my_var
+					max = 100
+				}
+			}
+		}
+		
+		modifier = {
+		}
+
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	CRO_demand_a_referendum = {
+
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			original_tag = CRO
+		}
+		
+		targets = {
+			AUS HUN
+		}
+
+		available = {
+			FROM = {
+				NOT = {
+					has_war_with = ROOT
+				}
+			}
+			is_subject = no
+			FROM = {
+				custom_trigger_tooltip = {
+					tooltip = need_50_habsburg_support_tt
+					check_variable = {
+						var = cro_habsburg_support
+						value = 50
+						compare = greater_than_or_equals
+					}
+				}
+			}
+		}
+	
+		visible = {
+		}
+
+		cost = 25
+		
+		days_remove = 0
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+		}
+		
+		modifier = {
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = CRO_demand_a_referendum_tt
+			FROM = {
+				country_event = better_yugo_croatia.17
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+
+}
+
+CRO_collapse_of_yugosslavia_decision_cat = {
+
+	YUG_slovenian_uprising = {
+
+		allowed = { tag = CRO }
+
+		icon = generic_civil_support
+
+		available = {
+			hidden_trigger = { always = no }
+		}
+
+		days_mission_timeout = 35
+		is_good = yes
+		fire_only_once = yes
+
+		cancel_trigger = {
+			OR = {
+				has_capitulated = yes
+				YUG = { exists = no }
+			}
+		}
+		
+		activation = {
+			has_global_flag = yugoslavia_is_dying_flag
+		}
+
+		visible = {
+			has_global_flag = yugoslavia_is_dying_flag
+		}
+		
+		cancel_effect = {
+		}
+
+		timeout_effect = {
+			if = {
+				limit = {
+					SLV = {
+						exists = yes
+						is_subject = yes
+					}
+				}
+				every_country = {
+					limit = {
+						has_subject = SLV
+					}
+					set_autonomy = {
+						target = SLV
+						autonomy_state = autonomy_free
+						end_wars = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					SLV = {
+						exists = yes
+						is_in_faction = yes
+					}
+				}
+				SLV = { leave_faction = yes }
+			}
+			SLV = {
+				transfer_state = 102
+				transfer_state = 853
+				add_ideas = YUG_regional_conflict
+				hidden_effect = {
+					set_politics = {
+						ruling_party = democratic
+						elections_allowed = yes
+					}
+					set_capital = { state = 853 }
+				}
+			}
+			give_military_access = SLV
+			SLV = { 
+				give_military_access = ROOT
+				country_event = better_yugo_yugoslav_wars.2
+			}
+			YUG = {
+				declare_war_on = {
+					target = SLV
+					type = annex_everything
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+	
+	YUG_bosnian_uprising = {
+
+		allowed = { tag = CRO }
+
+		icon = generic_civil_support
+
+		available = {
+			hidden_trigger = { always = no }
+		}
+
+		days_mission_timeout = 70
+		is_good = yes
+		fire_only_once = yes
+
+		cancel_trigger = {
+			OR = {
+				has_capitulated = yes
+				YUG = { exists = no }
+			}
+		}
+		
+		activation = {
+			has_global_flag = yugoslavia_is_dying_flag
+		}
+
+		visible = {
+			has_global_flag = yugoslavia_is_dying_flag
+		}
+		
+		cancel_effect = {
+		}
+
+		timeout_effect = {
+			BOS = {
+				transfer_state = 104
+				transfer_state = 804
+				add_ideas = YUG_regional_conflict
+				hidden_effect = {
+					set_politics = {
+						ruling_party = neutrality
+						elections_allowed = yes
+					}
+				}
+			}
+			give_military_access = BOS
+			SLV = { give_military_access = BOS }
+			BOS = {
+				give_military_access = ROOT 
+				give_military_access = SLV
+				country_event = better_yugo_yugoslav_wars.2
+			}
+			YUG = {
+				declare_war_on = {
+					target = BOS
+					type = annex_everything
+				}
+				swap_ideas = {
+					remove_idea = YUG_collapse_of_yugoslavia_1
+					add_idea = YUG_collapse_of_yugoslavia_2
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+	
+	YUG_montenegrin_uprising = {
+
+		allowed = { tag = CRO }
+
+		icon = generic_civil_support
+
+		available = {
+			hidden_trigger = { always = no }
+		}
+
+		days_mission_timeout = 105
+		is_good = yes
+		fire_only_once = yes
+
+		cancel_trigger = {
+			OR = {
+				has_capitulated = yes
+				YUG = { exists = no }
+			}
+		}
+		
+		activation = {
+			has_global_flag = yugoslavia_is_dying_flag
+		}
+
+		visible = {
+			has_global_flag = yugoslavia_is_dying_flag
+		}
+		
+		cancel_effect = {
+		}
+
+		timeout_effect = {
+			if = {
+				limit = {
+					MNT = {
+						exists = yes
+						is_subject = yes
+					}
+				}
+				every_country = {
+					limit = {
+						has_subject = MNT
+					}
+					set_autonomy = {
+						target = MNT
+						autonomy_state = autonomy_free
+						end_wars = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					MNT = {
+						exists = yes
+						is_in_faction = yes
+					}
+				}
+				MNT = { leave_faction = yes }
+			}
+			MNT = {
+				transfer_state = 105
+				transfer_state = 975
+				add_ideas = YUG_regional_conflict
+				hidden_effect = {
+					set_politics = {
+						ruling_party = neutrality
+						elections_allowed = no
+					}
+				}
+			}
+			give_military_access = MNT
+			SLV = { give_military_access = MNT }
+			BOS = { give_military_access = MNT }
+			MNT = {
+				give_military_access = ROOT 
+				give_military_access = SLV
+				give_military_access = BOS
+				country_event = better_yugo_yugoslav_wars.2
+			}
+			YUG = {
+				declare_war_on = {
+					target = MNT
+					type = annex_everything
+				}
+				swap_ideas = {
+					remove_idea = YUG_collapse_of_yugoslavia_2
+					add_idea = YUG_collapse_of_yugoslavia_3
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+	
+	YUG_bulgarian_invasion = {
+
+		allowed = { tag = CRO }
+
+		icon = generic_civil_support
+
+		available = {
+			hidden_trigger = { always = no }
+		}
+
+		days_mission_timeout = 180
+		is_good = yes
+		fire_only_once = yes
+
+		cancel_trigger = {
+			OR = {
+				has_capitulated = yes
+				YUG = { exists = no }
+			}
+		}
+		
+		activation = {
+			has_global_flag = yugoslavia_is_dying_flag
+		}
+
+		visible = {
+			BUL = {
+				exists = yes
+			}
+			YUG = {
+				owns_state = 106
+			}
+			has_global_flag = yugoslavia_is_dying_flag
+		}
+		
+		cancel_effect = {
+		}
+
+		timeout_effect = {
+			BUL = {
+				create_wargoal = {
+					type = take_state_focus
+					target = YUG
+					generator = { 106 }
+				}
+			}
+			YUG = {
+				swap_ideas = {
+					remove_idea = YUG_collapse_of_yugoslavia_3
+					add_idea = YUG_collapse_of_yugoslavia_4
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+	
+	YUG_offer_peace_terms = {
+
+		icon = generic_form_nation
+
+		allowed = {
+			original_tag = CRO
+		}
+
+		available = {
+			controls_state = 107
+		}
+	
+		visible = {
+			has_global_flag = yugoslavia_is_dying_flag
+			has_war_with = YUG
+		}
+
+		cost = 0
+		
+		days_remove = 0
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+		}
+
+		complete_effect = {
+			clr_global_flag = yugoslavia_is_dying_flag
+			YUG = {
+				every_unit_leader = {
+					set_nationality = SER
+				}
+				transfer_navy = {
+					target = CRO
+				}
+			}
+			if = {
+				limit = {
+					BUL = { has_war_with = YUG }
+				}
+				BUL = {
+					transfer_state = 106
+				}
+			}
+			if = {
+				limit = {
+					HUN = { has_war_with = YUG }
+				}
+				HUN = {
+					transfer_state = 45
+				}
+			}
+			if = {
+				limit = {
+					SLV = { exists = no }
+				}
+				SLV = {
+					transfer_state = 102
+					transfer_state = 853
+					hidden_effect = {
+						set_politics = {
+							ruling_party = democratic
+							elections_allowed = yes
+						}
+						country_event = better_yugo_yugoslav_wars.2
+						set_capital = { state = 853 }
+					}
+				}
+			}
+			if = {
+				limit = {
+					BOS = { exists = no }
+				}
+				BOS = {
+					transfer_state = 104
+					transfer_state = 804
+					hidden_effect = {
+						set_politics = {
+							ruling_party = neutrality
+							elections_allowed = yes
+						}
+						country_event = better_yugo_yugoslav_wars.2
+					}
+				}
+			}
+			SER = {
+				annex_country = {
+					target = YUG
+					transfer_troops = yes
+				}
+			}
+			if = {
+				limit = { MNT = { exists = yes } }
+				MNT = {
+					add_state_claim = 976
+				}
+			}
+			every_country = {
+				limit = {
+					has_idea = YUG_regional_conflict
+				}
+				remove_ideas = YUG_regional_conflict
+			}
+			every_state = {
+				limit = {
+					is_core_of = YUG
+				}
+				remove_core_of = YUG
+			}
+			hidden_effect = {
+				every_state = {
+					limit = {
+						has_dynamic_modifier = { modifier = yug_widepsread_illiteracy }
+					}
+					remove_dynamic_modifier = { modifier = yug_widepsread_illiteracy }
+				}
+				YUG_josip_broz_tito = {
+					set_nationality = CRO
+				}
+				diplomatic_relation = {
+					country = SLV
+					relation = military_access
+					active = no
+				}
+				diplomatic_relation = {
+					country = BOS
+					relation = military_access
+					active = no
+				}
+				diplomatic_relation = {
+					country = MNT
+					relation = military_access
+					active = no
+				}
+				SLV = {
+					diplomatic_relation = {
+						country = CRO
+						relation = military_access
+						active = no
+					}
+					diplomatic_relation = {
+						country = BOS
+						relation = military_access
+						active = no
+					}
+					diplomatic_relation = {
+						country = MNT
+						relation = military_access
+						active = no
+					}
+				}
+				BOS = {
+					diplomatic_relation = {
+						country = CRO
+						relation = military_access
+						active = no
+					}
+					diplomatic_relation = {
+						country = SLV
+						relation = military_access
+						active = no
+					}
+					diplomatic_relation = {
+						country = MNT
+						relation = military_access
+						active = no
+					}
+				}
+				MNT = {
+					diplomatic_relation = {
+						country = CRO
+						relation = military_access
+						active = no
+					}
+					diplomatic_relation = {
+						country = SLV
+						relation = military_access
+						active = no
+					}
+					diplomatic_relation = {
+						country = BOS
+						relation = military_access
+						active = no
+					}
+				}
+				news_event = { id = yugo_news.30 random_hours = 24 }
+			}
+		}
+		
+		modifier = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+}
+
+CRO_rally_monarchist_support_in_italy = {
+
+	CRO_reach_out_to_monarchists_in_italy = {
+
+		icon = eng_propaganda_campaigns
+
+		allowed = {
+			original_tag = CRO
+		}
+		
+		targets = {
+			ITA
+		}
+
+		available = {
+		}
+	
+		visible = { 
+		}
+
+		cost = 75
+		
+		days_remove = 15
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+			set_country_flag = CRO_has_reached_out_to_monarchists_flag
+			if = {
+				limit = { has_dlc = "La Resistance" }
+				create_intelligence_agency = {
+					name = "Kraljevska Obavještajna Služba"
+				}
+				add_intel = {
+					target = ITA
+					civilian_intel = 30
+					army_intel = 20
+					navy_intel = 15
+					airforce_intel = 10
+				}
+			}
+			else = {
+				ITA = {
+					add_stability = -0.1
+				}
+				add_ideas = CRO_foreign_infiltration
+			}
+			custom_effect_tooltip = unlocks_further_decisions_tt
+		}
+
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	CRO_smuggle_weapons = {
+
+		icon = generic_prepare_civil_war
+
+		allowed = {
+			original_tag = CRO
+		}
+
+		available = {
+			has_country_flag = CRO_has_reached_out_to_monarchists_flag
+		}
+	
+		visible = { 
+		}
+
+		cost = 50
+		
+		days_remove = 50
+		
+		fire_only_once = no
+		
+		remove_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 500
+				producer = ITA
+			}
+		}
+
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	CRO_control_production = {
+
+		icon = generic_industry
+
+		allowed = {
+			original_tag = CRO
+		}
+
+		available = {
+			has_country_flag = CRO_has_reached_out_to_monarchists_flag
+		}
+	
+		visible = { 
+		}
+
+		cost = 50
+		
+		days_remove = 75
+		
+		fire_only_once = no
+		
+		remove_effect = {
+			ITA = {
+				random_owned_controlled_state = {
+					limit = {
+						arms_factory > 0
+					}
+					remove_building = {
+						type = arms_factory
+						level = 1
+					}
+				}
+			}
+			add_offsite_building = { type = arms_factory level = 1 }
+		}
+
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	CRO_secret_deal_with_amedeo = {
+
+		icon = ITA_italian_east_africa
+
+		allowed = {
+			original_tag = CRO
+		}
+		
+		targets = {
+			AOI
+		}
+
+		available = {
+			FROM = { is_subject_of = ITA }
+		}
+	
+		visible = { 
+		}
+
+		cost = 125
+		
+		days_remove = 0
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+		}
+
+		complete_effect = {
+			if = {
+				limit = {
+					has_war_with = ITA
+				}
+				puppet = AOI
+			}
+			else = {
+				set_country_flag = CRO_secret_deal_with_amedeo_flag
+				custom_effect_tooltip = aoi_will_support_us_tt
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+
+}
+
+CRO_balkan_democratic_organization_category = {
+
+	CRO_invite_balkan_democracies_to_organization = {
+
+		icon = hol_exchange_intelligence_data
+
+		allowed = {
+			original_tag = CRO
+		}
+		
+		target_trigger = {
+			FROM = {
+				BUL_is_balkan_nation = yes
+				has_government = democratic
+				NOT = { has_country_flag = CRO_balkan_democratic_organization_member_flag }
+			}
+		}
+
+		available = {
+			FROM = { NOT = { has_war_with = ROOT } }
+		}
+	
+		visible = { 
+		}
+
+		cost = 0
+		
+		days_remove = 0
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+		}
+
+		complete_effect = {
+			FROM = { country_event = better_yugo_croatia.59 }
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	CRO_invite_ofbn_members_to_economy = {
+
+		icon = generic_fundraising
+
+		allowed = {
+			original_tag = CRO
+		}
+		
+		target_trigger = {
+			FROM = {
+				has_country_flag = CRO_balkan_democratic_organization_member_flag
+				NOT = { has_country_flag = ofbn_trade_flag }
+				has_completed_focus = CRO_common_trade_policy
+			}
+		}
+
+		available = {
+			FROM = { NOT = { has_war_with = ROOT } }
+		}
+	
+		visible = { 
+		}
+
+		cost = 0
+		
+		days_remove = 0
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+		}
+
+		complete_effect = {
+			FROM = { country_event = better_yugo_croatia.59 }
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	CRO_invite_ofbn_members_to_military = {
+
+		icon = generic_industry
+
+		allowed = {
+			original_tag = CRO
+		}
+		
+		target_trigger = {
+			FROM = {
+				has_country_flag = CRO_balkan_democratic_organization_member_flag
+				NOT = { has_country_flag = ofbn_military_flag }
+				has_completed_focus = CRO_common_defense_policy
+			}
+		}
+
+		available = {
+			FROM = { NOT = { has_war_with = ROOT } }
+		}
+	
+		visible = { 
+		}
+
+		cost = 0
+		
+		days_remove = 0
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+		}
+
+		complete_effect = {
+			FROM = { country_event = better_yugo_croatia.59 }
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	CRO_invite_to_ofbn_faction = {
+
+		icon = hol_exchange_intelligence_data
+
+		allowed = {
+			original_tag = CRO
+		}
+		
+		target_trigger = {
+			FROM = {
+				has_country_flag = CRO_balkan_democratic_organization_member_flag
+				NOT = { is_in_faction_with = ROOT }
+			}
+		}
+
+		available = {
+			FROM = { NOT = { has_war_with = ROOT } }
+		}
+	
+		visible = { 
+			is_faction_leader = yes
+			has_completed_focus = CRO_formalize_the_alliance
+		}
+
+		cost = 0
+		
+		days_remove = 0
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+		}
+
+		complete_effect = {
+			FROM = { country_event = generic.5 }
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	CRO_invade_communist_balkan_countries = {
+
+		icon = generic_tank
+
+		allowed = {
+			original_tag = CRO
+		}
+		
+		target_trigger = {
+			FROM = {
+				BUL_is_balkan_nation = yes
+				has_government = communism
+			}
+		}
+
+		available = {
+			FROM = { NOT = { has_war_with = ROOT } }
+		}
+	
+		visible = { 
+			has_completed_focus = CRO_rid_the_balkans_of_communism
+			is_subject = no
+			NOT = {
+				has_wargoal_against = FROM
+			}
+			can_declare_war_on = FROM
+		}
+
+		cost = 50
+		
+		days_remove = 20
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+			declare_war_on = {
+				target = FROM
+				type = puppet_wargoal_focus
+			}
+		}
+
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	CRO_invade_fascist_balkan_countries = {
+
+		icon = generic_tank
+
+		allowed = {
+			original_tag = CRO
+		}
+		
+		target_trigger = {
+			FROM = {
+				BUL_is_balkan_nation = yes
+				has_government = communism
+			}
+		}
+
+		available = {
+			FROM = { NOT = { has_war_with = ROOT } }
+		}
+	
+		visible = { 
+			has_completed_focus = CRO_rid_the_balkans_of_fascism
+			is_subject = no
+			NOT = {
+				has_wargoal_against = FROM
+			}
+			can_declare_war_on = FROM
+		}
+
+		cost = 50
+		
+		days_remove = 20
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+			declare_war_on = {
+				target = FROM
+				type = puppet_wargoal_focus
+			}
+		}
+
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+
+}
+
+CRO_reunification_of_yugoslavia_decision_cat = {
+
+	CRO_reuinify_yugoslavia = {
+
+		icon = generic_form_nation
+
+		allowed = {
+			original_tag = CRO
+		}
+
+		available = {
+			controls_state = 102
+			controls_state = 853
+			controls_state = 104
+			controls_state = 804
+			controls_state = 105
+			controls_state = 975
+			controls_state = 976
+			controls_state = 45
+			controls_state = 764
+			controls_state = 107
+			controls_state = 108
+			controls_state = 802
+			controls_state = 106
+		}
+	
+		visible = {
+		}
+
+		cost = 0
+		
+		days_remove = 0
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+		}
+		
+		modifier = {
+		}
+
+		complete_effect = {
+			set_cosmetic_tag = YUG_red_yugoslavia
+			set_country_flag = cro_has_reunited_yugoslavia_flag
+			hidden_effect = {
+				news_event = { id = yugo_news.29 random_hours = 24 }
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	} 
+	
+	CRO_puppet_slv_bos = {
+
+		icon = eng_trade_unions_support
+
+		allowed = {
+			original_tag = CRO
+		}
+		
+		targets = {
+			SLV BOS MNT
+		}
+
+		available = {
+			FROM = {
+				has_government = communism
+				has_civil_war = no
+			}
+		}
+	
+		visible = {
+			has_completed_focus = CRO_use_the_partisans
+		}
+
+		cost = 0
+		
+		days_remove = 0
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+		}
+		
+		modifier = {
+		}
+
+		complete_effect = {
+			puppet = FROM
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	CRO_support_slv_bos_communists = {
+
+		icon = generic_political_discourse
+
+		allowed = {
+			original_tag = CRO
+		}
+		
+		targets = {
+			SLV BOS MNT
+		}
+
+		available = {
+		}
+	
+		visible = {
+			has_completed_focus = CRO_use_the_partisans
+			FROM = {
+				NOT = { has_government = communism }
+				has_civil_war = no
+			}
+		}
+
+		cost = 35
+		
+		days_remove = 25
+		
+		fire_only_once = no
+		
+		remove_effect = {
+			FROM = {
+				add_popularity = {
+					ideology = communism
+					popularity = 0.05
+				}
+			}
+		}
+		
+		modifier = {
+		}
+
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	CRO_provide_slv_bos_partisans_with_weapons = {
+
+		icon = generic_prepare_civil_war
+
+		allowed = {
+			original_tag = CRO
+		}
+		
+		targets = {
+			SLV BOS MNT
+		}
+
+		available = {
+		}
+	
+		visible = {
+			has_completed_focus = CRO_use_the_partisans
+			FROM = {
+				NOT = { has_government = communism }
+				has_civil_war = no
+			}
+		}
+
+		custom_cost_trigger = {
+			has_equipment = { infantry_equipment > 499 }
+		}
+		custom_cost_text = decision_cost_ie_500
+		
+		days_remove = 40
+		
+		fire_only_once = no
+		
+		remove_effect = {
+			FROM = {
+				add_popularity = {
+					ideology = communism
+					popularity = 0.1
+				}
+			}
+		}
+		
+		modifier = {
+		}
+
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	CRO_ignite_uprising_in_slv_bos = {
+
+		icon = SWI_consolidate_council_power
+
+		allowed = {
+			original_tag = CRO
+		}
+		
+		targets = {
+			SLV BOS MNT
+		}
+
+		available = {
+			FROM = {
+				communism > 0.4
+			}
+		}
+	
+		visible = {
+			has_completed_focus = CRO_use_the_partisans
+			FROM = {
+				NOT = { has_government = communism }
+				has_civil_war = no
+			}
+		}
+
+		cost = 75
+		
+		days_remove = 0
+		
+		fire_only_once = no
+		
+		remove_effect = {
+		}
+		
+		modifier = {
+		}
+
+		complete_effect = {
+			FROM = {
+				start_civil_war = {
+					ideology = communism
+					size = 0.7
+					set_country_flag = cro_communist_puppet_flag
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	CRO_puppet_serbia = {
+
+		icon = eng_trade_unions_support
+
+		allowed = {
+			original_tag = CRO
+		}
+		
+		targets = {
+			SER
+		}
+
+		available = {
+			FROM = {
+				has_government = communism
+				has_civil_war = no
+			}
+		}
+	
+		visible = {
+			has_completed_focus = CRO_organize_partisans_in_serbia
+		}
+
+		cost = 0
+		
+		days_remove = 0
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+		}
+		
+		modifier = {
+		}
+
+		complete_effect = {
+			puppet = FROM
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	CRO_support_serbian_communists = {
+
+		icon = generic_political_discourse
+
+		allowed = {
+			original_tag = CRO
+		}
+		
+		targets = {
+			SER
+		}
+
+		available = {
+		}
+	
+		visible = {
+			has_completed_focus = CRO_organize_partisans_in_serbia
+			FROM = {
+				NOT = { has_government = communism }
+				has_civil_war = no
+			}
+		}
+
+		cost = 35
+		
+		days_remove = 25
+		
+		fire_only_once = no
+		
+		remove_effect = {
+			FROM = {
+				add_popularity = {
+					ideology = communism
+					popularity = 0.05
+				}
+			}
+		}
+		
+		modifier = {
+		}
+
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	CRO_provide_serbian_partisans_with_weapons = {
+
+		icon = generic_prepare_civil_war
+
+		allowed = {
+			original_tag = CRO
+		}
+		
+		targets = {
+			SER
+		}
+
+		available = {
+		}
+	
+		visible = {
+			has_completed_focus = CRO_organize_partisans_in_serbia
+			FROM = {
+				NOT = { has_government = communism }
+				has_civil_war = no
+			}
+		}
+
+		custom_cost_trigger = {
+			has_equipment = { infantry_equipment > 499 }
+		}
+		custom_cost_text = decision_cost_ie_500
+		
+		days_remove = 40
+		
+		fire_only_once = no
+		
+		remove_effect = {
+			FROM = {
+				add_popularity = {
+					ideology = communism
+					popularity = 0.1
+				}
+			}
+		}
+		
+		modifier = {
+		}
+
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	CRO_ignite_uprising_in_serbia = {
+
+		icon = SWI_consolidate_council_power
+
+		allowed = {
+			original_tag = CRO
+		}
+		
+		targets = {
+			SER
+		}
+
+		available = {
+			FROM = {
+				communism > 0.4
+			}
+		}
+	
+		visible = {
+			has_completed_focus = CRO_organize_partisans_in_serbia
+			FROM = {
+				NOT = { has_government = communism }
+				has_civil_war = no
+			}
+		}
+
+		cost = 75
+		
+		days_remove = 0
+		
+		fire_only_once = no
+		
+		remove_effect = {
+		}
+		
+		modifier = {
+		}
+
+		complete_effect = {
+			FROM = {
+				start_civil_war = {
+					ideology = communism
+					size = 0.7
+					set_country_flag = cro_communist_puppet_flag_ser
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	CRO_integrate_yugoslav_state = {
+
+		icon = infiltrate_state
+
+		state_target = yes
+
+		available = {
+		}
+		
+		target_trigger = { 
+			FROM = {
+				is_owned_and_controlled_by = ROOT
+				is_claimed_by = ROOT
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+		}
+
+		visible = {
+			OR = {
+				has_completed_focus = CRO_wars_of_liberation
+				has_completed_focus = CRO_risen_from_the_ashes
+			}
+		}
+
+		cancel_trigger = {
+		}
+
+		fire_only_once = yes
+		
+		cost = 50
+
+		days_remove = 30
+		
+		on_map_mode = map_and_decisions_view
+		
+		complete_effect = {
+		}
+		
+		modifier = {
+			political_power_gain = -0.1
+		}
+
+		remove_effect = {
+			hidden_effect = {
+				remove_state_claim = FROM
+			}
+			add_state_core = FROM
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+}
+
+YUG_chetnik_partisan_conflict_bop_decision_cat = {
+
+	YUG_foreign_support_for_chetniks = {
+
+		icon = hol_exchange_intelligence_data
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+		}
+		
+		target_trigger = {
+			FROM = {
+				is_major = yes
+				NOT = {
+					has_war_with = ROOT
+					has_government = communism
+				}
+			}
+		}
+	
+		visible = {
+			has_country_flag = yug_playing_as_chetniks_flag
+			NOT = { has_completed_focus = YUG_use_the_enemy }
+			any_country = {
+				has_war_with = ROOT
+				has_war_with = FROM
+			}
+			FROM = {
+				has_capitulated = no
+			}
+		}
+
+		cost = 50
+		
+		days_remove = 30
+		
+		fire_only_once = no
+		
+		days_re_enable = 50
+		
+		remove_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 500
+				producer = FROM
+			}
+			add_power_balance_value = {
+				id = YUG_chetnik_partisan_conflict
+				value = -0.05
+			}
+		}
+
+		complete_effect = {
+		}
+		
+		modifier = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_foreign_support_for_partisans = {
+	name = YUG_foreign_support_for_chetniks
+
+		icon = hol_exchange_intelligence_data
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+		}
+		
+		target_trigger = {
+			FROM = {
+				is_major = yes
+				NOT = {
+					has_war_with = ROOT
+				}
+			}
+		}
+	
+		visible = {
+			has_country_flag = yug_playing_as_partisans_flag
+			has_completed_focus = YUG_allied_arms_shipments
+			any_country = {
+				has_war_with = ROOT
+				has_war_with = FROM
+			}
+			FROM = {
+				has_capitulated = no
+			}
+		}
+
+		cost = 50
+		
+		days_remove = 30
+		
+		fire_only_once = no
+		
+		days_re_enable = 50
+		
+		remove_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 500
+				producer = FROM
+			}
+			add_power_balance_value = {
+				id = YUG_chetnik_partisan_conflict
+				value = 0.05
+			}
+		}
+
+		complete_effect = {
+		}
+		
+		modifier = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_recruit_the_chetniks = {
+
+		icon = generic_military
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+		}
+	
+		visible = {
+			has_country_flag = yug_playing_as_chetniks_flag
+		}
+
+		cost = 25
+		
+		days_remove = 50
+		
+		fire_only_once = no
+		
+		remove_effect = {
+		}
+
+		complete_effect = {
+		}
+		
+		modifier = {
+			weekly_manpower = 750
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_recruit_the_partisans = {
+
+		icon = generic_military
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+		}
+	
+		visible = {
+			has_country_flag = yug_playing_as_partisans_flag
+		}
+
+		cost = 25
+		
+		days_remove = 50
+		
+		fire_only_once = no
+		
+		remove_effect = {
+		}
+
+		complete_effect = {
+		}
+		
+		modifier = {
+			weekly_manpower = 750
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_uprising_in_serbia = {
+
+		allowed = { tag = YUG }
+
+		icon = SWI_consolidate_council_power
+
+		available = {
+			hidden_trigger = { always = no }
+		}
+
+		days_mission_timeout = 180
+		is_good = yes
+		fire_only_once = yes
+
+		cancel_trigger = {
+		}
+		
+		activation = {
+			has_completed_focus = YUG_prepare_for_the_inevitable
+		}
+
+		visible = {
+		}
+		
+		cancel_effect = {
+		}
+
+		timeout_effect = {
+			if = {
+				limit = {
+					has_country_flag = yug_playing_as_chetniks_flag
+				}
+				country_event = better_yugo_resistance.16
+			}
+			else = {
+				country_event = better_yugo_resistance.17
+			}
+			add_power_balance_value = {
+				id = YUG_chetnik_partisan_conflict
+				value = 0.05
+			}
+			if = {
+				limit = { has_country_flag = yug_playing_as_chetniks_flag }
+				activate_mission = YUG_c_partisan_resistance
+			}
+			hidden_effect = {
+				activate_mission = YUG_first_enemy_offensive
+				activate_mission = YUG_operation_mihailovic
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+	
+	YUG_operation_mihailovic = {
+
+		allowed = { always = no }
+
+		icon = generic_operation
+
+		available = {
+			hidden_trigger = { always = no }
+		}
+
+		days_mission_timeout = 150
+		is_good = yes
+		fire_only_once = yes
+
+		cancel_trigger = {
+		}
+		
+		activation = {
+		}
+
+		visible = {
+			has_country_flag = yug_playing_as_chetniks_flag
+		}
+		
+		cancel_effect = {
+		}
+
+		timeout_effect = {
+			108 = { add_resistance = -5 }
+			add_power_balance_value = {
+				id = YUG_chetnik_partisan_conflict
+				value = 0.05
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+	
+	YUG_c_partisan_resistance = {
+
+		allowed = { always = no }
+
+		icon = SWI_consolidate_council_power
+
+		available = {
+			hidden_trigger = { always = no }
+		}
+
+		days_mission_timeout = 90
+		is_good = yes
+		fire_only_once = no
+
+		cancel_trigger = {
+		}
+		
+		activation = {
+		}
+
+		visible = {
+			has_country_flag = yug_playing_as_chetniks_flag
+		}
+		
+		cancel_effect = {
+		}
+
+		timeout_effect = {
+			custom_effect_tooltip = random_state_gets_resistance_tt
+			random_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_resistance = 5
+			}
+			add_power_balance_value = {
+				id = YUG_chetnik_partisan_conflict
+				value = 0.05
+			}
+			activate_mission = YUG_c_partisan_resistance
+		}
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+	
+	YUG_first_enemy_offensive = {
+
+		allowed = { always = no }
+
+		icon = generic_tank
+
+		available = {
+			hidden_trigger = { always = no }
+		}
+
+		days_mission_timeout = 90
+		is_good = no
+		fire_only_once = yes
+
+		cancel_trigger = {
+			controls_state = 107
+			controls_state = 108
+		}
+		
+		activation = {
+		}
+
+		visible = {
+		}
+		
+		cancel_effect = {
+		}
+
+		timeout_effect = {
+			country_event = better_yugo_resistance.21
+			activate_mission = YUG_second_enemy_offensive
+		}
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+	
+	YUG_second_enemy_offensive = {
+
+		allowed = { always = no }
+
+		icon = generic_tank
+
+		available = {
+			hidden_trigger = { always = no }
+		}
+
+		days_mission_timeout = 120
+		is_good = no
+		fire_only_once = yes
+
+		cancel_trigger = {
+			controls_state = 104
+		}
+		
+		activation = {
+		}
+
+		visible = {
+		}
+		
+		cancel_effect = {
+		}
+
+		timeout_effect = {
+			country_event = better_yugo_resistance.22
+			activate_mission = YUG_third_enemy_offensive
+		}
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+	
+	YUG_third_enemy_offensive = {
+
+		allowed = { always = no }
+
+		icon = generic_tank
+
+		available = {
+			hidden_trigger = { always = no }
+		}
+
+		days_mission_timeout = 120
+		is_good = no
+		fire_only_once = yes
+
+		cancel_trigger = {	
+			controls_state = 104
+			controls_state = 804
+			controls_state = 105
+		}
+		
+		activation = {
+		}
+
+		visible = {
+		}
+		
+		cancel_effect = {
+		}
+
+		timeout_effect = {
+			country_event = better_yugo_resistance.23
+			activate_mission = YUG_fourth_enemy_offensive
+		}
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+	
+	YUG_fourth_enemy_offensive = {
+
+		allowed = { always = no }
+
+		icon = generic_tank
+
+		available = {
+			hidden_trigger = { always = no }
+		}
+
+		days_mission_timeout = 240
+		is_good = no
+		fire_only_once = yes
+
+		cancel_trigger = {	
+			controls_state = 104
+			controls_state = 804
+		}
+		
+		activation = {
+		}
+
+		visible = {
+		}
+		
+		cancel_effect = {
+		}
+
+		timeout_effect = {
+			country_event = better_yugo_resistance.24
+			activate_mission = YUG_fifth_enemy_offensive
+		}
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+	
+	YUG_fifth_enemy_offensive = {
+
+		allowed = { always = no }
+
+		icon = generic_tank
+
+		available = {
+			hidden_trigger = { always = no }
+		}
+
+		days_mission_timeout = 120
+		is_good = no
+		fire_only_once = yes
+
+		cancel_trigger = {
+			controls_state = 105
+			controls_state = 804
+		}
+		
+		activation = {
+		}
+
+		visible = {
+		}
+		
+		cancel_effect = {
+		}
+
+		timeout_effect = {
+			country_event = better_yugo_resistance.25
+			activate_mission = YUG_sixth_enemy_offensive
+		}
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+	
+	YUG_sixth_enemy_offensive = {
+
+		allowed = { always = no }
+
+		icon = generic_tank
+
+		available = {
+			hidden_trigger = { always = no }
+		}
+
+		days_mission_timeout = 210
+		is_good = no
+		fire_only_once = yes
+
+		cancel_trigger = {
+			controls_state = 105
+			controls_state = 975
+			controls_state = 103
+		}
+		
+		activation = {
+		}
+
+		visible = {
+		}
+		
+		cancel_effect = {
+		}
+
+		timeout_effect = {
+			country_event = better_yugo_resistance.26
+			activate_mission = YUG_seventh_enemy_offensive
+		}
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+	
+	YUG_seventh_enemy_offensive = {
+
+		allowed = { always = no }
+
+		icon = generic_tank
+
+		available = {
+			hidden_trigger = { always = no }
+		}
+
+		days_mission_timeout = 150
+		is_good = no
+		fire_only_once = yes
+
+		cancel_trigger = {
+		}
+		
+		activation = {
+		}
+
+		visible = {
+		}
+		
+		cancel_effect = {
+		}
+
+		timeout_effect = {
+			country_event = better_yugo_resistance.27
+		}
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+	
+	YUG_c_general_uprising_in_serbia = {
+
+		icon = SWI_consolidate_council_power
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+			has_country_flag = yug_ba_congress_is_over
+			107 = { resistance > 39 }
+			108 = { resistance > 39 }
+		}
+	
+		visible = {
+			has_country_flag = yug_playing_as_chetniks_flag
+			has_capitulated = yes
+		}
+
+		cost = 15
+		
+		days_remove = 10
+		
+		fire_only_once = no
+		
+		days_re_enable = 180
+		
+		complete_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						state = 103
+						state = 104
+						state = 804
+						state = 105
+						state = 975
+						state = 976
+						state = 107
+						state = 108
+						state = 970
+						state = 45
+						state = 764
+						state = 802
+						state = 803
+						state = 106
+						state = 977
+					}
+					resistance > 39
+				}
+				set_state_flag = yug_uprising_state_flag
+			}
+		}
+		
+		remove_effect = {
+			hidden_effect = {
+				every_state = {
+					limit = {
+						has_state_flag = yug_uprising_state_flag
+					}
+					set_state_controller_to = ROOT
+				}
+				division_template = {
+					name = "Četnički Odred"
+					division_names_group = YUG_CHETNIKS_01
+					is_locked = no
+					template_counter = 1
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+						infantry = { x = 2 y = 0 }
+						infantry = { x = 2 y = 1 }
+						infantry = { x = 2 y = 2 }
+					}
+					support = {
+						recon = { x = 0 y = 0 }
+					}
+				}
+				107 = {
+					create_unit = {
+						division = "name = \"Krajinski Korpus\" division_template = \"Četnički Odred\" start_experience_factor = 0.8" 
+						owner = YUG
+					}
+					create_unit = {
+						division = "name = \"Mlavski Korpus\" division_template = \"Četnički Odred\" start_experience_factor = 0.8" 
+						owner = YUG
+					}
+					create_unit = {
+						division = "name = \"Smederevski Korpus\" division_template = \"Četnički Odred\" start_experience_factor = 0.8" 
+						owner = YUG
+					}
+					create_unit = {
+						division = "name = \"Avalski Korpus\" division_template = \"Četnički Odred\" start_experience_factor = 0.8" 
+						owner = YUG
+					}
+					create_unit = {
+						division = "name = \"Rudnički Korpus\" division_template = \"Četnički Odred\" start_experience_factor = 0.8" 
+						owner = YUG
+					}
+					create_unit = {
+						division = "name = \"Ravnogorski  Korpus\" division_template = \"Četnički Odred\" start_experience_factor = 0.8" 
+						owner = YUG
+					}
+					create_unit = {
+						division = "name = \"Oplenački Korpus\" division_template = \"Četnički Odred\" start_experience_factor = 0.8" 
+						owner = YUG
+					}
+					create_unit = {
+						division = "name = \"Kosmajski Korpus\" division_template = \"Četnički Odred\" start_experience_factor = 0.8" 
+						owner = YUG
+					}
+					create_unit = {
+						division = "name = \"Kolubarski Korpus\" division_template = \"Četnički Odred\" start_experience_factor = 0.8" 
+						owner = YUG
+					}
+					create_unit = {
+						division = "name = \"Mačvanski Korpus\" division_template = \"Četnički Odred\" start_experience_factor = 0.8" 
+						owner = YUG
+					}
+					create_unit = {
+						division = "name = \"Cerski Korpus\" division_template = \"Četnički Odred\" start_experience_factor = 0.8" 
+						owner = YUG
+					}
+				}
+				108 = {
+					create_unit = {
+						division = "name = \"Šumadijski Korpus\" division_template = \"Četnički Odred\" start_experience_factor = 0.8" 
+						owner = YUG
+					}
+					create_unit = {
+						division = "name = \"Valjevski Korpus\" division_template = \"Četnički Odred\" start_experience_factor = 0.8" 
+						owner = YUG
+					}
+					create_unit = {
+						division = "name = \"Požeški Korpus\" division_template = \"Četnički Odred\" start_experience_factor = 0.8" 
+						owner = YUG
+					}
+					create_unit = {
+						division = "name = \"Zlatiborski Korpus\" division_template = \"Četnički Odred\" start_experience_factor = 0.8" 
+						owner = YUG
+					}
+					create_unit = {
+						division = "name = \"Javorski Korpus\" division_template = \"Četnički Odred\" start_experience_factor = 0.8" 
+						owner = YUG
+					}
+					create_unit = {
+						division = "name = \"Varvarinski Korpus\" division_template = \"Četnički Odred\" start_experience_factor = 0.8" 
+						owner = YUG
+					}
+					create_unit = {
+						division = "name = \"Rasinski Korpus\" division_template = \"Četnički Odred\" start_experience_factor = 0.8" 
+						owner = YUG
+					}
+					create_unit = {
+						division = "name = \"Jastrebački Korpus\" division_template = \"Četnički Odred\" start_experience_factor = 0.8" 
+						owner = YUG
+					}
+				}
+				if = {
+					limit = {
+						803 = { has_state_flag = yug_uprising_state_flag }
+					}
+					create_unit = {
+						division = "name = \"Jablanički Korpus\" division_template = \"Četnički Odred\" start_experience_factor = 0.8" 
+						owner = YUG
+					}
+				}
+				if = {
+					limit = {
+						106 = { has_state_flag = yug_uprising_state_flag }
+					}
+					create_unit = {
+						division = "name = \"Južnomoravski Korpus\" division_template = \"Četnički Odred\" start_experience_factor = 0.8" 
+						owner = YUG
+					}
+					create_unit = {
+						division = "name = \"Vardarski Korpus\" division_template = \"Četnički Odred\" start_experience_factor = 0.8" 
+						owner = YUG
+					}
+				}
+				if = {
+					limit = {
+						802 = { has_state_flag = yug_uprising_state_flag }
+					}
+					create_unit = {
+						division = "name = \"1. Kosovski Korpus\" division_template = \"Četnički Odred\" start_experience_factor = 0.8" 
+						owner = YUG
+					}
+					create_unit = {
+						division = "name = \"2. Kosovski Korpus\" division_template = \"Četnički Odred\" start_experience_factor = 0.8" 
+						owner = YUG
+					}
+				}
+				if = {
+					limit = {
+						975 = { has_state_flag = yug_uprising_state_flag }
+					}
+					create_unit = {
+						division = "name = \"Limski Korpus\" division_template = \"Četnički Odred\" start_experience_factor = 0.8" 
+						owner = YUG
+					}
+					create_unit = {
+						division = "name = \"Komski Korpus\" division_template = \"Četnički Odred\" start_experience_factor = 0.8" 
+						owner = YUG
+					}
+				}
+				if = {
+					limit = {
+						105 = { has_state_flag = yug_uprising_state_flag }
+					}
+					create_unit = {
+						division = "name = \"Nikšićki Korpus\" division_template = \"Četnički Odred\" start_experience_factor = 0.8" 
+						owner = YUG
+					}
+					create_unit = {
+						division = "name = \"Zetski Korpus\" division_template = \"Četnički Odred\" start_experience_factor = 0.8" 
+						owner = YUG
+					}
+					create_unit = {
+						division = "name = \"Crmničko-primorski Korpus\" division_template = \"Četnički Odred\" start_experience_factor = 0.8" 
+						owner = YUG
+					}
+					create_unit = {
+						division = "name = \"Bokokotorski Korpus\" division_template = \"Četnički Odred\" start_experience_factor = 0.8" 
+						owner = YUG
+					}
+				}
+				if = {
+					limit = {
+						103 = { has_state_flag = yug_uprising_state_flag }
+					}
+					create_unit = {
+						division = "name = \"Dubrovački Korpus\" division_template = \"Četnički Odred\" start_experience_factor = 0.8" 
+						owner = YUG
+					}
+				}
+				if = {
+					limit = {
+						804 = { has_state_flag = yug_uprising_state_flag }
+					}
+					create_unit = {
+						division = "name = \"Nevesinjski Korpus\" division_template = \"Četnički Odred\" start_experience_factor = 0.8" 
+						owner = YUG
+					}
+					create_unit = {
+						division = "name = \"Trebinski Korpus\" division_template = \"Četnički Odred\" start_experience_factor = 0.8" 
+						owner = YUG
+					}
+				}
+				if = {
+					limit = {
+						104 = { has_state_flag = yug_uprising_state_flag }
+					}
+					create_unit = {
+						division = "name = \"Drinski Korpus\" division_template = \"Četnički Odred\" start_experience_factor = 0.8" 
+						owner = YUG
+					}
+					create_unit = {
+						division = "name = \"Bosansko-krajiški Korpus\" division_template = \"Četnički Odred\" start_experience_factor = 0.8" 
+						owner = YUG
+					}
+					create_unit = {
+						division = "name = \"Srednjo-bosanski Korpus\" division_template = \"Četnički Odred\" start_experience_factor = 0.8" 
+						owner = YUG
+					}
+					create_unit = {
+						division = "name = \"Zenički Korpus\" division_template = \"Četnički Odred\" start_experience_factor = 0.8" 
+						owner = YUG
+					}
+					create_unit = {
+						division = "name = \"Romanijski Korpus\" division_template = \"Četnički Odred\" start_experience_factor = 0.8" 
+						owner = YUG
+					}
+				}
+				division_template = {
+					name = "Limsko-Sandžački Četnički Odred"
+					is_locked = no
+					template_counter = 2
+					regiments = { # beefy division
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						artillery_brigade = { x = 0 y = 3 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+						artillery_brigade = { x = 1 y = 3 }
+						infantry = { x = 2 y = 0 }
+						infantry = { x = 2 y = 1 }
+						infantry = { x = 2 y = 2 }
+						artillery_brigade = { x = 2 y = 3 }
+					}
+					support = {
+						artillery = { x = 0 y = 0 }
+					}
+				}
+				976 = {
+					create_unit = {
+						division = "name = \"Limsko-Sandžački Četnički Odred\" division_template = \"Limsko-Sandžački Četnički Odred\" start_experience_factor = 1" 
+						owner = YUG
+					}
+				}
+				division_template = {
+					name = "Dinarska Divizija"
+					division_names_group = YUG_CHETNIKS_01
+					is_locked = no
+					template_counter = 2
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+						artillery_brigade = { x = 1 y = 3 }
+						infantry = { x = 2 y = 0 }
+						infantry = { x = 2 y = 1 }
+						infantry = { x = 2 y = 2 }
+					}
+					support = {
+					}
+				}
+				103 = {
+					create_unit = {
+						division = "name = \"Dinarska Divizija\" division_template = \"Dinarska Divizija\" start_experience_factor = 0.9" 
+						owner = YUG
+					}
+				}
+			}
+			set_state_controller = 107
+			set_state_controller = 108
+			custom_effect_tooltip = YUG_c_general_uprising_in_serbia_tt
+			every_state = {
+				limit = {
+					has_state_flag = yug_uprising_state_flag
+				}
+				clr_state_flag = yug_uprising_state_flag
+			}
+			if = {
+				limit = {
+					has_country_flag = yug_topalovic_is_leader
+				}
+				set_party_name = {
+					ideology = democratic
+					long_name = YUG_jdnz_name_long 
+					name = YUG_jdnz_name
+				} 
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = yes
+				}
+				create_country_leader = {
+					name = YUG_zivko_topalovic
+					picture = GFX_portrait_YUG_zivko_topalovic_large
+					expire = "1965.1.1"
+					ideology = socialism
+					traits = {
+						yug_social_democrat
+					}
+				}
+				if = {
+					limit = {
+						has_idea = YUG_prince_regent_paul
+					}
+					remove_ideas = YUG_prince_regent_paul
+				}
+				if = {
+					limit = {
+						NOT = { has_idea = king_peter_1 }
+					}
+					add_ideas = king_peter_1
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = yug_mihailovic_is_leader
+				}
+				set_party_name = {
+					ideology = neutrality
+					long_name = YUG_jdnz_name_long 
+					name = YUG_jdnz_name
+				} 
+				set_politics = {
+					ruling_party = neutrality
+					elections_allowed = yes
+				}
+				create_country_leader = {
+					name = YUG_draza_mihailovic
+					picture = GFX_portrait_YUG_draza_mihailovic
+					expire = "1965.1.1"
+					ideology = centrism
+					traits = {
+						cica_draza
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = yug_mihailovic_leader_2
+				}
+				set_party_name = {
+					ideology = neutrality
+					long_name = YUG_cnk_name_long 
+					name = YUG_cnk_name
+				} 
+				set_politics = {
+					ruling_party = neutrality
+					elections_allowed = no
+				}
+				create_country_leader = {
+					name = YUG_draza_mihailovic
+					picture = GFX_portrait_YUG_draza_mihailovic
+					expire = "1965.1.1"
+					ideology = despotism
+					traits = {
+						cica_draza
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = yug_chetnik_greater_serbia
+				}
+				set_party_name = {
+					ideology = fascism
+					long_name = YUG_cnk_name_long 
+					name = YUG_cnk_name
+				} 
+				set_politics = {
+					ruling_party = fascism
+					elections_allowed = no
+				}
+				create_country_leader = {
+					name = YUG_dragisa_vasic
+					picture = GFX_portrait_YUG_dragisa_vasic
+					expire = "1965.1.1"
+					ideology = fascism_ideology
+					traits = {
+					}
+				}
+			}
+			add_timed_idea = { idea = YUG_freedom_or_death days = 240 }
+		}
+
+		complete_effect = {
+		}
+		
+		modifier = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	} 
+	
+	YUG_p_general_uprising = {
+
+		icon = SWI_consolidate_council_power
+
+		allowed = {
+			original_tag = YUG
+		}
+
+		available = {
+			has_completed_focus = YUG_prepare_for_the_uprising
+			any_state = {
+				is_core_of = ROOT
+				resistance > 39
+			}
+		}
+	
+		visible = {
+			has_country_flag = yug_playing_as_partisans_flag
+			has_capitulated = yes
+		}
+
+		cost = 15
+		
+		days_remove = 10
+		
+		fire_only_once = no
+		
+		days_re_enable = 180
+		
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_core_of = ROOT
+					resistance > 39
+				}
+				set_state_flag = yug_uprising_state_flag
+			}
+		}
+		
+		remove_effect = {
+			hidden_effect = {
+				every_state = {
+					limit = {
+						has_state_flag = yug_uprising_state_flag
+					}
+					set_state_controller_to = ROOT
+				}
+				division_template = {
+					name = "Proletarska Brigada"
+					division_names_group = YUG_PARTISANS_01
+					is_locked = no
+					template_counter = 0
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+					}
+					support = {
+					}
+				}
+				division_template = {
+					name = "Proletarska Divizija"
+					division_names_group = YUG_PARTISANS_01
+					is_locked = no
+					template_counter = 69
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+						infantry = { x = 2 y = 0 }
+						infantry = { x = 2 y = 1 }
+						infantry = { x = 2 y = 2 }
+					}
+					support = {
+						recon = { x = 0 y = 0 }
+					}
+				}
+				random_state = {
+					limit = {
+						has_state_flag = yug_uprising_state_flag
+					}
+					create_unit = {
+						division = "name = \"1. Proleterska Divizija\" division_template = \"Proletarska Divizija\" start_experience_factor = 0.8" 
+						owner = YUG
+					}
+					create_unit = {
+						division = "name = \"2. Proleterska Divizija\" division_template = \"Proletarska Divizija\" start_experience_factor = 0.8" 
+						owner = YUG
+					}
+					create_unit = {
+						division = "name = \"3. Proleterska Udarna Divizija\" division_template = \"Proletarska Divizija\" start_experience_factor = 0.8" 
+						owner = YUG
+					}
+					create_unit = {
+						division = "name = \"1. Proleterska Narodno-Oslobodilačka Udarna Brigada\" division_template = \"Proletarska Brigada\" start_experience_factor = 0.8" 
+						owner = YUG
+					}
+					create_unit = {
+						division = "name = \"4. Krajiška Divizija\" division_template = \"Proletarska Divizija\" start_experience_factor = 0.8" 
+						owner = YUG
+					}
+					create_unit = {
+						division = "name = \"5. Krajiška Divizija\" division_template = \"Proletarska Divizija\" start_experience_factor = 0.8" 
+						owner = YUG
+					}
+				}
+				if = {
+					limit = {
+						106 = {
+							has_state_flag = yug_uprising_state_flagv
+						}
+					}
+					106 = {
+						create_unit = {
+							division = "name = \"Makedonska Divizija\" division_template = \"Proletarska Divizija\" start_experience_factor = 0.8" 
+							owner = YUG
+						}
+						create_unit = {
+							division = "name = \"Makedonska Divizija\" division_template = \"Proletarska Divizija\" start_experience_factor = 0.8" 
+							owner = YUG
+						}
+						create_unit = {
+							division = "name = \"Makedonska Divizija\" division_template = \"Proletarska Divizija\" start_experience_factor = 0.8" 
+							owner = YUG
+						}
+						create_unit = {
+							division = "name = \"Makedonska Divizija\" division_template = \"Proletarska Divizija\" start_experience_factor = 0.8" 
+							owner = YUG
+						}
+					}
+				}
+				if = {
+					limit = {
+						977 = {
+							has_state_flag = yug_uprising_state_flag
+						}
+					}
+					977 = {
+						create_unit = {
+							division = "name = \"Makedonska Divizija\" division_template = \"Proletarska Divizija\" start_experience_factor = 0.8" 
+							owner = YUG
+						}
+					}
+				}
+				if = {
+					limit = {
+						802 = {
+							has_state_flag = yug_uprising_state_flag
+						}
+					}
+					802 = {
+						create_unit = {
+							division = "name = \"Kosovsko-Metohijska Divizija\" division_template = \"Proletarska Divizija\" start_experience_factor = 0.8" 
+							owner = YUG
+						}
+					}
+				}
+				if = {
+					limit = {
+						803 = {
+							has_state_flag = yug_uprising_state_flag
+						}
+					}
+					803 = {
+						create_unit = {
+							division = "name = \"Udarna Srpska Divizija\" division_template = \"Proletarska Divizija\" start_experience_factor = 0.8" 
+							owner = YUG
+						}
+					}
+				}
+				if = {
+					limit = {
+						107 = {
+							has_state_flag = yug_uprising_state_flag
+						}
+					}
+					107 = {
+						create_unit = {
+							division = "name = \"Srpska Divizija\" division_template = \"Proletarska Divizija\" start_experience_factor = 0.8" 
+							owner = YUG
+						}
+						create_unit = {
+							division = "name = \"Srpska Divizija\" division_template = \"Proletarska Divizija\" start_experience_factor = 0.8" 
+							owner = YUG
+						}
+					}
+				}
+				if = {
+					limit = {
+						108 = {
+							has_state_flag = yug_uprising_state_flag
+						}
+					}
+					108 = {
+						create_unit = {
+							division = "name = \"Srpska Divizija\" division_template = \"Proletarska Divizija\" start_experience_factor = 0.8" 
+							owner = YUG
+						}
+						create_unit = {
+							division = "name = \"Srpska Divizija\" division_template = \"Proletarska Divizija\" start_experience_factor = 0.8" 
+							owner = YUG
+						}
+						create_unit = {
+							division = "name = \"Srpska Divizija\" division_template = \"Proletarska Divizija\" start_experience_factor = 0.8" 
+							owner = YUG
+						}
+					}
+				}
+				if = {
+					limit = {
+						764 = {
+							has_state_flag = yug_uprising_state_flag
+						}
+					}
+					764 = {
+						create_unit = {
+							division = "name = \"Srpska Divizija\" division_template = \"Proletarska Divizija\" start_experience_factor = 0.8" 
+							owner = YUG
+						}
+					}
+				}
+				if = {
+					limit = {
+						45 = {
+							has_state_flag = yug_uprising_state_flag
+						}
+					}
+					45 = {
+						create_unit = {
+							division = "name = \"Vojvođanska Divizija\" division_template = \"Proletarska Divizija\" start_experience_factor = 0.8" 
+							owner = YUG
+						}
+						create_unit = {
+							division = "name = \"Vojvođanska Divizija\" division_template = \"Proletarska Divizija\" start_experience_factor = 0.8" 
+							owner = YUG
+						}
+						create_unit = {
+							division = "name = \"Vojvođanska Divizija\" division_template = \"Proletarska Divizija\" start_experience_factor = 0.8" 
+							owner = YUG
+						}
+					}
+				}
+				if = {
+					limit = {
+						104 = {
+							has_state_flag = yug_uprising_state_flag
+						}
+					}
+					104 = {
+						create_unit = {
+							division = "name = \"Krajiška Divizija\" division_template = \"Proletarska Divizija\" start_experience_factor = 0.8" 
+							owner = YUG
+						}
+						create_unit = {
+							division = "name = \"Krajiška Divizija\" division_template = \"Proletarska Divizija\" start_experience_factor = 0.8" 
+							owner = YUG
+						}
+						create_unit = {
+							division = "name = \"Krajiška Divizija\" division_template = \"Proletarska Divizija\" start_experience_factor = 0.8" 
+							owner = YUG
+						}
+						create_unit = {
+							division = "name = \"Krajiška Divizija\" division_template = \"Proletarska Divizija\" start_experience_factor = 0.8" 
+							owner = YUG
+						}
+						create_unit = {
+							division = "name = \"Krajiška Divizija\" division_template = \"Proletarska Divizija\" start_experience_factor = 0.8" 
+							owner = YUG
+						}
+						create_unit = {
+							division = "name = \"Istočnobosanska Divizija\" division_template = \"Proletarska Divizija\" start_experience_factor = 0.8" 
+							owner = YUG
+						}
+						create_unit = {
+							division = "name = \"Istočnobosanska Divizija\" division_template = \"Proletarska Divizija\" start_experience_factor = 0.8" 
+							owner = YUG
+						}
+						create_unit = {
+							division = "name = \"Istočnobosanska Divizija\" division_template = \"Proletarska Divizija\" start_experience_factor = 0.8" 
+							owner = YUG
+						}
+						create_unit = {
+							division = "name = \"Banijska Divizija\" division_template = \"Proletarska Divizija\" start_experience_factor = 0.8" 
+							owner = YUG
+						}
+					}
+				}
+				if = {
+					limit = {
+						804 = {
+							has_state_flag = yug_uprising_state_flag
+						}
+					}
+					804 = {
+						create_unit = {
+							division = "name = \"Hercegovačka Divizija\" division_template = \"Proletarska Divizija\" start_experience_factor = 0.8" 
+							owner = YUG
+						}
+						create_unit = {
+							division = "name = \"Srednjobosanska Divizija\" division_template = \"Proletarska Divizija\" start_experience_factor = 0.8" 
+							owner = YUG
+						}
+					}
+				}
+				if = {
+					limit = {
+						971 = {
+							has_state_flag = yug_uprising_state_flag
+						}
+					}
+					971 = {
+						create_unit = {
+							division = "name = \"Lička Proleterska Udarna Divizija\" division_template = \"Proletarska Divizija\" start_experience_factor = 0.8" 
+							owner = YUG
+						}
+						create_unit = {
+							division = "name = \"Lička Udarna Divizija\" division_template = \"Proletarska Divizija\" start_experience_factor = 0.8" 
+							owner = YUG
+						}
+						create_unit = {
+							division = "name = \"Primosko-Goranska Udarna Divizija\" division_template = \"Proletarska Divizija\" start_experience_factor = 0.8" 
+							owner = YUG
+						}
+					}
+				}
+				if = {
+					limit = {
+						105 = {
+							has_state_flag = yug_uprising_state_flag
+						}
+					}
+					105 = {
+						create_unit = {
+							division = "name = \"Srpska Divizija\" division_template = \"Proletarska Divizija\" start_experience_factor = 0.8" 
+							owner = YUG
+						}
+					}
+				}
+				if = {
+					limit = {
+						975 = {
+							has_state_flag = yug_uprising_state_flag
+						}
+					}
+					975 = {
+						create_unit = {
+							division = "name = \"Sandžačka Divizija\" division_template = \"Proletarska Divizija\" start_experience_factor = 0.8" 
+							owner = YUG
+						}
+					}
+				}
+				if = {
+					limit = {
+						109 = {
+							has_state_flag = yug_uprising_state_flag
+						}
+					}
+					109 = {
+						create_unit = {
+							division = "name = \"Zagorska Divizija\" division_template = \"Proletarska Divizija\" start_experience_factor = 0.8" 
+							owner = YUG
+						}
+						create_unit = {
+							division = "name = \"Kordunaška Divizija\" division_template = \"Proletarska Divizija\" start_experience_factor = 0.8" 
+							owner = YUG
+						}
+						create_unit = {
+							division = "name = \"Slavonska Divizija\" division_template = \"Proletarska Divizija\" start_experience_factor = 0.8" 
+							owner = YUG
+						}
+						create_unit = {
+							division = "name = \"Slavonska Divizija\" division_template = \"Proletarska Divizija\" start_experience_factor = 0.8" 
+							owner = YUG
+						}
+						create_unit = {
+							division = "name = \"Slavonska Divizija\" division_template = \"Proletarska Divizija\" start_experience_factor = 0.8" 
+							owner = YUG
+						}
+					}
+				}
+				if = {
+					limit = {
+						853 = {
+							has_state_flag = yug_uprising_state_flag
+						}
+					}
+					853 = {
+						create_unit = {
+							division = "name = \"Slovenačka Udarna Divizija\" division_template = \"Proletarska Divizija\" start_experience_factor = 0.8" 
+							owner = YUG
+						}
+						create_unit = {
+							division = "name = \"Slovenačka Divizija\" division_template = \"Proletarska Divizija\" start_experience_factor = 0.8" 
+							owner = YUG
+						}
+						create_unit = {
+							division = "name = \"Slovenačka Divizija\" division_template = \"Proletarska Divizija\" start_experience_factor = 0.8" 
+							owner = YUG
+						}
+					}
+				}
+				if = {
+					limit = {
+						102 = {
+							has_state_flag = yug_uprising_state_flag
+						}
+					}
+					102 = {
+						create_unit = {
+							division = "name = \"Slovenačka Udarna Divizija\" division_template = \"Proletarska Divizija\" start_experience_factor = 0.8" 
+							owner = YUG
+						}
+						create_unit = {
+							division = "name = \"Slovenačka Divizija\" division_template = \"Proletarska Divizija\" start_experience_factor = 0.8" 
+							owner = YUG
+						}
+					}
+				}
+				every_state = {
+					limit = {
+						has_state_flag = yug_uprising_state_flag
+					}
+					clr_state_flag = yug_uprising_state_flag
+				}
+			}
+			custom_effect_tooltip = YUG_p_general_uprising_tt
+			add_timed_idea = { idea = YUG_national_liberation days = 240 }
+			set_country_flag = yug_partisan_uprising
+		}
+
+		complete_effect = {
+		}
+		
+		modifier = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	YUG_c_yugoslav_civil_war = {
+	name = YUG_yugoslav_civil_war
+
+		allowed = { always = no }
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			hidden_trigger = { always = no }
+		}
+
+		days_mission_timeout = 110
+		is_good = no
+		fire_only_once = yes
+
+		cancel_trigger = {
+			has_completed_focus = YUG_trial_of_tito
+		}
+		
+		activation = {
+		}
+
+		visible = {
+		}
+		
+		cancel_effect = {
+			add_political_power = 25
+		}
+
+		timeout_effect = {
+			start_civil_war = {
+				ideology = communism
+				size = 0.3
+				states = {
+					109 853 971 102
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+	
+	YUG_p_yugoslav_civil_war = {
+	name = YUG_yugoslav_civil_war
+
+		allowed = { always = no }
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			hidden_trigger = { always = no }
+		}
+
+		days_mission_timeout = 110
+		is_good = no
+		fire_only_once = yes
+
+		cancel_trigger = {
+			has_completed_focus = YUG_trial_of_draza_mihailovic
+		}
+		
+		activation = {
+		}
+
+		visible = {
+		}
+		
+		cancel_effect = {
+			add_political_power = 25
+		}
+
+		timeout_effect = {
+			start_civil_war = {
+				ideology = neutrality
+				size = 0.3
+				states = {
+					105 975 976 108 802 803
+				}
+				create_country_leader = {
+					name = YUG_draza_mihailovic
+					picture = GFX_portrait_YUG_draza_mihailovic
+					expire = "1965.1.1"
+					ideology = despotism
+					traits = {
+						cica_draza
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+}

@@ -1,0 +1,27 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_bop_YUG_chetnik_side"
+		texturefile = "gfx/interface/bop/bop_YUG_chetnik_side.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_bop_YUG_partisan_side"
+		texturefile = "gfx/interface/bop/bop_YUG_partisan_side.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_bop_YUG_stojadinovic_side"
+		texturefile = "gfx/interface/bop/bop_YUG_stojadinovic_side.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_bop_YUG_decentralization_side"
+		texturefile = "gfx/interface/bop/bop_YUG_decentralization.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_bop_YUG_centralization_side"
+		texturefile = "gfx/interface/bop/bop_YUG_centralization.dds"
+	}
+}

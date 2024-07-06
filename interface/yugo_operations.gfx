@@ -1,0 +1,14 @@
+spriteTypes = {	
+
+	spriteType = {
+		name = "GFX_phase_assassinate_pavelic_infiltration"
+		texturefile = "gfx/interface/operations/images/phase_assassinate_pavelic_infiltration.dds"
+	} 
+	
+	spriteType = {
+		name = "GFX_phase_assassinate_pavelic_infiltration_small"
+		texturefile = "gfx/interface/operations/phases_small/phase_assassinate_pavelic_infiltration_small.dds"
+	}
+
+}
+
