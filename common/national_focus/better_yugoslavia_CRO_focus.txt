@@ -892,6 +892,66 @@ focus_tree = {
 	}
 	
 	focus = {
+		id = CRO_croatian_supremacy
+		icon = GFX_focus_CRO_croatian_supremacy
+		
+		prerequisite = { 
+			focus = CRO_towards_greater_croatia
+		}
+		
+		mutually_exclusive = {
+			focus = CRO_sign_the_tripartite_pact
+			focus = CRO_allies_across_the_adriatic
+		}
+		
+		x = 0
+		y = 1
+		relative_position_id = CRO_towards_greater_croatia
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+		}
+		
+		search_filters = { }
+
+		completion_reward = {
+			add_war_support = 0.1
+			add_political_power = 50
+			if = {
+				limit = {
+					NOT = { has_rule = can_create_factions }
+				}
+				set_rule = { can_create_factions = yes }
+			}
+			if = {
+				limit = {
+					is_in_faction = no
+					is_subject = no
+				}
+				create_faction = "cro_zagreb_pact"
+			}
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = CRO_stijepo_peric
+		}
+	}
+
+	focus = {
 		id = CRO_demand_istria
 		icon = GFX_focus_attack_italy
 		
@@ -986,67 +1046,7 @@ focus_tree = {
 				}
 			}
 		}
-	}
-	
-	focus = {
-		id = CRO_croatian_supremacy
-		icon = GFX_focus_CRO_croatian_supremacy
-		
-		prerequisite = { 
-			focus = CRO_towards_greater_croatia
-		}
-		
-		mutually_exclusive = {
-			focus = CRO_sign_the_tripartite_pact
-			focus = CRO_allies_across_the_adriatic
-		}
-		
-		x = 0
-		y = 1
-		relative_position_id = CRO_towards_greater_croatia
-
-		cost = 8
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			
-		}
-		
-		bypass = {
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-		}
-		
-		search_filters = { }
-
-		completion_reward = {
-			add_war_support = 0.1
-			add_political_power = 50
-			if = {
-				limit = {
-					NOT = { has_rule = can_create_factions }
-				}
-				set_rule = { can_create_factions = yes }
-			}
-			if = {
-				limit = {
-					is_in_faction = no
-					is_subject = no
-				}
-				create_faction = "cro_zagreb_pact"
-			}
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = CRO_stijepo_peric
-		}
-	}
+	}	
 	
 	focus = {
 		id = CRO_technology_sharing

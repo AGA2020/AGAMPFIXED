@@ -32,101 +32,6 @@ focus_tree = {
 
 	continuous_focus_position = { x = 50 y = 2000 }
 	
- ################## COLLAPSE OF YUGOSLAVIA ######################
- # this is how you play as croatia
- 
-	focus = {
-		id = YUG_raise_separatist_sentiment
-		icon = GFX_focus_YUG_raise_separatist_sentiment
-		
-		prerequisite = { 
-		}
-		
-		mutually_exclusive = { 
-			focus = YUG_assemble_the_regency_council
-			focus = YUG_lift_the_ban_on_kpj
-			focus = YUG_strenghten_jrz
-		}
-		
-		x = 46
-		y = 0
-		relative_position_id = YUG_strenghten_jrz
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-		}
-		
-		bypass = {
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-		}
-		
-		search_filters = {FOCUS_FILTER_POLITICAL}
-
-		completion_reward = {
-			add_stability = -0.1
-			add_ideas = YUG_raise_separatist_sentiment_idea
-			custom_effect_tooltip = YUG_raise_separatist_sentiment_tt
-			hidden_effect = {
-				country_event = {
-					id = better_yugo.114 days = 15
-				}
-			}
-		}
-	}
-	
-	focus = {
-		id = YUG_croatian_war_of_independence
-		icon = GFX_focus_CRO_flag_of_croatia
-		
-		prerequisite = { 
-			focus = YUG_raise_separatist_sentiment
-		}
-		
-		mutually_exclusive = { 
-		}
-		
-		x = 0
-		y = 1
-		relative_position_id = YUG_raise_separatist_sentiment
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-		}
-		
-		bypass = {
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-		}
-		
-		search_filters = {FOCUS_FILTER_POLITICAL}
-
-		completion_reward = {
-			country_event = better_yugo_yugoslav_wars.1
-			custom_effect_tooltip = YUG_croatian_war_of_independence_tt
-		}
-	}
-	
  ################## FASCIST/HISTORICAL ####################
 
 	focus = {
@@ -19100,4 +19005,100 @@ focus_tree = {
 			add_ideas = YUG_reconstruction
 		}
 	}
+
+ ################## COLLAPSE OF YUGOSLAVIA ######################
+ # this is how you play as croatia
+ 
+	focus = {
+		id = YUG_raise_separatist_sentiment
+		icon = GFX_focus_YUG_raise_separatist_sentiment
+		
+		prerequisite = { 
+		}
+		
+		mutually_exclusive = { 
+			focus = YUG_assemble_the_regency_council
+			focus = YUG_lift_the_ban_on_kpj
+			focus = YUG_strenghten_jrz
+		}
+		
+		x = 46
+		y = 0
+		relative_position_id = YUG_strenghten_jrz
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+		}
+		
+		search_filters = {FOCUS_FILTER_POLITICAL}
+
+		completion_reward = {
+			add_stability = -0.1
+			add_ideas = YUG_raise_separatist_sentiment_idea
+			custom_effect_tooltip = YUG_raise_separatist_sentiment_tt
+			hidden_effect = {
+				country_event = {
+					id = better_yugo.114 days = 15
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = YUG_croatian_war_of_independence
+		icon = GFX_focus_CRO_flag_of_croatia
+		
+		prerequisite = { 
+			focus = YUG_raise_separatist_sentiment
+		}
+		
+		mutually_exclusive = { 
+		}
+		
+		x = 0
+		y = 1
+		relative_position_id = YUG_raise_separatist_sentiment
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+		}
+		
+		search_filters = {FOCUS_FILTER_POLITICAL}
+
+		completion_reward = {
+			country_event = better_yugo_yugoslav_wars.1
+			custom_effect_tooltip = YUG_croatian_war_of_independence_tt
+		}
+	}
+	
 }
