@@ -2735,6 +2735,10 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
 		}
 
 		available = {
@@ -2819,6 +2823,10 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
 		}
 
 		available = {
@@ -3332,7 +3340,11 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 1
+			base = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
 		}
 
 		available = {
@@ -3597,7 +3609,15 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 1
+			base = 1
+			modifier = {
+				AND = { date < 1940.6.1 is_historical_focus_on = yes }
+				factor = 0
+			}
+			modifier = {
+				AND = { date > 1941.1.1 is_historical_focus_on = yes }
+				factor = 100
+			}
 		}
 
 		available = {
@@ -6463,7 +6483,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 1
+			base = 1
 		}
 
 		available = {

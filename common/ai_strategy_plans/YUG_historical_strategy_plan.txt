@@ -26,9 +26,9 @@ YUG_historical = {
 	}
 
 	ai_national_focuses = {
-		YUG_strenghten_jrz
-		YUG_status_quo
-		YUG_flexible_foreign_policy
+		YUG_strenghten_jrz # 35 days
+		YUG_status_quo # 35 days (total 70)
+		YUG_flexible_foreign_policy # 35 days (total 105)
 		YUG_trade_agreement_with_italy
 		YUG_ratify_the_concordat
 		YUG_improve_rural_infastructure
@@ -45,7 +45,8 @@ YUG_historical = {
 		YUG_depose_stojadinovic
 		YUG_banovina_of_croatia_mod
 		YUG_prepare_the_industry_for_war
-		YUG_alliance_with_germany
+
+
 	}
 
 	research = {
