@@ -60,6 +60,8 @@ terrain_modifiers = {
     terrain = { type = "mountain_Alexandroupoli" value = -0.3 }
     terrain = { type = "mountain_Skopje" value = -0.3 }
     terrain = { type = "mountain_Urumqi" value = -0.3 }
+    terrain = { type = "mountain_Beyrouth" value = -0.3 }
+
 
 
 
@@ -324,6 +326,8 @@ terrain_modifiers = {
     terrain = { type = "mountain_Alexandroupoli" value = 0.8 }
     terrain = { type = "mountain_Skopje" value = 0.8 }
     terrain = { type = "mountain_Urumqi" value = 0.8 }
+    terrain = { type = "mountain_Beyrouth" value = 0.8 }
+
 
 
 
@@ -653,6 +657,8 @@ terrain_modifiers = {
     terrain = { type = "mountain_Alexandroupoli" value = 0.8 }
     terrain = { type = "mountain_Skopje" value = 0.8 }
     terrain = { type = "mountain_Urumqi" value = 0.8 }
+    terrain = { type = "mountain_Beyrouth" value = 0.8 }
+
 
 
 
@@ -1005,6 +1011,7 @@ terrain_modifiers = {
     terrain = { type = "mountain_Alexandroupoli" value = -1.0 }
     terrain = { type = "mountain_Skopje" value = -1.0 }
     terrain = { type = "mountain_Urumqi" value = -1.0 }
+    terrain = { type = "mountain_Beyrouth" value = -1.0 }
 
 
 
@@ -1072,6 +1079,7 @@ terrain_modifiers = {
     terrain = { type = "mountain_Alexandroupoli" value = -7.0 }
     terrain = { type = "mountain_Skopje" value = -7.0 }
     terrain = { type = "mountain_Urumqi" value = -7.0 }
+    terrain = { type = "mountain_Beyrouth" value = -7.0 }
 
 
 
@@ -1127,6 +1135,8 @@ terrain_modifiers = {
     terrain = { type = "hills_Fiume" value = -3.0 }
     terrain = { type = "hills_Metz" value = -3.0 }
     terrain = { type = "hills_Opava" value = -3.0 }
+    terrain = { type = "hills_Klagenfurt" value = -3.0 }
+    terrain = { type = "hills_Ostrava" value = -3.0 }
 
 
 
@@ -1182,6 +1192,7 @@ terrain_modifiers = {
     terrain = { type = "forest_Bautzen" value = -1.0 }
     terrain = { type = "forest_Bitburg" value = -1.0 }
     terrain = { type = "forest_Charleroi" value = -1.0 }
+    terrain = { type = "forest_Maastricht" value = -1.0 }
 
 
 

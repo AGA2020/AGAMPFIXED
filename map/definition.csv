@@ -790,7 +790,7 @@
 789;4;3;95;land;false;hills;7
 790;4;3;200;land;false;plains;1
 791;4;4;244;sea;false;ocean;0
-792;4;6;15;land;true;mountain;7
+792;4;6;15;land;true;mountain_Beyrouth;7
 793;4;6;60;land;false;plains;1
 794;4;6;165;land;false;plains;1
 795;4;6;232;sea;false;ocean;0
@@ -1008,7 +1008,7 @@
 1007;5;12;240;sea;false;ocean;0
 1008;5;14;248;sea;false;ocean;0
 1009;5;15;65;land;true;plains;1
-1010;5;15;170;land;false;hills_Zunyi;6
+1010;5;15;170;land;false;hills;6
 1011;5;15;236;sea;false;ocean;0
 1012;5;17;244;sea;false;ocean;0
 1013;5;18;30;land;true;plains;5
@@ -3522,7 +3522,7 @@
 3521;44;126;178;land;false;plains;1
 3522;44;129;143;land;false;urban_magdeburg;1
 3523;44;129;198;land;false;hills;1
-3524;44;132;58;land;false;forest_Adlerhorst;1
+3524;44;132;58;land;false;forest;1
 3525;44;135;23;land;true;plains;1
 3526;44;135;128;land;false;forest;1
 3527;44;138;88;land;false;forest;1
@@ -3539,13 +3539,13 @@
 3538;44;153;68;land;false;desert;6
 3539;44;153;218;land;false;plains;1
 3540;44;156;33;land;false;plains;1
-3541;44;156;138;land;false;forest_Walhalla;1
+3541;44;156;138;land;false;forest;1
 3542;44;156;183;land;false;forest;1
 3543;44;159;98;land;false;plains;1
 3544;44;159;148;land;false;urban_Warszawa;1
 3545;44;162;63;land;false;hills;1
 3546;44;162;168;land;false;plains;1
-3547;44;165;28;land;false;forest_Ordensburg_Vogelsang_Eifel;1
+3547;44;165;28;land;false;forest;1
 3548;44;165;83;land;false;hills;1
 3549;44;165;133;land;false;plains;1
 3550;44;168;48;land;false;mountain;1
@@ -3581,7 +3581,7 @@
 3580;44;204;28;land;false;urban_Kursk;1
 3581;44;204;83;land;false;hills;1
 3582;44;204;133;land;false;forest;1
-3583;44;207;48;land;false;hills;1
+3583;44;207;48;land;false;hills_Ostrava;1
 3584;44;207;198;land;false;plains;1
 3585;44;210;13;land;false;mountain;1
 3586;44;210;163;land;false;forest;1
@@ -3671,7 +3671,7 @@
 3670;45;66;178;land;false;forest_Nagykanizsa;1
 3671;45;69;38;land;false;plains_Tours;1
 3672;45;69;93;land;false;plains_Grozny;1
-3673;45;69;143;land;false;hills;1
+3673;45;69;143;land;false;hills_Klagenfurt;1
 3674;45;72;208;land;false;mountain;1
 3675;45;75;173;land;false;mountain;1
 3676;45;78;88;land;false;mountain;1
@@ -11560,7 +11560,7 @@
 11559;170;204;217;land;true;plains;1
 11560;170;207;77;land;false;plains_Mainz;1
 11561;170;207;182;land;false;urban_KryvyiRih;1
-11562;170;207;227;land;false;forest;1
+11562;170;207;227;land;false;forest_Maastricht;1
 11563;170;210;42;land;false;plains_rouen;1
 11564;171;0;17;land;true;hills_Fiume;1
 11565;171;0;167;land;true;plains;1
