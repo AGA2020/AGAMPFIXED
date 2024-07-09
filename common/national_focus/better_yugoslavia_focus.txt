@@ -11124,7 +11124,7 @@ focus_tree = {
 		completion_reward = {
 			TUR = {
 				add_timed_idea = {
-					idea = communist_influence_2
+					idea = communist_influence
 					days = 730
 				}
 			}
