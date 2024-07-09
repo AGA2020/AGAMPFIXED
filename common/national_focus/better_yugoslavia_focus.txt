@@ -10394,6 +10394,7 @@ focus_tree = {
 		}
 		
 		bypass = {
+			is_in_faction_with = SOV
 		}
 
 		cancel_if_invalid = yes
@@ -10991,6 +10992,7 @@ focus_tree = {
 		available = {
 			is_subject = no
 			has_government = communism
+			is_in_faction = no
 		}
 		
 		bypass = {
