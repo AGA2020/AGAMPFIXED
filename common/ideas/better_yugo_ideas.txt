@@ -4528,7 +4528,8 @@ ideas = {
 			removal_cost = -1
 				
 			modifier = {
-				communism_drift = 0.15
+				communism_drift = 0.20
+				communism_acceptance = 85
 			}
 			
 		}
@@ -4556,7 +4557,8 @@ ideas = {
 			removal_cost = -1
 				
 			modifier = {
-				communism_drift = 0.1
+				communism_drift = 0.15
+				communism_acceptance = 85
 			}
 			
 		}
