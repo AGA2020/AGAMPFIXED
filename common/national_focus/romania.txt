@@ -2618,7 +2618,7 @@ focus_tree = {
 			add_stability = -0.1
 			ROMID_army_low_loyalty_decrease_effect = yes
 			ROMID_royalists_low_loyalty_decrease_effect = yes
-			ROMID_royalists_medium_popularity_decrease_effect = yes
+			ROMID_royalists_medium_popularity_decrease_effectf = yes
 			hidden_effect = {
 				if = {
 					limit = { is_ai = yes }

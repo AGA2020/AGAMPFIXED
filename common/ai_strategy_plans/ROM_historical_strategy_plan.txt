@@ -1,0 +1,101 @@
+ROM_historical = {
+	name = "Romanian historical plan"
+	desc = ""
+
+	allowed = {
+		original_tag = ROM
+		has_dlc = "Death or Dishonor"
+	}
+	enable = {
+		OR = {
+			AND = {
+				is_historical_focus_on = yes
+				has_game_rule = {
+					rule = ROM_ai_behavior
+					option = DEFAULT
+				}
+			}
+			has_country_flag = ROM_AI_RANDOM_FASCIST_HISTORICAL
+			has_game_rule = {
+				rule = ROM_ai_behavior
+				option = FASCIST_HISTORICAL
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		ROM_cooperation_with_malaxa
+		ROM_encourage_capitalist_investment
+		ROM_found_ior
+		ROM_cultural_development_university
+		ROM_malaxa_trains
+		ROM_the_ruined_army
+		ROM_malaxa_concern
+		ROM_crippling_logistics
+		ROM_domestic_arms_production
+		ROM_russia_of_the_balkans
+		ROM_import_zb_vz_24
+		ROM_danube_infrastructure
+		ROM_agrarian_reform
+		ROM_focus_on_domestic_industry
+		ROM_carpathian_infrastructure
+		ROM_expand_hunedoara_steel_works
+		ROM_state_backed_industrial_projects
+		ROM_kickstart_automobile_industy
+		ROM_civilian_automobile_focus
+		ROM_grenades_problem
+		ROM_institute_royal_dictatorship
+		ROM_revise_the_constitution
+		ROM_improve_romaniangerman_relations
+		ROM_execute_codreanu
+		ROM_frontulrenasteriinationalefrn
+		ROM_the_clash_with_ppgr
+		ROM_improve_romanianpolish_relations
+		ROM_turkeyssupportforromania
+		ROM_partidulnatiuniipn
+		ROM_invite_german_advisors
+		ROM_forcecarolsabdication
+		ROM_institute_statul_nationallegionar
+		ROM_leave_the_balkan_pact
+		ROM_ban_other_parties
+		ROM_jilava_massacre
+		ROM_sign_the_tripartite_pact
+		ROM_crush_the_coup
+		ROM_abolishstatulnationallegionar
+		ROM_purge_the_iron_guard
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
+	}
+
+}
+
