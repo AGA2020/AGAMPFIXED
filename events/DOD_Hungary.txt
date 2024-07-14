@@ -2151,7 +2151,7 @@ country_event = {
 		ai_chance = {
 			factor = 35
 			modifier = {
-				has_completed_focus = ROM_balkans_dominance
+				has_completed_focus = ROM_the_royal_guard
 				factor = 2 #come and have a go
 			}
 		}

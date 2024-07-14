@@ -10,6 +10,64 @@ focus_tree = {
 	}
 	default = no
 
+	#The 1937 Election
+	focus = {
+		id = ROM_the_1937_election
+		icon = GFX_focus_generic_self_management
+		x = 11
+		y = 0
+		search_filters = {
+			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
+		}
+		available = {
+			date > 1937.12.20
+			NOT = { 
+				custom_trigger_tooltip = { 
+					tooltip = ROMID_king_was_not_assassinated_tt
+					ROM = { has_country_flag = ROMID_king_was_assassinated } 
+				}
+			}
+			always=no
+		}
+		cost = 0
+		completion_reward = {
+			hidden_effect = { retire_character = ROM_octavian_goga }
+			custom_effect_tooltip = ROMID_1937_election_instant_tt
+			add_stability = -0.05
+			create_country_leader = {
+				name = "Octavian Goga"
+				desc = "Appointed as prime minister by King Carol II, Goga was expected to appease the fascist of Romania and also be dumb enough to let Carol sieze all the power behind him."
+				picture = GFX_Portrait_romania_octavian_goga	
+				expire = "1965.1.1"
+				ideology = gen_nazism
+				traits = {
+					ROMID_dislikes_communism
+					ROMID_incompetent_leader
+					ROMID_placed_by_carol
+					ROMID_poet
+				}
+				id = -1
+			}
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
+			}
+			set_political_party = {
+				ideology = fascism
+				popularity = 24
+			}
+			46 = {
+				add_dynamic_modifier = { modifier = ROMID_iron_guard_vs_lancieri_clashes days = 180 }
+			}
+			remove_ideas = neutrality_idea
+			ROMID_lancieri_low_loyalty_increase_effect = yes
+			ROMID_iron_guard_low_loyalty_decrease_effect = yes
+			ROMID_royalists_low_loyalty_decrease_effect = yes
+		}
+
+		mutually_exclusive = { focus = ROM_assasinate_the_king }
+	}	
+
 	#Assassinate The King
 	focus = {
 		id = ROM_assasinate_the_king
@@ -625,6 +683,25 @@ focus_tree = {
 		}
 		prerequisite = { focus = ROM_dismiss_pawn_ministers  }
 	}
+
+	#Subsidize Vital Industry
+	focus = {
+		id = ROM_subsidize_vital_industry
+		icon = GFX_focus_DEN_limited_regulations
+		x = 0
+		y = 2
+		relative_position_id = ROM_socialist_coalition
+		search_filters = {
+			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
+		}
+		available = {
+		}
+		cost = 5
+		completion_reward = {
+			add_ideas = ROMID_subsidized_industries
+		}
+		prerequisite = { focus = ROM_socialist_coalition  }
+	}	
 	
 	#Reduce Unemployment
 	focus = {
@@ -684,6 +761,29 @@ focus_tree = {
 		prerequisite = { focus = ROM_join_the_allies  }
 	}
 
+	#Straja Tarii
+	focus = {
+		id = ROM_straja_tarii_dem
+		icon = GFX_ROM_expandstrajatarii-312060
+		x = -4
+		y = 1
+		relative_position_id = ROM_liberal_law
+		search_filters = {
+			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
+		}
+		available = {
+		}
+		cost = 5
+		completion_reward = {
+			custom_effect_tooltip = ROMID_integrate_the_royalists_decision_tt
+			swap_ideas = {
+				remove_idea = ROMID_straja_trii_1
+				add_idea = ROMID_straja_trii_dem
+			}
+		}
+		prerequisite = { focus = ROM_liberal_law  }
+	}
+
 	#Root Out Balkan Instability
 	focus = {
 		id = ROM_root_out_balkan_instability
@@ -708,29 +808,6 @@ focus_tree = {
 			}
 		}
 		prerequisite = { focus = ROM_straja_tarii_dem  }
-	}
-
-	#Straja Tarii
-	focus = {
-		id = ROM_straja_tarii_dem
-		icon = GFX_ROM_expandstrajatarii-312060
-		x = -4
-		y = 1
-		relative_position_id = ROM_liberal_law
-		search_filters = {
-			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
-		}
-		available = {
-		}
-		cost = 5
-		completion_reward = {
-			custom_effect_tooltip = ROMID_integrate_the_royalists_decision_tt
-			swap_ideas = {
-				remove_idea = ROMID_straja_trii_1
-				add_idea = ROMID_straja_trii_dem
-			}
-		}
-		prerequisite = { focus = ROM_liberal_law  }
 	}
 
 	#Western Tourism
@@ -825,25 +902,6 @@ focus_tree = {
 		}
 		prerequisite = { focus = ROM_liberal_law focus = ROM_socialist_coalition  }
 	}	
-
-	#Subsidize Vital Industry
-	focus = {
-		id = ROM_subsidize_vital_industry
-		icon = GFX_focus_DEN_limited_regulations
-		x = 0
-		y = 2
-		relative_position_id = ROM_socialist_coalition
-		search_filters = {
-			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
-		}
-		available = {
-		}
-		cost = 5
-		completion_reward = {
-			add_ideas = ROMID_subsidized_industries
-		}
-		prerequisite = { focus = ROM_socialist_coalition  }
-	}
 
 	#Expand the Infrastructure
 	focus = {
@@ -1261,28 +1319,6 @@ focus_tree = {
 		prerequisite = { focus = ROM_literacy_campaign }
 	}
 
-	#Gărzile Patriotice
-	focus = {
-		id = ROM_garzile_patriotice
-		icon = GFX_focus_SOV_builder_of_the_red_army
-		x = 0
-		y = 2
-		relative_position_id = ROM_securitate
-		search_filters = {
-			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
-		}
-		available = {
-		}
-		cost = 5
-		completion_reward = {
-			swap_ideas = {
-				add_idea = ROMID_garzile_patriotice
-				remove_idea = ROMID_anti_fascist_militias
-			}
-		}
-		prerequisite = { focus = ROM_securitate }
-	}
-
 	#Securitate
 	focus = {
 		id = ROM_securitate
@@ -1306,6 +1342,28 @@ focus_tree = {
 			}
 		}
 		prerequisite = { focus = ROM_act_on_the_Constitution }
+	}	
+
+	#Gărzile Patriotice
+	focus = {
+		id = ROM_garzile_patriotice
+		icon = GFX_focus_SOV_builder_of_the_red_army
+		x = 0
+		y = 2
+		relative_position_id = ROM_securitate
+		search_filters = {
+			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
+		}
+		available = {
+		}
+		cost = 5
+		completion_reward = {
+			swap_ideas = {
+				add_idea = ROMID_garzile_patriotice
+				remove_idea = ROMID_anti_fascist_militias
+			}
+		}
+		prerequisite = { focus = ROM_securitate }
 	}
 
 	#Youth Organizations
@@ -1348,64 +1406,6 @@ focus_tree = {
 	#	}	
 	#	prerequisite = { focus = ROM_the_1937_election  }
 	#}
-
-	#The 1937 Election
-	focus = {
-		id = ROM_the_1937_election
-		icon = GFX_focus_generic_self_management
-		x = 11
-		y = 0
-		search_filters = {
-			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
-		}
-		available = {
-			date > 1937.12.20
-			NOT = { 
-				custom_trigger_tooltip = { 
-					tooltip = ROMID_king_was_not_assassinated_tt
-					ROM = { has_country_flag = ROMID_king_was_assassinated } 
-				}
-			}
-			always=no
-		}
-		cost = 0
-		completion_reward = {
-			hidden_effect = { retire_character = ROM_octavian_goga }
-			custom_effect_tooltip = ROMID_1937_election_instant_tt
-			add_stability = -0.05
-			create_country_leader = {
-				name = "Octavian Goga"
-				desc = "Appointed as prime minister by King Carol II, Goga was expected to appease the fascist of Romania and also be dumb enough to let Carol sieze all the power behind him."
-				picture = GFX_Portrait_romania_octavian_goga	
-				expire = "1965.1.1"
-				ideology = gen_nazism
-				traits = {
-					ROMID_dislikes_communism
-					ROMID_incompetent_leader
-					ROMID_placed_by_carol
-					ROMID_poet
-				}
-				id = -1
-			}
-			set_politics = {
-				ruling_party = fascism
-				elections_allowed = no
-			}
-			set_political_party = {
-				ideology = fascism
-				popularity = 24
-			}
-			46 = {
-				add_dynamic_modifier = { modifier = ROMID_iron_guard_vs_lancieri_clashes days = 180 }
-			}
-			remove_ideas = neutrality_idea
-			ROMID_lancieri_low_loyalty_increase_effect = yes
-			ROMID_iron_guard_low_loyalty_decrease_effect = yes
-			ROMID_royalists_low_loyalty_decrease_effect = yes
-		}
-
-		mutually_exclusive = { focus = ROM_assasinate_the_king }
-	}
 
 	#Institute Royal Dictatorship
 	focus = {
@@ -2128,7 +2128,49 @@ focus_tree = {
 		prerequisite = { focus = ROM_get_rid_of_the_iron_guard  }
 	}
 
-
+	#Purge the Iron Guard
+	focus = {
+		id = ROM_purge_the_iron_guard
+		icon = GFX_ROM_purge_the_iron_guard-422
+		x = -1
+		y = 1
+		relative_position_id = ROM_abolishstatulnationallegionar
+		search_filters = {
+			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
+		}
+		cost = 5
+		completion_reward = {
+			custom_effect_tooltip = ROMID_crush_the_coup_2_tt
+			custom_effect_tooltip = ROMID_crush_the_iron_guard_decision_tt
+			hidden_effect = {
+				81 = {
+					remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+					clr_state_flag = iron_guard_supporters
+				}
+				83 = {
+					remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+					clr_state_flag = iron_guard_supporters
+				}
+			}
+			ROMID_iron_guard_medium_loyalty_decrease_effect = yes
+			ROMID_iron_guard_high_popularity_decrease_effect = yes
+			hidden_effect = {
+				if = {
+					limit = { is_ai = yes }
+					remove_ideas = ROMID_the_iron_guard_weak_low_loyalty
+					remove_ideas = ROMID_the_iron_guard_weak_medium_loyalty
+					remove_ideas = ROMID_the_iron_guard_weak_high_loyalty
+					remove_ideas = ROMID_the_iron_guard_normal_low_loyalty
+					remove_ideas = ROMID_the_iron_guard_normal_medium_loyalty
+					remove_ideas = ROMID_the_iron_guard_normal_high_loyalty
+					remove_ideas = ROMID_the_iron_guard_powerful_low_loyalty
+					remove_ideas = ROMID_the_iron_guard_powerful_medium_loyalty
+					remove_ideas = ROMID_the_iron_guard_powerful_high_loyalty
+				}
+			}
+		}
+		prerequisite = { focus = ROM_abolishstatulnationallegionar  }
+	}
 
 
 	#"Ostasi, vă ordon: Treceti Prutul!"
@@ -2314,31 +2356,6 @@ focus_tree = {
 		prerequisite = { focus = ROM_institute_statul_nationallegionar  }
 	}
 
-	#Abolish Statul National-Legionar
-	focus = {
-		id = ROM_abolishstatulnationallegionar
-		icon = GFX_ROM_abolishstatulnationallegionar-262024
-		x = -1
-		y = 1
-		relative_position_id = ROM_crush_the_coup
-		search_filters = {
-			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
-		}
-		cost = 5
-		completion_reward = {
-			add_political_power = 25
-			set_cosmetic_tag = ROM
-			#drop_cosmetic_tag = yes
-			set_party_name = {
-				ideology = fascism
-				long_name = ROM_fascism_party_long1
- 				name = ROM_fascism_party1
-			}
-			ROMID_army_low_loyalty_increase_effect = yes
-		}
-		prerequisite = { focus = ROM_crush_the_coup  }
-	}
-
 	#Force Carol's Abdication
 	focus = {
 		id = ROM_forcecarolsabdication
@@ -2381,65 +2398,6 @@ focus_tree = {
 			}
 		}
 		prerequisite = { focus = ROM_invite_german_advisors  }
-	}
-
-	#Ban Other Parties
-	focus = {
-		id = ROM_ban_other_parties
-		icon = GFX_ROM_ban_other_parties-306300
-		x = -2
-		y = 1
-		relative_position_id = ROM_institute_statul_nationallegionar
-		cost = 5
-		search_filters = {
-			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
-		}
-		completion_reward = {
-			hidden_effect = {
-				76 = {
-					remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
-					clr_state_flag = lancieri_supporters
-				}
-				79 = {
-					remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
-					clr_state_flag = lancieri_supporters
-				}
-				80 = {
-					remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
-					clr_state_flag = lancieri_supporters
-				}
-				78 = {
-					remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
-					clr_state_flag = lancieri_supporters
-				}
-				766 = {
-					remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
-					clr_state_flag = lancieri_supporters
-				}
-			}
-			add_political_power = 50
-			custom_effect_tooltip = ROMID_crush_the_lancieri_decision_tt
-			ROMID_royalists_low_loyalty_decrease_effect = yes
-			ROMID_royalists_low_popularity_decrease_effect = yes
-			ROMID_iron_guard_low_loyalty_increase_effect = yes
-			ROMID_lancieri_low_loyalty_decrease_effect = yes
-			ROMID_lancieri_low_popularity_decrease_effect = yes
-			hidden_effect = {
-				if = {
-					limit = { is_ai = yes }
-					remove_ideas = ROMID_the_lancieri_weak_low_loyalty
-					remove_ideas = ROMID_the_lancieri_weak_medium_loyalty
-					remove_ideas = ROMID_the_lancieri_weak_high_loyalty
-					remove_ideas = ROMID_the_lancieri_normal_low_loyalty
-					remove_ideas = ROMID_the_lancieri_normal_medium_loyalty
-					remove_ideas = ROMID_the_lancieri_normal_high_loyalty
-					remove_ideas = ROMID_the_lancieri_powerful_low_loyalty
-					remove_ideas = ROMID_the_lancieri_powerful_medium_loyalty
-					remove_ideas = ROMID_the_lancieri_powerful_high_loyalty
-				}
-			}
-		}
-		prerequisite = { focus = ROM_institute_statul_nationallegionar  }  prerequisite = { focus = ROM_forcecarolsabdication }
 	}
 
 	#Institute Statul National-Legionar
@@ -2509,6 +2467,65 @@ focus_tree = {
 		prerequisite = { focus = ROM_forcecarolsabdication  focus = ROM_getridofthelancieri  }
 	}
 
+	#Ban Other Parties
+	focus = {
+		id = ROM_ban_other_parties
+		icon = GFX_ROM_ban_other_parties-306300
+		x = -2
+		y = 1
+		relative_position_id = ROM_institute_statul_nationallegionar
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
+		}
+		completion_reward = {
+			hidden_effect = {
+				76 = {
+					remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
+					clr_state_flag = lancieri_supporters
+				}
+				79 = {
+					remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
+					clr_state_flag = lancieri_supporters
+				}
+				80 = {
+					remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
+					clr_state_flag = lancieri_supporters
+				}
+				78 = {
+					remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
+					clr_state_flag = lancieri_supporters
+				}
+				766 = {
+					remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
+					clr_state_flag = lancieri_supporters
+				}
+			}
+			add_political_power = 50
+			custom_effect_tooltip = ROMID_crush_the_lancieri_decision_tt
+			ROMID_royalists_low_loyalty_decrease_effect = yes
+			ROMID_royalists_low_popularity_decrease_effect = yes
+			ROMID_iron_guard_low_loyalty_increase_effect = yes
+			ROMID_lancieri_low_loyalty_decrease_effect = yes
+			ROMID_lancieri_low_popularity_decrease_effect = yes
+			hidden_effect = {
+				if = {
+					limit = { is_ai = yes }
+					remove_ideas = ROMID_the_lancieri_weak_low_loyalty
+					remove_ideas = ROMID_the_lancieri_weak_medium_loyalty
+					remove_ideas = ROMID_the_lancieri_weak_high_loyalty
+					remove_ideas = ROMID_the_lancieri_normal_low_loyalty
+					remove_ideas = ROMID_the_lancieri_normal_medium_loyalty
+					remove_ideas = ROMID_the_lancieri_normal_high_loyalty
+					remove_ideas = ROMID_the_lancieri_powerful_low_loyalty
+					remove_ideas = ROMID_the_lancieri_powerful_medium_loyalty
+					remove_ideas = ROMID_the_lancieri_powerful_high_loyalty
+				}
+			}
+		}
+		prerequisite = { focus = ROM_institute_statul_nationallegionar  }  prerequisite = { focus = ROM_forcecarolsabdication }
+	}
+
 	#Crush the Coup
 	focus = {
 		id = ROM_crush_the_coup
@@ -2553,6 +2570,31 @@ focus_tree = {
 		prerequisite = { focus = ROM_jilava_massacre  } prerequisite = { focus = ROM_sign_the_tripartite_pact  }
 		mutually_exclusive = { focus = ROM_support_the_coup  }
 	}
+
+	#Abolish Statul National-Legionar
+	focus = {
+		id = ROM_abolishstatulnationallegionar
+		icon = GFX_ROM_abolishstatulnationallegionar-262024
+		x = -1
+		y = 1
+		relative_position_id = ROM_crush_the_coup
+		search_filters = {
+			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
+		}
+		cost = 5
+		completion_reward = {
+			add_political_power = 25
+			set_cosmetic_tag = ROM
+			#drop_cosmetic_tag = yes
+			set_party_name = {
+				ideology = fascism
+				long_name = ROM_fascism_party_long1
+ 				name = ROM_fascism_party1
+			}
+			ROMID_army_low_loyalty_increase_effect = yes
+		}
+		prerequisite = { focus = ROM_crush_the_coup  }
+	}	
 
 	#Support the Coup
 	focus = {
@@ -2787,50 +2829,6 @@ focus_tree = {
 			ROMID_army_low_loyalty_decrease_effect = yes
 		}
 		prerequisite = { focus = ROM_partidulnatiuniipn  }
-	}
-
-	#Purge the Iron Guard
-	focus = {
-		id = ROM_purge_the_iron_guard
-		icon = GFX_ROM_purge_the_iron_guard-422
-		x = -1
-		y = 1
-		relative_position_id = ROM_abolishstatulnationallegionar
-		search_filters = {
-			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
-		}
-		cost = 5
-		completion_reward = {
-			custom_effect_tooltip = ROMID_crush_the_coup_2_tt
-			custom_effect_tooltip = ROMID_crush_the_iron_guard_decision_tt
-			hidden_effect = {
-				81 = {
-					remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
-					clr_state_flag = iron_guard_supporters
-				}
-				83 = {
-					remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
-					clr_state_flag = iron_guard_supporters
-				}
-			}
-			ROMID_iron_guard_medium_loyalty_decrease_effect = yes
-			ROMID_iron_guard_high_popularity_decrease_effect = yes
-			hidden_effect = {
-				if = {
-					limit = { is_ai = yes }
-					remove_ideas = ROMID_the_iron_guard_weak_low_loyalty
-					remove_ideas = ROMID_the_iron_guard_weak_medium_loyalty
-					remove_ideas = ROMID_the_iron_guard_weak_high_loyalty
-					remove_ideas = ROMID_the_iron_guard_normal_low_loyalty
-					remove_ideas = ROMID_the_iron_guard_normal_medium_loyalty
-					remove_ideas = ROMID_the_iron_guard_normal_high_loyalty
-					remove_ideas = ROMID_the_iron_guard_powerful_low_loyalty
-					remove_ideas = ROMID_the_iron_guard_powerful_medium_loyalty
-					remove_ideas = ROMID_the_iron_guard_powerful_high_loyalty
-				}
-			}
-		}
-		prerequisite = { focus = ROM_abolishstatulnationallegionar  }
 	}
 
 	#Act of 23 August
@@ -5400,9 +5398,8 @@ focus_tree = {
 	focus = {
 		id = ROM_constanta_docks
 		icon = GFX_goal_generic_construct_naval_dockyard
-		x = 7
+		x = 77
 		y = 0
-		relative_position_id = ROM_cooperation_with_malaxa
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
@@ -7270,647 +7267,7 @@ focus_tree = {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	# AIR START
-
-	#Modernize Airfields
-	focus = {
-		id = ROM_modernize_airfields
-		icon = GFX_goal_generic_construct_civilian
-		x = 8
-		y = 0
-		relative_position_id = ROM_crippling_logistics
-		cost = 4
-		complete_tooltip = {
-			air_experience = 25
-			random_state = {
-				limit = {
-					has_state_flag = ROM_expand_the_air_force_AB
-				}
-				add_building_construction = {
-					type = air_base
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_state = {
-				limit = {
-					has_state_flag = ROM_expand_the_air_force_AB_2
-				}
-				add_building_construction = {
-					type = air_base
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_state = {
-				limit = {
-					has_state_flag = ROM_expand_the_air_force_AB_3
-				}
-				add_building_construction = {
-					type = air_base
-					level = 3
-					instant_build = yes
-				}
-			}
-		}
-
-		completion_reward = {
-			air_experience = 25
-			if = {
-				limit = {
-					has_dlc = "La Resistance"
-					NOT = { has_dlc = "By Blood Alone"}
-				}
-				add_tech_bonus = {
-					name = scout_plane
-					bonus = 1.0
-					uses = 1
-					category = cat_scout_plane
-				}				
-			}			
-			random_owned_controlled_state = {
-				prioritize = { 82 78 76 }
-				limit = {
-					ROOT = { has_full_control_of_state = PREV }
-					free_building_slots = {
-						building = air_base
-						size > 1
-					}
-				}
-				add_building_construction = {
-					type = air_base
-					level = 2
-					instant_build = yes
-				}
-				set_state_flag = ROM_expand_the_air_force_AB
-			}
-			random_owned_controlled_state = {
-				prioritize = { 766 83 }
-				limit = {
-					ROOT = { has_full_control_of_state = PREV }
-					free_building_slots = {
-						building = air_base
-						size > 0
-					}
-				}
-				add_building_construction = {
-					type = air_base
-					level = 1
-					instant_build = yes
-				}
-				set_state_flag = ROM_expand_the_air_force_AB_2
-			}
-			random_owned_controlled_state = {
-				prioritize = { 84 46 79 }
-				limit = {
-					ROOT = { has_full_control_of_state = PREV }
-					free_building_slots = {
-						building = air_base
-						size > 2
-					}
-				}
-				add_building_construction = {
-					type = air_base
-					level = 3
-					instant_build = yes
-				}
-				set_state_flag = ROM_expand_the_air_force_AB_3
-			}
-		}
-		search_filters = {
-			FOCUS_FILTER_WAR_SUPPORT
-		}
-	}
-	
-	#Invest in IAR
-	focus = {
-		id = ROM_invest_in_iar
-		icon = GFX_focus_generic_aircraft_production
-		x = 3
-		y = 1
-		relative_position_id = ROM_modernize_airfields
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
-		}
-		cost = 5
-		complete_tooltip = {
-			add_ideas = ROMID_investing_in_iar
-			random_state = {
-				prioritize = {
-					84
-				}
-				limit = {
-					has_state_flag = ROM_iar_works_IC
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}			
-			}
-			if = {
-                		limit = {
-                    			has_dlc = "Arms Against Tyranny"
-                		}
-                		custom_effect_tooltip = available_mio_tt
-                		show_mio_tooltip = ROMID_iar_organization
-                		mio:ROMID_iar_organization = {
-                    			add_mio_funds = 2500
-                		}
-            		}
-            		else = {
-				custom_effect_tooltip = available_designer
-				show_ideas_tooltip = ROMID_iar	
-            		}	
-			ROMID_supply_cap_add = yes		
-		}
-
-		completion_reward = {
-			add_ideas = ROMID_investing_in_iar
-			random_owned_controlled_state = {
-				prioritize = { 84 }
-				limit = {
-					ROOT = { has_full_control_of_state = PREV } 
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-				}	
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-				set_state_flag = ROM_iar_works_IC	
-			}
-			if = {
-                		limit = {
-                    			has_dlc = "Arms Against Tyranny"
-                		}
-                		custom_effect_tooltip = available_mio_tt
-                		show_mio_tooltip = ROMID_iar_organization
-                		mio:ROMID_iar_organization = {
-                    			add_mio_funds = 2500
-                		}
-            		}
-            		else = {
-				custom_effect_tooltip = available_designer
-				show_ideas_tooltip = ROMID_iar	
-            		}
-			ROMID_supply_cap_add = yes
-		}
-		prerequisite = { focus = ROM_modernize_airfields  }
-		mutually_exclusive = { focus = ROM_license_planes  }
-	}
-
-	#License Planes
-	focus = {
-		id = ROM_license_planes
-		icon = GFX_goal_generic_air_production
-		x = -3
-		y = 1
-		relative_position_id = ROM_modernize_airfields
-		search_filters = {
-			FOCUS_FILTER_WAR_SUPPORT
-		}
-		cost = 5
-		completion_reward = {
-			add_ideas = ROMID_licensing_planes
-		}
-		prerequisite = { focus = ROM_modernize_airfields  }
-		mutually_exclusive = { focus = ROM_invest_in_iar  }
-	}
-
-	#Convert IAR
-	focus = {
-		id = ROM_convert_iar
-		icon = GFX_goal_continuous_air_production
-		x = 1
-		y = 1
-		relative_position_id = ROM_license_planes
-		search_filters = {
-			FOCUS_FILTER_WAR_SUPPORT
-		}
-		cost = 5
-		complete_tooltip = {
-			add_ideas = ROMID_iar_conversion
-			random_state = {
-				prioritize = {
-					84
-				}
-				limit = {
-					has_state_flag = ROM_iar_works_2_IC
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}			
-			}
-			if = {
-				limit = { has_dlc = "By Blood Alone" }
-				add_tech_bonus = {
- 			    		bonus = 0.2
- 			    		uses = 1
-			    		category = cat_air_engine
-				}	
-			}			
-		}
-
-		completion_reward = {
-			add_ideas = ROMID_iar_conversion
-			random_owned_controlled_state = {
-				prioritize = { 84 }
-				limit = {
-					ROOT = { has_full_control_of_state = PREV } 
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-				}	
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-				set_state_flag = ROM_iar_works_2_IC	
-			}
-			if = {
-				limit = { has_dlc = "By Blood Alone" }
-				add_tech_bonus = {
- 			    		bonus = 0.2
- 			    		uses = 1
-			    		category = cat_air_engine
-				}	
-			}
-		}
-		prerequisite = { focus = ROM_license_planes  }
-	}
-
-	#Subsidize Other Companies
-	focus = {
-		id = ROM_subsidize_other_companies
-		icon = GFX_goal_generic_intelligence_exchange
-		x = 2
-		y = 2
-		relative_position_id = ROM_license_planes
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
-		}
-		cost = 3
-		completion_reward = {
-			if = {
-                		limit = {
-                    			has_dlc = "Arms Against Tyranny"
-                		}
-                		custom_effect_tooltip = available_mio_tt
-                		show_mio_tooltip = ROMID_icar_organization
-                		mio:ROMID_icar_organization = {
-                    			add_mio_funds = 500
-                		}
-				custom_effect_tooltip = available_mio_tt
-                		show_mio_tooltip = ROMID_set_organization
-                		mio:ROMID_set_organization = {
-                    			add_mio_funds = 500
-                		}
-				custom_effect_tooltip = available_mio_tt
-                		show_mio_tooltip = ROMID_stc_organization
-                		mio:ROMID_stc_organization = {
-                    			add_mio_funds = 500
-                		}
-            		}
-            		else = {
-				custom_effect_tooltip = available_designer
-				show_ideas_tooltip = ROMID_icar
-				custom_effect_tooltip = available_designer
-				show_ideas_tooltip = ROMID_set
-				custom_effect_tooltip = available_designer
-				show_ideas_tooltip = ROMID_stc
-            		}
-		}
-		prerequisite = { focus = ROM_invest_in_iar  focus = ROM_license_planes  }
-	}
-
-	#Fighter Focus
-	focus = {
-		id = ROM_fighter_focus
-		icon = GFX_ROM_fighter_focus-313102
-		x = -1
-		y = 1
-		relative_position_id = ROM_invest_in_iar
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
-		cost = 5
-		completion_reward = {
-			if = {
-				limit = { 
-					has_idea = ROMID_investing_in_iar
-				}
-				swap_ideas = {
-  					remove_idea = ROMID_investing_in_iar
- 					add_idea = ROMID_investing_in_iar_fighter
-				}
-			}
-			else = {
-				add_ideas = ROMID_investing_in_fighter
-			}
-			add_tech_bonus = {
-			    	name = modern_fighter
-				bonus = 0.5
-				uses = 1
-				category = light_fighter
-				technology = cv_early_fighter
-				technology = cv_fighter1
-				technology = cv_fighter2
-				technology = cv_fighter3
-			}
-		}
-		prerequisite = { focus = ROM_license_planes  focus = ROM_invest_in_iar  }
-		mutually_exclusive = { focus = ROM_bomber_focus  }
-	}
-
-	#Bomber Focus
-	focus = {
-		id = ROM_bomber_focus
-		icon = GFX_ROM_bomber_focus-313103
-		x = -3
-		y = 1
-		relative_position_id = ROM_invest_in_iar
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
-		cost = 5
-		completion_reward = {
-			if = {
-				limit = { 
-					has_idea = ROMID_investing_in_iar
-				}
-				swap_ideas = {
-  					remove_idea = ROMID_investing_in_iar
- 					add_idea = ROMID_investing_in_iar_bomber
-				}
-			}
-			else = {
-				add_ideas = ROMID_investing_in_bomber	
-			}
-			add_tech_bonus = {
-			    	name = modern_bomber
-				bonus = 0.5
-				uses = 1
-				category = cas_bomber
-				category = tactical_bomber
-			}
-		}
-		prerequisite = { focus = ROM_invest_in_iar  focus = ROM_license_planes  }
-		mutually_exclusive = { focus = ROM_fighter_focus  }
-	}
-
-	#New Air Tactics
-	focus = {
-		id = ROM_new_air_tactics
-		icon = GFX_goal_generic_air_doctrine
-		x = 1
-		y = 1
-		relative_position_id = ROM_bomber_focus
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
-		cost = 5
-		completion_reward = {		
-			add_doctrine_cost_reduction = {
-				name = air_doc_bonus_1
-				cost_reduction = 0.5
-       			        uses = 2
-           			category = air_doctrine
-   		        }			
-		}
-		prerequisite = { focus = ROM_fighter_focus  focus = ROM_bomber_focus  }
-	}
-
-	#Learn Foreign Tactics
-	focus = {
-		id = ROM_learn_foreign_tactics
-		icon = GFX_goal_generic_build_airforce
-		x = 0
-		y = 3
-		relative_position_id = ROM_license_planes
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
-		cost = 5
-		completion_reward = {		
-			add_doctrine_cost_reduction = {
-				name = air_doc_bonus_2
-				cost_reduction = 0.5
-       			        uses = 2
-           			category = air_doctrine
-   		        }			
-		}
-		prerequisite = { focus = ROM_license_planes  } prerequisite = { focus = ROM_new_air_tactics  }
-	}
-
-	#The Legendary IAR 80
-	focus = {
-		id = ROM_the_legendary_iar_80
-		icon = GFX_goal_generic_air_fighter
-		x = 0
-		y = 3
-		relative_position_id = ROM_invest_in_iar
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
-		cost = 10
-		completion_reward = {
-			air_experience = 50
-			if = {
-				limit = { NOT = { has_dlc = "By Blood Alone" } }
-				if = {
-					limit = {
-						NOT = {
-							has_tech = fighter2
-						}
-					}
-					custom_effect_tooltip = ROMID_iar_80
-					hidden_effect = {set_technology = { fighter2 = 1 popup = no } }
-					else = {
-						add_tech_bonus = {
-							name = iar80
-							bonus = 2
-							ahead_reduction = 2
-							uses = 1
-							category = light_fighter
-						}					
-					}
-				}
-			}
-			if = {
-				limit = { has_dlc = "By Blood Alone" }
-				if = {
-					limit = {
-						has_tech = improved_small_airframe
-					}
-					create_equipment_variant = {
-						name = "IAR 80"
-						type = small_plane_airframe_2
-						modules = {
-							fixed_main_weapon_slot = heavy_mg_4x
-							fixed_auxiliary_weapon_slot_1 = heavy_mg_4x
-							fixed_auxiliary_weapon_slot_2 = heavy_mg_4x
-							engine_type_slot = engine_3_1x
-							special_type_slot_1 = drop_tanks
-							special_type_slot_2 = self_sealing_fuel_tanks_small
-							special_type_slot_3 = armor_plate_small
-						}
-						icon = "GFX_ROM_fighter2_medium"
-					}
-					else = {
-						add_tech_bonus = {
-							name = ROM_iar_80
-							bonus = 1.0
-							ahead_reduction = 2
-							uses = 1
-							technology = improved_small_airframe
-						}
-					}
-				}
-			}
-		}
-		prerequisite = { focus = ROM_focus_on_domestic_industry  } prerequisite = { focus = ROM_fighter_focus  } prerequisite = { focus = ROM_invest_in_iar  }
-	}
-	# AIR END
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	# ARMY START
-
-	#Crippling Logistics
-	focus = {
-		id = ROM_crippling_logistics
-		icon = GFX_goal_generic_production2
-		x = 7
-		y = 0
-		relative_position_id = ROM_the_ruined_army
-		completion_reward = {
-			custom_effect_tooltip = ROMID_unlock_supply_decisions
-			remove_ideas = ROMID_crippled_logistics_combined
-			add_ideas = ROMID_crippled_logistics_command
-			add_ideas = ROMID_crippled_logistics_motorization
-			hidden_effect = { 
-				add_dynamic_modifier = { modifier = ROMID_crippled_logistics_supply } 
-				set_variable = { ROMID_var_supply_grace = 3 }
-				set_variable = { ROMID_var_out_supply = -0.05 }
-				set_variable = { ROMID_var_supply_cons = -0.1 }
-    				multiply_variable = { ROMID_var_supply_grace = ROMID_supply_counter }
-    				multiply_variable = { ROMID_var_out_supply = ROMID_supply_counter }
-    				multiply_variable = { ROMID_var_supply_cons = ROMID_supply_counter }
-			}
-			custom_effect_tooltip = ROMID_supply_cripple_tt
-		}
-		cost = 5
-		search_filters = {
-			FOCUS_FILTER_WAR_SUPPORT
-		}
-	}
 
 	#The Ruined Army
 	focus = {
@@ -7952,6 +7309,35 @@ focus_tree = {
 		prerequisite = { focus = ROM_the_ruined_army  }
 		mutually_exclusive = { focus = ROM_averescuslegacy  }
 	}
+
+	#Crippling Logistics
+	focus = {
+		id = ROM_crippling_logistics
+		icon = GFX_goal_generic_production2
+		x = 7
+		y = 0
+		relative_position_id = ROM_the_ruined_army
+		completion_reward = {
+			custom_effect_tooltip = ROMID_unlock_supply_decisions
+			remove_ideas = ROMID_crippled_logistics_combined
+			add_ideas = ROMID_crippled_logistics_command
+			add_ideas = ROMID_crippled_logistics_motorization
+			hidden_effect = { 
+				add_dynamic_modifier = { modifier = ROMID_crippled_logistics_supply } 
+				set_variable = { ROMID_var_supply_grace = 3 }
+				set_variable = { ROMID_var_out_supply = -0.05 }
+				set_variable = { ROMID_var_supply_cons = -0.1 }
+    				multiply_variable = { ROMID_var_supply_grace = ROMID_supply_counter }
+    				multiply_variable = { ROMID_var_out_supply = ROMID_supply_counter }
+    				multiply_variable = { ROMID_var_supply_cons = ROMID_supply_counter }
+			}
+			custom_effect_tooltip = ROMID_supply_cripple_tt
+		}
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_WAR_SUPPORT
+		}
+	}	
 
 	#Averescu's Legacy
 	focus = {
@@ -8780,4 +8166,526 @@ focus_tree = {
 		}
 		prerequisite = { focus = ROM_romanian_special_forces focus = ROM_advanced_mountain_units }
 	}
+
+
+
+
+
+	# AIR START
+
+	#Modernize Airfields
+	focus = {
+		id = ROM_modernize_airfields
+		icon = GFX_goal_generic_construct_civilian
+		x = 8
+		y = 0
+		relative_position_id = ROM_crippling_logistics
+		cost = 4
+		complete_tooltip = {
+			air_experience = 25
+			random_state = {
+				limit = {
+					has_state_flag = ROM_expand_the_air_force_AB
+				}
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_state = {
+				limit = {
+					has_state_flag = ROM_expand_the_air_force_AB_2
+				}
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_state = {
+				limit = {
+					has_state_flag = ROM_expand_the_air_force_AB_3
+				}
+				add_building_construction = {
+					type = air_base
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+
+		completion_reward = {
+			air_experience = 25
+			if = {
+				limit = {
+					has_dlc = "La Resistance"
+					NOT = { has_dlc = "By Blood Alone"}
+				}
+				add_tech_bonus = {
+					name = scout_plane
+					bonus = 1.0
+					uses = 1
+					category = cat_scout_plane
+				}				
+			}			
+			random_owned_controlled_state = {
+				prioritize = { 82 78 76 }
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					free_building_slots = {
+						building = air_base
+						size > 1
+					}
+				}
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = ROM_expand_the_air_force_AB
+			}
+			random_owned_controlled_state = {
+				prioritize = { 766 83 }
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					free_building_slots = {
+						building = air_base
+						size > 0
+					}
+				}
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = ROM_expand_the_air_force_AB_2
+			}
+			random_owned_controlled_state = {
+				prioritize = { 84 46 79 }
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					free_building_slots = {
+						building = air_base
+						size > 2
+					}
+				}
+				add_building_construction = {
+					type = air_base
+					level = 3
+					instant_build = yes
+				}
+				set_state_flag = ROM_expand_the_air_force_AB_3
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_WAR_SUPPORT
+		}
+	}
+	
+	#Invest in IAR
+	focus = {
+		id = ROM_invest_in_iar
+		icon = GFX_focus_generic_aircraft_production
+		x = 3
+		y = 1
+		relative_position_id = ROM_modernize_airfields
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		cost = 5
+		complete_tooltip = {
+			add_ideas = ROMID_investing_in_iar
+			random_state = {
+				prioritize = {
+					84
+				}
+				limit = {
+					has_state_flag = ROM_iar_works_IC
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}			
+			}
+			if = {
+                		limit = {
+                    			has_dlc = "Arms Against Tyranny"
+                		}
+                		custom_effect_tooltip = available_mio_tt
+                		show_mio_tooltip = ROMID_iar_organization
+                		mio:ROMID_iar_organization = {
+                    			add_mio_funds = 2500
+                		}
+            		}
+            		else = {
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = ROMID_iar	
+            		}	
+			ROMID_supply_cap_add = yes		
+		}
+
+		completion_reward = {
+			add_ideas = ROMID_investing_in_iar
+			random_owned_controlled_state = {
+				prioritize = { 84 }
+				limit = {
+					ROOT = { has_full_control_of_state = PREV } 
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}	
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = ROM_iar_works_IC	
+			}
+			if = {
+                		limit = {
+                    			has_dlc = "Arms Against Tyranny"
+                		}
+                		custom_effect_tooltip = available_mio_tt
+                		show_mio_tooltip = ROMID_iar_organization
+                		mio:ROMID_iar_organization = {
+                    			add_mio_funds = 2500
+                		}
+            		}
+            		else = {
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = ROMID_iar	
+            		}
+			ROMID_supply_cap_add = yes
+		}
+		prerequisite = { focus = ROM_modernize_airfields  }
+		mutually_exclusive = { focus = ROM_license_planes  }
+	}
+
+	#License Planes
+	focus = {
+		id = ROM_license_planes
+		icon = GFX_goal_generic_air_production
+		x = -3
+		y = 1
+		relative_position_id = ROM_modernize_airfields
+		search_filters = {
+			FOCUS_FILTER_WAR_SUPPORT
+		}
+		cost = 5
+		completion_reward = {
+			add_ideas = ROMID_licensing_planes
+		}
+		prerequisite = { focus = ROM_modernize_airfields  }
+		mutually_exclusive = { focus = ROM_invest_in_iar  }
+	}
+
+	#Convert IAR
+	focus = {
+		id = ROM_convert_iar
+		icon = GFX_goal_continuous_air_production
+		x = 1
+		y = 1
+		relative_position_id = ROM_license_planes
+		search_filters = {
+			FOCUS_FILTER_WAR_SUPPORT
+		}
+		cost = 5
+		complete_tooltip = {
+			add_ideas = ROMID_iar_conversion
+			random_state = {
+				prioritize = {
+					84
+				}
+				limit = {
+					has_state_flag = ROM_iar_works_2_IC
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}			
+			}
+			if = {
+				limit = { has_dlc = "By Blood Alone" }
+				add_tech_bonus = {
+ 			    		bonus = 0.2
+ 			    		uses = 1
+			    		category = cat_air_engine
+				}	
+			}			
+		}
+
+		completion_reward = {
+			add_ideas = ROMID_iar_conversion
+			random_owned_controlled_state = {
+				prioritize = { 84 }
+				limit = {
+					ROOT = { has_full_control_of_state = PREV } 
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}	
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = ROM_iar_works_2_IC	
+			}
+			if = {
+				limit = { has_dlc = "By Blood Alone" }
+				add_tech_bonus = {
+ 			    		bonus = 0.2
+ 			    		uses = 1
+			    		category = cat_air_engine
+				}	
+			}
+		}
+		prerequisite = { focus = ROM_license_planes  }
+	}
+
+	#Subsidize Other Companies
+	focus = {
+		id = ROM_subsidize_other_companies
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 2
+		y = 2
+		relative_position_id = ROM_license_planes
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		cost = 3
+		completion_reward = {
+			if = {
+                		limit = {
+                    			has_dlc = "Arms Against Tyranny"
+                		}
+                		custom_effect_tooltip = available_mio_tt
+                		show_mio_tooltip = ROMID_icar_organization
+                		mio:ROMID_icar_organization = {
+                    			add_mio_funds = 500
+                		}
+				custom_effect_tooltip = available_mio_tt
+                		show_mio_tooltip = ROMID_set_organization
+                		mio:ROMID_set_organization = {
+                    			add_mio_funds = 500
+                		}
+				custom_effect_tooltip = available_mio_tt
+                		show_mio_tooltip = ROMID_stc_organization
+                		mio:ROMID_stc_organization = {
+                    			add_mio_funds = 500
+                		}
+            		}
+            		else = {
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = ROMID_icar
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = ROMID_set
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = ROMID_stc
+            		}
+		}
+		prerequisite = { focus = ROM_invest_in_iar  focus = ROM_license_planes  }
+	}
+
+	#Fighter Focus
+	focus = {
+		id = ROM_fighter_focus
+		icon = GFX_ROM_fighter_focus-313102
+		x = -1
+		y = 1
+		relative_position_id = ROM_invest_in_iar
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		cost = 5
+		completion_reward = {
+			if = {
+				limit = { 
+					has_idea = ROMID_investing_in_iar
+				}
+				swap_ideas = {
+  					remove_idea = ROMID_investing_in_iar
+ 					add_idea = ROMID_investing_in_iar_fighter
+				}
+			}
+			else = {
+				add_ideas = ROMID_investing_in_fighter
+			}
+			add_tech_bonus = {
+			    	name = modern_fighter
+				bonus = 0.5
+				uses = 1
+				category = light_fighter
+				technology = cv_early_fighter
+				technology = cv_fighter1
+				technology = cv_fighter2
+				technology = cv_fighter3
+			}
+		}
+		prerequisite = { focus = ROM_license_planes  focus = ROM_invest_in_iar  }
+		mutually_exclusive = { focus = ROM_bomber_focus  }
+	}
+
+	#Bomber Focus
+	focus = {
+		id = ROM_bomber_focus
+		icon = GFX_ROM_bomber_focus-313103
+		x = -3
+		y = 1
+		relative_position_id = ROM_invest_in_iar
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		cost = 5
+		completion_reward = {
+			if = {
+				limit = { 
+					has_idea = ROMID_investing_in_iar
+				}
+				swap_ideas = {
+  					remove_idea = ROMID_investing_in_iar
+ 					add_idea = ROMID_investing_in_iar_bomber
+				}
+			}
+			else = {
+				add_ideas = ROMID_investing_in_bomber	
+			}
+			add_tech_bonus = {
+			    	name = modern_bomber
+				bonus = 0.5
+				uses = 1
+				category = cas_bomber
+				category = tactical_bomber
+			}
+		}
+		prerequisite = { focus = ROM_invest_in_iar  focus = ROM_license_planes  }
+		mutually_exclusive = { focus = ROM_fighter_focus  }
+	}
+
+	#New Air Tactics
+	focus = {
+		id = ROM_new_air_tactics
+		icon = GFX_goal_generic_air_doctrine
+		x = 1
+		y = 1
+		relative_position_id = ROM_bomber_focus
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		cost = 5
+		completion_reward = {		
+			add_doctrine_cost_reduction = {
+				name = air_doc_bonus_1
+				cost_reduction = 0.5
+       			        uses = 2
+           			category = air_doctrine
+   		        }			
+		}
+		prerequisite = { focus = ROM_fighter_focus  focus = ROM_bomber_focus  }
+	}
+
+	#Learn Foreign Tactics
+	focus = {
+		id = ROM_learn_foreign_tactics
+		icon = GFX_goal_generic_build_airforce
+		x = 0
+		y = 3
+		relative_position_id = ROM_license_planes
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		cost = 5
+		completion_reward = {		
+			add_doctrine_cost_reduction = {
+				name = air_doc_bonus_2
+				cost_reduction = 0.5
+       			        uses = 2
+           			category = air_doctrine
+   		        }			
+		}
+		prerequisite = { focus = ROM_license_planes  } prerequisite = { focus = ROM_new_air_tactics  }
+	}
+
+	#The Legendary IAR 80
+	focus = {
+		id = ROM_the_legendary_iar_80
+		icon = GFX_goal_generic_air_fighter
+		x = 0
+		y = 3
+		relative_position_id = ROM_invest_in_iar
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		cost = 10
+		completion_reward = {
+			air_experience = 50
+			if = {
+				limit = { NOT = { has_dlc = "By Blood Alone" } }
+				if = {
+					limit = {
+						NOT = {
+							has_tech = fighter2
+						}
+					}
+					custom_effect_tooltip = ROMID_iar_80
+					hidden_effect = {set_technology = { fighter2 = 1 popup = no } }
+					else = {
+						add_tech_bonus = {
+							name = iar80
+							bonus = 2
+							ahead_reduction = 2
+							uses = 1
+							category = light_fighter
+						}					
+					}
+				}
+			}
+			if = {
+				limit = { has_dlc = "By Blood Alone" }
+				if = {
+					limit = {
+						has_tech = improved_small_airframe
+					}
+					create_equipment_variant = {
+						name = "IAR 80"
+						type = small_plane_airframe_2
+						modules = {
+							fixed_main_weapon_slot = heavy_mg_4x
+							fixed_auxiliary_weapon_slot_1 = heavy_mg_4x
+							fixed_auxiliary_weapon_slot_2 = heavy_mg_4x
+							engine_type_slot = engine_3_1x
+							special_type_slot_1 = drop_tanks
+							special_type_slot_2 = self_sealing_fuel_tanks_small
+							special_type_slot_3 = armor_plate_small
+						}
+						icon = "GFX_ROM_fighter2_medium"
+					}
+					else = {
+						add_tech_bonus = {
+							name = ROM_iar_80
+							bonus = 1.0
+							ahead_reduction = 2
+							uses = 1
+							technology = improved_small_airframe
+						}
+					}
+				}
+			}
+		}
+		prerequisite = { focus = ROM_focus_on_domestic_industry  } prerequisite = { focus = ROM_fighter_focus  } prerequisite = { focus = ROM_invest_in_iar  }
+	}
+	# AIR END
+
+	
 }

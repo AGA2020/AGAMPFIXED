@@ -2398,7 +2398,7 @@ focus_tree = {
 			every_country_with_original_tag = {
 				original_tag_to_check = ROM
 				limit = {
-					has_completed_focus = ROM_his_majestys_loyal_government
+					has_completed_focus = ROM_the_royal_guard
 				}
 				add_opinion_modifier = {
 					target = TUR
