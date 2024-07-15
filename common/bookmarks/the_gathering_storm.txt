@@ -298,7 +298,6 @@ bookmarks = {
 			}
 			focuses = {
 				ROM_institute_royal_dictatorship
-				ROM_preserve_greater_romania
 			}
 		}
 		

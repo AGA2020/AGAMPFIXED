@@ -2128,233 +2128,35 @@ focus_tree = {
 		prerequisite = { focus = ROM_get_rid_of_the_iron_guard  }
 	}
 
-	#Purge the Iron Guard
+	#Invite German Advisors
 	focus = {
-		id = ROM_purge_the_iron_guard
-		icon = GFX_ROM_purge_the_iron_guard-422
-		x = -1
-		y = 1
-		relative_position_id = ROM_abolishstatulnationallegionar
-		search_filters = {
-			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
-		}
-		cost = 5
-		completion_reward = {
-			custom_effect_tooltip = ROMID_crush_the_coup_2_tt
-			custom_effect_tooltip = ROMID_crush_the_iron_guard_decision_tt
-			hidden_effect = {
-				81 = {
-					remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
-					clr_state_flag = iron_guard_supporters
-				}
-				83 = {
-					remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
-					clr_state_flag = iron_guard_supporters
-				}
-			}
-			ROMID_iron_guard_medium_loyalty_decrease_effect = yes
-			ROMID_iron_guard_high_popularity_decrease_effect = yes
-			hidden_effect = {
-				if = {
-					limit = { is_ai = yes }
-					remove_ideas = ROMID_the_iron_guard_weak_low_loyalty
-					remove_ideas = ROMID_the_iron_guard_weak_medium_loyalty
-					remove_ideas = ROMID_the_iron_guard_weak_high_loyalty
-					remove_ideas = ROMID_the_iron_guard_normal_low_loyalty
-					remove_ideas = ROMID_the_iron_guard_normal_medium_loyalty
-					remove_ideas = ROMID_the_iron_guard_normal_high_loyalty
-					remove_ideas = ROMID_the_iron_guard_powerful_low_loyalty
-					remove_ideas = ROMID_the_iron_guard_powerful_medium_loyalty
-					remove_ideas = ROMID_the_iron_guard_powerful_high_loyalty
-				}
-			}
-		}
-		prerequisite = { focus = ROM_abolishstatulnationallegionar  }
-	}
-
-
-	#"Ostasi, vă ordon: Treceti Prutul!"
-	focus = {
-		id = ROM_ostasivaordontrecetiprutul
-		icon = GFX_focus_attack_soviet
-		x = 1
-		y = 1
-		relative_position_id = ROM_purge_the_iron_guard
-		search_filters = {
-			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
-		}
-		cost = 5
-		completion_reward = {
-			declare_war_on = {
-				target = SOV
-  				type = annex_everything
-			}
-			add_timed_idea = {
-				idea = ROMID_operation_munchen
-				days = 90
-			}
-			news_event = {
-    				id = ROMEV_events.33
-			}
-		}
-		prerequisite = { focus = ROM_purge_the_iron_guard  } prerequisite = { focus = ROM_romanian_claims_between_dniester_and_southern_bug  }
-	}
-
-	#Nationalize the Industry
-	focus = {
-		id = ROM_nationalize_the_industry
-		icon = GFX_ROM_nationalize_the_industry-312132
-		x = 5
-		y = 2
-		relative_position_id = ROM_corpul_muncitorilor_legionari
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
-		}
-		cost = 5
-		complete_tooltip = {
-			random_state = {
-				limit = {
-					has_state_flag = ROM_jew_ind_AA
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
- 				    type = industrial_complex
- 				    level = 2
-				    instant_build = yes
-				}
-			}
-		}
-		completion_reward = {
-			random_owned_controlled_state = {
-				limit = {
-					ROOT = { has_full_control_of_state = PREV }
-					free_building_slots = {	
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
- 				    type = industrial_complex
- 				    level = 2
-				    instant_build = yes
-				}
-				set_state_flag = ROM_jew_ind_AA
-			}
-		}
-		prerequisite = { focus = ROM_nationalize_all_jewish_assets  focus = ROM_corpul_muncitorilor_legionari  }
-	}
-
-	#Protect The Oil Refineries
-	focus = {
-		id = ROM_protect_the_oil_refineries
-		icon = GFX_focus_generic_air_defense
-		x = 2
-		y = 1
-		relative_position_id = ROM_notsoimaginotline
-		cost = 8
-		search_filters = {
-			FOCUS_FILTER_WAR_SUPPORT
-		}
-		completion_reward = {
-			46 = { 
-				add_building_construction = {
-					type = bunker
-					level = 5
-					instant_build = yes
-   					province = 3663
-				}
-				add_building_construction = {
-					type = bunker
-					level = 2
-					instant_build = yes
-   					province = 9617
-				}
-				add_building_construction = {
-					type = anti_air_building
-					level = 3
-					instant_build = yes
-				}
-			}
-		}
-		prerequisite = { focus = ROM_notsoimaginotline  } prerequisite = { focus = ROM_ban_oil_export_to_germany  }
-	}
-
-	#Mobilize More Men to the Front
-	focus = {
-		id = ROM_mobilize_more_men_to_the_front
-		icon = GFX_focus_generic_little_entente
-		x = -1
-		y = 2
-		relative_position_id = ROM_ostasivaordontrecetiprutul
-		search_filters = {
-			FOCUS_FILTER_MANPOWER
-		}
-		cost = 5
-		completion_reward = {
-			custom_effect_tooltip = ROMID_unlock_prepare_coup_tt
-			add_ideas = ROMID_mobilization_effort
-		}
-		prerequisite = { focus = ROM_ostasivaordontrecetiprutul  } prerequisite = { focus = ROM_german_war_support  }
-	}
-
-	#Leave the Balkan Pact
-	focus = {
-		id = ROM_leave_the_balkan_pact
-		icon = GFX_focus_BUL_free_balkan_states
+		id = ROM_invite_german_advisors
+		icon = GFX_ROM_invite_german_advisors-307631
 		x = 0
 		y = 1
-		relative_position_id = ROM_institute_statul_nationallegionar
-		cost = 4
+		relative_position_id = ROM_partidulnatiuniipn
 		search_filters = {
-			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
+			FOCUS_FILTER_POLITICAL
 		}
+		cost = 5
 		completion_reward = {
-			add_political_power = 25
-			remove_opinion_modifier = { 
-				target = GRE
-				modifier = BFTB_balkan_pact_ally
+			add_political_power = 50
+			custom_effect_tooltip = ROMID_unlock_antonescu_coup
+			custom_effect_tooltip = ROMID_modify_german_license_tt
+			hidden_effect = { 
+				remove_relation_modifier = {
+					target = GER
+					modifier = ROMID_ger_rom_rom
+				}
+				add_relation_modifier = {
+					target = GER
+					modifier = ROMID_ger_rom_rom_2
+				}
 			}
-			remove_opinion_modifier = { 
-				target = TUR
-				modifier = BFTB_balkan_pact_ally
-			}
-			remove_opinion_modifier = { 
-				target = YUG
-				modifier = BFTB_balkan_pact_ally
-			}
-			remove_opinion_modifier = { 
-				target = BUL
-				modifier = BFTB_balkan_pact_enemy
-			}
-			remove_opinion_modifier = { 
-				target = HUN
-				modifier = BFTB_balkan_pact_enemy
-			}
-			diplomatic_relation = {
-				country = CZE
-				relation = guarantee
-   				active = no
-			}
-			diplomatic_relation = {
-				country = GRE
-				relation = guarantee
-   				active = no
-			}
-			diplomatic_relation = {
-				country = TUR
-				relation = guarantee
-   				active = no
-			}
-			diplomatic_relation = {
-				country = YUG
-				relation = guarantee
-   				active = no
-			}
+			ROMID_army_low_loyalty_decrease_effect = yes
 		}
-		prerequisite = { focus = ROM_institute_statul_nationallegionar  }
-	}
+		prerequisite = { focus = ROM_partidulnatiuniipn  }
+	}	
 
 	#Force Carol's Abdication
 	focus = {
@@ -2467,6 +2269,63 @@ focus_tree = {
 		prerequisite = { focus = ROM_forcecarolsabdication  focus = ROM_getridofthelancieri  }
 	}
 
+	#Leave the Balkan Pact
+	focus = {
+		id = ROM_leave_the_balkan_pact
+		icon = GFX_focus_BUL_free_balkan_states
+		x = 0
+		y = 1
+		relative_position_id = ROM_institute_statul_nationallegionar
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
+		}
+		completion_reward = {
+			add_political_power = 25
+			remove_opinion_modifier = { 
+				target = GRE
+				modifier = BFTB_balkan_pact_ally
+			}
+			remove_opinion_modifier = { 
+				target = TUR
+				modifier = BFTB_balkan_pact_ally
+			}
+			remove_opinion_modifier = { 
+				target = YUG
+				modifier = BFTB_balkan_pact_ally
+			}
+			remove_opinion_modifier = { 
+				target = BUL
+				modifier = BFTB_balkan_pact_enemy
+			}
+			remove_opinion_modifier = { 
+				target = HUN
+				modifier = BFTB_balkan_pact_enemy
+			}
+			diplomatic_relation = {
+				country = CZE
+				relation = guarantee
+   				active = no
+			}
+			diplomatic_relation = {
+				country = GRE
+				relation = guarantee
+   				active = no
+			}
+			diplomatic_relation = {
+				country = TUR
+				relation = guarantee
+   				active = no
+			}
+			diplomatic_relation = {
+				country = YUG
+				relation = guarantee
+   				active = no
+			}
+		}
+		prerequisite = { focus = ROM_institute_statul_nationallegionar  }
+	}
+
 	#Ban Other Parties
 	focus = {
 		id = ROM_ban_other_parties
@@ -2526,75 +2385,34 @@ focus_tree = {
 		prerequisite = { focus = ROM_institute_statul_nationallegionar  }  prerequisite = { focus = ROM_forcecarolsabdication }
 	}
 
-	#Crush the Coup
+	#Jilava Massacre
 	focus = {
-		id = ROM_crush_the_coup
-		icon = GFX_focus_generic_anti_fascist_diplomacy
-		x = 5
+		id = ROM_jilava_massacre
+		icon = GFX_ROM_jilava_massacre-306368
+		x = -1
 		y = 1
-		relative_position_id = ROM_jilava_massacre
+		relative_position_id = ROM_ban_other_parties
 		cost = 5
 		search_filters = {
 			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
 		}
 		completion_reward = {
-			add_stability = 0.05
-			custom_effect_tooltip = ROMID_crush_the_coup_tt
-			hidden_effect = {
-				82 = {
-					remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
-					clr_state_flag = iron_guard_supporters
-				}
-				84 = {
-					remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
-					clr_state_flag = iron_guard_supporters
-				}
-				46 = {
-					remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
-					clr_state_flag = iron_guard_supporters
-				}
-			}
-			ROMID_army_low_loyalty_increase_effect = yes
-			ROMID_iron_guard_high_loyalty_decrease_effect = yes
-			ROMID_iron_guard_medium_popularity_decrease_effect = yes
+			add_stability = -0.1
+			ROMID_army_low_loyalty_decrease_effect = yes
+			ROMID_royalists_low_loyalty_decrease_effect = yes
+			ROMID_royalists_medium_popularity_decrease_effect = yes
 			hidden_effect = {
 				if = {
 					limit = { is_ai = yes }
 					swap_ideas = {
-						remove_idea = ROMID_the_iron_guard_normal_medium_loyalty
-						add_idea = ROMID_the_iron_guard_normal_low_loyalty
+						remove_idea = ROMID_the_royalists_normal_medium_loyalty
+						add_idea = ROMID_the_royalists_weak_medium_loyalty
 					}
 				}
 			}
 		}
-		prerequisite = { focus = ROM_jilava_massacre  } prerequisite = { focus = ROM_sign_the_tripartite_pact  }
-		mutually_exclusive = { focus = ROM_support_the_coup  }
+		prerequisite = { focus = ROM_ban_other_parties  } prerequisite = { focus = ROM_forcecarolsabdication  } prerequisite = { focus = ROM_leave_the_balkan_pact  }
 	}
-
-	#Abolish Statul National-Legionar
-	focus = {
-		id = ROM_abolishstatulnationallegionar
-		icon = GFX_ROM_abolishstatulnationallegionar-262024
-		x = -1
-		y = 1
-		relative_position_id = ROM_crush_the_coup
-		search_filters = {
-			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
-		}
-		cost = 5
-		completion_reward = {
-			add_political_power = 25
-			set_cosmetic_tag = ROM
-			#drop_cosmetic_tag = yes
-			set_party_name = {
-				ideology = fascism
-				long_name = ROM_fascism_party_long1
- 				name = ROM_fascism_party1
-			}
-			ROMID_army_low_loyalty_increase_effect = yes
-		}
-		prerequisite = { focus = ROM_crush_the_coup  }
-	}	
 
 	#Support the Coup
 	focus = {
@@ -2643,35 +2461,165 @@ focus_tree = {
 		}
 		prerequisite = { focus = ROM_jilava_massacre  }
 		mutually_exclusive = { focus = ROM_crush_the_coup  }
-	}
+	}	
 
-	#Jilava Massacre
+	#Crush the Coup
 	focus = {
-		id = ROM_jilava_massacre
-		icon = GFX_ROM_jilava_massacre-306368
-		x = -1
+		id = ROM_crush_the_coup
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		x = 5
 		y = 1
-		relative_position_id = ROM_ban_other_parties
+		relative_position_id = ROM_jilava_massacre
 		cost = 5
 		search_filters = {
 			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
 		}
 		completion_reward = {
-			add_stability = -0.1
-			ROMID_army_low_loyalty_decrease_effect = yes
-			ROMID_royalists_low_loyalty_decrease_effect = yes
-			ROMID_royalists_medium_popularity_decrease_effectf = yes
+			add_stability = 0.05
+			custom_effect_tooltip = ROMID_crush_the_coup_tt
+			hidden_effect = {
+				82 = {
+					remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+					clr_state_flag = iron_guard_supporters
+				}
+				84 = {
+					remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+					clr_state_flag = iron_guard_supporters
+				}
+				46 = {
+					remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+					clr_state_flag = iron_guard_supporters
+				}
+			}
+			ROMID_army_low_loyalty_increase_effect = yes
+			ROMID_iron_guard_high_loyalty_decrease_effect = yes
+			ROMID_iron_guard_medium_popularity_decrease_effect = yes
 			hidden_effect = {
 				if = {
 					limit = { is_ai = yes }
 					swap_ideas = {
-						remove_idea = ROMID_the_royalists_normal_medium_loyalty
-						add_idea = ROMID_the_royalists_weak_medium_loyalty
+						remove_idea = ROMID_the_iron_guard_normal_medium_loyalty
+						add_idea = ROMID_the_iron_guard_normal_low_loyalty
 					}
 				}
 			}
 		}
-		prerequisite = { focus = ROM_ban_other_parties  } prerequisite = { focus = ROM_forcecarolsabdication  } prerequisite = { focus = ROM_leave_the_balkan_pact  }
+		prerequisite = { focus = ROM_jilava_massacre  } prerequisite = { focus = ROM_sign_the_tripartite_pact  }
+		mutually_exclusive = { focus = ROM_support_the_coup  }
+	}	
+
+	#Abolish Statul National-Legionar
+	focus = {
+		id = ROM_abolishstatulnationallegionar
+		icon = GFX_ROM_abolishstatulnationallegionar-262024
+		x = -1
+		y = 1
+		relative_position_id = ROM_crush_the_coup
+		search_filters = {
+			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
+		}
+		cost = 5
+		completion_reward = {
+			add_political_power = 25
+			set_cosmetic_tag = ROM
+			#drop_cosmetic_tag = yes
+			set_party_name = {
+				ideology = fascism
+				long_name = ROM_fascism_party_long1
+ 				name = ROM_fascism_party1
+			}
+			ROMID_army_low_loyalty_increase_effect = yes
+		}
+		prerequisite = { focus = ROM_crush_the_coup  }
+	}	
+
+	#Purge the Iron Guard
+	focus = {
+		id = ROM_purge_the_iron_guard
+		icon = GFX_ROM_purge_the_iron_guard-422
+		x = -1
+		y = 1
+		relative_position_id = ROM_abolishstatulnationallegionar
+		search_filters = {
+			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
+		}
+		cost = 5
+		completion_reward = {
+			custom_effect_tooltip = ROMID_crush_the_coup_2_tt
+			custom_effect_tooltip = ROMID_crush_the_iron_guard_decision_tt
+			hidden_effect = {
+				81 = {
+					remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+					clr_state_flag = iron_guard_supporters
+				}
+				83 = {
+					remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+					clr_state_flag = iron_guard_supporters
+				}
+			}
+			ROMID_iron_guard_medium_loyalty_decrease_effect = yes
+			ROMID_iron_guard_high_popularity_decrease_effect = yes
+			hidden_effect = {
+				if = {
+					limit = { is_ai = yes }
+					remove_ideas = ROMID_the_iron_guard_weak_low_loyalty
+					remove_ideas = ROMID_the_iron_guard_weak_medium_loyalty
+					remove_ideas = ROMID_the_iron_guard_weak_high_loyalty
+					remove_ideas = ROMID_the_iron_guard_normal_low_loyalty
+					remove_ideas = ROMID_the_iron_guard_normal_medium_loyalty
+					remove_ideas = ROMID_the_iron_guard_normal_high_loyalty
+					remove_ideas = ROMID_the_iron_guard_powerful_low_loyalty
+					remove_ideas = ROMID_the_iron_guard_powerful_medium_loyalty
+					remove_ideas = ROMID_the_iron_guard_powerful_high_loyalty
+				}
+			}
+		}
+		prerequisite = { focus = ROM_abolishstatulnationallegionar  }
+	}
+
+	#"Ostasi, vă ordon: Treceti Prutul!"
+	focus = {
+		id = ROM_ostasivaordontrecetiprutul
+		icon = GFX_focus_attack_soviet
+		x = 1
+		y = 1
+		relative_position_id = ROM_purge_the_iron_guard
+		search_filters = {
+			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
+		}
+		cost = 5
+		completion_reward = {
+			declare_war_on = {
+				target = SOV
+  				type = annex_everything
+			}
+			add_timed_idea = {
+				idea = ROMID_operation_munchen
+				days = 90
+			}
+			news_event = {
+    				id = ROMEV_events.33
+			}
+		}
+		prerequisite = { focus = ROM_purge_the_iron_guard  } prerequisite = { focus = ROM_romanian_claims_between_dniester_and_southern_bug  }
+	}	
+
+	#Mobilize More Men to the Front
+	focus = {
+		id = ROM_mobilize_more_men_to_the_front
+		icon = GFX_focus_generic_little_entente
+		x = -1
+		y = 2
+		relative_position_id = ROM_ostasivaordontrecetiprutul
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		cost = 5
+		completion_reward = {
+			custom_effect_tooltip = ROMID_unlock_prepare_coup_tt
+			add_ideas = ROMID_mobilization_effort
+		}
+		prerequisite = { focus = ROM_ostasivaordontrecetiprutul  } prerequisite = { focus = ROM_german_war_support  }
 	}
 
 	#Sign the Tripartite Pact
@@ -2784,6 +2732,63 @@ focus_tree = {
 		mutually_exclusive = { focus = ROM_institute_royal_dictatorship  }
 	}
 
+	#End the Parties
+	focus = {
+		id = ROM_end_the_parties
+		icon = GFX_focus_rom_parties_end
+		x = -1
+		y = 1
+		relative_position_id = ROM_strengthen_relation_with_the_allies
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		cost = 5
+		completion_reward = {
+			add_political_power = 50
+			custom_effect_tooltip = ROMID_integrate_the_royalists_decision_tt
+			remove_ideas = ROMID_carol_lifestyle
+			remove_country_leader_trait = ROMID_hedonist
+			ROMID_royalists_low_loyalty_decrease_effect = yes
+			hidden_effect = {
+				if = {
+					limit = { is_ai = yes }
+					remove_ideas = ROMID_the_royalists_weak_low_loyalty
+					remove_ideas = ROMID_the_royalists_weak_medium_loyalty
+					remove_ideas = ROMID_the_royalists_weak_high_loyalty
+					remove_ideas = ROMID_the_royalists_normal_low_loyalty
+					remove_ideas = ROMID_the_royalists_normal_medium_loyalty
+					remove_ideas = ROMID_the_royalists_normal_high_loyalty
+					remove_ideas = ROMID_the_royalists_powerful_low_loyalty
+					remove_ideas = ROMID_the_royalists_powerful_medium_loyalty
+					remove_ideas = ROMID_the_royalists_powerful_high_loyalty
+					add_ideas = ROMID_the_royalists_integrated
+				}
+			}
+		}
+		prerequisite = { focus = ROM_strengthen_relation_with_the_allies  }
+	}
+
+	#Expand Straja Tării
+	focus = {
+		id = ROM_expandstrajatarii
+		icon = GFX_ROM_expandstrajatarii-312060
+		x = 0
+		y = 1
+		relative_position_id = ROM_end_the_parties
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		cost = 6
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ROMID_straja_trii_1
+				add_idea = ROMID_straja_trii_2
+			}
+			ROMID_royalists_low_popularity_increase_effect = yes
+		}
+		prerequisite = { focus = ROM_end_the_parties  }
+	}
+
 	#Not so "Imaginot" Line
 	focus = {
 		id = ROM_notsoimaginotline
@@ -2801,34 +2806,39 @@ focus_tree = {
 		prerequisite = { focus = ROM_expandstrajatarii  }
 	}
 
-	#Invite German Advisors
+	#Protect The Oil Refineries
 	focus = {
-		id = ROM_invite_german_advisors
-		icon = GFX_ROM_invite_german_advisors-307631
-		x = 0
+		id = ROM_protect_the_oil_refineries
+		icon = GFX_focus_generic_air_defense
+		x = 2
 		y = 1
-		relative_position_id = ROM_partidulnatiuniipn
+		relative_position_id = ROM_notsoimaginotline
+		cost = 8
 		search_filters = {
-			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_WAR_SUPPORT
 		}
-		cost = 5
 		completion_reward = {
-			add_political_power = 50
-			custom_effect_tooltip = ROMID_unlock_antonescu_coup
-			custom_effect_tooltip = ROMID_modify_german_license_tt
-			hidden_effect = { 
-				remove_relation_modifier = {
-					target = GER
-					modifier = ROMID_ger_rom_rom
+			46 = { 
+				add_building_construction = {
+					type = bunker
+					level = 5
+					instant_build = yes
+   					province = 3663
 				}
-				add_relation_modifier = {
-					target = GER
-					modifier = ROMID_ger_rom_rom_2
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+   					province = 9617
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 3
+					instant_build = yes
 				}
 			}
-			ROMID_army_low_loyalty_decrease_effect = yes
 		}
-		prerequisite = { focus = ROM_partidulnatiuniipn  }
+		prerequisite = { focus = ROM_notsoimaginotline  } prerequisite = { focus = ROM_ban_oil_export_to_germany  }
 	}
 
 	#Act of 23 August
@@ -2928,6 +2938,36 @@ focus_tree = {
 		prerequisite = { focus = ROM_ostasivaordontrecetiprutul  focus = ROM_reclaim_bessarabia  }
 	}
 
+	#Increased Exports to Germany
+	focus = {
+		id = ROM_increased_exports_to_germany
+		icon = GFX_focus_chi_mission_to_germany
+		x = -1
+		y = 1
+		relative_position_id = ROM_purge_the_iron_guard
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		cost = 5
+		completion_reward = {
+			add_political_power = 50
+			custom_effect_tooltip = ROMID_modify_german_trade_tt
+			hidden_effect = { 
+				GER = {
+					remove_relation_modifier = {
+						target = ROM
+						modifier = ROMID_ger_rom_ger
+					}
+					add_relation_modifier = {
+						target = ROM
+						modifier = ROMID_ger_rom_ger_2
+					}
+				}
+			}
+		}
+		prerequisite = { focus = ROM_purge_the_iron_guard  }
+	}	
+
 	#German War Support
 	focus = {
 		id = ROM_german_war_support
@@ -3024,36 +3064,6 @@ focus_tree = {
 		prerequisite = { focus = ROM_ostasivaordontrecetiprutul  } prerequisite = { focus = ROM_germandefencesatploiesti  }
 	}
 
-	#Increased Exports to Germany
-	focus = {
-		id = ROM_increased_exports_to_germany
-		icon = GFX_focus_chi_mission_to_germany
-		x = -1
-		y = 1
-		relative_position_id = ROM_purge_the_iron_guard
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		cost = 5
-		completion_reward = {
-			add_political_power = 50
-			custom_effect_tooltip = ROMID_modify_german_trade_tt
-			hidden_effect = { 
-				GER = {
-					remove_relation_modifier = {
-						target = ROM
-						modifier = ROMID_ger_rom_ger
-					}
-					add_relation_modifier = {
-						target = ROM
-						modifier = ROMID_ger_rom_ger_2
-					}
-				}
-			}
-		}
-		prerequisite = { focus = ROM_purge_the_iron_guard  }
-	}
-
 	#Munca Tineretului Român
 	focus = {
 		id = ROM_muncatineretuluiroman
@@ -3112,6 +3122,34 @@ focus_tree = {
 		prerequisite = { focus = ROM_gogacodreanu_cooperation  }
 		mutually_exclusive = { focus = ROM_arm_the_paramilitaries }
 	}
+
+	#Echipa Mortii
+	focus = {
+		id = ROM_echipa_mortii
+		icon = GFX_ROM_echipa_mortii-422
+		x = 0
+		y = 1
+		relative_position_id = ROM_terrorize_opposition
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_ideas = ROMID_echipa_mortii
+			ROMID_iron_guard_low_loyalty_increase_effect = yes
+			ROMID_iron_guard_low_popularity_increase_effect = yes
+			hidden_effect = {
+				if = {
+					limit = { is_ai = yes }
+					swap_ideas = {
+						remove_idea = ROMID_the_iron_guard_normal_low_loyalty
+						add_idea = ROMID_the_iron_guard_powerful_low_loyalty
+					}
+				}
+			}
+		}
+		prerequisite = { focus = ROM_terrorize_opposition  }
+	}	
 
 	#Spark the Conflict
 	focus = {
@@ -3477,6 +3515,43 @@ focus_tree = {
 		prerequisite = { focus = ROM_arm_the_paramilitaries  focus = ROM_echipa_mortii  }
 	}
 
+	#Purge the Old Elite
+	focus = {
+		id = ROM_purge_the_old_elite
+		icon = GFX_focus_rom_parties_end
+		x = 1
+		y = 1
+		relative_position_id = ROM_spark_the_conflict
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = {
+			NOT = { has_civil_war = yes }
+		}
+		completion_reward = {
+			add_political_power = 50
+			custom_effect_tooltip = ROMID_crush_the_royalists_decision_tt
+			ROMID_royalists_high_loyalty_decrease_effect = yes
+			ROMID_royalists_high_popularity_decrease_effect = yes
+			hidden_effect = {
+				if = {
+					limit = { is_ai = yes }
+					remove_ideas = ROMID_the_royalists_weak_low_loyalty
+					remove_ideas = ROMID_the_royalists_weak_medium_loyalty
+					remove_ideas = ROMID_the_royalists_weak_high_loyalty
+					remove_ideas = ROMID_the_royalists_normal_low_loyalty
+					remove_ideas = ROMID_the_royalists_normal_medium_loyalty
+					remove_ideas = ROMID_the_royalists_normal_high_loyalty
+					remove_ideas = ROMID_the_royalists_powerful_low_loyalty
+					remove_ideas = ROMID_the_royalists_powerful_medium_loyalty
+					remove_ideas = ROMID_the_royalists_powerful_high_loyalty
+				}
+			}
+		}
+		prerequisite = { focus = ROM_spark_the_conflict  }
+	}	
+
 	#Request German Help
 	focus = {
 		id = ROM_request_german_help
@@ -3822,43 +3897,6 @@ focus_tree = {
 		prerequisite = { focus = ROM_stab_goga_in_the_back  }
 	}
 
-	#Purge the Old Elite
-	focus = {
-		id = ROM_purge_the_old_elite
-		icon = GFX_focus_rom_parties_end
-		x = 1
-		y = 1
-		relative_position_id = ROM_spark_the_conflict
-		cost = 5
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		available = {
-			NOT = { has_civil_war = yes }
-		}
-		completion_reward = {
-			add_political_power = 50
-			custom_effect_tooltip = ROMID_crush_the_royalists_decision_tt
-			ROMID_royalists_high_loyalty_decrease_effect = yes
-			ROMID_royalists_high_popularity_decrease_effect = yes
-			hidden_effect = {
-				if = {
-					limit = { is_ai = yes }
-					remove_ideas = ROMID_the_royalists_weak_low_loyalty
-					remove_ideas = ROMID_the_royalists_weak_medium_loyalty
-					remove_ideas = ROMID_the_royalists_weak_high_loyalty
-					remove_ideas = ROMID_the_royalists_normal_low_loyalty
-					remove_ideas = ROMID_the_royalists_normal_medium_loyalty
-					remove_ideas = ROMID_the_royalists_normal_high_loyalty
-					remove_ideas = ROMID_the_royalists_powerful_low_loyalty
-					remove_ideas = ROMID_the_royalists_powerful_medium_loyalty
-					remove_ideas = ROMID_the_royalists_powerful_high_loyalty
-				}
-			}
-		}
-		prerequisite = { focus = ROM_spark_the_conflict  }
-	}
-
 	#Expand the Cuiburi
 	focus = {
 		id = ROM_expand_the_cuiburi
@@ -4014,34 +4052,6 @@ focus_tree = {
 		prerequisite = { focus = ROM_stab_goga_in_the_back }
 	}
 
-	#Echipa Mortii
-	focus = {
-		id = ROM_echipa_mortii
-		icon = GFX_ROM_echipa_mortii-422
-		x = 0
-		y = 1
-		relative_position_id = ROM_terrorize_opposition
-		cost = 5
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		completion_reward = {
-			add_ideas = ROMID_echipa_mortii
-			ROMID_iron_guard_low_loyalty_increase_effect = yes
-			ROMID_iron_guard_low_popularity_increase_effect = yes
-			hidden_effect = {
-				if = {
-					limit = { is_ai = yes }
-					swap_ideas = {
-						remove_idea = ROMID_the_iron_guard_normal_low_loyalty
-						add_idea = ROMID_the_iron_guard_powerful_low_loyalty
-					}
-				}
-			}
-		}
-		prerequisite = { focus = ROM_terrorize_opposition  }
-	}
-
 	#Corpul Muncitorilor Legionari
 	focus = {
 		id = ROM_corpul_muncitorilor_legionari
@@ -4060,6 +4070,52 @@ focus_tree = {
 		prerequisite = { focus = ROM_getridofthelancieri  } prerequisite = { focus = ROM_institute_statul_nationallegionar  }
 	}
 
+	#Nationalize the Industry
+	focus = {
+		id = ROM_nationalize_the_industry
+		icon = GFX_ROM_nationalize_the_industry-312132
+		x = 5
+		y = 2
+		relative_position_id = ROM_corpul_muncitorilor_legionari
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		cost = 5
+		complete_tooltip = {
+			random_state = {
+				limit = {
+					has_state_flag = ROM_jew_ind_AA
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+ 				    type = industrial_complex
+ 				    level = 2
+				    instant_build = yes
+				}
+			}
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					free_building_slots = {	
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+ 				    type = industrial_complex
+ 				    level = 2
+				    instant_build = yes
+				}
+				set_state_flag = ROM_jew_ind_AA
+			}
+		}
+		prerequisite = { focus = ROM_nationalize_all_jewish_assets  focus = ROM_corpul_muncitorilor_legionari  }
+	}	
+
 	#Expand the Forced Labour Camps
 	focus = {
 		id = ROM_expand_the_forced_labour_camps
@@ -4076,6 +4132,26 @@ focus_tree = {
 			add_ideas = ROMID_labour_camps
 		}
 		prerequisite = { focus = ROM_support_the_coup  }
+	}
+
+	#Purge Hungarian and Bulgarian Fascists
+	focus = {
+		id = ROM_purge_hungarian_and_bulgarian_fascists
+		icon = GFX_ROM_purge_hungarian_and_bulgarian_fascists-312066
+		x = 1
+		y = 1
+		relative_position_id = ROM_secure_the_balkan_peninsula
+		search_filters = {
+			FOCUS_FILTER_FRA_OCCUPATION_COST
+		}
+		cost = 6
+		completion_reward = {
+			add_timed_idea = { 
+				idea = ROMID_purging_fascists_everywhere
+				days = 365
+			}
+		}
+		prerequisite = { focus = ROM_strikebeforeitstoolate  focus = ROM_secure_the_balkan_peninsula  }
 	}
 
 	#Royal Police
@@ -4294,83 +4370,6 @@ focus_tree = {
 		prerequisite = { focus = ROM_fortify_bessarabia_and_the_coast }
 	}
 
-	#Expand Straja Tării
-	focus = {
-		id = ROM_expandstrajatarii
-		icon = GFX_ROM_expandstrajatarii-312060
-		x = 0
-		y = 1
-		relative_position_id = ROM_end_the_parties
-		search_filters = {
-			FOCUS_FILTER_MANPOWER
-		}
-		cost = 6
-		completion_reward = {
-			swap_ideas = {
-				remove_idea = ROMID_straja_trii_1
-				add_idea = ROMID_straja_trii_2
-			}
-			ROMID_royalists_low_popularity_increase_effect = yes
-		}
-		prerequisite = { focus = ROM_end_the_parties  }
-	}
-
-	#Purge Hungarian and Bulgarian Fascists
-	focus = {
-		id = ROM_purge_hungarian_and_bulgarian_fascists
-		icon = GFX_ROM_purge_hungarian_and_bulgarian_fascists-312066
-		x = 1
-		y = 1
-		relative_position_id = ROM_secure_the_balkan_peninsula
-		search_filters = {
-			FOCUS_FILTER_FRA_OCCUPATION_COST
-		}
-		cost = 6
-		completion_reward = {
-			add_timed_idea = { 
-				idea = ROMID_purging_fascists_everywhere
-				days = 365
-			}
-		}
-		prerequisite = { focus = ROM_strikebeforeitstoolate  focus = ROM_secure_the_balkan_peninsula  }
-	}
-
-	#End the Parties
-	focus = {
-		id = ROM_end_the_parties
-		icon = GFX_focus_rom_parties_end
-		x = -1
-		y = 1
-		relative_position_id = ROM_strengthen_relation_with_the_allies
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		cost = 5
-		completion_reward = {
-			add_political_power = 50
-			custom_effect_tooltip = ROMID_integrate_the_royalists_decision_tt
-			remove_ideas = ROMID_carol_lifestyle
-			remove_country_leader_trait = ROMID_hedonist
-			ROMID_royalists_low_loyalty_decrease_effect = yes
-			hidden_effect = {
-				if = {
-					limit = { is_ai = yes }
-					remove_ideas = ROMID_the_royalists_weak_low_loyalty
-					remove_ideas = ROMID_the_royalists_weak_medium_loyalty
-					remove_ideas = ROMID_the_royalists_weak_high_loyalty
-					remove_ideas = ROMID_the_royalists_normal_low_loyalty
-					remove_ideas = ROMID_the_royalists_normal_medium_loyalty
-					remove_ideas = ROMID_the_royalists_normal_high_loyalty
-					remove_ideas = ROMID_the_royalists_powerful_low_loyalty
-					remove_ideas = ROMID_the_royalists_powerful_medium_loyalty
-					remove_ideas = ROMID_the_royalists_powerful_high_loyalty
-					add_ideas = ROMID_the_royalists_integrated
-				}
-			}
-		}
-		prerequisite = { focus = ROM_strengthen_relation_with_the_allies  }
-	}
-
 	#Merge the Iron Guard with the Army
 	focus = {
 		id = ROM_merge_the_iron_guard_with_the_army
@@ -4407,134 +4406,6 @@ focus_tree = {
 			add_ideas = ROMID_orthodox_state
 		}
 		prerequisite = { focus = ROM_nationalize_all_jewish_assets  focus = ROM_expand_the_cuiburi  }
-	}
-
-	#Replace the Iron Guard with the Lăncieri
-	focus = {
-		id = ROM_replacetheironguardwiththelancieri
-		icon = GFX_ROM_replacetheironguardwiththelancieri-312097
-		x = 0
-		y = 1
-		relative_position_id = ROM_strike_the_iron_guard
-		cost = 5
-		available = {
-			custom_trigger_tooltip = { 
-				tooltip = ROMID_goga_won_tt
-				has_country_flag = ROMID_goga_won
-			}
-		}
-		search_filters = {
-			FOCUS_FILTER_MANPOWER
-		}
-		completion_reward = {
-			#custom_effect_tooltip = ROMID_replace_the_guard_tt
-			custom_effect_tooltip = ROMID_integrate_the_lancieri_decision_tt
-			custom_effect_tooltip = ROMID_crush_the_iron_guard_decision_tt
-			#hidden_effect = {
-				46 = {
-					remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
-					clr_state_flag = iron_guard_supporters
-				}
-				81 = {
-					remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
-					clr_state_flag = iron_guard_supporters
-				}
-				82 = {
-					remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
-					clr_state_flag = iron_guard_supporters
-				}
-				83 = {
-					remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
-					clr_state_flag = iron_guard_supporters
-				}
-				84 = {
-					remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
-					clr_state_flag = iron_guard_supporters
-				}
-			#}
-			ROMID_iron_guard_medium_loyalty_decrease_effect = yes
-			ROMID_iron_guard_high_popularity_decrease_effect = yes
-			ROMID_lancieri_low_loyalty_increase_effect = yes
-			ROMID_lancieri_medium_popularity_increase_effect = yes
-			hidden_effect = {
-				if = {
-					limit = { is_ai = yes }
-					remove_ideas = ROMID_the_iron_guard_weak_low_loyalty
-					remove_ideas = ROMID_the_iron_guard_weak_medium_loyalty
-					remove_ideas = ROMID_the_iron_guard_weak_high_loyalty
-					remove_ideas = ROMID_the_iron_guard_normal_low_loyalty
-					remove_ideas = ROMID_the_iron_guard_normal_medium_loyalty
-					remove_ideas = ROMID_the_iron_guard_normal_high_loyalty
-					remove_ideas = ROMID_the_iron_guard_powerful_low_loyalty
-					remove_ideas = ROMID_the_iron_guard_powerful_medium_loyalty
-					remove_ideas = ROMID_the_iron_guard_powerful_high_loyalty
-				}
-			}
-			hidden_effect = {
-				if = {
-					limit = { is_ai = yes }
-					remove_ideas = ROMID_the_lancieri_weak_low_loyalty
-					remove_ideas = ROMID_the_lancieri_weak_medium_loyalty
-					remove_ideas = ROMID_the_lancieri_weak_high_loyalty
-					remove_ideas = ROMID_the_lancieri_normal_low_loyalty
-					remove_ideas = ROMID_the_lancieri_normal_medium_loyalty
-					remove_ideas = ROMID_the_lancieri_normal_high_loyalty
-					remove_ideas = ROMID_the_lancieri_powerful_low_loyalty
-					remove_ideas = ROMID_the_lancieri_powerful_medium_loyalty
-					remove_ideas = ROMID_the_lancieri_powerful_high_loyalty
-					add_ideas = ROMID_the_lancieri_integrated
-				}
-			}
-		}
-		prerequisite = { focus = ROM_strike_the_iron_guard  }
-	}
-
-	#Nationalize All Jewish Assets
-	focus = {
-		id = ROM_nationalize_all_jewish_assets
-		icon = GFX_ROM_nationalize_all_jewish_assets-312112
-		x = 0
-		y = 2
-		relative_position_id = ROM_replacetheironguardwiththelancieri
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
-		}
-		cost = 5
-		complete_tooltip = {
-			add_political_power = 25
-			random_state = {
-				limit = {
-					has_state_flag = ROM_jew_ind_AB
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
- 				    type = industrial_complex
- 				    level = 1
-				    instant_build = yes
-				}
-			}
-		}
-		completion_reward = {
-			add_political_power = 25
-			random_owned_controlled_state = {
-				limit = {
-					ROOT = { has_full_control_of_state = PREV }
-					free_building_slots = {	
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
- 				    type = industrial_complex
- 				    level = 1
-				    instant_build = yes
-				}
-				set_state_flag = ROM_jew_ind_AB
-			}
-		}
-		prerequisite = { focus = ROM_replacetheironguardwiththelancieri  }
 	}
 
 	#Strike the Iron Guard
@@ -4763,6 +4634,134 @@ focus_tree = {
 		prerequisite = { focus = ROM_request_german_help  }
 	}
 
+	#Replace the Iron Guard with the Lăncieri
+	focus = {
+		id = ROM_replacetheironguardwiththelancieri
+		icon = GFX_ROM_replacetheironguardwiththelancieri-312097
+		x = 0
+		y = 1
+		relative_position_id = ROM_strike_the_iron_guard
+		cost = 5
+		available = {
+			custom_trigger_tooltip = { 
+				tooltip = ROMID_goga_won_tt
+				has_country_flag = ROMID_goga_won
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		completion_reward = {
+			#custom_effect_tooltip = ROMID_replace_the_guard_tt
+			custom_effect_tooltip = ROMID_integrate_the_lancieri_decision_tt
+			custom_effect_tooltip = ROMID_crush_the_iron_guard_decision_tt
+			#hidden_effect = {
+				46 = {
+					remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+					clr_state_flag = iron_guard_supporters
+				}
+				81 = {
+					remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+					clr_state_flag = iron_guard_supporters
+				}
+				82 = {
+					remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+					clr_state_flag = iron_guard_supporters
+				}
+				83 = {
+					remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+					clr_state_flag = iron_guard_supporters
+				}
+				84 = {
+					remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+					clr_state_flag = iron_guard_supporters
+				}
+			#}
+			ROMID_iron_guard_medium_loyalty_decrease_effect = yes
+			ROMID_iron_guard_high_popularity_decrease_effect = yes
+			ROMID_lancieri_low_loyalty_increase_effect = yes
+			ROMID_lancieri_medium_popularity_increase_effect = yes
+			hidden_effect = {
+				if = {
+					limit = { is_ai = yes }
+					remove_ideas = ROMID_the_iron_guard_weak_low_loyalty
+					remove_ideas = ROMID_the_iron_guard_weak_medium_loyalty
+					remove_ideas = ROMID_the_iron_guard_weak_high_loyalty
+					remove_ideas = ROMID_the_iron_guard_normal_low_loyalty
+					remove_ideas = ROMID_the_iron_guard_normal_medium_loyalty
+					remove_ideas = ROMID_the_iron_guard_normal_high_loyalty
+					remove_ideas = ROMID_the_iron_guard_powerful_low_loyalty
+					remove_ideas = ROMID_the_iron_guard_powerful_medium_loyalty
+					remove_ideas = ROMID_the_iron_guard_powerful_high_loyalty
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = { is_ai = yes }
+					remove_ideas = ROMID_the_lancieri_weak_low_loyalty
+					remove_ideas = ROMID_the_lancieri_weak_medium_loyalty
+					remove_ideas = ROMID_the_lancieri_weak_high_loyalty
+					remove_ideas = ROMID_the_lancieri_normal_low_loyalty
+					remove_ideas = ROMID_the_lancieri_normal_medium_loyalty
+					remove_ideas = ROMID_the_lancieri_normal_high_loyalty
+					remove_ideas = ROMID_the_lancieri_powerful_low_loyalty
+					remove_ideas = ROMID_the_lancieri_powerful_medium_loyalty
+					remove_ideas = ROMID_the_lancieri_powerful_high_loyalty
+					add_ideas = ROMID_the_lancieri_integrated
+				}
+			}
+		}
+		prerequisite = { focus = ROM_strike_the_iron_guard  }
+	}
+
+	#Nationalize All Jewish Assets
+	focus = {
+		id = ROM_nationalize_all_jewish_assets
+		icon = GFX_ROM_nationalize_all_jewish_assets-312112
+		x = 0
+		y = 2
+		relative_position_id = ROM_replacetheironguardwiththelancieri
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		cost = 5
+		complete_tooltip = {
+			add_political_power = 25
+			random_state = {
+				limit = {
+					has_state_flag = ROM_jew_ind_AB
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+ 				    type = industrial_complex
+ 				    level = 1
+				    instant_build = yes
+				}
+			}
+		}
+		completion_reward = {
+			add_political_power = 25
+			random_owned_controlled_state = {
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					free_building_slots = {	
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+ 				    type = industrial_complex
+ 				    level = 1
+				    instant_build = yes
+				}
+				set_state_flag = ROM_jew_ind_AB
+			}
+		}
+		prerequisite = { focus = ROM_replacetheironguardwiththelancieri  }
+	}
+
 	#Purify Transylvania
 	focus = {
 		id = ROM_purify_transylvania
@@ -4814,6 +4813,62 @@ focus_tree = {
 		prerequisite = { focus = ROM_purify_transylvania }
 	}
 
+	#Violent Prison Camp System
+	focus = {
+		id = ROM_violent_prison_camp_system
+		icon = GFX_ROM_violent_prison_camp_system-312123
+		x = 5
+		y = 3
+		relative_position_id = ROM_nationalize_all_jewish_assets
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		cost = 5
+		completion_reward = {
+			custom_effect_tooltip = ROMID_crush_the_socialists_decision_tt
+			add_ideas = ROMID_prison_camp
+		}
+		prerequisite = { focus = ROM_nationalize_all_jewish_assets  }
+	}
+	
+
+	#Specialize the Camps
+	focus = {
+		id = ROM_specialize_the_camps
+		icon = GFX_ROM_specialize_the_camps-312188
+		x = 0
+		y = 1
+		relative_position_id = ROM_violent_prison_camp_system
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ROMID_prison_camp
+				add_idea = ROMID_specialized_prison_camp
+			}
+		}
+		prerequisite = { focus = ROM_violent_prison_camp_system  }
+	}
+
+	#Resource Extraction Camps
+	focus = {
+		id = ROM_resource_extraction_camps
+		icon = GFX_ROM_resource_extraction_camps-312190
+		x = 0
+		y = 1
+		relative_position_id = ROM_specialize_the_camps
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward = {
+			add_ideas = ROMID_res_prison_camp
+		}
+		prerequisite = { focus = ROM_specialize_the_camps  }
+	}
+
 	#Prison Camp Economy
 	focus = {
 		id = ROM_prison_camp_economy
@@ -4832,24 +4887,6 @@ focus_tree = {
 			}
 		}
 		prerequisite = { focus = ROM_resource_extraction_camps  } prerequisite = { focus = ROM_infrastructure_building_camps  } prerequisite = { focus = ROM_military_building_camps  } prerequisite = { focus = ROM_civilian_building_camps  } prerequisite = { focus = ROM_fortification_building_camps  }
-	}
-
-	#Violent Prison Camp System
-	focus = {
-		id = ROM_violent_prison_camp_system
-		icon = GFX_ROM_violent_prison_camp_system-312123
-		x = 5
-		y = 3
-		relative_position_id = ROM_nationalize_all_jewish_assets
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		cost = 5
-		completion_reward = {
-			custom_effect_tooltip = ROMID_crush_the_socialists_decision_tt
-			add_ideas = ROMID_prison_camp
-		}
-		prerequisite = { focus = ROM_nationalize_all_jewish_assets  }
 	}
 
 	#State Building Projects
@@ -4931,43 +4968,6 @@ focus_tree = {
 			}
 		}
 		prerequisite = { focus = ROM_german_war_support  }
-	}
-
-	#Specialize the Camps
-	focus = {
-		id = ROM_specialize_the_camps
-		icon = GFX_ROM_specialize_the_camps-312188
-		x = 0
-		y = 1
-		relative_position_id = ROM_violent_prison_camp_system
-		cost = 5
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
-		}
-		completion_reward = {
-			swap_ideas = {
-				remove_idea = ROMID_prison_camp
-				add_idea = ROMID_specialized_prison_camp
-			}
-		}
-		prerequisite = { focus = ROM_violent_prison_camp_system  }
-	}
-
-	#Resource Extraction Camps
-	focus = {
-		id = ROM_resource_extraction_camps
-		icon = GFX_ROM_resource_extraction_camps-312190
-		x = 0
-		y = 1
-		relative_position_id = ROM_specialize_the_camps
-		cost = 5
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
-		}
-		completion_reward = {
-			add_ideas = ROMID_res_prison_camp
-		}
-		prerequisite = { focus = ROM_specialize_the_camps  }
 	}
 
 	#Infrastructure Building Camps
@@ -5711,60 +5711,14 @@ focus_tree = {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	# OIL MINING START
 
 	#Cooperation With Malaxa
 	focus = {
 		id = ROM_cooperation_with_malaxa
 		icon = GFX_ROM_cooperation_with_malaxa-312433
-		x = 10
+		x = 70
 		y = 0
-		relative_position_id = ROM_modernize_airfields
 		cost = 5
 		complete_tooltip = {
 			activate_mission_tooltip = ROMID_random_intervention
