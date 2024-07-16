@@ -1,5 +1,239 @@
 ideas = {
 	country = {
+		ROM_army_purge = {
+		
+			removal_cost = -1
+
+			allowed = {
+				original_tag = ROM
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			modifier = {
+			army_org_factor = -0.1
+			planning_speed = -0.20
+			max_planning_factor = -0.1
+			land_doctrine_cost_factor = 0.50
+			naval_doctrine_cost_factor = 0.50
+			air_doctrine_cost_factor = 0.50
+			}
+			picture = generic_oppression
+		}	
+		ROM_destroy = {
+			
+			removal_cost = -1
+
+			allowed = {
+				original_tag = ROM
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			modifier = {
+			research_speed_factor = -0.1
+			stability_factor = -0.2
+			}
+			picture = generic_fascism_banned
+		}
+		ROM_stopplague = {
+				
+			removal_cost = -1
+
+			allowed = {
+				original_tag = ROM
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			modifier = {
+			MONTHLY_POPULATION = 1.0
+			stability_factor = 0.1
+			}
+			picture = generic_manpower_bonus
+		}
+		Rom_reb = {
+				
+			removal_cost = -1
+
+			allowed = {
+				original_tag = ROM
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			modifier = {
+			industrial_capacity_factory = 0.1
+			production_factory_max_efficiency_factor = 0.1
+			consumer_goods_factor = -0.05
+			stability_weekly = 0.001
+			}
+			picture = generic_goods_red_bonus
+		}	
+		ROM_echipas = {
+				
+			removal_cost = -1
+
+			allowed = {
+				original_tag = ROM
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			modifier = {
+			army_infantry_attack_factor = 0.05
+			mechanized_attack_factor = 0.05
+			motorized_attack_factor = 0.05
+			}
+			picture = generic_infantry_bonus
+		}
+		ROM_echipas2 = {
+				
+			removal_cost = -1
+
+			allowed = {
+				original_tag = ROM
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			modifier = {
+			army_infantry_attack_factor = 0.15
+			army_infantry_defence_factor = -0.1
+			mechanized_attack_factor = 0.15
+			mechanized_defence_factor = -0.1
+			motorized_attack_factor = 0.15
+			motorized_defence_factor = -0.1
+			}
+			picture = generic_infantry_bonus
+		}							
+		ROM_pur= {
+			
+			removal_cost = -1
+
+			allowed = {
+				original_tag = ROM
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			modifier = {
+			stability_weekly = -0.02
+			war_support_factor = 0.10
+			industrial_capacity_factory = -0.2
+			production_speed_buildings_factor = -0.2
+			consumer_goods_factor = 0.2
+			army_org_factor = -0.05
+			}
+			picture = generic_secret_police
+		}	
+		ROM_pur2 = {
+			
+			removal_cost = -1
+
+			allowed = {
+				original_tag = ROM
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			modifier = {
+			stability_weekly = -0.01
+			war_support_factor = 0.10
+			industrial_capacity_factory = -0.2
+			production_speed_buildings_factor = -0.2
+			consumer_goods_factor = 0.05
+			}
+			picture = generic_secret_police
+		}
+		ROM_pur3 = {
+			
+			removal_cost = -1
+
+			allowed = {
+				original_tag = ROM
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			modifier = {
+			war_support_factor = 0.10
+			industrial_capacity_factory = -0.2
+			production_speed_buildings_factor = -0.2
+			}
+			picture = generic_secret_police
+		}
+		ROM_pur4 = {
+			
+			removal_cost = -1
+
+			allowed = {
+				original_tag = ROM
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			modifier = {
+			war_support_factor = 0.10
+			production_speed_buildings_factor = -0.2
+			}
+			picture = generic_secret_police
+		}
+		ROM_pur5 = {
+			
+			removal_cost = -1
+
+			allowed = {
+				original_tag = ROM
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			modifier = {
+			war_support_factor = 0.10
+			}
+			picture = generic_secret_police
+		}
+		ROM_orthodox = {
+			
+			removal_cost = -1
+
+			allowed = {
+				original_tag = ROM
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			modifier = {
+			conscription_factor = 0.33
+			army_morale_factor = 0.05
+			}
+			picture = YUG_orthodox_church_support
+		}		
 		# ROYALISTS START
 		ROMID_the_royalists_weak_low_loyalty = {
 			picture = generic_monarchist_uprising
