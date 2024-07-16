@@ -114,7 +114,7 @@ characters={
 		name=ROM_corneliu_codreanu
 		portraits={
 			civilian={
-				large="gfx/leaders/ROM/r56_portrait_ROM_Corneliu_Codreanu.dds"
+				large="gfx/leaders/ROM/portrait_corneliu_zelea_codreanu.dds"
 			}
 			army={
 				large="gfx/leaders/ROM/r56_portrait_ROM_Corneliu_Codreanu_commander.dds"
