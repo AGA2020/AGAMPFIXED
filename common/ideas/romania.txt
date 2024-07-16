@@ -586,7 +586,6 @@ ideas = {
 				foreign_subversive_activites = -0.25
 				drift_defence_factor = 0.15
 				political_power_factor = 0.1
-				foreign_subversive_activites = -0.2
 				monthly_lancieri_loyalty_change = -3
 				monthly_lancieri_powerbase_change = -2
 				monthly_royalists_loyalty_change = -3
@@ -800,11 +799,10 @@ ideas = {
 				industrial_capacity_factory = 0.1
 				production_speed_buildings_factor = 0.1
 				communism_drift = 0.15
-				foreign_subversive_activites = -0.05
+				foreign_subversive_activites = -0.20
 				drift_defence_factor = 0.15
 				political_power_factor = 0.04
 		
-				foreign_subversive_activites = -0.2
 				monthly_lancieri_loyalty_change = -3
 				monthly_lancieri_powerbase_change = -2
 				monthly_royalists_loyalty_change = -3
@@ -2652,15 +2650,15 @@ ideas = {
 				always = yes
 			}
 			equipment_bonus = {
-				fighter_equipment = {
+				small_plane_airframe = {
 					build_cost_ic = -0.05
 					instant = yes
 				}
-				cv_fighter_equipment = {
+				cv_small_plane_airframe = {
 					build_cost_ic = -0.03
 					instant = yes
 				}
-				CAS_equipment = {
+				small_plane_cas_airframe = {
 					build_cost_ic = -0.03
 					instant = yes
 				}
@@ -2677,23 +2675,23 @@ ideas = {
 				always = yes
 			}
 			equipment_bonus = {
-				fighter_equipment = {
+				small_plane_airframe = {
 					build_cost_ic = -0.05
 					instant = yes
 				}
-				cv_fighter_equipment = {
+				cv_small_plane_airframe = {
 					build_cost_ic = -0.03
 					instant = yes
 				}
-				CAS_equipment = {
+				small_plane_cas_airframe = {
 					build_cost_ic = -0.1
 					instant = yes
 				}
-				tac_bomber_equipment = {
+				medium_plane_airframe = {
 					build_cost_ic = -0.1
 					instant = yes
 				}
-				nav_bomber_equipment = {
+				small_plane_naval_bomber_airframe = {
 					build_cost_ic = -0.05
 					instant = yes
 				}
@@ -2710,19 +2708,19 @@ ideas = {
 				always = yes
 			}
 			equipment_bonus = {
-				fighter_equipment = {
+				small_plane_airframe = {
 					build_cost_ic = -0.15
 					instant = yes
 				}
-				cv_fighter_equipment = {
+				cv_small_plane_airframe = {
 					build_cost_ic = -0.10
 					instant = yes
 				}
-				CAS_equipment = {
+				small_plane_cas_airframe = {
 					build_cost_ic = -0.05
 					instant = yes
 				}
-				heavy_fighter_equipment = {
+				medium_plane_fighter_airframe = {
 					build_cost_ic = -0.05
 					instant = yes
 				}
@@ -2739,15 +2737,15 @@ ideas = {
 				always = yes
 			}
 			equipment_bonus = {
-				CAS_equipment = {
+				small_plane_cas_airframe = {
 					build_cost_ic = -0.07
 					instant = yes
 				}
-				tac_bomber_equipment = {
+				medium_plane_airframe = {
 					build_cost_ic = -0.1
 					instant = yes
 				}
-				nav_bomber_equipment = {
+				small_plane_naval_bomber_airframe = {
 					build_cost_ic = -0.05
 					instant = yes
 				}
@@ -2764,15 +2762,19 @@ ideas = {
 				always = yes
 			}
 			equipment_bonus = {
-				fighter_equipment = {
+				small_plane_airframe = {
 					build_cost_ic = -0.10
 					instant = yes
 				}
-				cv_fighter_equipment = {
+				cv_small_plane_airframe = {
 					build_cost_ic = -0.07
 					instant = yes
 				}
-				CAS_equipment = {
+				small_plane_cas_airframe = {
+					build_cost_ic = -0.02
+					instant = yes
+				}
+				cv_small_plane_cas_airframe = {
 					build_cost_ic = -0.02
 					instant = yes
 				}
@@ -2822,17 +2824,17 @@ ideas = {
 			}
 			traits = { tank_manufacturer }
 			equipment_bonus = {
-				light_tank_destroyer_equipment = {
+				light_tank_destroyer_chassis = {
 					reliability = 0.1
 					hard_attack = 0.05
 					ap_attack = 0.05
 				}
-				medium_tank_destroyer_equipment = {
+				medium_tank_destroyer_chassis = {
 					reliability = 0.1
 					hard_attack = 0.05
 					ap_attack = 0.05
 				}
-				heavy_tank_destroyer_equipment = {
+				heavy_tank_destroyer_chassis = {
 					reliability = 0.1
 					hard_attack = 0.05
 					ap_attack = 0.05
@@ -2856,7 +2858,7 @@ ideas = {
 				armor = 0.1
 			}
 			equipment_bonus = {
-        			light_tank_equipment = {
+        			light_tank_chassis = {
 					armor_value = 0.05
 					soft_attack = 0.05
 				}
@@ -2945,21 +2947,21 @@ ideas = {
 			}
 			cost=50
 			equipment_bonus = {
-				fighter_equipment = {
+				small_plane_airframe = {
 					air_agility = 0.1
 					air_attack = 0.1
 					maximum_speed = 0.05
 				}
-				cv_fighter_equipment = {
+				cv_small_plane_airframe = {
 					air_agility = 0.1 
 					air_attack = 0.1
 					maximum_speed = 0.05
 				}
-				CAS_equipment = {
+				small_plane_cas_airframe = {
 					air_ground_attack = 0.15
 					reliability = 0.1
 				}
-				cv_CAS_equipment = {
+				cv_small_plane_cas_airframe = {
 					air_ground_attack = 0.05
 					naval_strike_attack = 0.1
 					reliability = 0.1
@@ -2980,11 +2982,11 @@ ideas = {
 			}
 			cost=100
 			equipment_bonus = {
-				heavy_fighter_equipment = {
+				medium_plane_fighter_airframe = {
 					reliability = 0.1
 					air_attack = 0.1
 				}
-				tac_bomber_equipment = {
+				medium_plane_airframe = {
 					air_ground_attack = 0.1
 					air_bombing = 0.1
 				}

@@ -10592,7 +10592,6 @@ focus_tree = {
 					type = small_plane_airframe
 					amount = 50
 					producer = FRA
-					variant_name = "Morane-Saulnier M.S.406"
 				}
 				add_equipment_to_stockpile = { 
 					type = medium_plane_airframe

@@ -3056,7 +3056,7 @@ focus_tree = {
 		completion_reward = {
 			air_experience = 100
 			add_equipment_to_stockpile = {
- 				type = fighter_equipment_1
+ 				type = small_plane_airframe
 				amount = 300
 				producer = GER
 			}
@@ -5586,11 +5586,7 @@ focus_tree = {
 				name = ROM_modern_destroyers
 				bonus = 1.0
 				uses = 1
-				technology = early_ship_hull_light
-				technology = basic_ship_hull_light
-				technology = improved_ship_hull_light
-				technology = advanced_ship_hull_light
-				technology = modern_ship_hull_light
+				category = dd_tech
 			}
 			
 			if = {
@@ -8480,11 +8476,7 @@ focus_tree = {
 			    	name = modern_fighter
 				bonus = 0.5
 				uses = 1
-				category = light_fighter
-				technology = cv_early_fighter
-				technology = cv_fighter1
-				technology = cv_fighter2
-				technology = cv_fighter3
+				category = light_air
 			}
 		}
 		prerequisite = { focus = ROM_license_planes  focus = ROM_invest_in_iar  }
