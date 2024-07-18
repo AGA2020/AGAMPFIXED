@@ -226,27 +226,6 @@ soundeffect =
 	playbackrate_random_offset = { 0.0 -0.15}
 }
 
-########## JBS
-
-soundeffect =
-{
-    name = "JBS_infantry_idle"
-    sounds = {
-        sound = SAU_Idle_001
-        sound = SAU_Idle_002
-        sound = SAU_Idle_003
-        sound = SAU_Idle_004
-        sound = SAU_Idle_005
-        sound = SAU_Idle_006
-        sound = SAU_Idle_007
-    }
-	max_audible = 1
-	max_audible_behaviour = fail
-	volume = 0.35
-	volume_random_offset = { 0.0 -0.15 }
-	playbackrate_random_offset = { 0.0 -0.15}
-}
-
 ########## OMA
 
 soundeffect =
