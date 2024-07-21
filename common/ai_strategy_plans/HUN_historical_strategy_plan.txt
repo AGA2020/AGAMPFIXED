@@ -1,0 +1,89 @@
+HUN_historical = {
+	name = "Hungarian historical plan"
+	desc = "Hungary will strengthen the Regency and pursue an alliance with Germany, after which it will try and switch sides as the war nears its conclusion."
+
+	allowed = {
+		original_tag = HUN
+		has_dlc = "Death or Dishonor"
+	}
+	enable = {
+		OR = {
+			AND = {
+				is_historical_focus_on = yes
+				has_game_rule = {
+					rule = HUN_ai_behavior
+					option = DEFAULT
+				}
+			}
+			has_country_flag = HUN_AI_RANDOM_FASCIST_HISTORICAL
+			has_game_rule = {
+				rule = HUN_ai_behavior
+				option = FASCIST_HISTORICAL
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		HUN_continue_bethlens_consolidation_1
+		HUN_strengthen_the_regency_monarch
+		HUN_industrial_rev
+		HUN_secret_armament
+		HUN_consolidate_horthys_power_monarch
+		HUN_improve_pengo
+		HUN_the_hungarian_brothers_alliance_monarch
+		HUN_announce_horthys_permanent_regency_monarch
+		HUN_reintegrate_railroads
+		HUN_gyor_program
+		HUN_agreement_bled
+		HUN_support_domestic_ind
+		HUN_germany_trade_deal_monarch
+		HUN_horthys_soldiers_monarch
+		HUN_institute_for_ind_techniques
+		HUN_german_friendship_treaty_monarch
+		HUN_reaffirm_claims_monarch
+		HUN_german_wheat_exports_monarch
+		HUN_army_maneuver
+		HUN_establish_airforce
+		HUN_proclaim_greater_hun_monarch
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		HUN_kalman_daranyi_LH = 10
+	}
+	ai_strategy = {
+		type = alliance 
+		id = "GER"
+		value = 200
+	}
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+		deputy_party_leader = 10
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		HUN_continue_bethlens_consolidation_1 = 10
+		HUN_proclaim_greater_hun_monarch = 5
+	}
+
+}
+

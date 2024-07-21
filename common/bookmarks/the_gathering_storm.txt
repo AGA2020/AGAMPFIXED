@@ -281,10 +281,12 @@ bookmarks = {
 			ideology = neutrality
 			ideas = {
 				HUN_treaty_of_triannon
+				HUN_wheat_depression
+				HUN_monarchy_without_monarch
 			}
 			focuses = {
 				HUN_proclaim_the_restoration_of_austria_hungary
-				HUN_secret_rearmament
+				HUN_gyor_program
 				HUN_renounce_the_treaty_of_trianon
 			}
 		}

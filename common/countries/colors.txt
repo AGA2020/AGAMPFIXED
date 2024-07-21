@@ -114,8 +114,8 @@ IRE = {
 	color_ui = rgb { 104 207 117 }
 }
 HUN = {
-	color = rgb { 249 126 98 }
-	color_ui = rgb { 255 164 127 }
+	color = rgb { 138  163  117 }
+	color_ui = rgb { 138  163  117 }
 }
 AFG = {
 	color = rgb { 64 160 167 }
@@ -878,6 +878,14 @@ SPM = {
 TTS = {
 	color = rgb { 230 230 0 }
 	color_ui = rgb { 179 179 0 }
+}
+GAL = {
+	color = rgb { 153 0 0 }
+	color_ui = rgb { 153 0 0 }
+}
+HCO = {
+	color = rgb { 125 13 24 }
+	color_ui = rgb { 163 17 31 }
 }
 GRN = {
 	color = rgb { 255 80 80 }

@@ -1,0 +1,260 @@
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+# contain
+# area_priority
+# building_target
+
+
+#### GERMAN AGITATION ####
+
+
+	# 20-40 Agitation
+hitler_agitation_1 = {
+	allowed = {
+		original_tag = GER 
+	}
+	enable = {
+		AND = {
+			GER = { check_variable = { var = ger_agitation_value value = 0.20 compare = greater_than_or_equals } }
+			GER = { check_variable = { var = ger_agitation_value value = 0.40 compare = less_than } }
+		}
+	}
+	abort = {
+		GER = { check_variable = { var = ger_agitation_value value = 0.20 compare = less_than } }
+	}
+	
+	ai_strategy = {
+		type = contain
+		id = "HUN"
+		value = 100
+	}
+	
+	ai_strategy = {
+		type = consider_weak
+		id = "HUN"
+		value = 100
+	}
+}
+
+	# 40-60 Agitation
+hitler_agitation_2 = {
+	allowed = {
+		original_tag = GER 
+	}
+	enable = {
+		AND = {
+			GER = { check_variable = { var = ger_agitation_value value = 0.40 compare = greater_than_or_equals } }
+			GER = { check_variable = { var = ger_agitation_value value = 0.60 compare = less_than } }
+		}
+	}
+	abort = {
+		GER = { check_variable = { var = ger_agitation_value value = 0.40 compare = less_than } }
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "HUN"
+		value = 100
+	}
+	
+}
+
+	# 60-80 Agitation
+hitler_agitation_3 = {
+	allowed = {
+		original_tag = GER 
+	}
+	enable = {
+		AND = {
+			GER = { check_variable = { var = ger_agitation_value value = 0.60 compare = greater_than_or_equals } }
+			GER = { check_variable = { var = ger_agitation_value value = 0.80 compare = less_than } }
+		}
+	}
+	abort = {
+		GER = { check_variable = { var = ger_agitation_value value = 0.60 compare = less_than } }
+	}
+	
+	ai_strategy = {
+		type = prepare_for_war
+		id = "HUN"
+		value = 100
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "HUN"
+		value = 100
+	}
+	
+}
+
+	# 80-100 Agitation
+hitler_agitation_4 = {
+	allowed = {
+		original_tag = GER 
+	}
+	enable = {
+		AND = {
+			GER = { check_variable = { var = ger_agitation_value value = 0.80 compare = greater_than_or_equals } }
+			GER = { check_variable = { var = ger_agitation_value value = 1 compare = less_than } }
+		}
+	}
+	abort = {
+		GER = { check_variable = { var = ger_agitation_value value = 0.80 compare = less_than } }
+	}
+	
+	ai_strategy = {
+		type = prepare_for_war
+		id = "HUN"
+		value = 100
+	}
+	
+	ai_strategy = {
+		type = invade
+		id = "HUN"
+		value = 100
+	}
+	
+}
+
+#### GERMAN INFLUENCE ####
+
+
+	# 0-25 Influence
+german_influence_1 = {
+	allowed = {
+		original_tag = GER 
+	}
+	enable = {
+		AND = {
+			GER = { check_variable = { var = ger_alignment_influence value = 0 compare = greater_than_or_equals } }
+			GER = { check_variable = { var = ger_alignment_influence value = 25 compare = less_than } }
+		}
+	}
+	abort = {
+		GER = { check_variable = { var = ger_alignment_influence value = 25 compare = greater_than_or_equals } }
+	}
+	
+	ai_strategy = {
+		type = support
+		id = "HUN"
+		value = 100
+	}
+	
+}
+
+	# 25-50 Influence
+german_influence_1 = {
+	allowed = {
+		original_tag = GER 
+	}
+	enable = {
+		AND = {
+			GER = { check_variable = { var = ger_alignment_influence value = 25 compare = greater_than_or_equals } }
+			GER = { check_variable = { var = ger_alignment_influence value = 50 compare = less_than } }
+		}
+	}
+	abort = {
+		GER = { check_variable = { var = ger_alignment_influence value = 50 compare = greater_than_or_equals } }
+	}
+	
+	ai_strategy = {
+		type = support
+		id = "HUN"
+		value = 100
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "HUN"
+		value = 100
+	}
+	
+}
+
+	# 50-75 Influence
+german_influence_1 = {
+	allowed = {
+		original_tag = GER 
+	}
+	enable = {
+		AND = {
+			GER = { check_variable = { var = ger_alignment_influence value = 50 compare = greater_than_or_equals } }
+			GER = { check_variable = { var = ger_alignment_influence value = 75 compare = less_than } }
+		}
+	}
+	abort = {
+		GER = { check_variable = { var = ger_alignment_influence value = 75 compare = greater_than_or_equals } }
+	}
+	
+	ai_strategy = {
+		type = support
+		id = "HUN"
+		value = 100
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "HUN"
+		value = 100
+	}
+	
+	ai_strategy = {
+		type = protect
+		id = "HUN"
+		value = 100
+	}
+	
+}
+
+	# 75-100 Influence
+german_influence_1 = {
+	allowed = {
+		original_tag = GER 
+	}
+	enable = {
+		AND = {
+			GER = { check_variable = { var = ger_alignment_influence value = 75 compare = greater_than_or_equals } }
+			GER = { check_variable = { var = ger_alignment_influence value = 100 compare = less_than } }
+		}
+	}
+	abort = {
+		GER = { check_variable = { var = ger_alignment_influence value = 100 compare = greater_than_or_equals } }
+	}
+	
+	ai_strategy = {
+		type = support
+		id = "HUN"
+		value = 100
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "HUN"
+		value = 100
+	}
+	
+	ai_strategy = {
+		type = protect
+		id = "HUN"
+		value = 100
+	}
+	
+	ai_strategy = {
+		type = alliance
+		id = "HUN"
+		value = 1000
+	}
+	
+}
+
+
