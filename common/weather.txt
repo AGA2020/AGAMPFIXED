@@ -61,6 +61,7 @@ terrain_modifiers = {
     terrain = { type = "mountain_Skopje" value = -0.3 }
     terrain = { type = "mountain_Urumqi" value = -0.3 }
     terrain = { type = "mountain_Beyrouth" value = -0.3 }
+    terrain = { type = "mountain_Riyadh" value = -0.3 }
 
 
 
@@ -197,6 +198,10 @@ terrain_modifiers = {
     terrain = { type = "plains_Santo_Domingo" value = 0.5 }
     terrain = { type = "plains_Split" value = 0.5 }
     terrain = { type = "plains_Verona" value = 0.5 }
+    terrain = { type = "plains_Koslin" value = 0.5 }
+    terrain = { type = "plains_Lahore" value = 0.5 }
+    terrain = { type = "plains_Xuzhou" value = 0.5 }
+
 
 
 
@@ -205,6 +210,8 @@ terrain_modifiers = {
     terrain = { type = "marsh_Miami" value = 0.9 }
     terrain = { type = "marsh_neworleans" value = 0.9 }
     terrain = { type = "marsh_Grodno" value = 0.9 }
+    terrain = { type = "marsh_Ferrara" value = 0.9 }
+
 
     terrain = { type = "desert" value = 0.1 }
     terrain = { type = "desert_Jerusalem" value = 0.1 }
@@ -226,6 +233,7 @@ terrain_modifiers = {
     terrain = { type = "desert_Caracas" value = 0.1 }
     terrain = { type = "desert_Samarkand" value = 0.1 }
     terrain = { type = "desert_Frunze" value = 0.1 }
+    terrain = { type = "desert_Karachi" value = 0.1 }
 
 
 
@@ -327,6 +335,7 @@ terrain_modifiers = {
     terrain = { type = "mountain_Skopje" value = 0.8 }
     terrain = { type = "mountain_Urumqi" value = 0.8 }
     terrain = { type = "mountain_Beyrouth" value = 0.8 }
+    terrain = { type = "mountain_Riyadh" value = 0.8 }
 
 
 
@@ -351,6 +360,7 @@ terrain_modifiers = {
     terrain = { type = "desert_Caracas" value = -1.0 }
     terrain = { type = "desert_Samarkand" value = -1.0 }
     terrain = { type = "desert_Frunze" value = -1.0 }
+    terrain = { type = "desert_Karachi" value = -1.0 }
 
 
 
@@ -658,6 +668,7 @@ terrain_modifiers = {
     terrain = { type = "mountain_Skopje" value = 0.8 }
     terrain = { type = "mountain_Urumqi" value = 0.8 }
     terrain = { type = "mountain_Beyrouth" value = 0.8 }
+    terrain = { type = "mountain_Riyadh" value = 0.8 }
 
 
 
@@ -683,6 +694,7 @@ terrain_modifiers = {
     terrain = { type = "desert_Caracas" value = -1.0 }
     terrain = { type = "desert_Samarkand" value = -1.0 }
     terrain = { type = "desert_Frunze" value = -1.0 }
+    terrain = { type = "desert_Karachi" value = -1.0 }
 
 
 
@@ -952,6 +964,8 @@ terrain_modifiers = {
     terrain = { type = "desert_Caracas" value = 0.8 }
     terrain = { type = "desert_Samarkand" value = 0.8 }
     terrain = { type = "desert_Frunze" value = 0.8 }
+    terrain = { type = "desert_Karachi" value = 0.8 }
+
 
 
 
@@ -1012,6 +1026,7 @@ terrain_modifiers = {
     terrain = { type = "mountain_Skopje" value = -1.0 }
     terrain = { type = "mountain_Urumqi" value = -1.0 }
     terrain = { type = "mountain_Beyrouth" value = -1.0 }
+    terrain = { type = "mountain_Riyadh" value = -1.0 }
 
 
 
@@ -1080,6 +1095,8 @@ terrain_modifiers = {
     terrain = { type = "mountain_Skopje" value = -7.0 }
     terrain = { type = "mountain_Urumqi" value = -7.0 }
     terrain = { type = "mountain_Beyrouth" value = -7.0 }
+    terrain = { type = "mountain_Riyadh" value = -7.0 }
+
 
 
 
@@ -1137,6 +1154,9 @@ terrain_modifiers = {
     terrain = { type = "hills_Opava" value = -3.0 }
     terrain = { type = "hills_Klagenfurt" value = -3.0 }
     terrain = { type = "hills_Ostrava" value = -3.0 }
+    terrain = { type = "hills_Asahikawa" value = -3.0 }
+    terrain = { type = "hills_Parma" value = -3.0 }
+
 
 
 
@@ -1193,6 +1213,8 @@ terrain_modifiers = {
     terrain = { type = "forest_Bitburg" value = -1.0 }
     terrain = { type = "forest_Charleroi" value = -1.0 }
     terrain = { type = "forest_Maastricht" value = -1.0 }
+    terrain = { type = "forest_Anqing" value = -1.0 }
+    terrain = { type = "forest_Wellington" value = -1.0 }
 
 
 

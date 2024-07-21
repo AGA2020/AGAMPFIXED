@@ -2842,6 +2842,39 @@ spriteTypes = {
 		textureFile = "gfx/interface/terrains/terrain_plains_Verona_winter.dds"
 	}
 
+	spriteType = {
+		name = "GFX_terrain_plains_Koslin"
+		textureFile = "gfx/interface/terrains/terrain_plains_Koslin.dds"
+	}
+
+	spriteType = {
+		name = "GFX_terrain_plains_Koslin_winter"
+		textureFile = "gfx/interface/terrains/terrain_plains_Koslin_winter.dds"
+	}
+
+
+	spriteType = {
+		name = "GFX_terrain_plains_Lahore"
+		textureFile = "gfx/interface/terrains/terrain_plains_Lahore.dds"
+	}
+
+	spriteType = {
+		name = "GFX_terrain_plains_Lahore_winter"
+		textureFile = "gfx/interface/terrains/terrain_plains_Lahore_winter.dds"
+	}
+
+
+	spriteType = {
+		name = "GFX_terrain_plains_Xuzhou"
+		textureFile = "gfx/interface/terrains/terrain_plains_Xuzhou.dds"
+	}
+
+	spriteType = {
+		name = "GFX_terrain_plains_Xuzhou_winter"
+		textureFile = "gfx/interface/terrains/terrain_plains_Xuzhou_winter.dds"
+	}
+
+
 
 
 
@@ -3001,6 +3034,16 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_terrain_desert_Frunze_winter"
 		textureFile = "gfx/interface/terrains/terrain_desert_Frunze_winter.dds"
+	}
+
+	spriteType = {
+		name = "GFX_terrain_desert_Karachi"
+		textureFile = "gfx/interface/terrains/terrain_desert_Karachi.dds"
+	}
+
+	spriteType = {
+		name = "GFX_terrain_desert_Karachi_winter"
+		textureFile = "gfx/interface/terrains/terrain_desert_Karachi_winter.dds"
 	}
 
 
@@ -3447,6 +3490,26 @@ spriteTypes = {
 		textureFile = "gfx/interface/terrains/terrain_hills_Ostrava_winter.dds"
 	}
 
+	spriteType = {
+		name = "GFX_terrain_hills_Asahikawa"
+		textureFile = "gfx/interface/terrains/terrain_hills_Asahikawa.dds"
+	}
+
+	spriteType = {
+		name = "GFX_terrain_hills_Asahikawa_winter"
+		textureFile = "gfx/interface/terrains/terrain_hills_Asahikawa_winter.dds"
+	}
+
+	spriteType = {
+		name = "GFX_terrain_hills_Parma"
+		textureFile = "gfx/interface/terrains/terrain_hills_Parma.dds"
+	}
+
+	spriteType = {
+		name = "GFX_terrain_hills_Parma_winter"
+		textureFile = "gfx/interface/terrains/terrain_hills_Parma_winter.dds"
+	}
+
 
 
 
@@ -3873,6 +3936,26 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_terrain_forest_Richmond_winter"
 		textureFile = "gfx/interface/terrains/terrain_forest_Richmond_winter.dds"
+	}
+
+	spriteType = {
+		name = "GFX_terrain_forest_Anqing"
+		textureFile = "gfx/interface/terrains/terrain_forest_Anqing.dds"
+	}
+
+	spriteType = {
+		name = "GFX_terrain_forest_Anqing_winter"
+		textureFile = "gfx/interface/terrains/terrain_forest_Anqing_winter.dds"
+	}
+
+	spriteType = {
+		name = "GFX_terrain_forest_Wellington"
+		textureFile = "gfx/interface/terrains/terrain_forest_Wellington.dds"
+	}
+
+	spriteType = {
+		name = "GFX_terrain_forest_Wellington_winter"
+		textureFile = "gfx/interface/terrains/terrain_forest_Wellington_winter.dds"
 	}
 
 
@@ -4372,6 +4455,16 @@ spriteTypes = {
 		textureFile = "gfx/interface/terrains/terrain_mountain_Beyrouth_winter.dds"
 	}
 
+	spriteType = {
+		name = "GFX_terrain_mountain_Riyadh"
+		textureFile = "gfx/interface/terrains/terrain_mountain_Riyadh.dds"
+	}
+
+	spriteType = {
+		name = "GFX_terrain_mountain_Riyadh_winter"
+		textureFile = "gfx/interface/terrains/terrain_mountain_Riyadh_winter.dds"
+	}
+
 
 
 
@@ -4395,6 +4488,16 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_terrain_marsh_Grodno_winter"
 		textureFile = "gfx/interface/terrains/terrain_marsh_Grodno_winter.dds"
+	}
+
+	spriteType = {
+		name = "GFX_terrain_marsh_Ferrara"
+		textureFile = "gfx/interface/terrains/terrain_marsh_Ferrara.dds"
+	}
+
+	spriteType = {
+		name = "GFX_terrain_marsh_Ferrara_winter"
+		textureFile = "gfx/interface/terrains/terrain_marsh_Ferrara_winter.dds"
 	}
 
 

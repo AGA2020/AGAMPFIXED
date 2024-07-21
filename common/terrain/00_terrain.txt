@@ -1,4 +1,5 @@
 
+
 ##################################################################
 ### Terrain Categories
 ###
@@ -5980,6 +5981,48 @@ categories =  {
 		truck_attrition_factor = 0.2
 	}
 
+	hills_Asahikawa = {
+		color = { 248 255 153 }
+		movement_cost = 1.5
+		#combat_width = -0.33
+		combat_width = 70
+		combat_support_width = 35
+		ai_terrain_importance_factor = 3.0
+		match_value = 2
+		sound_type = desert
+
+		units = {
+			attack = -0.25
+			#movement = -0.2
+		}
+		enemy_army_bonus_air_superiority_factor = -0.05
+		
+		supply_flow_penalty_factor = 0.1
+		
+		truck_attrition_factor = 0.2
+	}
+						
+	hills_Parma = {
+		color = { 248 255 153 }
+		movement_cost = 1.5
+		#combat_width = -0.33
+		combat_width = 70
+		combat_support_width = 35
+		ai_terrain_importance_factor = 3.0
+		match_value = 2
+		sound_type = desert
+
+		units = {
+			attack = -0.25
+			#movement = -0.2
+		}
+		enemy_army_bonus_air_superiority_factor = -0.05
+		
+		supply_flow_penalty_factor = 0.1
+		
+		truck_attrition_factor = 0.2
+	}
+
 
 
 
@@ -7239,6 +7282,29 @@ categories =  {
 
 
 	mountain_Beyrouth = {
+		color = { 157 192 208 }
+		movement_cost = 2.0
+		attrition = 0.3
+		#combat_width = -0.66
+		combat_width = 50
+		combat_support_width = 25
+		ai_terrain_importance_factor = 10.0
+		match_value = 10
+		sound_type = desert
+
+		units = {
+			attack = -0.5
+			#movement = -0.4
+		}
+
+		enemy_army_bonus_air_superiority_factor = -0.10
+		
+		supply_flow_penalty_factor = 0.12
+		
+		truck_attrition_factor = 1.0
+	}
+
+	mountain_Riyadh = {
 		color = { 157 192 208 }
 		movement_cost = 2.0
 		attrition = 0.3
@@ -8590,6 +8656,36 @@ categories =  {
 		sound_type = plains
 	}	
 						
+	plains_Koslin = {
+		color = { 255 129 66 }
+		movement_cost = 1.0
+		ai_terrain_importance_factor = 0.1
+		combat_width = 70
+		combat_support_width = 35
+		match_value = 0.5
+		sound_type = plains
+	}
+	
+	plains_Lahore = {
+		color = { 255 129 66 }
+		movement_cost = 1.0
+		ai_terrain_importance_factor = 0.1
+		combat_width = 70
+		combat_support_width = 35
+		match_value = 0.5
+		sound_type = plains
+	}
+	
+	plains_Xuzhou = {
+		color = { 255 129 66 }
+		movement_cost = 1.0
+		ai_terrain_importance_factor = 0.1
+		combat_width = 70
+		combat_support_width = 35
+		match_value = 0.5
+		sound_type = plains
+	}	
+						
 
 
 #######################   desert   #########################################
@@ -8917,6 +9013,24 @@ categories =  {
 		
 		truck_attrition_factor = 0.5
 	}
+
+	desert_Karachi = {
+		color = { 255 127 0 }
+		movement_cost = 1.05
+		attrition = 0.15
+		combat_width = 70
+		combat_support_width = 35
+		ai_terrain_importance_factor = 8.0
+		match_value = 8
+		sound_type = desert
+		
+		sickness_chance = 1.0
+		
+		supply_flow_penalty_factor = 0.14
+		
+		truck_attrition_factor = 0.5
+	}
+
 
 
 
@@ -10048,6 +10162,51 @@ categories =  {
 	}
 
 
+	forest_Anqing = {
+		color = { 89 199 85 }
+		movement_cost = 1.5
+		#combat_width = -0.20
+		combat_width = 60
+		combat_support_width = 30
+		ai_terrain_importance_factor = 5.0
+		match_value = 5
+		sound_type = forest
+
+		units = {
+			attack = -0.15
+			#movement = -0.2
+		}
+
+		enemy_army_bonus_air_superiority_factor = -0.1
+		
+		supply_flow_penalty_factor = 0.08
+		
+		truck_attrition_factor = 0.2
+	}
+
+	forest_Wellington = {
+		color = { 89 199 85 }
+		movement_cost = 1.5
+		#combat_width = -0.20
+		combat_width = 60
+		combat_support_width = 30
+		ai_terrain_importance_factor = 5.0
+		match_value = 5
+		sound_type = forest
+
+		units = {
+			attack = -0.15
+			#movement = -0.2
+		}
+
+		enemy_army_bonus_air_superiority_factor = -0.1
+		
+		supply_flow_penalty_factor = 0.08
+		
+		truck_attrition_factor = 0.2
+	}
+
+
 
 
 
@@ -10391,7 +10550,29 @@ categories =  {
 		truck_attrition_factor = 4.0
 	}
 											
-																							
+	marsh_Ferrara = {
+		color = { 76 96 35 }
+		movement_cost = 2.0
+		attrition = 0.35
+		# combat_width = -0.25
+		combat_width = 50
+		combat_support_width = 25
+		ai_terrain_importance_factor = 8.0
+		match_value = 8
+		sound_type = forest
+
+		units = {
+			attack = -0.4
+			#movement = -0.4
+		}
+		
+		sickness_chance = 1.0
+		
+		supply_flow_penalty_factor = 0.16
+		
+		truck_attrition_factor = 4.0
+	}
+																															
 
 
 

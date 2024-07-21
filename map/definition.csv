@@ -1081,7 +1081,7 @@
 1080;5;75;180;land;false;mountain;5
 1081;5;78;40;land;false;hills;6
 1082;5;78;95;land;false;plains;6
-1083;5;78;145;land;false;forest;6
+1083;5;78;145;land;false;forest_Anqing;6
 1084;5;81;5;land;false;plains;6
 1085;5;81;60;land;true;jungle;4
 1086;5;81;210;land;false;desert_Jerusalem;7
@@ -1812,7 +1812,7 @@
 1811;8;138;25;land;false;plains;6
 1812;8;138;70;land;false;marsh;6
 1813;8;138;175;land;false;forest;6
-1814;8;141;35;land;true;forest;4
+1814;8;141;35;land;true;forest_Wellington;4
 1815;8;141;90;land;false;desert;2
 1816;8;141;140;land;false;forest;6
 1817;8;144;0;land;false;forest;5
@@ -3454,7 +3454,7 @@
 3453;44;39;236;sea;false;ocean;0
 3454;44;40;244;sea;true;ocean;0
 3455;44;42;43;land;false;plains;1
-3456;44;42;98;land;true;desert;6
+3456;44;42;98;land;true;desert_Karachi;6
 3457;44;42;148;land;false;plains;1
 3458;44;45;8;land;false;plains_Radom;1
 3459;44;45;63;land;false;desert;6
@@ -6791,7 +6791,7 @@
 6790;87;204;51;land;false;hills;1
 6791;87;204;96;land;false;hills;6
 6792;87;204;201;land;false;forest;1
-6793;87;207;16;land;true;marsh;1
+6793;87;207;16;land;true;marsh_Ferrara;1
 6794;87;207;61;land;false;plains;1
 6795;87;207;166;land;false;hills;2
 6796;87;210;26;land;false;plains;1
@@ -7023,7 +7023,7 @@
 7022;89;15;244;sea;false;ocean;0
 7023;89;16;232;sea;false;ocean;0
 7024;89;17;240;sea;false;ocean;0
-7025;89;18;1;land;false;plains;6
+7025;89;18;1;land;false;plains_Xuzhou;6
 7026;89;18;151;land;true;plains;7
 7027;89;18;206;land;true;mountain;6
 7028;89;19;248;sea;true;ocean;0
@@ -9750,7 +9750,7 @@
 9749;129;204;159;land;false;mountain;6
 9750;129;204;214;land;false;hills;1
 9751;129;207;74;land;false;forest;1
-9752;129;207;179;land;false;hills;1
+9752;129;207;179;land;false;hills_Parma;1
 9753;129;207;224;land;false;urban_Astrakhan;6
 9754;129;210;39;land;false;hills;2
 9755;130;0;14;land;false;hills;7
@@ -10885,7 +10885,7 @@
 10884;135;171;79;land;false;desert;5
 10885;135;171;129;land;false;desert;6
 10886;135;171;184;land;true;plains;3
-10887;135;174;44;land;false;plains;6
+10887;135;174;44;land;false;plains_Lahore;6
 10888;135;174;99;land;false;jungle;3
 10889;135;174;149;land;true;jungle;2
 10890;135;177;9;land;false;mountain;7
@@ -11370,7 +11370,7 @@
 11369;169;180;132;land;false;plains;1
 11370;169;183;47;land;false;urban_minsk;1
 11371;169;183;197;land;true;forest;1
-11372;169;186;12;land;true;plains;1
+11372;169;186;12;land;true;plains_Koslin;1
 11373;169;189;77;land;false;forest;6
 11374;169;189;182;land;true;plains;1
 11375;169;189;227;land;false;urban_Gorky;6
@@ -12419,7 +12419,7 @@
 12418;175;126;42;land;false;plains;2
 12419;175;126;97;land;false;desert;5
 12420;175;126;147;land;false;plains;6
-12421;175;129;7;land;false;hills;6
+12421;175;129;7;land;false;hills_Asahikawa;6
 12422;175;129;62;land;false;hills;3
 12423;175;129;212;land;false;forest;6
 12424;175;132;27;land;false;forest;4
@@ -12725,7 +12725,7 @@
 12724;177;21;217;land;false;mountain;6
 12725;177;24;32;land;true;mountain_Suakin;5
 12726;177;24;182;land;false;plains;7
-12727;177;27;97;land;false;mountain;7
+12727;177;27;97;land;false;mountain_Riyadh;7
 12728;177;27;147;land;false;plains;2
 12729;177;27;202;land;false;jungle;3
 12730;177;30;62;land;false;mountain;6

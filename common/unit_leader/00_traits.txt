@@ -1531,6 +1531,11 @@ leader_traits = {
 				attack = 0.1
 				defence = 0.1
 			}
+			desert_Karachi = {
+				movement = 0.05
+				attack = 0.1
+				defence = 0.1
+			}
 
 
 		}
@@ -1577,6 +1582,11 @@ leader_traits = {
 				defence = 0.1
 			}
 			marsh_Grodno = {
+				movement = 0.05
+				attack = 0.1
+				defence = 0.1
+			}
+			marsh_Ferrara = {
 				movement = 0.05
 				attack = 0.1
 				defence = 0.1
@@ -1878,6 +1888,11 @@ leader_traits = {
 				attack = 0.1
 				defence = 0.1
 			}
+			mountain_Riyadh = {
+				movement = 0.05
+				attack = 0.1
+				defence = 0.1
+			}
 
 
 		}
@@ -2141,6 +2156,17 @@ leader_traits = {
 				attack = 0.1
 				defence = 0.1
 			}
+			hills_Asahikawa = {
+				movement = 0.05
+				attack = 0.1
+				defence = 0.1
+			}
+			hills_Parma = {
+				movement = 0.05
+				attack = 0.1
+				defence = 0.1
+			}
+
 
 
 		}
@@ -2486,6 +2512,17 @@ leader_traits = {
 				attack = 0.1
 				defence = 0.1
 			}
+			forest_Anqing = {
+				movement = 0.05
+				attack = 0.1
+				defence = 0.1
+			}
+			forest_Wellington = {
+				movement = 0.05
+				attack = 0.1
+				defence = 0.1
+			}
+
 
 
 		}
@@ -4098,6 +4135,10 @@ leader_traits = {
 			desert_Frunze = {
 				movement = 0.1
 			}
+			desert_Karachi = {
+				movement = 0.1
+			}
+
 
 
 
@@ -4247,6 +4288,12 @@ leader_traits = {
 				movement = 0.1
 			}
 			hills_Ostrava = {
+				movement = 0.1
+			}
+			hills_Asahikawa = {
+				movement = 0.1
+			}
+			hills_Parma = {
 				movement = 0.1
 			}
 
@@ -4410,6 +4457,13 @@ leader_traits = {
 			forest_Maastricht = {
 				movement = 0.1
 			}
+			forest_Anqing = {
+				movement = 0.1
+			}
+			forest_Wellington = {
+				movement = 0.1
+			}
+
 
 
 
@@ -4582,6 +4636,9 @@ leader_traits = {
 				movement = 0.1
 			}
 			mountain_Beyrouth = {
+				movement = 0.1
+			}
+			mountain_Riyadh = {
 				movement = 0.1
 			}
 
@@ -4985,6 +5042,16 @@ leader_traits = {
 			plains_Verona = {
 				movement = 0.1
 			}
+			plains_Koslin = {
+				movement = 0.1
+			}
+			plains_Lahore = {
+				movement = 0.1
+			}
+			plains_Xuzhou = {
+				movement = 0.1
+			}
+
 
 
 
@@ -5760,6 +5827,9 @@ leader_traits = {
 				movement = 0.1
 			}
 			marsh_Grodno = {
+				movement = 0.1
+			}
+			marsh_Ferrara = {
 				movement = 0.1
 			}
 
