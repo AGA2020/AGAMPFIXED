@@ -1,0 +1,119 @@
+﻿###########################
+# Little Hungary Events
+###########################
+
+add_namespace = LH_ITA
+
+#Italian Hungarian Armament Loans
+country_event = {
+	id = LH_ITA.1
+	title = LH_ITA.1.t
+	desc = LH_ITA.1.d
+	picture = GFX_report_event_generic_factory
+	
+	is_triggered_only = yes
+	
+	# We can spare some money for the loan.
+	option = {
+		name = LH_ITA.1.a
+		ai_chance = {
+			factor = 80
+			modifier = {
+				factor = 2
+				has_opinion = { target = FROM value > 50 }
+			}
+		}
+		add_political_power = -15
+		add_timed_idea = { idea = HUN_loan_payments days = 365 }
+		HUN = {
+			effect_tooltip = { add_timed_idea = { idea = HUN_italian_loan days = 365 } }
+			country_event = { id = LH.6 }
+		}
+	}
+	
+	# We need the money ourselves
+	option = {
+		name = LH_ITA.1.b
+		ai_chance = {
+			factor = 20
+		}
+		HUN = { country_event = { id = LH.7 } }
+	}
+}	
+
+#Mussolini Assassinated
+country_event = {
+	id = LH_ITA.2
+	title = LH_ITA.2.t
+	desc = LH_ITA.2.d
+	picture = GFX_report_event_generic_factory
+	
+	is_triggered_only = yes
+
+	# It is done (no choice needed because decision was taken in previous focus's events)
+	option = {
+		name = LH_ITA.2.a
+		set_politics = { ruling_party = neutrality elections_allowed = no }
+		add_popularity = { ideology = neutrality popularity = 0.1 }
+		swap_ideas = {
+			remove_idea = GER_preparing_ITA_coup
+			add_idea = GER_preparing_ITA_coup2
+		}
+		remove_ideas = victor_emmanuel
+		create_country_leader = {
+			name = "Victor Emmanuel III"
+			desc = "POLITICS_VICTOR_EMMANUEL_III_DESC"
+			picture = GFX_portrait_italy_victor_emmanuel_iii
+			expire = "1965.1.1"
+			ideology = despotism
+			traits = {
+
+			}
+		}
+		add_ai_strategy = {
+			type = alliance
+			id = "HUN"			
+			value = 200
+		}	
+		
+		if = {
+			limit = {is_in_faction_with = GER}
+			leave_faction = yes
+		}	
+		
+		HUN = {
+			add_to_faction = ITA
+			country_event = { id = wtt_germany.12 }
+		}
+			
+	}
+}	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+

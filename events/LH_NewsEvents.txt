@@ -1,0 +1,1068 @@
+﻿###########################
+# Hungarian News Events
+###########################
+
+add_namespace = LH_news
+
+# Italian-Hungarian Naval Academy
+news_event = {
+	id = LH_news.38
+	title = LH_news.38.t
+	desc = LH_news.38.d
+	picture = GFX_news_event_HUN_italian_ships
+	
+	is_triggered_only = yes
+	
+	major = no
+	
+	#Cooperation is the way forward.
+	option = {
+		name = LH_news.38.a
+	}
+}
+
+#Geraldine marries Zog
+news_event = {
+	id = LH_news.2
+	title = LH_news.2.t
+	desc = LH_news.2.desc 
+	picture = GFX_news_event_royal_visit
+	
+	#mean_time_to_happen = {
+	#	days = 2
+	#}
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = LH_news.2.a 
+	}
+	
+}
+
+news_event = { #Dragon Movement explanation event
+	id = LH_news.3
+	title = LH_news.3.t
+	desc = LH_news.3.d
+	picture = GFX_news_event_generic_rally2
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	
+	option = {
+		name = LH_news.3.a
+		hidden_effect = {
+			if = {
+				limit = { ROOT = { tag = HUN } }
+				add_popularity = { ideology = democratic popularity = 0.05 }
+			}
+			
+		}
+	}
+}
+
+news_event = { # Return of the Habsburg family
+	id = LH_news.4
+	title = LH_news.4.t
+	desc = LH_news.4.d
+	picture = GFX_news_event_por_return_of_monarchy
+	
+	is_triggered_only = no
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_completed_focus = HUN_accept_the_habsburg_prince
+		NOT = {
+			has_country_flag = HUN_habsburgs_refused_flag
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 10
+	}
+
+	option = { # They are back home
+		name = LH_news.4.a
+		#HUN = {
+			set_country_flag = HUN_habsburgs_returned_home_flag
+			HUN_maximilian_habsburg = {
+				add_corps_commander_role = {
+					traits = { politically_connected old_guard }
+					skill = 1
+					attack_skill = 1
+					defense_skill = 2
+					planning_skill = 2
+					logistics_skill = 1
+					legacy_id=-1
+				}
+			}
+		#}
+		add_political_power = 5
+	}
+
+}
+
+news_event = { #Joseph August takes throne
+	id = LH_news.5
+	title = LH_news.5.t
+	desc = LH_news.5.d
+	picture = GFX_news_event_royal_visit
+	
+	#mean_time_to_happen = {
+	#	days = 2
+	#}
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = LH_news.5.a 
+	}
+	
+}
+
+
+news_event = { #Ferenc Szálasi takes over after Imrédy flees
+	id = LH_news.6
+	title = LH_news.6.t
+	desc = LH_news.6.d
+	picture = GFX_news_event_civil_war_turkey
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	is_triggered_only = no
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_country_flag = HUN_documents_discovered_flag
+	}
+	
+	option = {
+		name = LH_news.6.a 
+	}
+	
+}
+
+news_event = {	# Németh József returns from the Ethiopian front and gives army XP
+	id = LH_news.7
+	title = LH_news.7.t 
+	desc = LH_news.7.d 
+	picture = GFX_news_event_italian_tank_desert
+	
+	mean_time_to_happen = {
+		days = 20
+	}
+	
+	is_triggered_only = no 
+	
+	fire_only_once = yes 
+	
+	trigger = {
+		ITA = {
+			OR = {
+				has_full_control_of_state = 271
+				ETH = {
+					is_puppet_of = ITA
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = LH_news.7.a 
+		army_experience = 5
+	}
+}
+
+news_event = {	# Szent Jobb Event
+	id = LH_news.8
+	title = LH_news.8.t 
+	desc = LH_news.8.d 
+	picture = GFX_news_event_szent_jobb
+	
+	mean_time_to_happen = {
+		days = 20
+	}
+	
+	is_triggered_only = no 
+	
+	fire_only_once = yes 
+	
+	trigger = {
+		original_tag = HUN
+		has_global_flag = HUN_eucharistic_congress_over
+		NOT = {
+			has_government = communism
+			has_country_flag = HUN_new_nationalist_symbol_flag
+		}
+	}
+	
+	option = {
+		name = LH_news.8.a 
+		add_war_support = 0.03
+	}
+}
+
+news_event = { # Böszörmény Coup attempt
+	id = LH_news.9
+	title = LH_news.9.t 
+	desc = LH_news.9.d 
+	picture = GFX_news_event_bulgarian_soldiers
+	
+	fire_only_once = yes 
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = LH_news.9.a 
+		if = {
+			limit = { NOT = { has_completed_focus = HUN_empower_the_far_right } }
+			add_popularity = { ideology = fascism popularity = 0.05 }
+		}
+		
+		set_country_flag = HUN_boszormeny_coup_flag
+	}
+}
+
+
+news_event = { # Hungary is third in olympics
+	id = LH_news.10
+	title = LH_news.10.t 
+	desc = LH_news.10.d 
+	picture = GFX_news_event_olympics_1940
+	
+	fire_only_once = yes 
+	
+	is_triggered_only = no 
+	
+	trigger = {
+		has_global_flag = olympics_1936
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = { # Congratulations!
+		name = LH_news.10.a 
+	}
+}
+
+news_event = { # London Congress Successfull
+	id = LH_news.11
+	title = LH_news.11.t 
+	desc = LH_news.11.d 
+	picture = GFX_news_event_generic_rally_3
+	
+	fire_only_once = yes 
+	
+	is_triggered_only = no 
+	
+	trigger = {
+		has_global_flag = london_congress_concluded
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	option = { # Interesting
+		name = LH_news.11.a 
+	}
+}
+
+news_event = { # Otto's Coronation
+	id = LH_news.12
+	title = LH_news.12.t 
+	desc = LH_news.12.d 
+	picture = GFX_news_event_banovina_croatia
+	
+	major = yes
+	
+	is_triggered_only = yes 
+	
+	option = { # Interesting
+		name = LH_news.12.a 
+		trigger = {
+			NOT = { TAG = HUN }
+			OR = {
+				TAG = YUG 
+				TAG = ROM 
+				TAG = CZE
+			}
+		}
+	}
+	
+	option = { # Worrying
+		name = LH_news.12.b 
+		trigger = {
+			NOT = { 
+				TAG = HUN 
+				TAG = YUG 
+				TAG = ROM 
+				TAG = CZE
+			}
+		}
+	}
+	
+	option = {
+		name = LH_news.12.c
+		trigger = {
+			TAG = HUN
+		}
+	}
+}
+
+news_event = { # Joseph's Coronation
+	id = LH_news.13
+	title = LH_news.13.t 
+	desc = LH_news.13.d 
+	picture = GFX_news_event_banovina_croatia
+	
+	major = yes
+	
+	is_triggered_only = yes 
+	
+	option = { # Interesting
+		name = LH_news.13.a 
+		trigger = {
+			NOT = { TAG = HUN }
+			OR = {
+				TAG = YUG 
+				TAG = ROM 
+				TAG = CZE
+			}
+		}
+	}
+	
+	option = { # Worrying
+		name = LH_news.13.b 
+		trigger = {
+			NOT = { 
+				TAG = HUN 
+				TAG = YUG 
+				TAG = ROM 
+				TAG = CZE
+			}
+		}
+	}
+	
+	option = {	# Hungary
+		name = LH_news.13.c
+		trigger = {
+			TAG = HUN
+		}
+	}
+}
+
+news_event = { # Albrechts Coronation
+	id = LH_news.14
+	title = LH_news.14.t 
+	desc = LH_news.14.d 
+	picture = GFX_news_event_banovina_croatia
+	
+	major = yes
+	
+	is_triggered_only = yes 
+	
+	option = { # Very good...
+		name = LH_news.14.a 
+		trigger = {
+			has_government = fascism
+			NOT = { 
+				TAG = HUN 
+				TAG = YUG 
+				TAG = ROM 
+				TAG = CZE
+			}
+		}
+	}
+	
+	
+	option = { # Worrying
+		name = LH_news.14.b 
+		trigger = {
+			OR = { 
+				TAG = YUG 
+				TAG = ROM 
+				TAG = CZE
+			}
+			NOT = {
+				TAG = HUN
+			}
+		}
+	}
+	
+	option = {	#Everyone else
+		name = LH_news.14.c
+		trigger = {
+			NOT = {
+				has_government = fascism
+			}
+			NOT = { 
+				TAG = HUN 
+				TAG = YUG 
+				TAG = ROM 
+				TAG = CZE
+			}
+		}
+	}
+	
+	option = {	# Hungary
+		name = LH_news.14.e
+		trigger = { 
+			TAG = HUN
+		}
+	}
+}
+
+news_event = { # Szálasi Imprisoned
+	id = LH_news.15
+	title = LH_news.15.t 
+	desc = LH_news.15.d 
+	picture = GFX_news_event_szalasi_prison
+	
+	fire_only_once = yes 
+	
+	is_triggered_only = yes 
+	
+	option = { # Interesting
+		name = LH_news.15.a 
+		
+	}
+}
+
+news_event = { # Szentgyörgyi Albert Nobel Prize
+	id = LH_news.16
+	title = LH_news.16.t 
+	desc = LH_news.16.d 
+	picture = GFX_news_event_partition_of_india
+	
+	fire_only_once = yes 
+	
+	is_triggered_only = no 
+	
+	major = no
+
+	trigger = {
+		date > 1937.1.1
+	}
+	
+	mean_time_to_happen = {
+		days = 40
+	}
+	
+	option = { # Great!
+		name = LH_news.16.a 
+		add_political_power = 25
+	}
+}
+
+
+news_event = { # Little Entente Forms because Hungary asks Habsburg to come back
+	id = LH_news.17
+	title = LH_news.17.t 
+	desc = LH_news.17.d 
+	picture = GFX_news_event_cze_little_entente
+	
+	fire_only_once = yes 
+	
+	is_triggered_only = yes 
+	
+	major = yes
+	
+	option = { # We will win!
+		name = LH_news.17.a 
+		trigger = {
+			OR = {
+				TAG = YUG 
+				TAG = ROM 
+				TAG = CZE
+			}
+		}
+	}
+	
+	option = { # We will win! HUNGARY
+		name = LH_news.17.b 
+		trigger = {
+			TAG = HUN
+		}
+	}
+	
+	option = { # Everyone else
+		name = LH_news.17.c
+		trigger = {
+			NOT = { 
+				TAG = HUN 
+				TAG = YUG 
+				TAG = ROM 
+				TAG = CZE
+			}
+		}
+	}
+}
+
+news_event = { # Politician Assassinated!
+	id = LH_news.18
+	title = LH_news.18.t 
+	desc = LH_news.18.d 
+	picture = GFX_news_event_generic_rally2
+	
+	fire_only_once = no
+	
+	is_triggered_only = yes 
+	
+	option = { # Interesting
+		name = LH_news.18.a 
+	}
+}
+
+news_event = { # Szálasi Death
+	id = LH_news.19
+	title = LH_news.19.t 
+	desc = LH_news.19.d 
+	picture = GFX_news_event_szalasi_death
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes 
+	
+	option = { # God rest his soul
+		name = LH_news.19.a 
+	}
+}
+
+news_event = { # Imrédy condems Italy
+	id = LH_news.20
+	title = LH_news.20.t 
+	desc = LH_news.20.d 
+	picture = GFX_news_event_hitler_speech
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes 
+	
+	option = { # Oh dear
+		name = LH_news.20.a 
+	}
+}
+
+news_event = { # Imrédy speech in Kaposvár
+	id = LH_news.21
+	title = LH_news.21.t 
+	desc = LH_news.21.d 
+	picture = GFX_news_event_imredy_speech
+	
+	fire_only_once = yes
+	
+	is_triggered_only = no 
+
+	trigger = {
+		tag = HUN 
+		date > 1938.09.05
+		has_completed_focus = HUN_fund_the_working_class_monarch
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = { # Oh dear
+		name = LH_news.21.a 
+		set_country_flag = HUN_right_wing_prime_minister_flag
+		clr_country_flag = HUN_conservative_prime_minister_flag
+		custom_effect_tooltip = will_become_right_tt
+	}
+}
+
+news_event = { # Csáky death
+	id = LH_news.22
+	title = LH_news.22.t 
+	desc = LH_news.22.d 
+	picture = GFX_news_event_generic_funeral 
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes 
+	
+	option = { # Oh dear
+		name = LH_news.22.a 
+		retire_character = HUN_andras_csaky  
+	}
+}
+
+news_event = { # Horthy and family is christened
+	id = LH_news.23
+	title = LH_news.23.t 
+	desc = LH_news.23.d 
+	picture = GFX_news_event_banovina_croatia
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes 
+	
+	major = yes
+	
+	option = { # Great
+		name = LH_news.23.a 
+		trigger = {
+			has_government = neutrality
+		}
+	}
+	
+	option = { # Oh dear
+		name = LH_news.23.b
+		trigger = {
+			NOT = {
+				has_government = neutrality
+			}
+		}
+	}
+}
+
+news_event = { # Horthy is crowned
+	id = LH_news.24
+	title = LH_news.24.t 
+	desc = LH_news.24.d 
+	picture = GFX_news_event_royal_visit
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes 
+	
+	major = yes
+	
+	option = { # Great
+		name = LH_news.24.a 
+		trigger = {
+			has_government = neutrality
+		}
+	}
+	
+	option = { # Oh dear
+		name = LH_news.24.b
+		trigger = {
+			NOT = {
+				has_government = neutrality
+			}
+		}
+	}
+}
+
+
+news_event = { # Gendarme coup
+	id = LH_news.25
+	title = LH_news.25.t 
+	desc = LH_news.25.d 
+	picture = GFX_news_event_038
+	
+	fire_only_once = yes
+	
+	is_triggered_only = no 
+
+	trigger = {
+		original_tag = HUN
+		has_country_flag = HUN_deportations_stopped_flag
+	}
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	
+	major = no
+	
+	option = { # That was close... Or was it?
+		name = LH_news.25.a 
+		
+	}
+	
+}
+
+news_event = { #Rákosi is killed
+	id = LH_news.26
+	title = LH_news.26.t
+	desc = LH_news.26.d
+	picture = GFX_news_event_040
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {	# Terrible!
+		name = LH_news.26.a 
+		custom_effect_tooltip = HUN_rakosi_dead_tt
+	}
+	
+}
+
+news_event = { #Béla Kun was rescued
+	id = LH_news.27
+	title = LH_news.27.t
+	desc = LH_news.27.d
+	picture = GFX_news_event_067
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = HUN
+	}
+	
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					tag = HUN
+				}
+				HUN_bela_kun = {
+					promote_character = yes
+				}
+				set_country_flag = HUN_kun_rescued_flag
+			}
+		}
+	}
+	
+	option = {	# Welcome home!
+		name = LH_news.27.a 
+		HUN = {
+			### Get Jószef Pogány as advisor
+		}
+	}
+	
+}
+
+news_event = { # Failed mission Kun
+	id = LH_news.28
+	title = LH_news.28.t
+	desc = LH_news.28.d
+	picture = GFX_news_event_ITA_purged_fascists
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {	# Terrible!
+		name = LH_news.28.a 
+		
+	}
+	
+}
+
+news_event = { # Kun is killed in trials
+	id = LH_news.29
+	title = LH_news.29.t
+	desc = LH_news.29.d
+	picture = GFX_news_event_SOV_bukharin
+	
+	fire_only_once = yes
+	
+	trigger = {
+		SOV = { has_completed_focus = SOV_the_bloc_of_rights_and_trotskyites }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_global_flag = flag_kun_dead
+			HUN = {
+				retire_character = HUN_bela_kun
+			}
+		}
+	}
+	
+	option = {	# God rest his soul
+		name = LH_news.29.a 
+		trigger = {
+			TAG = HUN
+		}
+		hidden_effect = {
+			if = {
+				limit = { has_completed_focus = HUN_rescue_bela_kun }
+				uncomplete_national_focus = { focus = HUN_rescue_bela_kun uncomplete_children = yes refund_political_power = no }
+			}
+		}
+	}
+	
+	option = {	# Good riddance
+		name = LH_news.29.b 
+		trigger = {
+			has_government = communism
+			NOT = { tag = HUN }
+		}
+	}
+	
+	option = {	# When will this madness end?
+		name = LH_news.29.c 
+		trigger = {
+			OR = {
+				has_government = fascism 
+				has_government = democratic 
+			}
+		}
+	}
+	
+}
+
+
+news_event = { # Rákosi birthday
+	id = LH_news.30
+	title = LH_news.30.t
+	desc = LH_news.30.d
+	picture = GFX_news_event_rakosi_birthday
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {	# All hail Rákosi!
+		name = LH_news.30.a 
+		
+	}
+	
+}
+
+news_event = { # Rákosi trial
+	id = LH_news.31
+	title = LH_news.31.t
+	desc = LH_news.31.d
+	picture = GFX_news_event_rakosi_trial
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {	# Good!
+		name = LH_news.31.a 
+		
+	}
+	
+}
+
+news_event = { # Rákosi flees the country
+	id = LH_news.32
+	title = LH_news.32.t
+	desc = LH_news.32.d
+	picture = GFX_news_event_rakosi_speech
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {	# Good!
+		name = LH_news.32.a 
+		
+	}
+	
+}
+
+news_event = { # Rákosi takes on prime ministry
+	id = LH_news.33
+	title = LH_news.33.t
+	desc = LH_news.33.d
+	picture = GFX_news_event_rakosi_speech_2
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {	# Good!
+		name = LH_news.33.a 
+		
+	}
+	
+}
+
+news_event = { # Rákosi is handed over to Hungary
+	id = LH_news.34
+	title = LH_news.34.t
+	desc = LH_news.34.d
+	picture = GFX_news_event_038
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {	# Good!
+		name = LH_news.34.a 
+		
+	}
+	
+}
+
+news_event = { # Rákosi négyesfogat
+	id = LH_news.35
+	title = LH_news.35.t
+	desc = LH_news.35.d
+	picture = GFX_news_event_negyesfogat
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {	# Good!
+		name = LH_news.35.a 
+		set_country_flag = HUN_rakosi_negyesfogat_flag
+		custom_effect_tooltip = available_political_advisor
+		show_ideas_tooltip = HUN_erno_gero
+		show_ideas_tooltip = HUN_mihaly_farkas
+		show_ideas_tooltip = HUN_jozsef_revai
+	}
+	
+}
+
+news_event = { # MOVE takes over during civil war - Magasházy László
+	id = LH_news.36
+	title = LH_news.36.t
+	desc = LH_news.36.d
+	picture = GFX_news_event_magashazy
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {	# Good!
+		name = LH_news.36.a 
+		HUN_laszlo_magashazy = {
+			set_nationality = KOH
+		}
+		KOH = {
+			add_country_leader_role = {
+				character = HUN_laszlo_magashazy
+				promote_leader = yes
+				country_leader = {
+					ideology=oligarchism
+					traits={  }
+					expire="1965.1.1.1"
+				}
+			}
+		}
+		
+	}
+	
+}
+
+news_event = { # Almásy discovers the Magyarab tribe
+	id = LH_news.37
+	title = LH_news.37.t
+	desc = LH_news.37.d
+	picture = GFX_news_event_almasy
+	
+	is_triggered_only = no 
+	
+	fire_only_once = yes
+	
+	trigger = {
+		date > 1936.04.01
+		tag = HUN
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {	# Interesting!
+		name = LH_news.37.a 
+		
+	}
+	
+}
+
+
+news_event = { # fascist King assumes leadership
+	id = LH_news.39
+	title = LH_news.39.t
+	desc = LH_news.39.d
+	picture = GFX_news_event_banovina_croatia
+	
+	is_triggered_only = yes 
+	
+	fire_only_once = yes
+	
+	option = {	# Unexpected
+		name = LH_news.39.a 
+		
+	}
+	
+}
+
+news_event = { # eucharistic congress 
+	id = LH_news.40
+	title = LH_news.40.t
+	desc = LH_news.40.d
+	picture = GFX_news_event_eucharistic_congress
+	
+	is_triggered_only = yes 
+	
+	major = yes
+	
+	option = {	# nice
+		name = LH_news.40.a 
+		set_global_flag = HUN_eucharistic_congress_over
+	}
+	
+}
+
+news_event = { # HAESZ Owner commits suicide
+	id = LH_news.41
+	title = LH_news.41.t
+	desc = LH_news.41.d
+	picture = GFX_news_event_turanist_ambition
+	
+	is_triggered_only = no 
+
+	fire_only_once = yes 
+	
+	trigger = {
+		date > 1937.11.20
+	}
+	
+	major = no
+	
+	option = {	# interesting...
+		name = LH_news.41.a 
+		set_country_flag = HUN_haesz_new_name_flag
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

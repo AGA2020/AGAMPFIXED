@@ -1,0 +1,1165 @@
+# Allows you to create your own dynamic keys
+# to be called in localization.
+# defined_text -> this is it, we're defining the text
+# text -> a discrete entry that can be picked to display in loc.
+# trigger -> determines if a text entry will be picked or not.
+# (The triggers need to be valid for the scope the key is called in
+# (eg Root or From.From).)
+# localization_key -> points to the localization key
+# that'll be used if trigger passes
+
+defined_text = { 
+	name = Getbulwark_of_CatholicismName #HUNGARY
+	text = {
+		trigger = {
+			original_tag = HUN
+			OR = {
+				has_country_leader = {
+					name = "Otto von Habsburg"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Albrecht Franz von Habsburg-Teschen"
+					ruling_only = yes
+				}
+			}
+			
+		}
+		localization_key = HUN_BULWARK_OF_CATHOLICISM_NAME_HABSBURG_desc
+	}
+	text = {
+		trigger = {
+			original_tag = HUN
+			NOT = {
+				has_country_leader = {
+					name = "Otto von Habsburg"
+					ruling_only = yes
+				}
+			}
+		}
+		localization_key = HUN_BULWARK_OF_CATHOLICISM_NAME_MONARCHY_desc
+	}
+}
+
+defined_text = { 
+	name = Getconstitutional_reformName #HUNGARY
+	text = {
+		trigger = {
+			original_tag = HUN
+			has_completed_focus = HUN_strengthen_the_dragon_movement
+			
+		}
+		localization_key = HUN_CONSTITUTIONAL_REFORM_DRAGON_NAME
+	}
+	text = {
+		trigger = {
+			original_tag = HUN
+			NOT = {
+				has_completed_focus = HUN_strengthen_the_dragon_movement
+			}
+		}
+		localization_key = HUN_CONSTITUTIONAL_REFORM_MARCH_MOV_NAME
+	}
+}
+
+defined_text = { 
+	name = Getconstitutional_reformDesc #HUNGARY
+	text = {
+		trigger = {
+			original_tag = HUN
+			has_completed_focus = HUN_strengthen_the_dragon_movement
+			
+		}
+		localization_key = HUN_CONSTITUTIONAL_REFORM_DRAGON_desc
+	}
+	text = {
+		trigger = {
+			original_tag = HUN
+			NOT = {
+				has_completed_focus = HUN_strengthen_the_dragon_movement
+			}
+		}
+		localization_key = HUN_CONSTITUTIONAL_REFORM_MARCH_MOV_desc
+	}
+}
+
+defined_text = { 
+	name = GetHUN_horthys_soldiersName #Horthy Miklós katonája
+	text = {
+		trigger = {
+			original_tag = HUN
+			has_country_flag = HUN_istvan_as_king_flag
+			
+		}
+		localization_key = HUN_ISTVAN_KATONAJA_NAME
+	}
+	text = {
+		trigger = {
+			original_tag = HUN
+			NOT = {
+				has_country_flag = HUN_istvan_as_king_flag
+			}
+			
+		}
+		localization_key = HUN_MIKLOS_KATONAJA_NAME
+	}
+}
+
+defined_text = { 
+	name = GetHUN_horthys_soldiersDesc #HUNGARY
+	text = {
+		trigger = {
+			original_tag = HUN
+			has_country_flag = HUN_istvan_as_king_flag
+			
+		}
+		localization_key = HUN_ISTVAN_KATONAJA_desc
+	}
+	text = {
+		trigger = {
+			original_tag = HUN
+			NOT = {
+				has_country_flag = HUN_istvan_as_king_flag
+			}
+			
+		}
+		localization_key = HUN_MIKLOS_KATONAJA_desc
+	}
+}
+
+defined_text = { 
+	name = GetHUN_deal_with_scythe_crossName #Scythe Cross Focus
+	text = {
+		trigger = {
+			original_tag = HUN
+			has_country_flag = HUN_boszormeny_prime_flag
+			
+		}
+		localization_key = HUN_SCYTHE_BOSZORMENY_NAME
+	}
+	text = {
+		trigger = {
+			original_tag = HUN
+			NOT = {
+				has_country_flag = HUN_boszormeny_prime_flag
+			}
+			
+		}
+		localization_key = HUN_SCYTHE_SZALASI_NAME
+	}
+}
+
+defined_text = { 
+	name = GetHUN_deal_with_scythe_crossDesc #HUNGARY
+	text = {
+		trigger = {
+			original_tag = HUN
+			has_country_flag = HUN_boszormeny_prime_flag
+			
+		}
+		localization_key = HUN_SCYTHE_BOSZORMENY_desc
+	}
+	text = {
+		trigger = {
+			original_tag = HUN
+			NOT = {
+				has_country_flag = HUN_boszormeny_prime_flag
+			}
+			
+		}
+		localization_key = HUN_SCYTHE_SZALASI_desc
+	}
+}
+
+defined_text = { 
+	name = GetHUN_corporatism_szalasiName #Böszörmény German Economy
+	text = {
+		trigger = {
+			original_tag = HUN
+			has_country_flag = HUN_boszormeny_prime_flag
+			
+		}
+		localization_key = HUN_SCYTHE_BOSZORMENY_ECONOMY_NAME
+	}
+	text = {
+		trigger = {
+			original_tag = HUN
+			NOT = {
+				has_country_flag = HUN_boszormeny_prime_flag
+			}
+			
+		}
+		localization_key = HUN_SCYTHE_SZALASI_ECONOMY_NAME
+	}
+}
+
+defined_text = { 
+	name = GetHUN_corporatism_szalasiDesc #Böszörmény German Economy
+	text = {
+		trigger = {
+			original_tag = HUN
+			has_country_flag = HUN_boszormeny_prime_flag
+			
+		}
+		localization_key = HUN_SCYTHE_BOSZORMENY_ECONOMY_desc
+	}
+	text = {
+		trigger = {
+			original_tag = HUN
+			NOT = {
+				has_country_flag = HUN_boszormeny_prime_flag
+			}
+			
+		}
+		localization_key = HUN_SCYTHE_SZALASI_ECONOMY_desc
+	}
+}
+
+defined_text = { 
+	name = GetHUN_crown_kingName 
+	text = {
+		trigger = {
+			original_tag = HUN
+			has_country_flag = HUN_istvan_as_king_flag
+			
+		}
+		localization_key = HUN_ISTVAN_CORONATION_NAME
+	}
+	text = {
+		trigger = {
+			original_tag = HUN
+			NOT = {
+				has_country_flag = HUN_istvan_as_king_flag
+			}
+			
+		}
+		localization_key = HUN_MIKLOS_CORONATION_NAME
+	}
+}
+
+defined_text = { 
+	name = GetHUN_crown_kingDesc 
+	text = {
+		trigger = {
+			original_tag = HUN
+			has_country_flag = HUN_istvan_as_king_flag
+			
+		}
+		localization_key = HUN_ISTVAN_CORONATION_DESC
+	}
+	text = {
+		trigger = {
+			original_tag = HUN
+			NOT = {
+				has_country_flag = HUN_istvan_as_king_flag
+			}
+			
+		}
+		localization_key = HUN_MIKLOS_CORONATION_DESC
+	}
+}
+
+defined_text = { 
+	name = GetHUN_alliance_prime_ministerName 
+	text = {
+		trigger = {
+			original_tag = HUN
+			has_country_flag = HUN_bethlen_prime_flag
+		}
+		localization_key = HUN_BETHLEN_ALLIANCE_NAME
+	}
+	text = {
+		trigger = {
+			original_tag = HUN
+			has_country_flag = HUN_szell_prime_flag
+		}
+		localization_key = HUN_SZELL_ALLIANCE_NAME
+	}
+	text = {
+		trigger = {
+			original_tag = HUN
+			has_country_flag = HUN_daranyi_prime_flag
+		}
+		localization_key = HUN_DARANYI_ALLIANCE_NAME
+	}
+	text = {
+		trigger = {
+			original_tag = HUN
+			NOT = {
+				has_country_flag = HUN_daranyi_prime_flag
+				has_country_flag = HUN_szell_prime_flag
+				has_country_flag = HUN_bethlen_prime_flag
+			}
+		}
+		localization_key = HUN_NO_PRIME_NAME
+	}
+}
+
+defined_text = { 
+	name = GetHUN_habsburg_middleName 
+	text = {
+		trigger = {
+			original_tag = HUN
+			has_country_flag = HUN_traditional_model_flag
+		}
+		localization_key = HUN_TRADITIONAL_FOCUS_NAME
+	}
+	text = {
+		trigger = {
+			original_tag = HUN
+			has_country_flag = HUN_autocratic_model_flag
+		}
+		localization_key = HUN_AUTOCRATIC_MODEL_NAME
+	}
+	text = {	# None is chosen yet
+		trigger = {
+			original_tag = HUN
+			NOT = {
+				has_country_flag = HUN_autocratic_model_flag
+				has_country_flag = HUN_traditional_model_flag
+			}
+		}
+		localization_key = HUN_HABSBURG_MIDDLE_NAME
+	}
+}
+
+defined_text = { 
+	name = GetHUN_habsburg_middleDesc
+	text = {
+		trigger = {
+			original_tag = HUN
+			has_country_flag = HUN_traditional_model_flag
+		}
+		localization_key = HUN_TRADITIONAL_FOCUS_DESC
+	}
+	text = {
+		trigger = {
+			original_tag = HUN
+			has_country_flag = HUN_autocratic_model_flag
+		}
+		localization_key = HUN_AUTOCRATIC_MODEL_DESC
+	}
+	text = {	# None is chosen yet
+		trigger = {
+			original_tag = HUN
+			NOT = {
+				has_country_flag = HUN_autocratic_model_flag
+				has_country_flag = HUN_traditional_model_flag
+			}
+		}
+		localization_key = HUN_HABSBURG_MIDDLE_DESC
+	}
+}
+
+defined_text = { 
+	name = GetHUN_demand_referendumName 
+	text = {
+		trigger = {
+			original_tag = HUN
+			OR = {
+				has_completed_focus = HUN_hms_responsible_government
+				has_country_flag = HUN_confederation_democracy_flag
+			}
+		}
+		localization_key = HUN_REFERENDUM_DEMOCRATIC_NAME
+	}
+	text = {
+		trigger = {
+			original_tag = HUN
+			NOT = {
+				has_completed_focus = HUN_hms_responsible_government
+			}
+		}
+		localization_key = HUN_REFERENDUM_NAME
+	}
+}
+
+defined_text = { 
+	name = GetHUN_demand_referendumDesc 
+	text = {
+		trigger = {
+			original_tag = HUN
+			OR = {
+				has_completed_focus = HUN_hms_responsible_government
+				has_country_flag = HUN_confederation_democracy_flag
+			}
+		}
+		localization_key = HUN_REFERENDUM_DEMOCRATIC_DESC
+	}
+	text = {
+		trigger = {
+			original_tag = HUN
+			NOT = {
+				has_completed_focus = HUN_hms_responsible_government
+			}
+		}
+		localization_key = HUN_REFERENDUM_DESC
+	}
+}
+
+defined_text = { 
+	name = GetHUN_protect_czeName 
+	text = {
+		trigger = {
+			original_tag = HUN
+			OR = {
+				has_completed_focus = HUN_hms_responsible_government
+				has_country_flag = HUN_confederation_democracy_flag
+			}
+		}
+		localization_key = HUN_PROTECT_CZE_DEMOCRATIC_NAME
+	}
+	text = {
+		trigger = {
+			original_tag = HUN
+			NOT = {
+				has_completed_focus = HUN_hms_responsible_government
+			}
+		}
+		localization_key = HUN_PROTECT_CZE_NAME
+	}
+}
+
+defined_text = { 
+	name = GetHUN_protect_czeDesc
+	text = {
+		trigger = {
+			original_tag = HUN
+			OR = {
+				has_completed_focus = HUN_hms_responsible_government
+				has_country_flag = HUN_confederation_democracy_flag
+			}
+		}
+		localization_key = HUN_PROTECT_CZE_DEMOCRATIC_DESC
+	}
+	text = {
+		trigger = {
+			original_tag = HUN
+			NOT = {
+				has_completed_focus = HUN_hms_responsible_government
+			}
+		}
+		localization_key = HUN_PROTECT_CZE_DESC
+	}
+}
+
+defined_text = { 
+	name = GetHUN_restoration_aus_hunName 
+	text = {
+		trigger = {
+			original_tag = HUN
+			has_completed_focus = HUN_populist_habsburg
+		}
+		localization_key = HUN_RESTORATION_AUS_EMPIRE_NAME
+	}
+	text = {
+		trigger = {
+			original_tag = HUN
+			NOT = {
+				has_completed_focus = HUN_populist_habsburg
+			}
+		}
+		localization_key = HUN_PREEMPIRE_NAME
+	}
+}
+
+defined_text = { 
+	name = GetHUN_restoration_aus_hunDesc
+	text = {
+		trigger = {
+			original_tag = HUN
+			has_completed_focus = HUN_populist_habsburg
+		}
+		localization_key = HUN_RESTORATION_AUS_EMPIRE_DESC
+	}
+	text = {
+		trigger = {
+			original_tag = HUN
+			NOT = {
+				has_completed_focus = HUN_populist_habsburg
+			}
+		}
+		localization_key = HUN_PREEMPIRE_DESC
+	}
+}
+
+defined_text = { 
+	name = GetHUN_strengthen_the_hungarist_movementName 
+	text = {
+		trigger = {
+			original_tag = HUN
+			NOT = {
+				has_completed_focus = HUN_a_new_middle_class
+			}
+		}
+		localization_key = HUN_SZALASI_HUNGARISM_NAME
+	}
+	text = {
+		trigger = {
+			original_tag = HUN
+			has_completed_focus = HUN_a_new_middle_class
+		}
+		localization_key = HUN_IMREDY_HUNGARISM_NAME
+	}
+}
+
+defined_text = { 
+	name = GetHUN_strengthen_the_hungarist_movementDesc 
+	text = {
+		trigger = {
+			original_tag = HUN
+			NOT = {
+				has_completed_focus = HUN_a_new_middle_class
+			}
+		}
+		localization_key = HUN_SZALASI_HUNGARISM_DESC
+	}
+	text = {
+		trigger = {
+			original_tag = HUN
+			has_completed_focus = HUN_a_new_middle_class
+		}
+		localization_key = HUN_IMREDY_HUNGARISM_DESC
+	}
+}
+
+defined_text = { 
+	name = GetHUN_fund_the_working_class_monarchName 
+	text = {
+		trigger = {
+			original_tag = HUN
+			NOT = {
+				has_completed_focus = HUN_arrow_cross_deal
+			}
+		}
+		localization_key = HUN_FUND_WORKING_CLASS_NAME
+	}
+	text = {
+		trigger = {
+			original_tag = HUN
+			has_completed_focus = HUN_arrow_cross_deal
+		}
+		localization_key = HUN_NEW_POLITICS_NAME
+	}
+}
+
+defined_text = { 
+	name = GetHUN_fund_the_working_class_monarchDesc
+	text = {
+		trigger = {
+			original_tag = HUN
+			NOT = {
+				has_completed_focus = HUN_arrow_cross_deal
+			}
+		}
+		localization_key = HUN_FUND_WORKING_CLASS_DESC
+	}
+	text = {
+		trigger = {
+			original_tag = HUN
+			has_completed_focus = HUN_arrow_cross_deal
+		}
+		localization_key = HUN_NEW_POLITICS_DESC
+	}
+}
+
+defined_text = { 
+	name = GetHUN_request_bulgariaName
+	text = {
+		trigger = {
+			original_tag = HUN
+			NOT = {
+				has_completed_focus = HUN_join_axi
+			}
+			NOT = {
+				is_in_faction_with = BUL
+			}
+		}
+		localization_key = HUN_BULGARIA_ALLIANCE_NAME
+	}
+	text = {
+		trigger = {
+			original_tag = HUN
+			has_completed_focus = HUN_join_axi
+			is_in_faction_with = BUL
+		}
+		localization_key = HUN_BULGARIA_PUPPET_NAME
+	}
+}
+
+defined_text = { 
+	name = GetHUN_request_bulgariaDesc
+	text = {
+		trigger = {
+			original_tag = HUN
+			NOT = {
+				has_completed_focus = HUN_join_axi
+			}
+			NOT = {
+				is_in_faction_with = BUL
+			}
+		}
+		localization_key = HUN_BULGARIA_ALLIANCE_DESC
+	}
+	text = {
+		trigger = {
+			original_tag = HUN
+			has_completed_focus = HUN_join_axi
+			is_in_faction_with = BUL
+		}
+		localization_key = HUN_BULGARIA_PUPPET_DESC
+	}
+}
+
+### SCRIPTED LOCALISATION IDEAS ###
+
+defined_text = { 
+	name = HUN_habsburg_restored_AName 
+	text = {
+		trigger = {
+			original_tag = HUN
+			has_country_flag = HUN_proclaimed_aus_hun_cro_flag
+		}
+		localization_key = HUN_habsburg_restored_A_trialism
+	}
+	text = {
+		trigger = {
+			original_tag = HUN
+			has_country_flag = HUN_proclaimed_aus_hun_flag
+		}
+		localization_key = HUN_habsburg_restored_A_dualism
+	}
+}
+
+defined_text = { 
+	name = HUN_habsburg_restored_BName 
+	text = {
+		trigger = {
+			original_tag = HUN
+			has_country_flag = HUN_proclaimed_aus_hun_cro_flag
+		}
+		localization_key = HUN_habsburg_restored_B_trialism
+	}
+	text = {
+		trigger = {
+			original_tag = HUN
+			has_country_flag = HUN_proclaimed_aus_hun_flag
+		}
+		localization_key = HUN_habsburg_restored_B_dualism
+	}
+}
+
+defined_text = { 
+	name = HUN_habsburg_restored_CName 
+	text = {
+		trigger = {
+			original_tag = HUN
+			has_country_flag = HUN_proclaimed_aus_hun_cro_flag
+		}
+		localization_key = HUN_habsburg_restored_C_trialism
+	}
+	text = {
+		trigger = {
+			original_tag = HUN
+			has_country_flag = HUN_proclaimed_aus_hun_flag
+		}
+		localization_key = HUN_habsburg_restored_C_dualism
+	}
+}
+
+defined_text = { 
+	name = HUN_habsburg_restored_DName 
+	text = {
+		trigger = {
+			original_tag = HUN
+			has_country_flag = HUN_proclaimed_aus_hun_cro_flag
+		}
+		localization_key = HUN_habsburg_restored_D_trialism
+	}
+	text = {
+		trigger = {
+			original_tag = HUN
+			has_country_flag = HUN_proclaimed_aus_hun_flag
+		}
+		localization_key = HUN_habsburg_restored_D_dualism
+	}
+}
+
+defined_text = { 
+	name = HUN_habsburg_restored_EName 
+	text = {
+		trigger = {
+			original_tag = HUN
+			has_country_flag = HUN_proclaimed_aus_hun_cro_flag
+		}
+		localization_key = HUN_habsburg_restored_E_trialism
+	}
+	text = {
+		trigger = {
+			original_tag = HUN
+			has_country_flag = HUN_proclaimed_aus_hun_flag
+		}
+		localization_key = HUN_habsburg_restored_E_dualism
+	}
+}
+
+defined_text = { 
+	name = HUN_habsburg_restored_FName 
+	text = {
+		trigger = {
+			original_tag = HUN
+			has_country_flag = HUN_proclaimed_aus_hun_cro_flag
+		}
+		localization_key = HUN_habsburg_restored_F_trialism
+	}
+	text = {
+		trigger = {
+			original_tag = HUN
+			has_country_flag = HUN_proclaimed_aus_hun_flag
+		}
+		localization_key = HUN_habsburg_restored_F_dualism
+	}
+}
+
+defined_text = { 
+	name = HUN_habsburg_restored_GName 
+	text = {
+		trigger = {
+			original_tag = HUN
+			has_country_flag = HUN_proclaimed_aus_hun_cro_flag
+		}
+		localization_key = HUN_habsburg_restored_G_trialism
+	}
+	text = {
+		trigger = {
+			original_tag = HUN
+			has_country_flag = HUN_proclaimed_aus_hun_flag
+		}
+		localization_key = HUN_habsburg_restored_G_dualism
+	}
+}
+
+defined_text = { 
+	name = GETinvestmentcity 
+	text = { 
+		trigger = {
+			has_country_flag = HUN_budapest_factory_flag
+		}
+		localization_key = VICTORY_POINTS_9660
+	}
+	text = { 
+		trigger = {
+			has_country_flag = HUN_gyor_factory_flag
+		}
+		localization_key = VICTORY_POINTS_6720
+	}
+	text = { 
+		trigger = {
+			has_country_flag = HUN_szeged_factory_flag
+		}
+		localization_key = VICTORY_POINTS_6700
+	}
+	
+}
+
+defined_text = { #Destination for Szálasi's visit
+	name = GetDestinationSzalasiName
+	text = {
+		trigger = {
+			check_variable = { HUN_szalasi_destination = 1 }
+		}
+		localization_key = HUN_dest_budapest
+	}
+	text = {
+		trigger = {
+			check_variable = { HUN_szalasi_destination = 2 }
+		}
+		localization_key = HUN_dest_transdanubia
+	}
+	text = {
+		trigger = {
+			check_variable = { HUN_szalasi_destination = 3 }
+		}
+		localization_key = HUN_dest_bacs
+	}
+	text = {
+		trigger = {
+			check_variable = { HUN_szalasi_destination = 4 }
+		}
+		localization_key = HUN_dest_northern_hungary
+	}
+	text = {
+		trigger = {
+			check_variable = { HUN_szalasi_destination = 5 }
+		}
+		localization_key = HUN_dest_alfold
+	}
+}
+
+defined_text = { #Name for Economic Crisis depending on what you have 
+	name = HUN_economic_crisis_name
+	text = {
+		trigger = {
+			has_country_flag = HUN_economic_crisis_2_flag
+		}
+		localization_key = HUN_economic_crisis_2_name
+	}
+	text = {
+		trigger = {
+			has_country_flag = HUN_economic_crisis_1_flag 
+		}
+		localization_key = HUN_economic_crisis_1_name
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_country_flag = HUN_economic_crisis_1_flag 
+				has_country_flag = HUN_economic_crisis_2_flag
+				has_country_flag = HUN_economic_crisis_good_flag
+			}
+		}
+		localization_key = HUN_economic_crisis_3_name 
+	}
+	text = {
+		trigger = {
+			has_country_flag = HUN_economic_crisis_good_flag 
+		}
+		localization_key = HUN_economic_crisis_good_name 
+	}
+}
+
+defined_text = { #Desc for Economic Crisis depending on what you have 
+	name = HUN_economic_crisis_desc 
+	text = {
+		trigger = { 
+			tag = HUN
+		}
+		localization_key = HUN_economic_crisis_together_desc 
+	}
+}
+
+defined_text = { #Economic Crisis Trade Partner
+	name = HUN_crisis_trade_partner  
+	text = {
+		trigger = { 
+			has_country_flag = HUN_no_trade_partner_flag
+		}
+		localization_key = HUN_crisis_no_partner
+	}
+	text = {
+		trigger = { 
+			has_country_flag = HUN_eng_trade_partner_flag
+		}
+		localization_key = HUN_crisis_eng_partner
+	}
+	text = {
+		trigger = { 
+			has_country_flag = HUN_fra_trade_partner_flag
+		}
+		localization_key = HUN_crisis_fra_partner
+	}
+	text = {
+		trigger = { 
+			has_country_flag = HUN_ita_trade_partner_flag
+		}
+		localization_key = HUN_crisis_ita_partner
+	}
+	text = {
+		trigger = { 
+			has_country_flag = HUN_ger_trade_partner_flag
+		}
+		localization_key = HUN_crisis_ger_partner
+	}
+	text = {
+		trigger = { 
+			has_country_flag = HUN_sov_trade_partner_flag
+		}
+		localization_key = HUN_crisis_sov_partner
+	}
+	text = {
+		trigger = { 
+			has_country_flag = HUN_usa_trade_partner_flag
+		}
+		localization_key = HUN_crisis_usa_partner
+	}
+}
+
+defined_text = { #Desc for Trade Deal modifiers
+	name = HUN_trade_deal_modifiers
+	text = {
+		trigger = { 
+			has_country_flag = HUN_axis_trade_flag 
+		}
+		localization_key = HUN_axis_trade_modifier
+	}
+	text = {
+		trigger = { 
+			has_country_flag = HUN_comintern_trade_flag
+		}
+		localization_key = HUN_comintern_trade_modifier
+	}
+	text = {
+		trigger = { 
+			has_country_flag = HUN_allied_trade_flag 
+		}
+		localization_key = HUN_allied_trade_modifier
+	}
+	text = {
+		trigger = { 
+			has_country_flag = HUN_no_trade_modifier_flag 
+		}
+		localization_key = HUN_no_trade_modifier
+	}
+}
+
+defined_text = { #Name for Trade Deal dynamic modifier
+	name = HUN_trade_deal_name
+	text = {
+		trigger = { 
+			has_country_flag = HUN_axis_trade_flag
+			NOT = { has_completed_focus = HUN_infiltrate_britain }
+		}
+		localization_key = HUN_axis_trade_deal_name
+	}
+	text = {
+		trigger = { 
+			has_country_flag = HUN_axis_trade_flag
+			has_completed_focus = HUN_infiltrate_britain
+		}
+		localization_key = HUN_axis_britain_trade_deal_name
+	}
+	text = {
+		trigger = { 
+			has_country_flag = HUN_axis_trade_flag
+			has_completed_focus = HUN_meet_with_the_members_of_the_rongyos_garda
+		}
+		localization_key = HUN_axis_italy_trade_deal_name
+	}
+	text = {
+		trigger = { 
+			has_country_flag = HUN_comintern_trade_flag
+		}
+		localization_key = HUN_comintern_trade_deal_name
+	}
+	text = {
+		trigger = { 
+			has_country_flag = HUN_allied_trade_flag
+		}
+		localization_key = HUN_allies_trade_deal_name
+	}
+}
+
+defined_text = { #MAORT name based on ideology
+	name = HUN_maort_name 
+	text = {
+		trigger = { 
+			has_country_flag = HUN_eurogasco_completed_flag
+			has_completed_focus = HUN_found_maort
+			OR = {
+				has_country_flag = HUN_usa_trade_partner_flag
+				has_country_flag = HUN_eng_trade_partner_flag
+				has_country_flag = HUN_fra_trade_partner_flag
+			}	
+			NOT = {
+				has_country_flag = HUN_ger_trade_partner_flag
+				has_country_flag = HUN_ita_trade_partner_flag
+				has_country_flag = HUN_sov_trade_partner_flag
+			}
+		}
+		localization_key = HUN_maort_title 
+	}
+	text = {
+		trigger = { 
+			NOT = { has_country_flag = HUN_eurogasco_completed_flag }
+			NOT = { has_completed_focus = HUN_found_maort }
+		}
+		localization_key = HUN_eurogasco_name
+	}
+	text = {
+		trigger = { 
+			has_country_flag = HUN_eurogasco_completed_flag
+			has_country_flag = HUN_ger_trade_partner_flag
+		}
+		localization_key = HUN_manat_name
+	}
+	text = {
+		trigger = { 
+			has_country_flag = HUN_eurogasco_completed_flag 
+			has_country_flag = HUN_ita_trade_partner_flag
+		}
+		localization_key = HUN_molart_name
+	}
+	text = {
+		trigger = {  
+			has_country_flag = HUN_eurogasco_completed_flag 
+			has_country_flag = HUN_sov_trade_partner_flag
+		}
+		localization_key = HUN_maszolaj_name
+	}
+}
+
+defined_text = { #MAORT desc based on ideology
+	name = HUN_maort_desc
+	text = {
+		trigger = { 
+			has_country_flag = HUN_eurogasco_completed_flag
+			has_completed_focus = HUN_found_maort
+			OR = {
+				has_country_flag = HUN_usa_trade_partner_flag
+				has_country_flag = HUN_eng_trade_partner_flag
+				has_country_flag = HUN_fra_trade_partner_flag
+			}	
+			NOT = {
+				has_country_flag = HUN_ger_trade_partner_flag
+				has_country_flag = HUN_ita_trade_partner_flag
+				has_country_flag = HUN_sov_trade_partner_flag
+			}
+		}
+		localization_key = HUN_maort_idea_desc 
+	}
+	text = {
+		trigger = { 
+			NOT = { has_country_flag = HUN_eurogasco_completed_flag }
+			NOT = { has_completed_focus = HUN_found_maort }
+		}
+		localization_key = HUN_eurogasco_desc
+	}
+	text = {
+		trigger = { 
+			has_country_flag = HUN_eurogasco_completed_flag
+			has_country_flag = HUN_ger_trade_partner_flag
+		}
+		localization_key = HUN_manat_desc
+	}
+	text = {
+		trigger = { 
+			has_country_flag = HUN_eurogasco_completed_flag 
+			has_country_flag = HUN_ita_trade_partner_flag
+		}
+		localization_key = HUN_molart_desc
+	}
+	text = {
+		trigger = {  
+			has_country_flag = HUN_eurogasco_completed_flag 
+			has_country_flag = HUN_sov_trade_partner_flag
+		}
+		localization_key = HUN_maszolaj_desc
+	}
+}
+
+defined_text = {
+	name = Getartillery_subsidy_tooltip
+	text = {
+		trigger = {
+			has_country_flag = HUN_artillery_subsidised_flag #Decision grants bonuses
+		}
+		localization_key = HUN_artillery_subsidised_tooltip
+	}
+	text = {
+		localization_key = generic_null
+	}
+}
+
+defined_text = {
+	name = Getinfantry_subsidy_tooltip
+	text = {
+		trigger = {
+			has_country_flag = HUN_infantry_subsidised_flag #Decision grants bonuses
+		}
+		localization_key = HUN_infantry_subsidised_tooltip
+	}
+	text = {
+		localization_key = generic_null
+	}
+}
+
+defined_text = {
+	name = Getsupport_subsidy_tooltip
+	text = {
+		trigger = {
+			has_country_flag = HUN_support_subsidised_flag #Decision grants bonuses
+		}
+		localization_key = HUN_support_subsidised_tooltip
+	}
+	text = {
+		localization_key = generic_null
+	}
+}
+
+defined_text = {
+	name = Gettank_subsidy_tooltip
+	text = {
+		trigger = {
+			has_country_flag = HUN_tank_subsidised_flag #Decision grants bonuses
+		}
+		localization_key = HUN_tank_subsidised_tooltip
+	}
+	text = {
+		localization_key = generic_null
+	}
+}
+
+defined_text = {
+	name = Gettruck_subsidy_tooltip
+	text = {
+		trigger = {
+			has_country_flag = HUN_truck_subsidised_flag #Decision grants bonuses
+		}
+		localization_key = HUN_truck_subsidised_tooltip
+	}
+	text = {
+		localization_key = generic_null
+	}
+}
+
+defined_text = {
+	name = Getaa_subsidy_tooltip
+	text = {
+		trigger = {
+			has_country_flag = HUN_aa_subsidised_flag #Decision grants bonuses
+		}
+		localization_key = HUN_aa_subsidised_tooltip
+	}
+	text = {
+		localization_key = generic_null
+	}
+}
+
+defined_text = {
+	name = Getat_subsidy_tooltip
+	text = {
+		trigger = {
+			has_country_flag = HUN_at_subsidised_flag #Decision grants bonuses
+		}
+		localization_key = HUN_at_subsidised_tooltip
+	}
+	text = {
+		localization_key = generic_null
+	}
+}
+
+defined_text = {
+	name = Getfighter_subsidy_tooltip
+	text = {
+		trigger = {
+			has_country_flag = HUN_fighter_subsidised_flag #Decision grants bonuses
+		}
+		localization_key = HUN_fighter_subsidised_tooltip
+	}
+	text = {
+		localization_key = generic_null
+	}
+}
+
+defined_text = {
+	name = Getcas_subsidy_tooltip
+	text = {
+		trigger = {
+			has_country_flag = HUN_cas_subsidised_flag #Decision grants bonuses
+		}
+		localization_key = HUN_cas_subsidised_tooltip
+	}
+	text = {
+		localization_key = generic_null
+	}
+}

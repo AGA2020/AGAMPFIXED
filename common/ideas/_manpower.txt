@@ -115,9 +115,11 @@ ideas = {
 							has_dlc = "Arms Against Tyranny"
 						}
 						NOT = { has_idea = HUN_treaty_of_triannon_aat }
+						has_country_flag = HUN_huba_1_flag 
 					}
 					else = {
 						NOT = { has_idea = HUN_treaty_of_triannon }
+						has_country_flag = HUN_huba_1_flag 
 					}
 				}
 				if = {
@@ -292,9 +294,11 @@ ideas = {
 							has_dlc = "Arms Against Tyranny"
 						}
 						NOT = { has_idea = HUN_treaty_of_triannon_aat }
+						has_country_flag = HUN_huba_2_flag
 					}
 					else = {
 						NOT = { has_idea = HUN_treaty_of_triannon }
+						has_country_flag = HUN_huba_2_flag
 					}
 				}
 				if = {
@@ -476,9 +480,11 @@ ideas = {
 							has_dlc = "Arms Against Tyranny"
 						}
 						NOT = { has_idea = HUN_treaty_of_triannon_aat }
+						has_country_flag = HUN_huba_3_flag
 					}
 					else = {
 						NOT = { has_idea = HUN_treaty_of_triannon }
+						has_country_flag = HUN_huba_3_flag
 					}
 				}
 				if = {
@@ -650,9 +656,11 @@ ideas = {
 							has_dlc = "Arms Against Tyranny"
 						}
 						NOT = { has_idea = HUN_treaty_of_triannon_aat }
+						has_country_flag = HUN_huba_3_flag
 					}
 					else = {
 						NOT = { has_idea = HUN_treaty_of_triannon }
+						has_country_flag = HUN_huba_3_flag
 					}
 				}
 				if = {
@@ -817,9 +825,11 @@ ideas = {
 							has_dlc = "Arms Against Tyranny"
 						}
 						NOT = { has_idea = HUN_treaty_of_triannon_aat }
+						has_country_flag = HUN_huba_3_flag
 					}
 					else = {
 						NOT = { has_idea = HUN_treaty_of_triannon }
+						has_country_flag = HUN_huba_3_flag
 					}
 				}
 				if = {

@@ -1,0 +1,454 @@
+#	Example:
+# 
+#	example_dynamic_modifier = {
+#		icon = "GFX_idea_unknown" # optional, will show up in guis if icon is specified
+#		enable = { always = yes } #optional, the modifier won't apply if not enabled
+#		remove_trigger = { always = no } #optional, will remove the modifier if true
+#
+#		# list of modifiers
+#		fuel_cost = 321
+#		max_fuel = var_max_fuel # will be taken from a variable
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		add_dynamic_modifier = {
+#			modifier = example_dynamic_modifier
+#			scope = GER # optional, if you specify this your dynamic modifier scoped to this scope (root is the effect scope)
+#			days = 14 # optional, will be removed after this many days passes
+#		}
+#	}
+#
+#	can be added to countries, states or unit leaders
+#	will only updated daily, unless forced by force_update_dynamic_modifier effect
+
+HUN_hungarian_minorites_lots = {
+	
+	enable = { always = yes }
+	
+	remove_trigger = { 
+		is_owned_and_controlled_by = HUN
+	}
+	
+	icon = GFX_modifiers_hun_hungarian_minorities
+	
+	recruitable_population_factor = -0.45
+	state_production_speed_buildings_factor = -0.15
+	state_resources_factor = -0.15
+	local_factories = -0.1
+}
+
+HUN_hungarian_majority = {
+	
+	enable = { always = yes }
+	
+	remove_trigger = { 
+		is_owned_and_controlled_by = HUN
+	}
+	
+	icon = GFX_modifiers_hun_hungarian_minorities
+	
+	recruitable_population_factor = -0.8
+	state_production_speed_buildings_factor = -0.35
+	state_resources_factor = -0.2
+	local_factories = -0.2
+}
+
+HUN_hungarian_minorites_middle = {
+	
+	enable = { always = yes }
+	
+	remove_trigger = { 
+		is_owned_and_controlled_by = HUN
+	}
+	
+	icon = GFX_modifiers_hun_hungarian_minorities
+	
+	recruitable_population_factor = -0.2
+	state_production_speed_buildings_factor = -0.1
+	state_resources_factor = -0.1
+	local_factories = -0.05
+}
+
+HUN_hungarian_minorites_little = {
+	
+	enable = { always = yes }
+	
+	remove_trigger = { 
+		is_owned_and_controlled_by = HUN
+	}
+	
+	icon = GFX_modifiers_hun_hungarian_minorities
+	
+	recruitable_population_factor = -0.1
+	state_production_speed_buildings_factor = -0.05
+	state_resources_factor = -0.05
+	local_factories = -0.02
+}
+
+HUN_red_terror_state = {
+	
+	enable = { always = yes }
+	
+	remove_trigger = { 
+	
+	}
+	
+	icon = GFX_modifiers_hun_red_terror
+	
+	stability_factor = hun_red_terror_stability
+	recruitable_population_factor = hun_red_terror_recruitable
+	state_production_speed_buildings_factor = hun_red_terror_build_speed
+}
+
+HUN_red_terror_state_1 = {
+	
+	enable = { always = yes }
+	
+	remove_trigger = { 
+	
+	}
+	
+	icon = GFX_modifiers_hun_red_terror
+	
+	recruitable_population_factor = -0.03 
+	state_production_speed_buildings_factor = -0.2
+}
+
+HUN_red_terror_state_2 = {
+	
+	enable = { always = yes }
+	
+	remove_trigger = { 
+	
+	}
+	
+	icon = GFX_modifiers_hun_red_terror
+	
+	stability_factor = -0.1
+}
+
+HUN_provincial_autonomy = {
+	
+	enable = { always = yes }
+	
+	remove_trigger = { 
+		is_core_of = HUN
+	}
+	
+	icon = GFX_modifiers_hun_provincial_autonomy
+	
+	local_building_slots_factor = 0.3
+	local_factories = 0.4
+	local_non_core_manpower = 0.4
+	local_resources = 0.4
+	resistance_growth = -0.6
+	
+}
+
+
+HUN_unjust_hierarchy = {
+	
+	enable = { always = yes }
+	
+	remove_trigger = { 
+		NOT = {
+			is_owned_and_controlled_by = HUN
+		}
+	}
+	
+	icon = GFX_modifiers_hun_unjust_hierarchy
+	
+	local_factories = -0.2
+	local_manpower = -0.4
+	local_resources = -0.2
+	resistance_growth = 0.6
+	
+}
+
+
+HUN_albanian_territory_warranted = {
+	
+	enable = { always = yes }
+	
+	remove_trigger = { 
+		is_owned_and_controlled_by = ALB
+	}
+	
+	icon = GFX_modifiers_alb_arranged_territorial_expansion
+	
+}
+
+
+HUN_bulgarian_territory_warranted = {
+	
+	enable = { always = yes }
+	
+	remove_trigger = { 
+		OR = {
+			is_owned_and_controlled_by = BUL
+			has_dynamic_modifier = {
+				modifier = bulgarian_territorial_expansion_arranged
+			} 
+		}
+	}
+	
+	icon = GFX_modifiers_bul_arranged_territorial_expansion
+	
+}
+
+##### NATIONAL IDEAS ######
+
+HUN_economic_crisis_3 = {	# ECONOMIC CRISIS 3  
+	enable = { always = yes } 
+
+	icon = GFX_idea_usa_great_depression_3 
+	
+	consumer_goods_factor = HUN_crisis_consumer_goods_factor 
+	industrial_capacity_factory = HUN_crisis_industrial_capacity_factory
+	production_lack_of_resource_penalty_factor = HUN_crisis_production_lack_of_resource_penalty_factor
+	production_speed_buildings_factor = HUN_crisis_production_speed_buildings_factor 
+ 
+}
+
+HUN_economic_crisis_2 = {	# ECONOMIC CRISIS 2 
+	enable = { always = yes } 
+
+	icon = GFX_idea_usa_great_depression_2 
+	
+	consumer_goods_factor = HUN_crisis_consumer_goods_factor  
+	industrial_capacity_factory = HUN_crisis_industrial_capacity_factory
+	production_lack_of_resource_penalty_factor = HUN_crisis_production_lack_of_resource_penalty_factor
+	production_speed_buildings_factor = HUN_crisis_production_speed_buildings_factor 
+ 
+}
+
+HUN_economic_crisis_1 = {	# ECONOMIC CRISIS 1
+	enable = { always = yes } 
+
+	icon = GFX_idea_great_depression 
+	
+	consumer_goods_factor = HUN_crisis_consumer_goods_factor 
+	industrial_capacity_factory = HUN_crisis_industrial_capacity_factory
+	production_lack_of_resource_penalty_factor = HUN_crisis_production_lack_of_resource_penalty_factor
+	production_speed_buildings_factor = HUN_crisis_production_speed_buildings_factor 
+ 
+}
+
+HUN_economic_crisis_good = {	# ECONOMIC CRISIS GOOD 
+	enable = { always = yes } 
+
+	icon = GFX_idea_generic_improved_industries  
+	
+	consumer_goods_factor = HUN_good_crisis_consumer_goods_factor 
+	industrial_capacity_factory = HUN_good_crisis_industrial_capacity_factory
+	production_lack_of_resource_penalty_factor = HUN_good_crisis_production_lack_of_resource_penalty_factor
+	production_speed_buildings_factor = HUN_good_crisis_production_speed_buildings_factor 
+	### SORG ###
+	global_building_slots_factor = HUN_crisis_global_building_slots_factor 
+	### PALATINUS ###
+	cic_construction_boost_factor = HUN_crisis_cic_construction_boost_factor
+	### LÁNG ###
+	truck_attrition_factor = HUN_crisis_truck_attrition_factor 
+	### SHELL ###
+	army_fuel_consumption_factor = HUN_crisis_army_fuel_consumption_factor
+	### CORDATIC ###
+	supply_factor = HUN_crisis_supply_factor
+	### CSEPEL PORT ###
+	convoy_retreat_speed = HUN_crisis_convoy_retreat_speed
+	### TUNGSRAM ###
+	military_industrial_organization_funds_gain = HUN_crisis_military_industrial_organization_funds_gain 
+	### STANDARD ###
+	coordination_bonus = HUN_crisis_coordination_bonus 
+	### EUROGASCO ###
+	fuel_gain_factor = HUN_crisis_fuel_gain_factor
+}
+
+HUN_trade_deal_modifier = {	# TRADE WITH AXIS/COMINTERN/ALLIES
+
+	#icon = GFX_idea_generic_improved_industries 
+	
+	#remove_trigger = {
+	#	HUN_dynamic_modifier_remove_trigger = yes
+	#}
+
+	democratic_acceptance = HUN_democratic_acceptance 
+	democratic_drift = HUN_democratic_drift
+	communism_acceptance = HUN_communism_acceptance
+	communism_drift = HUN_communism_drift
+	fascism_acceptance = HUN_fascism_acceptance
+	fascism_drift = HUN_fascism_drift
+	
+	generate_wargoal_tension = HUN_generate_wargoal_tension
+	join_faction_tension = HUN_join_faction_tension
+	lend_lease_tension = HUN_lend_lease_tension
+	send_volunteers_tension = HUN_send_volunteers_tension
+	guarantee_tension = HUN_guarantee_tension
+	civilian_intel_to_others = HUN_civilian_intel_to_others
+	army_intel_to_others = HUN_army_intel_to_others
+	navy_intel_to_others = HUN_navy_intel_to_others
+	airforce_intel_to_others = HUN_airforce_intel_to_others
+	embargo_cost_factor = HUN_embargo_cost_factor
+	embargo_threshold_factor = HUN_embargo_threshold_factor
+	justify_war_goal_when_in_major_war_time = HUN_justify_war_goal_when_in_major_war_time
+	drift_defence_factor = HUN_drift_defence_factor
+
+}
+
+HUN_revolutionary_council_dynamic_modifier = {	# NATIONAL IDEA
+	enable = { always = yes } 
+
+	icon = GFX_idea_jap_the_unthinkable_option
+	
+	max_surrender_limit_offset = HUN_rev_max_surrender_limit_offset #0.4 
+	offensive_war_stability_factor = HUN_rev_offensive_war_stability_factor #0.1
+	party_popularity_stability_factor = HUN_rev_party_popularity_stability_factor#0.1
+	stability_factor = HUN_rev_stability_factor #0.10
+	war_support_factor = HUN_rev_war_support_factor #0.10
+	conscription = HUN_rev_conscription #0.02
+	army_attack_factor = HUN_rev_army_attack_factor #0.1
+	tank_manufacturer_cost_factor = HUN_rev_tank_manufacturer_cost_factor #-0.15
+	naval_manufacturer_cost_factor = HUN_rev_naval_manufacturer_cost_factor #-0.15
+	aircraft_manufacturer_cost_factor = HUN_rev_aircraft_manufacturer_cost_factor #-0.15
+	materiel_manufacturer_cost_factor = HUN_rev_materiel_manufacturer_cost_factor #-0.15
+	industrial_concern_cost_factor = HUN_rev_industrial_concern_cost_factor #-0.15
+	army_speed_factor = HUN_rev_army_speed_factor # 0.1
+	army_morale = HUN_rev_army_morale # 0.1
+	attrition = HUN_rev_attrition # 0.1
+	
+}
+
+
+HUN_move_dynamic_modifier = {	# NATIONAL IDEA 
+	enable = { always = yes } 
+
+	icon = GFX_idea_HUN_MOVE
+	
+	political_power_cost = HUN_move_pp_cost #  
+	conscription = HUN_move_conscription #0.002
+	stability_factor = HUN_move_stability_factor #-0.1
+	surrender_limit = HUN_move_surrender_limit #0.2
+	army_core_attack_factor = HUN_move_army_attack_factor #-0.3 
+	drift_defence_factor = HUN_move_drift_defence_factor #-0.3
+	command_power_gain = HUN_move_command_power_gain #0.1
+	fascism_drift = HUN_move_fascism_drift #0.1
+	high_command_cost_factor = HUN_move_high_command_cost #-0.15 
+	political_power_factor = HUN_move_pp_gain
+	
+ 
+}
+
+HUN_szalasi_plan_dynamic_modifier = {	# NATIONAL IDEA PLAN FOR THE BUILDING OF THE HUNGARIAN STATE
+	enable = { always = yes } 
+	
+	remove_trigger = {
+		num_of_civilian_factories > 24
+	}
+
+	icon = GFX_idea_hol_the_foundations_of_defense
+	
+	industrial_capacity_factory = HUN_szalasi_industrial_capacity_factor 
+	production_speed_buildings_factor = HUN_production_speed_buildings_factor
+	military_industrial_organization_funds_gain = HUN_military_industrial_organization_funds_gain 
+	production_factory_max_efficiency_factor = HUN_production_factory_max_efficiency_factor
+	line_change_production_efficiency_factor = HUN_line_change_production_efficiency_factor 
+	repair_speed_arms_factory_factor = HUN_repair_speed_arms_factory_factor
+	consumer_goods_factor = HUN_szalasi_consumer_goods_factor 
+	stability_factor = HUN_szalasi_stability_factor 
+	compliance_gain = HUN_szalasi_compliance_gain  
+	command_power_gain = HUN_command_power_gain  
+	cic_construction_boost_factor = HUN_cic_construction_boost_factor
+	production_lack_of_resource_penalty_factor = HUN_production_lack_of_resource_penalty_factor
+	trade_laws_cost_factor = HUN_trade_laws_cost_factor
+	min_export = HUN_min_export
+	production_speed_industrial_complex_factor = HUN_production_speed_industrial_complex_factor 
+	production_speed_arms_factory_factor = HUN_production_speed_arms_factory_factor
+	supply_factor = HUN_supply_factor
+	global_building_slots_factor = HUN_global_building_slots_factor
+	political_power_cost = HUN_political_power_cost
+	political_power_factor = HUN_political_power_factor
+	production_speed_infrastructure_factor = HUN_production_speed_infrastructure_factor
+	production_speed_rail_way_factor = HUN_production_speed_rail_way_factor
+	local_resources_factor = HUN_local_resources_factor
+	custom_modifier_tooltip = HUN_will_remove_after_25_factories_tt
+	
+}
+
+HUN_hungarian_army_modifier = {	# NATIONAL IDEA #### LISTED IN ORDER OF IDEA DISPLAYING ON-SCREEN!!! BUT IT IS NOT CHRONOLOGICAL!! 
+	enable = { always = yes } 
+
+	icon = GFX_hungarian_army_idea 
+	
+	custom_modifier_tooltip = HUN_hungarian_army_production_bonus_tt
+	
+	#INITIAL
+	army_speed_factor = HUN_hungarian_army_speed_factor
+	experience_gain_army_factor = HUN_hungarian_army_xp_gain 
+	
+	# FUTURE
+	mobilization_speed = HUN_hungarian_army_mob_speed
+	
+	# INITIAL 
+	army_org_factor = HUN_hungarian_army_org_factor   
+	
+	# FUTURE
+	conscription_factor = HUN_hungarian_army_conscription_factor
+	heat_attrition_factor = HUN_hungarian_army_heat_attrition_factor
+	supply_consumption_factor = HUN_hungarian_army_supply_consumption_factor
+	land_reinforce_rate = HUN_hungarian_reinforcement_rate
+	army_org_regain = HUN_hungarian_army_org_regain
+	army_attack_factor = HUN_hungarian_army_attack_factor
+	army_core_defence_factor = HUN_hungarian_army_core_defence_factor
+	cavalry_attack_factor = HUN_hungarian_army_cavalry_attack_factor
+	army_morale_factor = HUN_hungarian_army_morale_factor
+	max_dig_in_factor = HUN_hungarian_army_max_dig_in_factor
+	acclimatization_hot_climate_gain_factor = HUN_hungarian_hot_acc
+	cas_damage_reduction = HUN_hungarian_army_cas_damage_reduction
+	special_forces_out_of_supply_factor = HUN_hungarian_army_special_forces_out_of_supply_factor 
+	resistance_damage_to_garrison = HUN_hungarian_army_garrison_resistance
+	supply_node_range = HUN_hungarian_army_supply_node_range
+	army_spirit_category_type_cost_factor = HUN_hungarian_army_spirit_cost
+	modifier_army_sub_unit_cavalry_defence_factor = HUN_hungarian_army_cavalry_defence_factor 
+	modifier_army_sub_unit_cavalry_speed_factor = HUN_hungarian_army_cavalry_speed_factor
+	modifier_army_sub_unit_infantry_defence_factor = HUN_hungarian_army_infantry_defence_factor
+	modifier_army_sub_unit_mountaineers_defence_factor = HUN_hungarian_army_mountaineers_defence_factor 
+	modifier_army_sub_unit_mountaineers_max_org_factor = HUN_hungarian_army_mountaineers_max_org_factor
+	modifier_army_sub_unit_paratrooper_max_org_factor = HUN_hungarian_army_paratrooper_max_org_factor
+	license_armor_purchase_cost = HUN_license_armor_purchase_cost 
+	license_purchase_cost = HUN_license_purchase_cost
+	consumer_goods_factor = HUN_army_consumer_goods_factor
+	modifier_army_sub_unit_militia_attack_factor = HUN_modifier_army_sub_unit_militia_attack_factor
+	modifier_army_sub_unit_militia_defence_factor = HUN_modifier_army_sub_unit_militia_defence_factor
+	modifier_army_sub_unit_militia_speed_factor = HUN_modifier_army_sub_unit_militia_speed_factor
+	experience_gain_army = HUN_experience_gain_army
+}
+
+
+HUN_goulash_dynamic_modifier = {	# NATIONAL IDEA  
+	enable = { always = yes } 
+ 
+	icon = GFX_idea_eng_for_the_good_of_the_revolution
+	
+	consumer_goods_factor = HUN_kadar_consumer_goods_factor
+	political_power_gain = HUN_kadar_political_power_gain
+	production_factory_efficiency_gain_factor = HUN_kadar_production_factory_efficiency_gain_factor
+	industrial_capacity_factory = HUN_kadar_industrial_capacity_factory
+	compliance_gain = HUN_kadar_compliance_gain 
+	improve_relations_maintain_cost_factor = HUN_kadar_improve_relations_maintain_cost_factor 
+	encryption_factor = HUN_kadar_encryption_factor
+	stability_factor = HUN_kadar_stability_factor
+	political_advisor_cost_factor = HUN_kadar_political_advisor_cost_factor
+	
+}
+
+HUN_quadrumvirate_idea = {	# NATIONAL IDEA  
+	enable = { always = yes } 
+ 
+	icon = GFX_idea_eng_for_the_good_of_the_revolution
+	
+	political_advisor_cost_factor = -0.5
+	custom_modifier_tooltip = HUN_quadrumvirate_influence_show_tt
+	
+}

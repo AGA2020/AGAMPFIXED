@@ -1,0 +1,34 @@
+
+ technology_sharing_group = {
+
+	id = allied_laboratories
+	name = allied_laboratories_name
+	desc = allied_laboratories_desc
+	picture = GFX_commonwealth_research
+    
+	research_sharing_per_country_bonus = 0.1
+
+    available = {
+        is_in_faction_with = ENG
+    }
+	
+	categories = { electronics radar_tech }
+
+}
+
+ technology_sharing_group = {
+
+	id = research_allies_monarchy
+	name = research_allies_monarchy_name
+	desc = research_allies_monarchy_desc
+	picture = GFX_commonwealth_research
+    
+	research_sharing_per_country_bonus = 0.1
+
+    available = {
+        is_in_faction = yes
+    }
+
+}
+
+

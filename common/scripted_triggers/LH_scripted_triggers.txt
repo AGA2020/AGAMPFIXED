@@ -1,0 +1,1071 @@
+#scripted trigger for Hungary
+
+HUN_finland_has_winter_war = {
+	custom_trigger_tooltip = {
+		tooltip = HUN_FIN_winter_war_1_tt
+		FIN = {
+			has_country_flag = FIN_winter_war_ongoing_flag 
+		}
+	}
+}
+
+HUN_spain_has_civil_war = {
+	custom_trigger_tooltip = {
+		tooltip = HUN_spr_civil_war_tt
+		SPR = { 
+			has_country_leader = { ruling_only = yes name = "Francisco Franco" }
+			has_civil_war = yes
+		}
+	}
+}
+
+### ECONOMIC CRISIS TRIGGERS ###
+
+HUN_has_economic_crisis = {
+	OR = {
+		has_dynamic_modifier = { modifier = HUN_economic_crisis_3 }
+		has_dynamic_modifier = { modifier = HUN_economic_crisis_2 }
+		has_dynamic_modifier = { modifier = HUN_economic_crisis_1 }
+	}
+}
+
+HUN_has_war_with_hun = {
+	has_war_with = HUN
+}
+
+HUN_dynamic_modifier_remove_trigger = {
+	if = {
+		limit = { has_country_flag = HUN_eng_trade_partner_flag }
+		HUN_has_available_trade_route_eng = no
+	}
+	if = {
+		limit = { has_country_flag = HUN_fra_trade_partner_flag }
+		HUN_has_available_trade_route_fra = no
+	}
+	if = {
+		limit = { has_country_flag = HUN_usa_trade_partner_flag }
+		HUN_has_available_trade_route_usa = no
+	}
+	if = {
+		limit = { has_country_flag = HUN_ita_trade_partner_flag }
+		HUN_has_available_trade_route_ita = no
+	}
+	if = {
+		limit = { has_country_flag = HUN_ger_trade_partner_flag }
+		HUN_has_available_trade_route_ger = no
+	}
+	if = {
+		limit = { has_country_flag = HUN_sov_trade_partner_flag }
+		HUN_has_available_trade_route_sov = no
+	}
+}
+
+HUN_has_available_trade_route_fra = { 
+	FRA = {
+		OR = {
+			has_capitulated = no 
+			has_war_with = HUN 
+		}
+	}
+	HUN = {
+		NOT = {
+			is_embargoed_by = FRA
+		}
+	}
+	OR = {
+		### AUSTRIA ROUTE
+		AND = {	### MAIN ROUTE + SUBROUTE
+			975 = {	### AUSTRIA
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			4 = {
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			152 = {
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			OR = {	###SUBROUTES
+				AND = {	## GERMANY ROUTE
+					52 = {
+						CONTROLLER = {
+							HUN_has_war_with_hun = no
+						}
+					}
+					50 = {
+						CONTROLLER = {
+							HUN_has_war_with_hun = no
+						}
+					}
+					28 = {
+						CONTROLLER = {
+							HUN_has_war_with_hun = no
+						}
+					}
+					18 = {
+						CONTROLLER = {
+							HUN_has_war_with_hun = no
+						}
+					}
+					16 = {
+						CONTROLLER = {
+							HUN_has_war_with_hun = no
+						}
+					}
+				}
+				AND = {	### SWITZERLAND ROUTE
+					53 = {
+						CONTROLLER = {
+							HUN_has_war_with_hun = no
+						}
+					}
+					848 = {
+						CONTROLLER = {
+							HUN_has_war_with_hun = no
+						}
+					}
+					845 = {
+						CONTROLLER = {
+							HUN_has_war_with_hun = no
+						}
+					}
+					3 = {
+						CONTROLLER = {
+							HUN_has_war_with_hun = no
+						}
+					}
+					17 = {
+						CONTROLLER = {
+							HUN_has_war_with_hun = no
+						}
+					}
+					27 = {
+						CONTROLLER = {
+							HUN_has_war_with_hun = no
+						}
+					}
+					16 = {
+						CONTROLLER = {
+							HUN_has_war_with_hun = no
+						}
+					}
+				}
+				AND = {	### AUSTRIA - ITALY ROUTE
+					39 = {
+						CONTROLLER = {
+							HUN_has_war_with_hun = no
+						}
+					}
+					159 = {
+						CONTROLLER = {
+							HUN_has_war_with_hun = no
+						}
+					}
+					158 = {
+						CONTROLLER = {
+							HUN_has_war_with_hun = no
+						}
+					}
+					32 = {
+						CONTROLLER = {
+							HUN_has_war_with_hun = no
+						}
+					}
+					735 = {
+						CONTROLLER = {
+							HUN_has_war_with_hun = no
+						}
+					}
+					20 = {
+						CONTROLLER = {
+							HUN_has_war_with_hun = no
+						}
+					}
+					27 = {
+						CONTROLLER = {
+							HUN_has_war_with_hun = no
+						}
+					}
+					16 = {
+						CONTROLLER = {
+							HUN_has_war_with_hun = no
+						}
+					}
+				}
+			}
+		}
+		### YUGOSLAVIA ROUTE
+		AND = {	### MAIN ROUTE
+			109 = {	### YUGOSLAVIA
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			OR = {
+				102 = {	
+					CONTROLLER = {
+						HUN_has_war_with_hun = no
+					}
+				}
+				853 = {	
+					CONTROLLER = {
+						HUN_has_war_with_hun = no
+					}
+				}
+			}
+			736 = {	
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			160 = {
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			158 = {	
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			159 = {	
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			32 = {
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			735 = {
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			20 = {
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			27 = {
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			16 = {
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+		}
+		any_state = {
+			is_controlled_by = HUN
+			is_coastal = yes
+		}
+		any_country = {
+			is_neighbor_of = HUN 
+			NOT = { has_war_with = HUN }
+			NOT = { is_embargoing = HUN }
+			any_state = {
+				is_controlled_by = PREV
+				is_coastal = yes
+			}
+		}
+	}
+}
+
+HUN_has_available_trade_route_eng = { 
+	ENG = {
+		OR = {
+			has_capitulated = no 
+			has_war_with = HUN 
+		}
+	}
+	HUN = {
+		NOT = {
+			is_embargoed_by = ENG
+		}
+	}
+	OR = {
+		any_state = {
+			is_controlled_by = HUN
+			is_coastal = yes
+		}
+		any_country = {
+			is_neighbor_of = HUN 
+			NOT = { has_war_with = HUN }
+			NOT = { is_embargoing = HUN }
+			any_state = {
+				is_controlled_by = PREV
+				is_coastal = yes
+			}
+		}
+	}
+}
+
+HUN_has_available_trade_route_usa = { 
+	USA = {
+		OR = {
+			has_capitulated = no 
+			has_war_with = HUN 
+		}
+	}
+	HUN = {
+		NOT = {
+			is_embargoed_by = USA
+		}
+	}
+	OR = {
+		any_state = {
+			is_controlled_by = HUN
+			is_coastal = yes
+		}
+		any_country = {
+			is_neighbor_of = HUN 
+			NOT = { has_war_with = HUN }
+			NOT = { is_embargoing = HUN }
+			any_state = {
+				is_controlled_by = PREV
+				is_coastal = yes
+			}
+		}
+	}
+}
+
+HUN_has_available_trade_route_ger = { 
+	GER = {
+		OR = {
+			has_capitulated = no 
+			has_war_with = HUN 
+		}
+	}
+	HUN = {
+		NOT = {
+			is_embargoed_by = GER
+		}
+	}
+	OR = {
+		AND = {	### AUSTRIA ROUTE
+			975 = {	### AUSTRIA
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			4 = {
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			152 = {
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			153 = {
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			53 = {
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			54 = {
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			60 = {
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			64 = {
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+		}
+		AND = {	### CZECH ROUTE
+			664 = {	### CHECZ
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			70 = {
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			74 = {
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			75 = {
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			9 = {
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			69 = {
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			65 = {
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			64 = {
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+		}
+		AND = {	### POLISH ROUTE
+			664 = {	### POLAND
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			OR = {
+				AND = {
+					71 = {
+						CONTROLLER = {
+							HUN_has_war_with_hun = no
+						}
+					}
+					88 = {
+						CONTROLLER = {
+							HUN_has_war_with_hun = no
+						}
+					}
+					90 = {
+						CONTROLLER = {
+							HUN_has_war_with_hun = no
+						}
+					}
+					86 = {
+						CONTROLLER = {
+							HUN_has_war_with_hun = no
+						}
+					}
+					87 = {
+						CONTROLLER = {
+							HUN_has_war_with_hun = no
+						}
+					}
+				}
+				AND = {
+					73 = {
+						CONTROLLER = {
+							HUN_has_war_with_hun = no
+						}
+					}
+					89 = {
+						CONTROLLER = {
+							HUN_has_war_with_hun = no
+						}
+					}
+					91 = {
+						CONTROLLER = {
+							HUN_has_war_with_hun = no
+						}
+					}
+					92 = {
+						CONTROLLER = {
+							HUN_has_war_with_hun = no
+						}
+					}
+					10 = {
+						CONTROLLER = {
+							HUN_has_war_with_hun = no
+						}
+					}
+					86 = {
+						CONTROLLER = {
+							HUN_has_war_with_hun = no
+						}
+					}
+					87 = {
+						CONTROLLER = {
+							HUN_has_war_with_hun = no
+						}
+					}
+				}
+			}
+			64 = {	
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			68 = {	
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+		}
+		any_state = {
+			is_controlled_by = HUN
+			is_coastal = yes
+		}
+		any_country = {
+			is_neighbor_of = HUN 
+			NOT = { has_war_with = HUN }
+			NOT = { is_embargoing = HUN }
+			any_state = {
+				is_controlled_by = PREV
+				is_coastal = yes
+			}
+		}
+	}
+}
+
+HUN_has_available_trade_route_ita = { 
+	ITA = {
+		OR = {
+			has_capitulated = no 
+			has_war_with = HUN 
+		}
+	}
+	HUN = {
+		NOT = {
+			is_embargoed_by = ITA
+		}
+	}
+	OR = {
+		AND = {	### YUGOSLAVIA ROUTE
+			109 = {	### YUGOSLAVIA
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			OR = {
+				853 = {	
+					CONTROLLER = {
+						HUN_has_war_with_hun = no
+					}
+				}
+				102 = {	
+					CONTROLLER = {
+						HUN_has_war_with_hun = no
+					}
+				}
+			}
+			736 = {	
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			160 = {	
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			161 = {	
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			162 = {	
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			2 = {	
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+		}
+		AND = {	### AUSTRIA ROUTE
+			975 = {	### AUSTRIA
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			4 = {
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			152 = {
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			153 = {
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			39 = {
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			850 = {
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			159 = {
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			161 = {
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			162 = {
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			2 = {
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+		}
+		AND = {	### CZECH, GERMAN, SWISS ROUTE
+			664 = {	### CZECH
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			70 = {	
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			75 = {	
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			9 = {	
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			69 = {	
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			53 = {	
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			54 = {	
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			50 = {	
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			3 = {	
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			151 = {	
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			846 = {	
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			159 = {	
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			161 = {	
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			162 = {	
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			2 = {	
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+		}
+		
+		any_state = {
+			is_controlled_by = HUN
+			is_coastal = yes
+		}
+		any_country = {
+			is_neighbor_of = HUN 
+			NOT = { has_war_with = HUN }
+			NOT = { is_embargoing = HUN }
+			any_state = {
+				is_controlled_by = PREV
+				is_coastal = yes
+			}
+		}
+	}
+}
+
+
+HUN_has_available_trade_route_sov = { 
+	SOV = {
+		OR = {
+			has_capitulated = no 
+			has_war_with = HUN 
+		}
+	}
+	HUN = {
+		NOT = {
+			is_embargoed_by = SOV
+		}
+	}
+	OR = {
+		AND = {	### ROMANIAN ROUTE
+			76 = {	
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			79 = {	
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			78 = {	
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			834 = {	
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			203 = {	
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			259 = {	
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			221 = {	
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			240 = {	
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			220 = {	
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			222 = {	
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			223 = {	
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			219 = {	
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+		}
+		AND = {	### POLISH ROUTE
+			664 = {	
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			OR = {
+				AND = {
+					71 = {	
+						CONTROLLER = {
+							HUN_has_war_with_hun = no
+						}
+					}
+					88 = {	
+						CONTROLLER = {
+							HUN_has_war_with_hun = no
+						}
+					}
+				}
+				AND = {
+					73 = {	
+						CONTROLLER = {
+							HUN_has_war_with_hun = no
+						}
+					}
+					89 = {	
+						CONTROLLER = {
+							HUN_has_war_with_hun = no
+						}
+					}
+				}
+			}
+			91 = {	
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			93 = {	
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			201 = {	
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			202 = {	
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			193 = {	
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			225 = {	
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			205 = {	
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			224 = {	
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			219 = {	
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+		}
+		AND = {	### TURKISH ROUTE
+			OR = {	
+				AND = {	### YUGOSLAVIA ROUTE
+					45 = {	
+						CONTROLLER = {
+							HUN_has_war_with_hun = no
+						}
+					}
+					109 = {	
+						CONTROLLER = {
+							HUN_has_war_with_hun = no
+						}
+					}
+					107 = {	
+						CONTROLLER = {
+							HUN_has_war_with_hun = no
+						}
+					}
+					108 = {	
+						CONTROLLER = {
+							HUN_has_war_with_hun = no
+						}
+					}
+					803 = {	
+						CONTROLLER = {
+							HUN_has_war_with_hun = no
+						}
+					}
+					48 = {	
+						CONTROLLER = {
+							HUN_has_war_with_hun = no
+						}
+					}
+					801 = {	
+						CONTROLLER = {
+							HUN_has_war_with_hun = no
+						}
+					}
+				}
+				AND = {	### ROMANIAN ROUTE
+					76 = {	
+						CONTROLLER = {
+							HUN_has_war_with_hun = no
+						}
+					}
+					84 = {	
+						CONTROLLER = {
+							HUN_has_war_with_hun = no
+						}
+					}
+					46 = {	
+						CONTROLLER = {
+							HUN_has_war_with_hun = no
+						}
+					}
+					801 = {	
+						CONTROLLER = {
+							HUN_has_war_with_hun = no
+						}
+					}
+				}
+			}
+			211 = {	
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			341 = {	
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			797 = {	
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			347 = {	
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			49 = {	
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			798 = {	
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			341 = {	
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			349 = {	
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			353 = {	
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			354 = {	
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			231 = {	
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			827 = {	
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			235 = {	
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			234 = {	
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			218 = {	
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			245 = {	
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			260 = {	
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			258 = {	
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			254 = {	
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+			219 = {	
+				CONTROLLER = {
+					HUN_has_war_with_hun = no
+				}
+			}
+		}
+		any_state = {
+			is_controlled_by = HUN
+			is_coastal = yes
+		}
+		any_country = {
+			is_neighbor_of = HUN 
+			NOT = { has_war_with = HUN }
+			NOT = { is_embargoing = HUN }
+			any_state = {
+				is_controlled_by = PREV
+				is_coastal = yes
+			}
+		}
+	}
+}

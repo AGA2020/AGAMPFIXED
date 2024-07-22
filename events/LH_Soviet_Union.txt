@@ -1,0 +1,257 @@
+﻿###########################
+# Little Hungary Events
+###########################
+
+add_namespace = LH_SOV
+
+#Hungary asks for help in economic crisis
+country_event = {
+	id = LH_SOV.1
+	title = LH_SOV.1.t
+	desc = LH_SOV.1.d 
+	
+	fire_only_once = no
+	
+	is_triggered_only = yes
+	
+	picture = GFX_report_event_generic_conference	
+	
+	option = {# We will help
+		name = LH_SOV.1.a
+		
+		ai_chance = {
+			factor = 30
+			modifier = {
+				has_opinion = { target = HUN value > 40} 
+				factor = 2
+			}
+			modifier = {
+				has_opinion = { target = HUN value > 0} 
+				factor = 2
+			}
+			modifier = {
+				is_in_faction_with = HUN
+				factor = 2
+			}
+			modifier = {
+				HUN = {
+					has_completed_focus = HUN_social_reforms
+				}
+				factor = 2
+			}
+		}
+		
+		HUN = {
+			country_event = { id = LH.37 }
+			
+		}
+		
+		add_political_power = 100
+	
+	
+	}
+	
+	option = {# We have no interest in such things
+		name = LH_SOV.1.b
+		
+		ai_chance = {
+			factor = 40
+			modifier = {
+				has_opinion = { target = HUN value < 0} 
+				factor = 5
+			}
+			modifier = {
+				has_opinion = { target = HUN value < 50} 
+				factor = 2
+			}
+			modifier = {
+				HUN = { has_completed_focus = HUN_renounce_trianon }
+				factor = 5
+			}
+			modifier = {
+				HUN = { has_country_leader_with_trait = anti_communist }
+				factor = 2
+			}
+			
+		}
+		
+		HUN = {
+			country_event = { id = LH.38 }
+		}
+	}
+}
+
+#Hungary asks for help in economic crisis !!2!!
+country_event = {
+	id = LH_SOV.2
+	title = LH_SOV.2.t
+	desc = LH_SOV.2.d 
+	
+	fire_only_once = no
+	
+	is_triggered_only = yes
+	
+	picture = GFX_report_event_generic_conference	
+	
+	option = {# We will help
+		name = LH_SOV.2.a
+		
+		ai_chance = {
+			factor = 30
+			modifier = {
+				has_opinion = { target = HUN value > 40} 
+				factor = 2
+			}
+			modifier = {
+				has_opinion = { target = HUN value > 0} 
+				factor = 2
+			}
+			modifier = {
+				is_in_faction_with = HUN
+				factor = 2
+			}
+			modifier = {
+				HUN = {
+					has_completed_focus = HUN_social_reforms
+				}
+				factor = 2
+			}
+		}
+		
+		HUN = {
+			country_event = { id = LH.47 }
+		}
+		
+		add_political_power = 100
+	
+	
+	}
+	
+	option = {# We have no interest in such things
+		name = LH_SOV.2.b
+		
+		ai_chance = {
+			factor = 40
+			modifier = {
+				has_opinion = { target = HUN value < 0} 
+				factor = 5
+			}
+			modifier = {
+				has_opinion = { target = HUN value < 50} 
+				factor = 2
+			}
+			modifier = {
+				HUN = { has_completed_focus = HUN_renounce_trianon }
+				factor = 5
+			}
+			modifier = {
+				HUN = { has_country_leader_with_trait = anti_communist }
+				factor = 2
+			}
+		}
+		
+		HUN = {
+			country_event = { id = LH.48 }
+		}
+	}
+}
+
+#Hungary asks for help in economic crisis !!3!!
+country_event = {
+	id = LH_SOV.3
+	title = LH_SOV.3.t
+	desc = LH_SOV.3.d 
+	
+	fire_only_once = no
+	
+	is_triggered_only = yes
+	
+	picture = GFX_report_event_generic_conference	
+	
+	option = {# We will help
+		name = LH_SOV.3.a
+		
+		ai_chance = {
+			factor = 30
+			modifier = {
+				has_opinion = { target = HUN value > 40} 
+				factor = 2
+			}
+			modifier = {
+				has_opinion = { target = HUN value > 0} 
+				factor = 2
+			}
+			modifier = {
+				is_in_faction_with = HUN
+				factor = 2
+			}
+		}
+		
+		HUN = {
+			country_event = { id = LH.49 }
+			
+		}
+		
+		add_political_power = 100
+	
+	
+	} 
+	
+	option = {# We have no interest in such things
+		name = LH_SOV.3.b
+		
+		ai_chance = {
+			factor = 40
+			modifier = {
+				has_opinion = { target = HUN value < 0} 
+				factor = 5
+			}
+			modifier = {
+				has_opinion = { target = HUN value < 50} 
+				factor = 2
+			}
+			modifier = {
+				HUN = { has_completed_focus = HUN_renounce_trianon }
+				factor = 5
+			}
+			modifier = {
+				HUN = { has_country_leader_with_trait = anti_communist }
+				factor = 2
+			}
+		}
+		
+		HUN = {
+			country_event = { id = LH.50 }
+		}
+	}
+}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+

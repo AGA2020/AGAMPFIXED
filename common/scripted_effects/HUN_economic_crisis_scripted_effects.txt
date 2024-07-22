@@ -1,0 +1,1738 @@
+#### ECONOMIC CRISIS EFFECTS ####
+
+HUN_check_crisis_icon = { #If certain value is reached then icon is changed, but actually the whole modifier is just switched 
+	if = {	### SET IT TO SECOND AFTER LAST
+		limit = {
+			has_dynamic_modifier = { modifier = HUN_economic_crisis_3 }
+			check_variable = {
+				var = HUN_crisis_consumer_goods_factor
+				value = 0.10
+				compare = less_than_or_equals
+			}
+			check_variable = {
+				var = HUN_crisis_production_speed_buildings_factor
+				value = -0.15
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = HUN_crisis_industrial_capacity_factory
+				value = -0.15
+				compare = greater_than_or_equals
+			}
+		}
+		remove_dynamic_modifier = { modifier = HUN_economic_crisis_3 }
+		add_dynamic_modifier = { modifier = HUN_economic_crisis_2 }
+		set_country_flag = HUN_economic_crisis_2_flag 
+    }
+	else_if = {	### SET IT TO NEARLY GONE
+		limit = {
+			has_dynamic_modifier = { modifier = HUN_economic_crisis_2 }
+			
+			check_variable = {	### CONSUMER GOODS
+				var = HUN_crisis_consumer_goods_factor
+				value = 0.05
+				compare = less_than_or_equals
+			}
+			
+			check_variable = {	### CONSTRUCTION SPEED 
+				var = HUN_crisis_production_speed_buildings_factor
+				value = -0.10
+				compare = greater_than_or_equals
+			}
+			
+			check_variable = {	### FACTORY OUTPUT
+				var = HUN_crisis_industrial_capacity_factory
+				value = -0.10
+				compare = greater_than_or_equals
+			} 
+		}
+		
+		remove_dynamic_modifier = { modifier = HUN_economic_crisis_2 }
+		clr_country_flag = HUN_economic_crisis_2_flag
+		add_dynamic_modifier = { modifier = HUN_economic_crisis_1 }
+		set_country_flag = HUN_economic_crisis_1_flag
+    }
+	#else_if = {	### REMOVE MODIFIER
+		#limit = {
+			#has_dynamic_modifier = { modifier = HUN_economic_crisis_1 }
+			### CONSUMER GOODS
+			#check_variable = {
+			#	var = HUN_crisis_consumer_goods_factor 
+			#	value = 0
+			#	compare = equals
+			#}
+			### CONSTRUCTION SPEED
+			#check_variable = {
+			#	var = HUN_crisis_production_speed_buildings_factor
+			#	value = 0
+			#	compare = equals
+			#}
+			### FACTORY OUTPUT 
+			#check_variable = {
+			#	var = HUN_crisis_industrial_capacity_factory
+			#	value = 0
+			#	compare = equals
+			#} 
+		#}
+		#country_event = LH.475  
+	#}
+}
+
+### ADD CRISIS VALUES ###
+
+HUN_add_1_consumer = {
+	if = {
+		limit = {
+			check_variable = {
+				var = HUN_crisis_consumer_goods_factor 
+				value = 0
+				compare = greater_than
+			} 
+		}
+		custom_effect_tooltip = HUN_economic_crisis_1_consumer_goods
+		add_to_variable = { var = HUN_crisis_consumer_goods_factor value = -0.01 } 
+		clamp_variable = { var = HUN_crisis_consumer_goods_factor min = 0 }
+		HUN_check_crisis_icon = yes
+	}
+	else_if = {
+		limit = { 
+			has_country_flag = HUN_economic_crisis_good_flag 
+			check_variable = {
+				var = HUN_good_crisis_consumer_goods_factor 
+				value = -0.1
+				compare = greater_than
+			} 
+		}
+		custom_effect_tooltip = HUN_economic_crisis_1_consumer_goods
+	}
+	add_to_variable = { var = HUN_good_crisis_consumer_goods_factor value = -0.01 } 
+	clamp_variable = { var = HUN_good_crisis_consumer_goods_factor min = -0.1 }
+}
+ 
+HUN_add_2_consumer = {
+	if = {
+		limit = {
+			check_variable = {
+				var = HUN_crisis_consumer_goods_factor 
+				value = 0
+				compare = greater_than
+			} 
+		}
+		custom_effect_tooltip = HUN_economic_crisis_2_consumer_goods
+		add_to_variable = { var = HUN_crisis_consumer_goods_factor value = -0.02 } 
+		clamp_variable = { var = HUN_crisis_consumer_goods_factor min = 0 }
+		HUN_check_crisis_icon = yes
+	}
+	else_if = {
+		limit = { 
+			has_country_flag = HUN_economic_crisis_good_flag 
+			check_variable = {
+				var = HUN_good_crisis_consumer_goods_factor 
+				value = -0.1
+				compare = greater_than
+			} 
+		}
+		custom_effect_tooltip = HUN_economic_crisis_2_consumer_goods
+	}
+	add_to_variable = { var = HUN_good_crisis_consumer_goods_factor value = -0.02 } 
+	clamp_variable = { var = HUN_good_crisis_consumer_goods_factor min = -0.1 }
+}
+ 
+HUN_add_3_consumer = {
+	if = {
+		limit = {
+			check_variable = {
+				var = HUN_crisis_consumer_goods_factor 
+				value = 0
+				compare = greater_than
+			} 
+		}
+		custom_effect_tooltip = HUN_economic_crisis_3_consumer_goods
+		add_to_variable = { var = HUN_crisis_consumer_goods_factor value = -0.03 } 
+		clamp_variable = { var = HUN_crisis_consumer_goods_factor min = 0 }
+		HUN_check_crisis_icon = yes
+	}
+	else_if = {
+		limit = { 
+			has_country_flag = HUN_economic_crisis_good_flag 
+			check_variable = {
+				var = HUN_good_crisis_consumer_goods_factor 
+				value = -0.1
+				compare = greater_than
+			} 
+		}
+		custom_effect_tooltip = HUN_economic_crisis_3_consumer_goods
+	}
+	add_to_variable = { var = HUN_good_crisis_consumer_goods_factor value = -0.03 } 
+	clamp_variable = { var = HUN_good_crisis_consumer_goods_factor min = -0.1 }
+}
+ 
+HUN_add_4_consumer = {
+	if = {
+		limit = {
+			check_variable = {
+				var = HUN_crisis_consumer_goods_factor 
+				value = 0
+				compare = greater_than
+			} 
+		}
+		custom_effect_tooltip = HUN_economic_crisis_4_consumer_goods
+		add_to_variable = { var = HUN_crisis_consumer_goods_factor value = -0.04 } 
+		clamp_variable = { var = HUN_crisis_consumer_goods_factor min = 0 }
+		HUN_check_crisis_icon = yes
+	}
+	else_if = {
+		limit = { 
+			has_country_flag = HUN_economic_crisis_good_flag 
+			check_variable = {
+				var = HUN_good_crisis_consumer_goods_factor 
+				value = -0.1
+				compare = greater_than
+			} 
+		}
+		custom_effect_tooltip = HUN_economic_crisis_4_consumer_goods
+	}
+	add_to_variable = { var = HUN_good_crisis_consumer_goods_factor value = -0.04 } 
+	clamp_variable = { var = HUN_good_crisis_consumer_goods_factor min = -0.1 }
+}
+ 
+HUN_add_5_consumer = {
+	if = {
+		limit = {
+			check_variable = {
+				var = HUN_crisis_consumer_goods_factor 
+				value = 0
+				compare = greater_than
+			} 
+		}
+		custom_effect_tooltip = HUN_economic_crisis_5_consumer_goods
+		add_to_variable = { var = HUN_crisis_consumer_goods_factor value = -0.05 } 
+		clamp_variable = { var = HUN_crisis_consumer_goods_factor min = 0 }
+		HUN_check_crisis_icon = yes
+	}
+	else_if = {
+		limit = { 
+			has_country_flag = HUN_economic_crisis_good_flag 
+			check_variable = {
+				var = HUN_good_crisis_consumer_goods_factor 
+				value = -0.1
+				compare = greater_than
+			} 
+		}
+		custom_effect_tooltip = HUN_economic_crisis_5_consumer_goods
+	}
+	add_to_variable = { var = HUN_good_crisis_consumer_goods_factor value = -0.05 } 
+	clamp_variable = { var = HUN_good_crisis_consumer_goods_factor min = -0.1 }
+}
+ 
+HUN_add_6_consumer = {
+	if = {
+		limit = {
+			check_variable = {
+				var = HUN_crisis_consumer_goods_factor 
+				value = 0
+				compare = greater_than
+			} 
+		}
+		custom_effect_tooltip = HUN_economic_crisis_6_consumer_goods
+		add_to_variable = { var = HUN_crisis_consumer_goods_factor value = -0.06 } 
+		clamp_variable = { var = HUN_crisis_consumer_goods_factor min = 0 }
+		HUN_check_crisis_icon = yes
+	}
+	else_if = {
+		limit = { 
+			has_country_flag = HUN_economic_crisis_good_flag 
+			check_variable = {
+				var = HUN_good_crisis_consumer_goods_factor 
+				value = -0.1
+				compare = greater_than
+			} 
+		}
+		custom_effect_tooltip = HUN_economic_crisis_6_consumer_goods
+	}
+	add_to_variable = { var = HUN_good_crisis_consumer_goods_factor value = -0.06 } 
+	clamp_variable = { var = HUN_good_crisis_consumer_goods_factor min = -0.1 }
+}
+ 
+HUN_add_7_consumer = {
+	if = {
+		limit = {
+			check_variable = {
+				var = HUN_crisis_consumer_goods_factor 
+				value = 0
+				compare = greater_than
+			} 
+		}
+		custom_effect_tooltip = HUN_economic_crisis_7_consumer_goods
+		add_to_variable = { var = HUN_crisis_consumer_goods_factor value = -0.07 } 
+		clamp_variable = { var = HUN_crisis_consumer_goods_factor min = 0 }
+		HUN_check_crisis_icon = yes
+	}
+	else_if = {
+		limit = { 
+			has_country_flag = HUN_economic_crisis_good_flag 
+			check_variable = {
+				var = HUN_good_crisis_consumer_goods_factor 
+				value = -0.1
+				compare = greater_than
+			} 
+		}
+		custom_effect_tooltip = HUN_economic_crisis_7_consumer_goods
+	}
+	add_to_variable = { var = HUN_good_crisis_consumer_goods_factor value = -0.07 } 
+	clamp_variable = { var = HUN_good_crisis_consumer_goods_factor min = -0.1 }
+}
+ 
+HUN_add_8_consumer = {
+	if = {
+		limit = {
+			check_variable = {
+				var = HUN_crisis_consumer_goods_factor 
+				value = 0
+				compare = greater_than
+			} 
+		}
+		custom_effect_tooltip = HUN_economic_crisis_8_consumer_goods
+		add_to_variable = { var = HUN_crisis_consumer_goods_factor value = -0.08 } 
+		clamp_variable = { var = HUN_crisis_consumer_goods_factor min = 0 }
+		HUN_check_crisis_icon = yes
+	}
+	else_if = {
+		limit = { 
+			has_country_flag = HUN_economic_crisis_good_flag 
+			check_variable = {
+				var = HUN_good_crisis_consumer_goods_factor 
+				value = -0.1
+				compare = greater_than
+			} 
+		}
+		custom_effect_tooltip = HUN_economic_crisis_8_consumer_goods
+	}
+	add_to_variable = { var = HUN_good_crisis_consumer_goods_factor value = -0.08 } 
+	clamp_variable = { var = HUN_good_crisis_consumer_goods_factor min = -0.1 }
+}
+ 
+HUN_add_9_consumer = {
+	if = {
+		limit = {
+			check_variable = {
+				var = HUN_crisis_consumer_goods_factor 
+				value = 0
+				compare = greater_than
+			} 
+		}
+		custom_effect_tooltip = HUN_economic_crisis_9_consumer_goods
+		add_to_variable = { var = HUN_crisis_consumer_goods_factor value = -0.09 } 
+		clamp_variable = { var = HUN_crisis_consumer_goods_factor min = 0 }
+		HUN_check_crisis_icon = yes
+	}
+	else_if = {
+		limit = { 
+			has_country_flag = HUN_economic_crisis_good_flag 
+			check_variable = {
+				var = HUN_good_crisis_consumer_goods_factor 
+				value = -0.1
+				compare = greater_than
+			} 
+		}
+		custom_effect_tooltip = HUN_economic_crisis_9_consumer_goods
+	}
+	add_to_variable = { var = HUN_good_crisis_consumer_goods_factor value = -0.09 } 
+	clamp_variable = { var = HUN_good_crisis_consumer_goods_factor min = -0.1 }
+}
+ 
+HUN_add_10_consumer = {
+	if = {
+		limit = {
+			check_variable = {
+				var = HUN_crisis_consumer_goods_factor 
+				value = 0
+				compare = greater_than
+			} 
+		}
+		custom_effect_tooltip = HUN_economic_crisis_10_consumer_goods
+		add_to_variable = { var = HUN_crisis_consumer_goods_factor value = -0.010 } 
+		clamp_variable = { var = HUN_crisis_consumer_goods_factor min = 0 }
+		HUN_check_crisis_icon = yes
+	}
+	else_if = {
+		limit = { 
+			has_country_flag = HUN_economic_crisis_good_flag 
+			check_variable = {
+				var = HUN_good_crisis_consumer_goods_factor 
+				value = -0.1
+				compare = greater_than
+			} 
+		}
+		custom_effect_tooltip = HUN_economic_crisis_10_consumer_goods
+	}
+	add_to_variable = { var = HUN_good_crisis_consumer_goods_factor value = -0.10 } 
+	clamp_variable = { var = HUN_good_crisis_consumer_goods_factor min = -0.1 }
+}
+ 
+HUN_add_1_construction = {
+	if = {
+		limit = {
+			check_variable = {
+				var = HUN_crisis_production_speed_buildings_factor
+				value = 0
+				compare = less_than
+			} 
+		}
+		custom_effect_tooltip = HUN_economic_crisis_1_construction_speed
+		add_to_variable = { var = HUN_crisis_production_speed_buildings_factor value = 0.01 }
+		clamp_variable = { var = HUN_crisis_production_speed_buildings_factor max = 0 }
+		HUN_check_crisis_icon = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = HUN_economic_crisis_good_flag 
+			check_variable = {
+				var = HUN_good_crisis_production_speed_buildings_factor 
+				value = 0.2
+				compare = less_than
+			} 
+		}
+		custom_effect_tooltip = HUN_economic_crisis_1_construction_speed
+	}
+	add_to_variable = { var = HUN_good_crisis_production_speed_buildings_factor value = 0.01 }
+	clamp_variable = { var = HUN_good_crisis_production_speed_buildings_factor max = 0.2 }
+}
+
+HUN_add_2_construction = {
+	if = {
+		limit = {
+			check_variable = {
+				var = HUN_crisis_production_speed_buildings_factor
+				value = 0
+				compare = less_than
+			} 
+		}
+		custom_effect_tooltip = HUN_economic_crisis_2_construction_speed
+		add_to_variable = { var = HUN_crisis_production_speed_buildings_factor value = 0.02 }
+		clamp_variable = { var = HUN_crisis_production_speed_buildings_factor max = 0 }
+		HUN_check_crisis_icon = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = HUN_economic_crisis_good_flag 
+			check_variable = {
+				var = HUN_good_crisis_production_speed_buildings_factor 
+				value = 0.2
+				compare = less_than
+			} 
+		}
+		custom_effect_tooltip = HUN_economic_crisis_2_construction_speed
+	}
+	add_to_variable = { var = HUN_good_crisis_production_speed_buildings_factor value = 0.02 }
+	clamp_variable = { var = HUN_good_crisis_production_speed_buildings_factor max = 0.2 }
+}
+
+HUN_add_3_construction = {
+	if = {
+		limit = {
+			check_variable = {
+				var = HUN_crisis_production_speed_buildings_factor
+				value = 0
+				compare = less_than
+			} 
+		}
+		custom_effect_tooltip = HUN_economic_crisis_3_construction_speed
+		add_to_variable = { var = HUN_crisis_production_speed_buildings_factor value = 0.03 }
+		clamp_variable = { var = HUN_crisis_production_speed_buildings_factor max = 0 }
+		HUN_check_crisis_icon = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = HUN_economic_crisis_good_flag 
+			check_variable = {
+				var = HUN_good_crisis_production_speed_buildings_factor 
+				value = 0.2
+				compare = less_than
+			} 
+		}
+		custom_effect_tooltip = HUN_economic_crisis_3_construction_speed
+	}
+	add_to_variable = { var = HUN_good_crisis_production_speed_buildings_factor value = 0.03 }
+	clamp_variable = { var = HUN_good_crisis_production_speed_buildings_factor max = 0.2 }
+}
+
+HUN_add_4_construction = {
+	if = {
+		limit = {
+			check_variable = {
+				var = HUN_crisis_production_speed_buildings_factor
+				value = 0
+				compare = less_than
+			} 
+		}
+		custom_effect_tooltip = HUN_economic_crisis_4_construction_speed
+		add_to_variable = { var = HUN_crisis_production_speed_buildings_factor value = 0.04 }
+		clamp_variable = { var = HUN_crisis_production_speed_buildings_factor max = 0 }
+		HUN_check_crisis_icon = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = HUN_economic_crisis_good_flag 
+			check_variable = {
+				var = HUN_good_crisis_production_speed_buildings_factor 
+				value = 0.2
+				compare = less_than
+			} 
+		}
+		custom_effect_tooltip = HUN_economic_crisis_4_construction_speed
+	}
+	add_to_variable = { var = HUN_good_crisis_production_speed_buildings_factor value = 0.04 }
+	clamp_variable = { var = HUN_good_crisis_production_speed_buildings_factor max = 0.2 }
+}
+
+HUN_add_5_construction = {
+	if = {
+		limit = {
+			check_variable = {
+				var = HUN_crisis_production_speed_buildings_factor
+				value = 0
+				compare = less_than
+			} 
+		}
+		custom_effect_tooltip = HUN_economic_crisis_5_construction_speed
+		add_to_variable = { var = HUN_crisis_production_speed_buildings_factor value = 0.05 }
+		clamp_variable = { var = HUN_crisis_production_speed_buildings_factor max = 0 }
+		HUN_check_crisis_icon = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = HUN_economic_crisis_good_flag 
+			check_variable = {
+				var = HUN_good_crisis_production_speed_buildings_factor 
+				value = 0.2
+				compare = less_than
+			} 
+		}
+		custom_effect_tooltip = HUN_economic_crisis_5_construction_speed
+	}
+	add_to_variable = { var = HUN_good_crisis_production_speed_buildings_factor value = 0.05 }
+	clamp_variable = { var = HUN_good_crisis_production_speed_buildings_factor max = 0.2 }
+}
+
+HUN_add_6_construction = {
+	if = {
+		limit = {
+			check_variable = {
+				var = HUN_crisis_production_speed_buildings_factor
+				value = 0
+				compare = less_than
+			} 
+		}
+		custom_effect_tooltip = HUN_economic_crisis_6_construction_speed
+		add_to_variable = { var = HUN_crisis_production_speed_buildings_factor value = 0.06 }
+		clamp_variable = { var = HUN_crisis_production_speed_buildings_factor max = 0 }
+		HUN_check_crisis_icon = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = HUN_economic_crisis_good_flag 
+			check_variable = {
+				var = HUN_good_crisis_production_speed_buildings_factor 
+				value = 0.2
+				compare = less_than
+			} 
+		}
+		custom_effect_tooltip = HUN_economic_crisis_6_construction_speed
+	}
+	add_to_variable = { var = HUN_good_crisis_production_speed_buildings_factor value = 0.06 }
+	clamp_variable = { var = HUN_good_crisis_production_speed_buildings_factor max = 0.2 }
+}
+
+HUN_add_7_construction = {
+	if = {
+		limit = {
+			check_variable = {
+				var = HUN_crisis_production_speed_buildings_factor
+				value = 0
+				compare = less_than
+			} 
+		}
+		custom_effect_tooltip = HUN_economic_crisis_7_construction_speed
+		add_to_variable = { var = HUN_crisis_production_speed_buildings_factor value = 0.07 }
+		clamp_variable = { var = HUN_crisis_production_speed_buildings_factor max = 0 }
+		HUN_check_crisis_icon = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = HUN_economic_crisis_good_flag 
+			check_variable = {
+				var = HUN_good_crisis_production_speed_buildings_factor 
+				value = 0.2
+				compare = less_than
+			} 
+		}
+		custom_effect_tooltip = HUN_economic_crisis_7_construction_speed
+	}
+	add_to_variable = { var = HUN_good_crisis_production_speed_buildings_factor value = 0.07 }
+	clamp_variable = { var = HUN_good_crisis_production_speed_buildings_factor max = 0.2 }
+}
+
+HUN_add_8_construction = {
+	if = {
+		limit = {
+			check_variable = {
+				var = HUN_crisis_production_speed_buildings_factor
+				value = 0
+				compare = less_than
+			} 
+		}
+		custom_effect_tooltip = HUN_economic_crisis_8_construction_speed
+		add_to_variable = { var = HUN_crisis_production_speed_buildings_factor value = 0.08 }
+		clamp_variable = { var = HUN_crisis_production_speed_buildings_factor max = 0 }
+		HUN_check_crisis_icon = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = HUN_economic_crisis_good_flag 
+			check_variable = {
+				var = HUN_good_crisis_production_speed_buildings_factor 
+				value = 0.2
+				compare = less_than
+			} 
+		}
+		custom_effect_tooltip = HUN_economic_crisis_8_construction_speed
+	}
+	add_to_variable = { var = HUN_good_crisis_production_speed_buildings_factor value = 0.08 }
+	clamp_variable = { var = HUN_good_crisis_production_speed_buildings_factor max = 0.2 }
+}
+
+HUN_add_9_construction = {
+	if = {
+		limit = {
+			check_variable = {
+				var = HUN_crisis_production_speed_buildings_factor
+				value = 0
+				compare = less_than
+			} 
+		}
+		custom_effect_tooltip = HUN_economic_crisis_9_construction_speed
+		add_to_variable = { var = HUN_crisis_production_speed_buildings_factor value = 0.09 }
+		clamp_variable = { var = HUN_crisis_production_speed_buildings_factor max = 0 }
+		HUN_check_crisis_icon = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = HUN_economic_crisis_good_flag 
+			check_variable = {
+				var = HUN_good_crisis_production_speed_buildings_factor 
+				value = 0.2
+				compare = less_than
+			} 
+		}
+		custom_effect_tooltip = HUN_economic_crisis_9_construction_speed
+	}
+	add_to_variable = { var = HUN_good_crisis_production_speed_buildings_factor value = 0.09 }
+	clamp_variable = { var = HUN_good_crisis_production_speed_buildings_factor max = 0.2 }
+}
+
+HUN_add_10_construction = {
+	if = {
+		limit = {
+			check_variable = {
+				var = HUN_crisis_production_speed_buildings_factor
+				value = 0
+				compare = less_than
+			} 
+		}
+		custom_effect_tooltip = HUN_economic_crisis_10_construction_speed
+		add_to_variable = { var = HUN_crisis_production_speed_buildings_factor value = 0.10 }
+		clamp_variable = { var = HUN_crisis_production_speed_buildings_factor max = 0 }
+		HUN_check_crisis_icon = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = HUN_economic_crisis_good_flag 
+			check_variable = {
+				var = HUN_good_crisis_production_speed_buildings_factor 
+				value = 0.2
+				compare = less_than
+			} 
+		}
+		custom_effect_tooltip = HUN_economic_crisis_10_construction_speed
+	}
+	add_to_variable = { var = HUN_good_crisis_production_speed_buildings_factor value = 0.10 }
+	clamp_variable = { var = HUN_good_crisis_production_speed_buildings_factor max = 0.2 }
+}
+
+HUN_add_1_factory_output = {
+	if = {
+		limit = {
+			check_variable = {
+				var = HUN_crisis_industrial_capacity_factory
+				value = 0
+				compare = less_than
+			} 
+		}
+		custom_effect_tooltip = HUN_economic_crisis_1_factory_output
+		add_to_variable = { var = HUN_crisis_industrial_capacity_factory value = 0.01 }
+		clamp_variable = { var = HUN_crisis_industrial_capacity_factory max = 0 }
+		HUN_check_crisis_icon = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = HUN_economic_crisis_good_flag 
+			check_variable = {
+				var = HUN_good_crisis_industrial_capacity_factory
+				value = 0.2
+				compare = less_than
+			} 
+		}
+		custom_effect_tooltip = HUN_economic_crisis_1_factory_output
+	}
+	add_to_variable = { var = HUN_good_crisis_industrial_capacity_factory value = 0.01 }
+	clamp_variable = { var = HUN_good_crisis_industrial_capacity_factory max = 0.2 }
+}
+
+HUN_add_2_factory_output = {
+	if = {
+		limit = {
+			check_variable = {
+				var = HUN_crisis_industrial_capacity_factory
+				value = 0
+				compare = less_than
+			} 
+		}
+		custom_effect_tooltip = HUN_economic_crisis_2_factory_output
+		add_to_variable = { var = HUN_crisis_industrial_capacity_factory value = 0.02 }
+		clamp_variable = { var = HUN_crisis_industrial_capacity_factory max = 0 }
+		HUN_check_crisis_icon = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = HUN_economic_crisis_good_flag 
+			check_variable = {
+				var = HUN_good_crisis_industrial_capacity_factory
+				value = 0.2
+				compare = less_than
+			} 
+		}
+		custom_effect_tooltip = HUN_economic_crisis_2_factory_output
+	}
+	add_to_variable = { var = HUN_good_crisis_industrial_capacity_factory value = 0.02 }
+	clamp_variable = { var = HUN_good_crisis_industrial_capacity_factory max = 0.2 }
+}
+
+HUN_add_3_factory_output = {
+	if = {
+		limit = {
+			check_variable = {
+				var = HUN_crisis_industrial_capacity_factory
+				value = 0
+				compare = less_than
+			} 
+		}
+		custom_effect_tooltip = HUN_economic_crisis_3_factory_output
+		add_to_variable = { var = HUN_crisis_industrial_capacity_factory value = 0.03 }
+		clamp_variable = { var = HUN_crisis_industrial_capacity_factory max = 0 }
+		HUN_check_crisis_icon = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = HUN_economic_crisis_good_flag 
+			check_variable = {
+				var = HUN_good_crisis_industrial_capacity_factory
+				value = 0.2
+				compare = less_than
+			} 
+		}
+		custom_effect_tooltip = HUN_economic_crisis_3_factory_output
+	}
+	add_to_variable = { var = HUN_good_crisis_industrial_capacity_factory value = 0.03 }
+	clamp_variable = { var = HUN_good_crisis_industrial_capacity_factory max = 0.2 }
+}
+
+HUN_add_4_factory_output = {
+	if = {
+		limit = {
+			check_variable = {
+				var = HUN_crisis_industrial_capacity_factory
+				value = 0
+				compare = less_than
+			} 
+		}
+		custom_effect_tooltip = HUN_economic_crisis_4_factory_output
+		add_to_variable = { var = HUN_crisis_industrial_capacity_factory value = 0.04 }
+		clamp_variable = { var = HUN_crisis_industrial_capacity_factory max = 0 }
+		HUN_check_crisis_icon = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = HUN_economic_crisis_good_flag 
+			check_variable = {
+				var = HUN_good_crisis_industrial_capacity_factory
+				value = 0.2
+				compare = less_than
+			} 
+		}
+		custom_effect_tooltip = HUN_economic_crisis_4_factory_output
+	}
+	add_to_variable = { var = HUN_good_crisis_industrial_capacity_factory value = 0.04 }
+	clamp_variable = { var = HUN_good_crisis_industrial_capacity_factory max = 0.2 }
+}
+
+HUN_add_5_factory_output = {
+	if = {
+		limit = {
+			check_variable = {
+				var = HUN_crisis_industrial_capacity_factory
+				value = 0
+				compare = less_than
+			} 
+		}
+		custom_effect_tooltip = HUN_economic_crisis_5_factory_output
+		add_to_variable = { var = HUN_crisis_industrial_capacity_factory value = 0.05 }
+		clamp_variable = { var = HUN_crisis_industrial_capacity_factory max = 0 }
+		HUN_check_crisis_icon = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = HUN_economic_crisis_good_flag 
+			check_variable = {
+				var = HUN_good_crisis_industrial_capacity_factory
+				value = 0.2
+				compare = less_than
+			} 
+		}
+		custom_effect_tooltip = HUN_economic_crisis_5_factory_output
+	}
+	add_to_variable = { var = HUN_good_crisis_industrial_capacity_factory value = 0.05 }
+	clamp_variable = { var = HUN_good_crisis_industrial_capacity_factory max = 0.2 }
+}
+
+HUN_add_6_factory_output = {
+	if = {
+		limit = {
+			check_variable = {
+				var = HUN_crisis_industrial_capacity_factory
+				value = 0
+				compare = less_than
+			} 
+		}
+		custom_effect_tooltip = HUN_economic_crisis_6_factory_output
+		add_to_variable = { var = HUN_crisis_industrial_capacity_factory value = 0.06 }
+		clamp_variable = { var = HUN_crisis_industrial_capacity_factory max = 0 }
+		HUN_check_crisis_icon = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = HUN_economic_crisis_good_flag 
+			check_variable = {
+				var = HUN_good_crisis_industrial_capacity_factory
+				value = 0.2
+				compare = less_than
+			} 
+		}
+		custom_effect_tooltip = HUN_economic_crisis_6_factory_output
+	}
+	add_to_variable = { var = HUN_good_crisis_industrial_capacity_factory value = 0.06 }
+	clamp_variable = { var = HUN_good_crisis_industrial_capacity_factory max = 0.2 }
+}
+
+HUN_add_7_factory_output = {
+	if = {
+		limit = {
+			check_variable = {
+				var = HUN_crisis_industrial_capacity_factory
+				value = 0
+				compare = less_than
+			} 
+		}
+		custom_effect_tooltip = HUN_economic_crisis_7_factory_output
+		add_to_variable = { var = HUN_crisis_industrial_capacity_factory value = 0.07 }
+		clamp_variable = { var = HUN_crisis_industrial_capacity_factory max = 0 }
+		HUN_check_crisis_icon = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = HUN_economic_crisis_good_flag 
+			check_variable = {
+				var = HUN_good_crisis_industrial_capacity_factory
+				value = 0.2
+				compare = less_than
+			} 
+		}
+		custom_effect_tooltip = HUN_economic_crisis_7_factory_output
+	}
+	add_to_variable = { var = HUN_good_crisis_industrial_capacity_factory value = 0.07 }
+	clamp_variable = { var = HUN_good_crisis_industrial_capacity_factory max = 0.2 }
+}
+
+HUN_add_8_factory_output = {
+	if = {
+		limit = {
+			check_variable = {
+				var = HUN_crisis_industrial_capacity_factory
+				value = 0
+				compare = less_than
+			} 
+		}
+		custom_effect_tooltip = HUN_economic_crisis_8_factory_output
+		add_to_variable = { var = HUN_crisis_industrial_capacity_factory value = 0.08 }
+		clamp_variable = { var = HUN_crisis_industrial_capacity_factory max = 0 }
+		HUN_check_crisis_icon = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = HUN_economic_crisis_good_flag 
+			check_variable = {
+				var = HUN_good_crisis_industrial_capacity_factory
+				value = 0.2
+				compare = less_than
+			} 
+		}
+		custom_effect_tooltip = HUN_economic_crisis_8_factory_output
+	}
+	add_to_variable = { var = HUN_good_crisis_industrial_capacity_factory value = 0.08 }
+	clamp_variable = { var = HUN_good_crisis_industrial_capacity_factory max = 0.2 }
+}
+
+HUN_add_9_factory_output = {
+	if = {
+		limit = {
+			check_variable = {
+				var = HUN_crisis_industrial_capacity_factory
+				value = 0
+				compare = less_than
+			} 
+		}
+		custom_effect_tooltip = HUN_economic_crisis_9_factory_output
+		add_to_variable = { var = HUN_crisis_industrial_capacity_factory value = 0.09 }
+		clamp_variable = { var = HUN_crisis_industrial_capacity_factory max = 0 }
+		HUN_check_crisis_icon = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = HUN_economic_crisis_good_flag 
+			check_variable = {
+				var = HUN_good_crisis_industrial_capacity_factory
+				value = 0.2
+				compare = less_than
+			} 
+		}
+		custom_effect_tooltip = HUN_economic_crisis_9_factory_output
+	}
+	add_to_variable = { var = HUN_good_crisis_industrial_capacity_factory value = 0.09 } 
+	clamp_variable = { var = HUN_good_crisis_industrial_capacity_factory max = 0.2 }
+}
+
+HUN_add_10_factory_output = {
+	if = {
+		limit = {
+			check_variable = {
+				var = HUN_crisis_industrial_capacity_factory
+				value = 0
+				compare = less_than
+			} 
+		}
+		custom_effect_tooltip = HUN_economic_crisis_10_factory_output
+		add_to_variable = { var = HUN_crisis_industrial_capacity_factory value = 0.10 }
+		clamp_variable = { var = HUN_crisis_industrial_capacity_factory max = 0 }
+		HUN_check_crisis_icon = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = HUN_economic_crisis_good_flag 
+			check_variable = {
+				var = HUN_good_crisis_industrial_capacity_factory
+				value = 0.2
+				compare = less_than
+			} 
+		}
+		custom_effect_tooltip = HUN_economic_crisis_10_factory_output
+	}
+	add_to_variable = { var = HUN_good_crisis_industrial_capacity_factory value = 0.10 }
+	clamp_variable = { var = HUN_good_crisis_industrial_capacity_factory max = 0.2 }
+}
+
+### SHOW THE TOOLTIP IF NECESSARY ###
+
+HUN_modify_crisis_consumer_tt = {	### ONLY CONSUMER
+	if = {
+		limit = {
+			HUN_has_economic_crisis = yes 
+			check_variable = {
+				var = HUN_crisis_consumer_goods_factor 
+				value = 0
+				compare = greater_than
+			}
+		}
+		custom_effect_tooltip = HUN_economic_crisis_intro_tt
+	}
+}
+
+HUN_modify_crisis_construction_tt = {	### ONLY CONSTRUCTION SPEED
+	if = {
+		limit = {
+			HUN_has_economic_crisis = yes 
+			check_variable = {
+				var = HUN_crisis_production_speed_buildings_factor
+				value = 0
+				compare = less_than
+			} 
+		}
+		custom_effect_tooltip = HUN_economic_crisis_intro_tt
+	}
+}
+
+HUN_modify_crisis_output_tt = {	### ONLY FACTORY OUTPUT
+	if = {
+		limit = {
+			HUN_has_economic_crisis = yes 
+			check_variable = {
+				var = HUN_crisis_industrial_capacity_factory
+				value = 0
+				compare = less_than
+			} 
+		}
+		custom_effect_tooltip = HUN_economic_crisis_intro_tt
+	}
+}
+
+HUN_modify_crisis_construction_output_tt = {	### CONSTRUCTION SPEED + FACTORY OUTPUT
+	if = {
+		limit = {
+			HUN_has_economic_crisis = yes 
+			OR = {
+				check_variable = {
+					var = HUN_crisis_production_speed_buildings_factor
+					value = 0
+					compare = less_than
+				} 
+				check_variable = {
+					var = HUN_crisis_industrial_capacity_factory
+					value = 0
+					compare = less_than
+				} 
+			}
+		}
+		custom_effect_tooltip = HUN_economic_crisis_intro_tt
+	}
+}
+
+HUN_modify_crisis_consumer_output_tt = {	### CONSUMER GOODS + FACTORY OUTPUT
+	if = {
+		limit = {
+			HUN_has_economic_crisis = yes 
+			OR = {
+				check_variable = {
+					var = HUN_crisis_consumer_goods_factor 
+					value = 0
+					compare = greater_than
+				}
+				check_variable = {
+					var = HUN_crisis_industrial_capacity_factory
+					value = 0
+					compare = less_than
+				} 
+			}
+		}
+		custom_effect_tooltip = HUN_economic_crisis_intro_tt
+	}
+}
+
+HUN_modify_crisis_consumer_construction_tt = {	### CONSUMER GOODS + CONSTRUCTION SPEED
+	if = {
+		limit = {
+			HUN_has_economic_crisis = yes 
+			OR = {
+				check_variable = {
+					var = HUN_crisis_consumer_goods_factor 
+					value = 0
+					compare = greater_than
+				}
+				check_variable = {
+					var = HUN_crisis_production_speed_buildings_factor
+					value = 0
+					compare = less_than
+				} 
+			}
+		}
+		custom_effect_tooltip = HUN_economic_crisis_intro_tt
+	}
+}
+
+HUN_modify_crisis_all_tt = {	### ALL OF THEM
+	if = {
+		limit = {
+			HUN_has_economic_crisis = yes 
+			OR = {
+				check_variable = {
+					var = HUN_crisis_consumer_goods_factor 
+					value = 0
+					compare = greater_than
+				}
+				check_variable = {
+					var = HUN_crisis_production_speed_buildings_factor
+					value = 0
+					compare = less_than
+				} 
+				check_variable = {
+					var = HUN_crisis_industrial_capacity_factory
+					value = 0
+					compare = less_than
+				} 
+			}
+		}
+		custom_effect_tooltip = HUN_economic_crisis_intro_tt
+	}
+}
+
+### TRADE DEAL VARIABLES ###
+
+HUN_set_consumer_trade_deal = {
+	if = {
+		limit = {
+			check_variable = { var = HUN_trade_deal_consumer_value value = 0 compare = equals }
+		}
+		set_variable = { var = HUN_trade_deal_consumer_value value = -0.01 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { var = HUN_trade_deal_consumer_value value = -0.01 compare = equals }
+		}
+		set_variable = { var = HUN_trade_deal_consumer_value value = -0.02 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { var = HUN_trade_deal_consumer_value value = -0.02 compare = equals }
+		}
+		set_variable = { var = HUN_trade_deal_consumer_value value = -0.03 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { var = HUN_trade_deal_consumer_value value = -0.03 compare = equals }
+		}
+		set_variable = { var = HUN_trade_deal_consumer_value value = -0.04 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { var = HUN_trade_deal_consumer_value value = -0.04 compare = equals }
+		}
+		set_variable = { var = HUN_trade_deal_consumer_value value = -0.05 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { var = HUN_trade_deal_consumer_value value = -0.05 compare = equals }
+		}
+		set_variable = { var = HUN_trade_deal_consumer_value value = -0.06 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { var = HUN_trade_deal_consumer_value value = -0.06 compare = equals }
+		}
+		set_variable = { var = HUN_trade_deal_consumer_value value = -0.07 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { var = HUN_trade_deal_consumer_value value = -0.07 compare = equals }
+		}
+		set_variable = { var = HUN_trade_deal_consumer_value value = -0.08 }
+	}
+}
+
+
+HUN_set_construction_trade_deal = {
+	if = {
+		limit = {
+			check_variable = { var = HUN_trade_deal_construction_value value = 0 compare = equals }
+		}
+		set_variable = { var = HUN_trade_deal_construction_value value = 0.02 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { var = HUN_trade_deal_construction_value value = 0.02 compare = equals }
+		}
+		set_variable = { var = HUN_trade_deal_construction_value value = 0.04 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { var = HUN_trade_deal_construction_value value = 0.04 compare = equals }
+		}
+		set_variable = { var = HUN_trade_deal_construction_value value = 0.06 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { var = HUN_trade_deal_construction_value value = 0.06 compare = equals }
+		}
+		set_variable = { var = HUN_trade_deal_construction_value value = 0.08 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { var = HUN_trade_deal_construction_value value = 0.08 compare = equals }
+		}
+		set_variable = { var = HUN_trade_deal_construction_value value = 0.10 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { var = HUN_trade_deal_construction_value value = 0.10 compare = equals }
+		}
+		set_variable = { var = HUN_trade_deal_construction_value value = 0.12 }
+	}
+}
+
+HUN_set_output_trade_deal = {
+	if = {
+		limit = {
+			check_variable = { var = HUN_trade_deal_output_value value = 0 compare = equals }
+		}
+		set_variable = { var = HUN_trade_deal_output_value value = 0.02 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { var = HUN_trade_deal_output_value value = 0.02 compare = equals }
+		}
+		set_variable = { var = HUN_trade_deal_output_value value = 0.04 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { var = HUN_trade_deal_output_value value = 0.04 compare = equals }
+		}
+		set_variable = { var = HUN_trade_deal_output_value value = 0.06 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { var = HUN_trade_deal_output_value value = 0.06 compare = equals }
+		}
+		set_variable = { var = HUN_trade_deal_output_value value = 0.08 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { var = HUN_trade_deal_output_value value = 0.08 compare = equals }
+		}
+		set_variable = { var = HUN_trade_deal_output_value value = 0.10 }
+	}
+}
+
+HUN_remove_trade_deal_bonuses = {
+	subtract_from_variable = {
+		var = HUN_crisis_consumer_goods_factor
+		value = HUN_trade_deal_consumer_value
+	}
+	set_variable = { var = HUN_trade_deal_consumer_value value = 0 }
+	subtract_from_variable = {
+		var = HUN_crisis_production_speed_buildings_factor
+		value = HUN_trade_deal_construction_value
+	}
+	set_variable = { var = HUN_trade_deal_construction_value value = 0 }
+	subtract_from_variable = {
+		var = HUN_crisis_industrial_capacity_factory
+		value = HUN_trade_deal_output_value
+	}
+	set_variable = { var = HUN_trade_deal_output_value value = 0 }
+}
+
+HUN_reset_trade_deal_modifier = {
+	hidden_effect = { remove_dynamic_modifier = { modifier = HUN_trade_deal_modifier } }
+	
+	
+	### REMOVE RESSOURCES ###
+	
+	if = {
+		limit = { has_country_flag = HUN_eng_trade_partner_flag }
+		HUN_remove_ressources_eng = yes
+		ENG = { remove_ideas = HUN_giving_economic_help }
+	}
+	
+	if = {
+		limit = { has_country_flag = HUN_fra_trade_partner_flag }
+		HUN_remove_ressources_fra = yes
+		FRA = { remove_ideas = HUN_giving_economic_help }
+	}
+	
+	if = {
+		limit = { has_country_flag = HUN_usa_trade_partner_flag }
+		HUN_remove_ressources_usa = yes
+		USA = { remove_ideas = HUN_giving_economic_help }
+	}
+	
+	if = {
+		limit = { has_country_flag = HUN_ger_trade_partner_flag }
+		HUN_remove_ressources_ger = yes
+		GER = { remove_ideas = HUN_giving_economic_help }
+	}
+	
+	if = {
+		limit = { has_country_flag = HUN_ita_trade_partner_flag }
+		HUN_remove_ressources_ita = yes
+		ITA = { remove_ideas = HUN_giving_economic_help }
+	}
+	
+	if = {
+		limit = { has_country_flag = HUN_sov_trade_partner_flag }
+		HUN_remove_ressources_sov = yes
+		SOV = { remove_ideas = HUN_giving_economic_help }
+	}
+	
+	### RESET MODIFIER VALUES ###
+	
+	set_variable = { var = HUN_democratic_acceptance value = 0 }
+	set_variable = { var = HUN_democratic_drift value = 0 }
+	set_variable = { var = HUN_communism_acceptance value = 0 }
+	set_variable = { var = HUN_communism_drift value = 0 }
+	set_variable = { var = HUN_fascism_acceptance value = 0 }
+	set_variable = { var = HUN_fascism_drift value = 0 }
+	set_variable = { var = HUN_generate_wargoal_tension value = 0 }
+	set_variable = { var = HUN_join_faction_tension value = 0 }
+	set_variable = { var = HUN_lend_lease_tension value = 0 }
+	set_variable = { var = HUN_send_volunteers_tension value = 0 }
+	set_variable = { var = HUN_guarantee_tension value = 0 }
+	set_variable = { var = HUN_civilian_intel_to_others value = 0 }
+	set_variable = { var = HUN_army_intel_to_others value = 0 }
+	set_variable = { var = HUN_navy_intel_to_others value = 0 }
+	set_variable = { var = HUN_airforce_intel_to_others value = 0 }
+	set_variable = { var = HUN_embargo_cost_factor value = 0 }
+	set_variable = { var = HUN_embargo_threshold_factor value = 0 }
+	set_variable = { var = HUN_justify_war_goal_when_in_major_war_time value = 0 }
+	set_variable = { var = HUN_drift_defence_factor value = 0 }
+	subtract_from_variable = { var = HUN_crisis_production_lack_of_resource_penalty_factor value = 0.05 }
+	
+	### SET APPROPRIATE FLAGS ###
+	
+	set_country_flag = HUN_no_trade_partner_flag
+	clr_country_flag = HUN_eng_trade_partner_flag
+	clr_country_flag = HUN_fra_trade_partner_flag
+	clr_country_flag = HUN_usa_trade_partner_flag
+	clr_country_flag = HUN_sov_trade_partner_flag
+	clr_country_flag = HUN_ger_trade_partner_flag
+	clr_country_flag = HUN_ita_trade_partner_flag
+	clr_country_flag = HUN_trade_deal_accepted_flag
+	clr_country_flag = HUN_allied_trade_flag
+	clr_country_flag = HUN_axis_trade_flag
+	clr_country_flag = HUN_comintern_trade_flag
+	if = {
+		limit = { NOT = { has_country_flag = HUN_already_trade_flag } }
+		clr_country_flag = HUN_trade_upgrade_flag	### CLEAR ONLY IF YOURE NOT ALREADY IN TRADE WITH SOMEONE ELSE
+	}
+	clr_country_flag = HUN_titan_trade_flag	
+	
+	### REMOVE TRADE RELATIONS ###
+	if = {
+		limit = { has_country_flag = HUN_trade_reliance_flag }
+		hidden_effect = {
+			ENG = {
+				remove_opinion_modifier = {
+					target = HUN
+					modifier = HUN_economic_dependancy
+				}
+				remove_opinion_modifier = {
+					target = HUN
+					modifier = HUN_economic_isolation
+				}
+			}
+			FRA = {
+				remove_opinion_modifier = {
+					target = HUN
+					modifier = HUN_economic_dependancy
+				}
+				remove_opinion_modifier = {
+					target = HUN
+					modifier = HUN_economic_isolation
+				}
+			}
+			USA = {
+				remove_opinion_modifier = {
+					target = HUN
+					modifier = HUN_economic_dependancy
+				}
+				remove_opinion_modifier = {
+					target = HUN
+					modifier = HUN_economic_isolation
+				}
+			}
+			GER = {
+				remove_opinion_modifier = {
+					target = HUN
+					modifier = HUN_economic_dependancy
+				}
+				remove_opinion_modifier = {
+					target = HUN
+					modifier = HUN_economic_isolation
+				}
+			}
+			ITA = {
+				remove_opinion_modifier = {
+					target = HUN
+					modifier = HUN_economic_dependancy
+				}
+				remove_opinion_modifier = {
+					target = HUN
+					modifier = HUN_economic_isolation
+				}
+			}
+			SOV = {
+				remove_opinion_modifier = {
+					target = HUN
+					modifier = HUN_economic_dependancy
+				}
+				remove_opinion_modifier = {
+					target = HUN
+					modifier = HUN_economic_isolation
+				}
+			}
+		}
+		clr_country_flag = HUN_trade_reliance_flag
+	}
+	
+	add_offsite_building = { type = industrial_complex level = -3 }
+}
+
+HUN_set_trade_deal_ger = {
+	hidden_effect = { add_dynamic_modifier = { modifier = HUN_trade_deal_modifier } }
+	
+	clr_country_flag = HUN_no_trade_partner_flag
+	clr_country_flag = HUN_ita_trade_partner_flag
+	clr_country_flag = HUN_usa_trade_partner_flag
+	clr_country_flag = HUN_fra_trade_partner_flag
+	clr_country_flag = HUN_eng_trade_partner_flag
+	clr_country_flag = HUN_sov_trade_partner_flag
+	set_country_flag = HUN_ger_trade_partner_flag 
+	set_country_flag = HUN_axis_trade_flag
+	
+	if = {
+		limit = {
+			NOT = { 
+				focus_progress = {
+					focus = HUN_infiltrate_britain
+					progress > 0
+				}
+			}
+		}
+		custom_effect_tooltip = HUN_trade_deal_intro_axis  
+	}
+	
+	custom_effect_tooltip = HUN_trade_deal_axis_tt 
+	set_variable = { var = HUN_fascism_acceptance value = 50 }
+	set_variable = { var = HUN_fascism_drift value = 0.05 }
+	set_variable = { var = HUN_justify_war_goal_when_in_major_war_time value = -0.80 } 
+	set_variable = { var = HUN_generate_wargoal_tension value = -0.5 }
+	set_variable = { var = HUN_lend_lease_tension value = -0.10 } 
+	set_variable = { var = HUN_join_faction_tension value = -0.5 } 
+	set_variable = { var = HUN_civilian_intel_to_others value = -5.0 }
+	set_variable = { var = HUN_army_intel_to_others value = 0 }
+	set_variable = { var = HUN_navy_intel_to_others value = -10.0 }
+	set_variable = { var = HUN_airforce_intel_to_others value = 0 }
+	set_variable = { var = HUN_embargo_cost_factor value = 1 }
+	set_variable = { var = HUN_send_volunteers_tension value = -0.40 } 
+	set_variable = { var = HUN_guarantee_tension value = -0.40 } 
+	set_variable = { var = HUN_drift_defence_factor value = 0.30 }
+	if = {
+		limit = { NOT = { has_country_flag = HUN_invested_in_ressources_flag }}
+		subtract_from_variable = { var = HUN_crisis_production_lack_of_resource_penalty_factor value = 0.05 }
+	}
+	
+	add_offsite_building = { type = industrial_complex level = 3 }
+	set_country_flag = HUN_trade_deal_accepted_flag
+	clr_country_flag = HUN_budget_management
+	HUN_give_ressources_ger = yes
+}
+
+HUN_set_trade_deal_ita = {
+	hidden_effect = { add_dynamic_modifier = { modifier = HUN_trade_deal_modifier } }
+	
+	clr_country_flag = HUN_no_trade_partner_flag
+	clr_country_flag = HUN_ger_trade_partner_flag
+	clr_country_flag = HUN_eng_trade_partner_flag
+	clr_country_flag = HUN_fra_trade_partner_flag
+	clr_country_flag = HUN_usa_trade_partner_flag
+	clr_country_flag = HUN_sov_trade_partner_flag
+	set_country_flag = HUN_ita_trade_partner_flag 
+	set_country_flag = HUN_axis_trade_flag
+	if = {
+		limit = {
+			NOT = { 
+				has_completed_focus = HUN_meet_with_the_members_of_the_rongyos_garda
+			}
+		}
+		custom_effect_tooltip = HUN_trade_deal_intro_axis 
+	}
+	
+	custom_effect_tooltip = HUN_trade_deal_axis_tt 
+	set_variable = { var = HUN_fascism_acceptance value = 50 }
+	set_variable = { var = HUN_fascism_drift value = 0.05 }
+	set_variable = { var = HUN_justify_war_goal_when_in_major_war_time value = -0.80 } 
+	set_variable = { var = HUN_generate_wargoal_tension value = -0.5 }
+	set_variable = { var = HUN_lend_lease_tension value = -0.10 } 
+	set_variable = { var = HUN_join_faction_tension value = -0.5 } 
+	set_variable = { var = HUN_civilian_intel_to_others value = -5.0 }
+	set_variable = { var = HUN_army_intel_to_others value = 0 }
+	set_variable = { var = HUN_navy_intel_to_others value = -10.0 }
+	set_variable = { var = HUN_airforce_intel_to_others value = 0 }
+	set_variable = { var = HUN_embargo_cost_factor value = 1 }
+	set_variable = { var = HUN_send_volunteers_tension value = -0.40 } 
+	set_variable = { var = HUN_guarantee_tension value = -0.40 } 
+	set_variable = { var = HUN_drift_defence_factor value = 0.30 }
+	if = {
+		limit = { NOT = { has_country_flag = HUN_invested_in_ressources_flag }}
+		subtract_from_variable = { var = HUN_crisis_production_lack_of_resource_penalty_factor value = 0.05 }
+	}
+	
+	add_offsite_building = { type = industrial_complex level = 3 }
+	set_country_flag = HUN_trade_deal_accepted_flag
+	clr_country_flag = HUN_budget_management
+	HUN_give_ressources_ita = yes
+}
+
+HUN_set_trade_deal_usa = {
+	hidden_effect = { add_dynamic_modifier = { modifier = HUN_trade_deal_modifier } }
+	
+	clr_country_flag = HUN_no_trade_partner_flag
+	clr_country_flag = HUN_eng_trade_partner_flag
+	clr_country_flag = HUN_fra_trade_partner_flag
+	clr_country_flag = HUN_ita_trade_partner_flag
+	clr_country_flag = HUN_ger_trade_partner_flag
+	clr_country_flag = HUN_sov_trade_partner_flag
+	set_country_flag = HUN_usa_trade_partner_flag 
+	set_country_flag = HUN_allied_trade_flag
+	
+	custom_effect_tooltip = HUN_trade_deal_intro_allies 
+	custom_effect_tooltip = HUN_trade_deal_allies_tt 
+	set_variable = { var = HUN_democratic_acceptance value = 50 }
+	set_variable = { var = HUN_democratic_drift value = 0.05 }
+	set_variable = { var = HUN_generate_wargoal_tension value = 0.5 }
+	set_variable = { var = HUN_join_faction_tension value = 0.40 }
+	set_variable = { var = HUN_lend_lease_tension value = -0.10 }
+	set_variable = { var = HUN_send_volunteers_tension value = -0.10 }
+	set_variable = { var = HUN_guarantee_tension value = -0.15 }
+	set_variable = { var = HUN_civilian_intel_to_others value = 0 }
+	set_variable = { var = HUN_army_intel_to_others value = -5.0 }
+	set_variable = { var = HUN_navy_intel_to_others value = 0 }
+	set_variable = { var = HUN_airforce_intel_to_others value = -5 }
+	set_variable = { var = HUN_embargo_cost_factor value = -0.5 }
+	set_variable = { var = HUN_embargo_threshold_factor value = -0.5 }
+	set_variable = { var = HUN_drift_defence_factor value = 0.30 }
+	if = {
+		limit = { NOT = { has_country_flag = HUN_invested_in_ressources_flag }}
+		subtract_from_variable = { var = HUN_crisis_production_lack_of_resource_penalty_factor value = 0.05 }
+	}
+	
+	add_offsite_building = { type = industrial_complex level = 3 }
+	set_country_flag = HUN_trade_deal_accepted_flag
+	clr_country_flag = HUN_budget_management
+	HUN_give_ressources_usa = yes
+}
+
+HUN_set_trade_deal_fra = {
+	hidden_effect = { add_dynamic_modifier = { modifier = HUN_trade_deal_modifier } }
+	
+	clr_country_flag = HUN_no_trade_partner_flag
+	clr_country_flag = HUN_usa_trade_partner_flag
+	clr_country_flag = HUN_eng_trade_partner_flag
+	clr_country_flag = HUN_ita_trade_partner_flag
+	clr_country_flag = HUN_sov_trade_partner_flag
+	clr_country_flag = HUN_ger_trade_partner_flag
+	set_country_flag = HUN_fra_trade_partner_flag 
+	set_country_flag = HUN_allied_trade_flag
+	
+	custom_effect_tooltip = HUN_trade_deal_intro_allies 
+	custom_effect_tooltip = HUN_trade_deal_allies_tt 
+	set_variable = { var = HUN_democratic_acceptance value = 50 }
+	set_variable = { var = HUN_democratic_drift value = 0.05 }
+	set_variable = { var = HUN_generate_wargoal_tension value = 0.5 }
+	set_variable = { var = HUN_join_faction_tension value = 0.40 }
+	set_variable = { var = HUN_lend_lease_tension value = -0.10 }
+	set_variable = { var = HUN_send_volunteers_tension value = -0.10 }
+	set_variable = { var = HUN_guarantee_tension value = -0.15 }
+	set_variable = { var = HUN_civilian_intel_to_others value = 0 }
+	set_variable = { var = HUN_army_intel_to_others value = -5.0 }
+	set_variable = { var = HUN_navy_intel_to_others value = 0 }
+	set_variable = { var = HUN_airforce_intel_to_others value = -5 }
+	set_variable = { var = HUN_embargo_cost_factor value = -0.5 }
+	set_variable = { var = HUN_embargo_threshold_factor value = -0.5 }
+	set_variable = { var = HUN_drift_defence_factor value = 0.30 }
+	if = {
+		limit = { NOT = { has_country_flag = HUN_invested_in_ressources_flag }}
+		subtract_from_variable = { var = HUN_crisis_production_lack_of_resource_penalty_factor value = 0.05 }
+	}
+	
+	add_offsite_building = { type = industrial_complex level = 3 }
+	set_country_flag = HUN_trade_deal_accepted_flag
+	clr_country_flag = HUN_budget_management
+	HUN_give_ressources_fra = yes
+}
+
+HUN_set_trade_deal_eng = {
+	hidden_effect = { add_dynamic_modifier = { modifier = HUN_trade_deal_modifier } }
+	
+	clr_country_flag = HUN_no_trade_partner_flag
+	clr_country_flag = HUN_usa_trade_partner_flag
+	clr_country_flag = HUN_fra_trade_partner_flag
+	clr_country_flag = HUN_ita_trade_partner_flag
+	clr_country_flag = HUN_ger_trade_partner_flag
+	clr_country_flag = HUN_sov_trade_partner_flag
+	set_country_flag = HUN_eng_trade_partner_flag 
+	set_country_flag = HUN_allied_trade_flag
+	
+	custom_effect_tooltip = HUN_trade_deal_intro_allies 
+	custom_effect_tooltip = HUN_trade_deal_allies_tt 
+	set_variable = { var = HUN_democratic_acceptance value = 50 }
+	set_variable = { var = HUN_democratic_drift value = 0.05 }
+	set_variable = { var = HUN_generate_wargoal_tension value = 0.5 }
+	set_variable = { var = HUN_join_faction_tension value = 0.40 }
+	set_variable = { var = HUN_lend_lease_tension value = -0.10 }
+	set_variable = { var = HUN_send_volunteers_tension value = -0.10 }
+	set_variable = { var = HUN_guarantee_tension value = -0.15 }
+	set_variable = { var = HUN_civilian_intel_to_others value = 0 }
+	set_variable = { var = HUN_army_intel_to_others value = -5.0 }
+	set_variable = { var = HUN_navy_intel_to_others value = 0 }
+	set_variable = { var = HUN_airforce_intel_to_others value = -5 }
+	set_variable = { var = HUN_embargo_cost_factor value = -0.5 }
+	set_variable = { var = HUN_embargo_threshold_factor value = -0.5 }
+	set_variable = { var = HUN_drift_defence_factor value = 0.30 }
+	if = {
+		limit = { NOT = { has_country_flag = HUN_invested_in_ressources_flag }}
+		subtract_from_variable = { var = HUN_crisis_production_lack_of_resource_penalty_factor value = 0.05 }
+	}
+	
+	add_offsite_building = { type = industrial_complex level = 3 }
+	set_country_flag = HUN_trade_deal_accepted_flag
+	clr_country_flag = HUN_budget_management
+	HUN_give_ressources_eng = yes
+}
+
+HUN_set_trade_deal_sov = {
+	hidden_effect = { add_dynamic_modifier = { modifier = HUN_trade_deal_modifier } }
+	
+	clr_country_flag = HUN_no_trade_partner_flag
+	clr_country_flag = HUN_eng_trade_partner_flag
+	clr_country_flag = HUN_fra_trade_partner_flag
+	clr_country_flag = HUN_usa_trade_partner_flag
+	clr_country_flag = HUN_ita_trade_partner_flag
+	clr_country_flag = HUN_ger_trade_partner_flag
+	set_country_flag = HUN_sov_trade_partner_flag 
+	set_country_flag = HUN_comintern_trade_flag
+	
+	custom_effect_tooltip = HUN_trade_deal_intro_comintern  
+	custom_effect_tooltip = HUN_trade_deal_comintern_tt 
+	set_variable = { var = HUN_communism_acceptance value = 50 }
+	set_variable = { var = HUN_communism_drift value = 0.05 }
+	set_variable = { var = HUN_generate_wargoal_tension value = -0.5 } 
+	set_variable = { var = HUN_civilian_intel_to_others value = -10.0 } 
+	set_variable = { var = HUN_army_intel_to_others value = -3.5 } 
+	set_variable = { var = HUN_navy_intel_to_others value = -7.5 } 
+	set_variable = { var = HUN_airforce_intel_to_others value = -2.5 } 
+	set_variable = { var = HUN_join_faction_tension value = -0.5 } 
+	set_variable = { var = HUN_embargo_threshold_factor value = 0.5 } 
+	set_variable = { var = HUN_lend_lease_tension value = -0.10 } 
+	set_variable = { var = HUN_guarantee_tension value = -0.40 } 
+	set_variable = { var = HUN_drift_defence_factor value = 0.30 } 
+	set_variable = { var = HUN_send_volunteers_tension value = -0.40 }
+	if = {
+		limit = { NOT = { has_country_flag = HUN_invested_in_ressources_flag }}
+		subtract_from_variable = { var = HUN_crisis_production_lack_of_resource_penalty_factor value = 0.05 }
+	}
+	
+	add_offsite_building = { type = industrial_complex level = 3 }
+	set_country_flag = HUN_trade_deal_accepted_flag
+	clr_country_flag = HUN_budget_management
+	HUN_give_ressources_sov = yes
+}
+
+HUN_give_ressources_eng = {
+	add_resource = {
+		type = chromium
+		amount = 30
+		state = 43
+	}
+	
+}
+
+HUN_remove_ressources_eng = {
+	add_resource = {
+		type = chromium
+		amount = -30
+		state = 43
+	}
+}
+
+HUN_give_ressources_fra = {
+	FRA = {
+		give_resource_rights = {
+			receiver = HUN
+			state = 19
+			resources = { steel }
+		}
+	}
+}
+
+HUN_remove_ressources_fra = {
+	HUN = { remove_resource_rights = 19 }
+}
+
+HUN_give_ressources_ger = {
+	GER = {
+		give_resource_rights = {
+			receiver = HUN
+			state = 60
+			resources = { steel }
+		}
+	}
+}
+
+
+HUN_remove_ressources_ger = {
+	HUN = { remove_resource_rights = 60 }
+}
+
+HUN_give_ressources_ita = {
+	add_resource = {
+		type = tungsten
+		amount = 30
+		state = 43
+	}
+	
+}
+
+HUN_remove_ressources_ita = {
+	add_resource = {
+		type = tungsten
+		amount = -30
+		state = 43
+	}
+}
+
+HUN_give_ressources_sov = {
+	SOV = {
+		give_resource_rights = {
+			receiver = HUN
+			state = 232
+			resources = { oil }
+		}
+	}
+}
+
+HUN_remove_ressources_sov = {
+	HUN = { remove_resource_rights = 232 }
+}
+
+HUN_give_ressources_usa = {
+	USA = {
+		give_resource_rights = {
+			receiver = HUN
+			state = 382
+			resources = { oil }
+		}
+	}
+}
+
+HUN_remove_ressources_usa = {
+	HUN = { remove_resource_rights = 382 }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

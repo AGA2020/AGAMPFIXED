@@ -1,0 +1,269 @@
+﻿###########################
+# Little Hungary Events
+###########################
+
+add_namespace = LH_ENG
+
+#Hungary asks for help in economic crisis
+country_event = {
+	id = LH_ENG.1
+	title = LH_ENG.1.t
+	desc = LH_ENG.1.d 
+	
+	fire_only_once = no
+	
+	is_triggered_only = yes
+	
+	picture = GFX_report_event_generic_conference	
+	
+	option = {# We will help
+		name = LH_ENG.1.a
+		
+		ai_chance = {
+			factor = 30
+			modifier = {
+				has_opinion = { target = HUN value > 40} 
+				factor = 2
+			}
+			modifier = {
+				has_opinion = { target = HUN value > 0} 
+				factor = 2
+			}
+			modifier = {
+				is_in_faction_with = HUN 
+				factor = 2
+			}
+			modifier = {
+				GER =  { check_variable = { var = ger_alignment_influence value = 15 compare = less_than_or_equals } }
+				factor = 2
+			}
+		}
+		
+		HUN = {
+			country_event = { id = LH.33 } 
+			
+		}
+	
+		add_political_power = 100
+	
+	}
+	
+	option = {# We have no interest in such things
+		name = LH_ENG.1.b
+		
+		ai_chance = {
+			factor = 40
+			modifier = {
+				has_opinion = { target = HUN value < 0} 
+				factor = 5
+			}
+			modifier = {
+				has_opinion = { target = HUN value < 50} 
+				factor = 2
+			}
+			modifier = {
+				HUN = { 
+					OR = {
+						has_completed_focus = HUN_renounce_trianon 
+						has_completed_focus = HUN_renounce_trianon_monarch
+					}
+				}
+				factor = 5
+			}
+			modifier = {
+				GER =  { check_variable = { var = ger_alignment_influence value = 15 compare = greater_than_or_equals } }
+				factor = 2
+			}
+		}
+		
+		HUN = {
+			country_event = { id = LH.34 }
+		}
+	}
+}
+
+#Hungary asks for help in economic crisis !!2!!
+country_event = {
+	id = LH_ENG.2
+	title = LH_ENG.2.t
+	desc = LH_ENG.2.d 
+	
+	fire_only_once = no
+	
+	is_triggered_only = yes
+	
+	picture = GFX_report_event_generic_conference	
+	
+	option = {# We will help
+		name = LH_ENG.2.a
+		
+		ai_chance = {
+			factor = 30
+			modifier = {
+				has_opinion = { target = HUN value > 50} 
+				factor = 2
+			}
+			modifier = {
+				has_opinion = { target = HUN value > 0} 
+				factor = 2
+			}
+			modifier = {
+				is_in_faction_with = HUN
+				factor = 2
+			}
+			modifier = {
+				GER =  { check_variable = { var = ger_alignment_influence value = 25 compare = less_than_or_equals } }
+				factor = 2
+			}
+		}
+		
+		HUN = {
+			country_event = { id = LH.39 }
+			
+		}
+	
+		add_political_power = 100
+	
+	}
+	
+	option = {# We have no interest in such things
+		name = LH_ENG.2.b
+		
+		ai_chance = {
+			factor = 40
+			modifier = {
+				has_opinion = { target = HUN value < 0} 
+				factor = 5
+			}
+			modifier = {
+				has_opinion = { target = HUN value < 50} 
+				factor = 2
+			}
+			modifier = {
+				HUN = { 
+					OR = {
+						has_completed_focus = HUN_renounce_trianon 
+						has_completed_focus = HUN_renounce_trianon_monarch
+					}
+				}
+				factor = 5
+			}
+			modifier = {
+				GER =  { check_variable = { var = ger_alignment_influence value = 25 compare = greater_than_or_equals } }
+				factor = 2
+			}
+		}
+		
+		HUN = {
+			country_event = { id = LH.40 }
+		}
+	}
+}
+
+#Hungary asks for help in economic crisis !!3!!
+country_event = {
+	id = LH_ENG.3
+	title = LH_ENG.3.t
+	desc = LH_ENG.3.d 
+	
+	fire_only_once = no
+	
+	is_triggered_only = yes
+	
+	picture = GFX_report_event_generic_conference	
+	
+	option = {# We will help
+		name = LH_ENG.3.a
+		
+		ai_chance = {
+			factor = 30
+			modifier = {
+				has_opinion = { target = HUN value > 40} 
+				factor = 2
+			}
+			modifier = {
+				has_opinion = { target = HUN value > 0} 
+				factor = 2
+			}
+			modifier = {
+				is_in_faction_with = HUN
+				factor = 2
+			}
+			modifier = {
+				GER =  { check_variable = { var = ger_alignment_influence value = 35 compare = less_than_or_equals } }
+				factor = 2
+			}
+		}
+		
+		HUN = {
+			country_event = { id = LH.41 }
+			
+		}
+	
+		add_political_power = 100
+	
+	}
+	
+	option = {# We have no interest in such things
+		name = LH_ENG.3.b
+		
+		ai_chance = {
+			factor = 40
+			modifier = {
+				has_opinion = { target = HUN value < 0} 
+				factor = 5
+			}
+			modifier = {
+				has_opinion = { target = HUN value < 50} 
+				factor = 2
+			}
+			modifier = {
+				HUN = { 
+					OR = {
+						has_completed_focus = HUN_renounce_trianon 
+						has_completed_focus = HUN_renounce_trianon_monarch
+					}
+				}
+				factor = 5
+			}
+			modifier = {
+				GER =  { check_variable = { var = ger_alignment_influence value = 35 compare = greater_than_or_equals } }
+				factor = 2
+			}
+		}
+		
+		HUN = {
+			country_event = { id = LH.42 }
+		}
+	}
+}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+

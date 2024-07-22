@@ -1,0 +1,555 @@
+﻿capital = 973
+
+oob = "HUN_1936"
+if = {
+	limit = { has_dlc = "By Blood Alone" } 
+		set_air_oob = "HUN_1936_air"
+		set_technology = {
+			aa_lmg = 1
+			engines_1 = 1
+			engines_2 = 1
+			early_bombs = 1
+			aircraft_construction = 1
+			iw_small_airframe = 1
+			iw_medium_airframe = 1
+		}
+	else = {
+		set_air_oob = "HUN_1936_air_l"
+		set_technology = {
+			early_fighter = 1
+			fighter1 = 1
+			early_bomber = 1
+			tactical_bomber1 = 1
+			strategic_bomber1 = 1
+			CAS1 = 1
+			naval_bomber1 = 1
+		}
+	}
+}
+
+
+
+set_research_slots = 3
+set_stability = 0.6
+set_war_support = 0.35
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1		
+	tech_recon = 1
+	tech_trucks = 1
+	gw_artillery = 1
+	
+	fuel_silos = 1
+	basic_train = 1
+}
+
+
+if = {
+	limit = {
+		NOT = {
+			has_dlc = "No Step Back"
+		}
+	}
+	set_technology = {
+		gwtank = 1
+		basic_light_tank = 1
+	}
+}
+if = {
+	limit = {
+		
+		has_dlc = "No Step Back"
+		
+	}
+	set_technology = {
+		gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+	}
+}
+
+if = {
+	limit = {
+		has_dlc = "Death or Dishonor"
+	}
+	if = {
+		limit = { has_dlc = "Arms Against Tyranny" }
+		add_ideas = { HUN_treaty_of_triannon_aat }
+	}
+	if = {
+		limit = {
+			NOT = { has_dlc = "Arms Against Tyranny" }
+		}
+		add_ideas = { HUN_treaty_of_triannon }
+	}
+	add_ideas = {
+		disarmed_nation
+		HUN_monarchy_without_monarch
+		HUN_split_nation
+	}
+	add_dynamic_modifier = { modifier = HUN_move_dynamic_modifier }
+	add_dynamic_modifier = { modifier = HUN_economic_crisis_3 }
+	set_variable = { HUN_move_surrender_limit = 0.2 }
+	set_variable = { HUN_move_drift_defence_factor = -0.3 }
+	set_variable = { HUN_move_stability_factor = -0.1 }
+	set_variable = { HUN_move_command_power_gain = 0.2 }
+	set_variable = { HUN_move_conscription = 0.002 }
+	set_variable = { HUN_move_high_command_cost = -0.15 }
+	### SET RED TERROR ###
+	155 = {
+		add_dynamic_modifier = {
+			modifier = HUN_red_terror_state
+		}
+		set_variable = { hun_red_terror_recruitable = -0.4 }
+		set_variable = { hun_red_terror_build_speed = -0.25 }
+		set_variable = { hun_red_terror_stability = -0.1 }
+	}
+	972 = {
+		add_dynamic_modifier = {
+			modifier = HUN_red_terror_state
+		}
+		set_variable = { hun_red_terror_recruitable = -0.4 }
+		set_variable = { hun_red_terror_build_speed = -0.25 }
+		set_variable = { hun_red_terror_stability = -0.1 }
+	}
+}
+
+country_lock_all_division_template = yes
+
+if = {
+	limit = {
+		has_dlc = "By Blood Alone"
+	}
+	create_equipment_variant = {
+		name = "WM-16"
+		type = small_plane_cas_airframe_0
+		modules = {
+			fixed_main_weapon_slot = bomb_locks
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+	}
+}
+
+
+if = {
+	limit = {
+		#has_dlc = Battle for the Bosporus
+	}
+	add_opinion_modifier = { 
+		target = CZE
+		modifier = BFTB_incongruous_neighbors
+	}
+	add_opinion_modifier = { 
+		target = ROM
+		modifier = BFTB_incongruous_neighbors
+	}
+	add_opinion_modifier = { 
+		target = YUG
+		modifier = BFTB_incongruous_neighbors
+	}
+}
+
+1939.1.1 = {
+	if = {
+		limit = {
+			has_dlc = "Arms Against Tyranny"
+		}
+		remove_ideas = HUN_treaty_of_triannon_aat
+	}
+	if = {
+		limit = {
+			NOT = { has_dlc = "Arms Against Tyranny" }
+		}
+		remove_ideas = HUN_treaty_of_triannon
+	}
+
+	add_political_power = 1198
+	add_command_power = 100
+
+	if = {
+		limit = {
+			has_dlc = "Death or Dishonor"
+		}
+		complete_national_focus = HUN_economic_intervention
+		complete_national_focus = HUN_secret_rearmament
+		complete_national_focus = HUN_war_games
+		complete_national_focus = HUN_theoretical_air_efforts
+		complete_national_focus = HUN_trade_deal_with_germany
+		complete_national_focus = HUN_joint_aluminum_mining_company
+		complete_national_focus = HUN_reaffirm_territorial_claims
+		complete_national_focus = HUN_announce_the_gyor_program
+		complete_national_focus = HUN_civilian_industry
+		complete_national_focus = HUN_reintegrate_the_railroads
+		complete_national_focus = HUN_invite_foreign_investors
+		complete_national_focus = HUN_bled_agreement
+		complete_national_focus = HUN_army_maneuvers
+		complete_national_focus = HUN_establish_the_air_force
+		complete_national_focus = HUN_demand_southern_slovakia
+		complete_national_focus = HUN_mobile_focus
+		complete_national_focus = HUN_license_foreign_LH_designs
+		
+		#Handle this manually
+		unlock_national_focus = HUN_renounce_the_treaty_of_trianon
+		add_ideas = {
+			limited_conscription
+			HUN_treaty_of_triannon_3
+		}
+
+		unlock_national_focus = HUN_strengthen_fascists #To avoid leader ID clash
+		add_ideas = HUN_strengthen_fascists
+
+		else = {
+			#generic focuses
+			complete_national_focus = army_effort
+			complete_national_focus = equipment_effort
+			complete_national_focus = motorization_effort
+			complete_national_focus = aviation_effort
+			complete_national_focus = construction_effort_2
+			complete_national_focus = production_effort_2
+			complete_national_focus = infrastructure_effort
+			complete_national_focus = industrial_effort
+			complete_national_focus = construction_effort
+			complete_national_focus = production_effort		
+		}
+	}
+	
+	set_technology = {
+		fighter1 = 1
+		early_bomber = 1
+		tactical_bomber1 = 1
+		interwar_artillery = 1
+		interwar_antitank = 1
+		interwar_antiair = 1
+		tech_engineers = 1
+		tech_mountaineers = 1
+		motorised_infantry = 1
+		infantry_weapons2 = 1
+		support_weapons = 1
+
+		#doctrines
+		air_superiority = 1
+		grand_battle_plan = 1
+		trench_warfare = 1
+		fleet_in_being = 1
+		battlefleet_concentration = 1
+		convoy_sailing = 1
+
+		#electronics
+		electronic_mechanical_engineering = 1
+		radio = 1
+		radio_detection = 1
+		mechanical_computing = 1
+		computing_machine = 1
+
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		construction1 = 1
+		construction2 = 1
+		dispersed_industry = 1
+		dispersed_industry2 = 1
+		fuel_refining = 1
+	}
+	if = {
+		limit = {
+			NOT = {
+				has_dlc = "No Step Back"
+			}
+		}
+		set_technology = {
+			basic_light_tank = 1
+	
+		}
+		set_oob = "HUN_1939"
+	}
+	if = {
+		limit = {
+			
+			has_dlc = "No Step Back"
+			
+		}
+		set_technology = {
+			basic_light_tank_chassis = 1
+	
+		}
+
+		create_equipment_variant = {
+			name = "Toldi 38M"
+			type = light_tank_chassis_1
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_small_cannon
+				turret_type_slot = tank_light_two_man_tank_turret
+				suspension_type_slot = tank_torsion_bar_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_diesel_engine
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 3
+				tank_nsb_armor_upgrade = 2
+			}
+			icon = "GFX_generic_light_BAA_camo"
+		}
+		set_oob = "HUN_1939_nsb"
+	}
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1935.3.31"
+	election_frequency = 48
+	elections_allowed = yes
+}
+set_popularities = {
+	democratic = 19
+	fascism = 14
+	neutrality = 67
+	communism = 0
+}
+
+#Start Horty as neutral if DOD
+
+### SET FLAGS AND VARIABLES ###
+
+set_variable = { HUN_trade_deal_cost = 20 }
+set_variable = { HUN_trade_deal_cost_germany = 20 }
+
+### ECONOMIC CRISIS ###
+ 
+set_variable = { HUN_crisis_consumer_goods_factor = 0.15 }
+set_variable = { HUN_crisis_industrial_capacity_factory = -0.20 }
+set_variable = { HUN_crisis_production_speed_buildings_factor = -0.25 }
+set_variable = { HUN_crisis_production_lack_of_resource_penalty_factor = 0.15 }
+set_variable = { HUN_good_crisis_consumer_goods_factor = 0.15 }
+set_variable = { HUN_good_crisis_industrial_capacity_factory = -0.20 }
+set_variable = { HUN_good_crisis_production_speed_buildings_factor = -0.25 }
+set_variable = { HUN_good_crisis_production_lack_of_resource_penalty_factor = 0.15 }
+
+### HUNGARIAN ARMY ###
+set_variable = { HUN_license_purchase_cost = 0 }
+set_variable = { HUN_license_armor_purchase_cost = 0 }
+set_variable = { HUN_hungarian_army_paratrooper_max_org_factor = 0 }
+set_variable = { HUN_hungarian_army_mountaineers_max_org_factor = 0 }
+set_variable = { HUN_hungarian_army_mountaineers_defence_factor = 0 }
+set_variable = { HUN_hungarian_army_infantry_defence_factor = 0 }
+set_variable = { HUN_hungarian_army_cavalry_speed_factor = 0 }
+set_variable = { HUN_hungarian_army_cavalry_defence_factor = 0 }
+set_variable = { HUN_hungarian_army_spirit_cost = 0 }
+set_variable = { HUN_hungarian_army_supply_node_range = 0 }
+set_variable = { HUN_hungarian_army_garrison_resistance = 0 }
+set_variable = { HUN_hungarian_army_special_forces_out_of_supply_factor = 0 }
+set_variable = { HUN_hungarian_army_cas_damage_reduction = 0 }
+set_variable = { HUN_hungarian_hot_acc = 0 }
+set_variable = { HUN_hungarian_army_max_dig_in_factor = 0 }
+set_variable = { HUN_hungarian_army_morale_factor = 0 }
+set_variable = { HUN_hungarian_army_cavalry_attack_factor = 0 }
+set_variable = { HUN_hungarian_army_core_defence_factor = 0 }
+set_variable = { HUN_hungarian_army_attack_factor = 0 }
+set_variable = { HUN_hungarian_army_org_regain = 0 }
+set_variable = { HUN_hungarian_reinforcement_rate = 0 }
+set_variable = { HUN_hungarian_army_supply_consumption_factor = 0 }
+set_variable = { HUN_hungarian_army_heat_attrition_factor = 0 }
+set_variable = { HUN_hungarian_army_conscription_factor = 0 }
+set_variable = { HUN_hungarian_army_org_factor = 0 }
+set_variable = { HUN_hungarian_army_xp_gain = 0 }
+set_variable = { HUN_hungarian_army_speed_factor = 0 }
+set_variable = { HUN_army_consumer_goods_factor = 0 }
+set_variable = { HUN_modifier_army_sub_unit_militia_attack_factor = 0 }
+set_variable = { HUN_modifier_army_sub_unit_militia_defence_factor = 0 }
+set_variable = { HUN_modifier_army_sub_unit_militia_speed_factor = 0 }
+set_variable = { HUN_experience_gain_army = 0 }
+
+
+
+### LEADERS ###
+
+recruit_character = HUN_miklos_horthy
+recruit_character = HUN_parliament_without_leader
+recruit_character = HUN_otto_von_habsburg
+recruit_character = HUN_joseph_august_habsburg
+recruit_character = HUN_matyas_rakosi
+recruit_character = HUN_bela_kun
+recruit_character = HUN_arpad_szakasits
+recruit_character = HUN_exiled_leaders
+recruit_character = HUN_franz_friedrich
+recruit_character = HUN_istvan_szechenyi
+recruit_character = HUN_albrecht_habsburg
+recruit_character = HUN_regency_council
+recruit_character = HUN_endre_zsilinszky
+recruit_character = HUN_imre_nagy
+recruit_character = HUN_ivan_hejjas
+recruit_character = HUN_janos_kadar
+recruit_character = HUN_bela_imredy
+recruit_character = HUN_karl_pius_habsburg
+recruit_character = HUN_wilhelm_franz_habsburg
+recruit_character = HUN_laszlo_magashazy
+
+### GENERALS AND ADMIRALS ###
+
+recruit_character = HUN_geza_lakatos
+recruit_character = HUN_maximilian_habsburg
+recruit_character = HUN_mihaly_farkas
+recruit_character = HUN_ivan_hindy
+recruit_character = HUN_karoly_beregfy
+recruit_character = HUN_lajos_veress
+recruit_character = HUN_ferenc_feketehalmyczeydner
+recruit_character = HUN_shvoy_kalman
+recruit_character = HUN_gyorgy_jendrassik
+recruit_character = HUN_ferenc_szombathelyi
+recruit_character = HUN_hugo_sonyi
+recruit_character = HUN_janos_voros
+recruit_character = HUN_gusztav_hennyey
+recruit_character = HUN_lajos_csatay
+recruit_character = HUN_antal_vattay
+recruit_character = HUN_bela_miklos
+recruit_character = HUN_jeno_major
+recruit_character = HUN_karoly_bartha
+recruit_character = HUN_imre_czlenner
+recruit_character = HUN_alajos_beldy
+recruit_character = HUN_zoltan_decleva
+recruit_character = HUN_vilmos_nagy
+recruit_character = HUN_gabor_faragho
+recruit_character = HUN_ferenc_farkas
+recruit_character = HUN_zoltan_szugyi
+recruit_character = HUN_imre_kemeri_nagy
+recruit_character = HUN_pal_pronay
+recruit_character = HUN_kalman_szell
+recruit_character = HUN_jozsef_grassy
+recruit_character = HUN_maximilian_angelis
+recruit_character = HUN_janos_kiss
+recruit_character = HUN_ferenc_hanisch
+recruit_character = HUN_arpad_henney
+
+### MILITARY HIGH COMMAND ###
+
+recruit_character = HUN_gusztav_jany
+recruit_character = HUN_dezso_laszlo
+recruit_character = HUN_jeno_ratz
+recruit_character = HUN_henrik_werth
+recruit_character = HUN_ferenc_szentnemedy
+recruit_character = HUN_bela_rakosi
+recruit_character = HUN_sandor_magyarossy
+recruit_character = HUN_laszlo_hary
+recruit_character = HUN_reszo_kastner
+recruit_character = HUN_francois_deak
+recruit_character = HUN_laszlo_tomor
+recruit_character = HUN_waldemar_kenese
+recruit_character = HUN_erno_billnitzer
+
+### THEORISTS ###
+
+recruit_character = HUN_zoltan_bay
+recruit_character = HUN_miklos_straussler
+
+### POLITICAL ADVISORS ###
+
+recruit_character = HUN_bela_lukacs
+recruit_character = HUN_kalman_rattkay
+recruit_character = HUN_bela_bangha
+recruit_character = HUN_kalman_kanya
+recruit_character = HUN_tihamer_fabinyi
+recruit_character = HUN_kalman_hubay
+recruit_character = HUN_emil_szakvary
+recruit_character = HUN_jozsef_varga
+recruit_character = HUN_lajos_remenyi_schneller
+recruit_character = HUN_vilmos_roder
+recruit_character = HUN_zoltan_tildy
+recruit_character = HUN_jozsef_szell
+recruit_character = HUN_kalman_daranyi
+recruit_character = HUN_lajos_szasz
+recruit_character = HUN_tasnadi_andras
+recruit_character = HUN_homan_balint
+recruit_character = HUN_istvan_bethlen
+recruit_character = HUN_ferenc_keresztes_fischer
+recruit_character = HUN_miklos_kallay
+recruit_character = HUN_istvan_horthy
+recruit_character = HUN_miklos_horthy_jr
+recruit_character = HUN_pal_teleki
+recruit_character = HUN_laszlo_bardossy
+recruit_character = HUN_istvan_friedrich
+recruit_character = HUN_szalasi_ferenc
+recruit_character = HUN_maderspach_viktor
+recruit_character = HUN_istvan_antal
+recruit_character = HUN_jeno_szolosi
+recruit_character = HUN_pater_kun
+recruit_character = HUN_ferenc_rajniss
+recruit_character = HUN_andor_jaross
+recruit_character = HUN_gusztav_gratz
+recruit_character = HUN_karoly_peyer
+recruit_character = HUN_peter_veres
+recruit_character = HUN_ede_atzel
+recruit_character = HUN_lajos_dinnyes
+recruit_character = HUN_tibor_eckhardt
+recruit_character = HUN_karoly_rassay
+recruit_character = HUN_geza_malasits
+recruit_character = HUN_ferenc_nagy
+recruit_character = HUN_gyula_peidl
+recruit_character = HUN_bela_kovacs
+recruit_character = HUN_laszlo_rajk
+recruit_character = HUN_erno_gero
+recruit_character = HUN_gabor_peter
+recruit_character = HUN_gyula_gombos_de_jakfa
+recruit_character = HUN_dome_sztojay
+recruit_character = HUN_zoltan_boszormeny
+recruit_character = HUN_fidel_palffy
+recruit_character = HUN_zoltan_mesko
+recruit_character = HUN_sandor_festetics
+recruit_character = HUN_andras_csaky
+recruit_character = HUN_ferenc_munnich
+recruit_character = HUN_sandor_garbai
+recruit_character = HUN_gyorgy_nyisztor
+recruit_character = HUN_gyorgy_lukacs
+recruit_character = HUN_jozsef_pogany
+recruit_character = HUN_bela_vago
+recruit_character = HUN_jozsef_revai
+recruit_character = HUN_istvan_szirmai
+recruit_character = HUN_gyorgy_aczel
+recruit_character = HUN_jozsef_dudas
+recruit_character = HUN_pal_losonczi
+recruit_character = HUN_gyorgy_marosan
+recruit_character = HUN_pal_maleter
+recruit_character = HUN_janos_peter
+recruit_character = HUN_istvan_bata
+recruit_character = HUN_jozsef_mindszenty
+
+
+recruit_character = HUN_thomas_szell
+
+### PRIME MINISTER STUFF ###
+
+
+recruit_character = HUN_kalman_daranyi_prime
+recruit_character = HUN_jozsef_szell_prime
+recruit_character = HUN_bela_imredy_prime
+recruit_character = HUN_szalasi_ferenc_prime
+recruit_character = HUN_geza_lakatos_prime
+recruit_character = HUN_istvan_bethlen_prime
+recruit_character = HUN_arpad_szakasits_prime
+recruit_character = HUN_karoly_peyer_prime
+recruit_character = HUN_endre_zsilinszky_prime
+recruit_character = HUN_ferenc_keresztes_fischer_prime
+recruit_character = HUN_miklos_kallay_prime
+recruit_character = HUN_pal_teleki_prime
+recruit_character = HUN_laszlo_bardossy_prime
+
+activate_advisor = HUN_gyula_gombos_de_jakfa
+
+
+
+
+1939.1.1 = {
+	set_politics = {
+		ruling_party = fascism
+		last_election = "1939.5.29"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+	set_popularities = {
+		democratic = 27
+		fascism = 70
+		communism = 3
+	}
+}
