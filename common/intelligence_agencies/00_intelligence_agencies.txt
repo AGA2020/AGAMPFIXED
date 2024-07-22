@@ -429,33 +429,50 @@ intelligence_agency = {
 	available = { original_tag = HOL }
 }
 
+
+
 intelligence_agency = {
 
 	picture = GFX_intelligence_agency_logo_hun
-	names = { "2. Vezérkari Főnökség" }
+	names = { "VKF-2" }
+	
+	default = { tag = HUN }
+	available = { original_tag = HUN }
+}
+
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_logo_aus_hun
+	names = { "Evidenzbüro" }
 	
 	default = { tag = HUN }
 	available = { 
-		original_tag = HUN 
-		OR = {
-			NOT = { has_government = communism }
-			is_ai = no
-		}
+		original_tag = HUN
+		has_completed_focus = HUN_accept_the_habsburg_prince
 	}
 }
 
 intelligence_agency = {
 
-	picture = GFX_intelligence_agency_logo_hun_communism
+	picture = GFX_intelligence_agency_logo_nszk
+	names = { "Nemzeti Számonkérő Szervezet" }
+	
+	default = { tag = HUN }
+	available = { 
+		original_tag = HUN
+		has_completed_focus = HUN_empower_the_far_right
+	}
+}
+
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_logo_avh
 	names = { "Államvédelmi Hatóság" }
 	
 	default = { tag = HUN }
 	available = { 
-		original_tag = HUN 
-		OR = {
-			has_government = communism
-			is_ai = no
-		}
+		original_tag = HUN
+		has_government = communism
 	}
 }
 
@@ -1036,7 +1053,6 @@ intelligence_agency = {
 				controls_state = 4
 			}
 			OR = { 
-				original_tag = HUN
 				original_tag = CZE
 				original_tag = AUS
 			}

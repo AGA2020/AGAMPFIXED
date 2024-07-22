@@ -1,0 +1,283 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_report_event_hun_election_habsburg"
+		texturefile = "gfx/event_pictures/report_event_hun_election_habsburg.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_PAP_vatican"
+		texturefile = "gfx/event_pictures/report_event_PAP_vatican.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_hun_esztergom_church"
+		texturefile = "gfx/event_pictures/report_event_hun_esztergom_church.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_hun_eucharistic_congress"
+		texturefile = "gfx/event_pictures/report_event_hun_eucharistic_congress.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_mindszenty_per"
+		texturefile = "gfx/event_pictures/report_event_mindszenty_per.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_hun_szalasi_visit"
+		texturefile = "gfx/event_pictures/report_event_hun_szalasi_visit.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_hun_imredy_pope"
+		texturefile = "gfx/event_pictures/report_event_hun_imredy_pope.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_hun_lang_gyar"
+		texturefile = "gfx/event_pictures/report_event_hun_lang_gyar.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_hun_oilfields"
+		texturefile = "gfx/event_pictures/report_event_hun_oilfields.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_hun_cordatic"
+		texturefile = "gfx/event_pictures/report_event_hun_cordatic.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_hun_csepel_kikoto"
+		texturefile = "gfx/event_pictures/report_event_hun_csepel_kikoto.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_hun_tungsram"
+		texturefile = "gfx/event_pictures/report_event_hun_tungsram.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_hun_standard"
+		texturefile = "gfx/event_pictures/report_event_hun_standard.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_news_event_magashazy"
+		texturefile = "gfx/event_pictures/news_event_magashazy.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_news_event_eucharistic_congress"
+		texturefile = "gfx/event_pictures/news_event_eucharistic_congress.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_news_event_almasy"
+		texturefile = "gfx/event_pictures/news_event_almasy.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_kadar_arrest"
+		texturefile = "gfx/event_pictures/report_event_kadar_arrest.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_news_event_negyesfogat"
+		texturefile = "gfx/event_pictures/news_event_negyesfogat.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_rajk_per"
+		texturefile = "gfx/event_pictures/report_event_rajk_per.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_solyom_per"
+		texturefile = "gfx/event_pictures/report_event_solyom_per.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_hun_oncsa"
+		texturefile = "gfx/event_pictures/report_event_hun_oncsa.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_hun_nagy_speech"
+		texturefile = "gfx/event_pictures/report_event_hun_nagy_speech.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_hun_horthy_succession"
+		texturefile = "gfx/event_pictures/report_event_hun_horthy_succession.dds"
+	}
+		
+	spriteType = {
+		name = "GFX_report_event_hun_kabsz"
+		texturefile = "gfx/event_pictures/report_event_hun_kabsz.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_news_event_imredy_speech"
+		texturefile = "gfx/event_pictures/news_event_imredy_speech.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_news_event_rakosi_trial"
+		texturefile = "gfx/event_pictures/news_event_rakosi_trial.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_news_event_rakosi_speech"
+		texturefile = "gfx/event_pictures/news_event_rakosi_speech.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_news_event_rakosi_speech_2"
+		texturefile = "gfx/event_pictures/news_event_rakosi_speech_2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_news_event_rakosi_birthday"
+		texturefile = "gfx/event_pictures/news_event_rakosi_birthday.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_hun_gyori_program"
+		texturefile = "gfx/event_pictures/report_event_hun_gyori_program.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_carte_rouge"
+		texturefile = "gfx/event_pictures/report_event_carte_rouge.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_hun_magyar_elet_mozgalom"
+		texturefile = "gfx/event_pictures/report_event_hun_magyar_elet_mozgalom.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_hun_magyarfold"
+		texturefile = "gfx/event_pictures/report_event_hun_magyarfold.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_hun_kkp"
+		texturefile = "gfx/event_pictures/report_event_hun_kkp.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_news_event_szent_jobb"
+		texturefile = "gfx/event_pictures/news_event_szent_jobb.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_news_event_szalasi_death"
+		texturefile = "gfx/event_pictures/news_event_szalasi_death.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_hun_arrow_cross_meeting"
+		texturefile = "gfx/event_pictures/report_event_hun_arrow_cross_meeting.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_news_event_szalasi_prison"
+		texturefile = "gfx/event_pictures/news_event_szalasi_prison.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_hun_istvan_dies_in_crash"
+		texturefile = "gfx/event_pictures/report_event_hun_istvan_dies_in_crash.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_hun_istvan_survives"
+		texturefile = "gfx/event_pictures/report_event_hun_istvan_survives.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_hun_dinner"
+		texturefile = "gfx/event_pictures/report_event_hun_dinner.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_hun_fascist_king"
+		texturefile = "gfx/event_pictures/report_event_hun_fascist_king.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_three_kingdoms"
+		texturefile = "gfx/event_pictures/report_event_three_kingdoms.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_hun_marriage_otto"
+		texturefile = "gfx/event_pictures/report_event_hun_marriage_otto.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_hun_horthy_enter"
+		texturefile = "gfx/event_pictures/report_event_hun_horthy_enter.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_hun_parade"
+		texturefile = "gfx/event_pictures/report_event_hun_parade.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_hun_parade_2"
+		texturefile = "gfx/event_pictures/report_event_hun_parade_2.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_hun_parade_3"
+		texturefile = "gfx/event_pictures/report_event_hun_parade_3.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_hun_parade_4"
+		texturefile = "gfx/event_pictures/report_event_hun_parade_4.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_hun_parade_5"
+		texturefile = "gfx/event_pictures/report_event_hun_parade_5.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_hun_parade_6"
+		texturefile = "gfx/event_pictures/report_event_hun_parade_6.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_hun_horthy_taking_vows"
+		texturefile = "gfx/event_pictures/report_event_hun_horthy_taking_vows.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_hun_szalasi_taking_vows"
+		texturefile = "gfx/event_pictures/report_event_hun_szalasi_taking_vows.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_hungarism"
+		texturefile = "gfx/event_pictures/report_event_hungarism.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_hun_burn_books"
+		texturefile = "gfx/event_pictures/report_event_hun_burn_books.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_honved_iskola_szhely"
+		texturefile = "gfx/event_pictures/report_event_honved_iskola_szhely.dds"
+	}
+
+	

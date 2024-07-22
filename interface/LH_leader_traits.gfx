@@ -1,0 +1,27 @@
+spriteTypes = {	
+
+	spriteType = {
+		name = "GFX_trait_artillery_leader"
+		texturefile = "gfx/interface/traits/artillery_leader.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_trait_german_sympathies"
+		texturefile = "gfx/interface/traits/german_sympathies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_trait_horthyist"
+		texturefile = "gfx/interface/traits/horthyist.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_trait_communist_sympathizer"
+		texturefile = "gfx/interface/traits/communist_sympathizer.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_trait_rongyos_sympathizer"
+		texturefile = "gfx/interface/traits/rongyos_sympathizer.dds"
+	}
+}

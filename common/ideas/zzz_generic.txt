@@ -1906,7 +1906,7 @@ ideas = {
 			picture = generic_artillery_manufacturer_2
 
 			allowed = {
-				NOT = { OR = { tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = FIN } }
+				NOT = { OR = { tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = FIN tag = HUN } }
 				NOT = {
 					has_allowed_idea_with_traits = { idea = artillery_manufacturer limit = 1 }
 				}
