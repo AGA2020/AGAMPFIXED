@@ -1,0 +1,1125 @@
+leader_traits = {
+
+	great_consolidator = {
+		sprite = 10
+		random = no
+		political_power_factor = 0.05
+		consumer_goods_factor = -0.05
+		stability_factor = 0.05
+		neutrality_drift = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	consolidator_regent = { 
+		random = no
+		sprite = 10
+		political_advisor_cost_factor = -0.1
+		trade_laws_cost_factor = -0.1
+		mobilization_laws_cost_factor = -0.1
+		economy_cost_factor = -0.1
+		#neutrality_drift = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	rakosi_trait = { 
+		random = no
+		sprite = 10
+		political_power_factor = 0.1
+		party_popularity_stability_factor = 0.25
+		political_advisor_cost_factor = -0.1
+		industry_repair_factor = 0.3
+		army_defence_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	general_secretary_of_communist_party = { 
+		random = no
+		sprite = 10
+		political_power_factor = -0.05
+		stability_factor = -0.1
+		consumer_goods_factor = -0.1
+		production_lack_of_resource_penalty_factor = -0.3
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	revolutionary_author_kun = {
+		random = no
+		sprite = 13
+
+		political_power_factor = 0.15
+		stability_factor = 0.05
+		war_support_factor = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	absolute_regent = {
+		random = no
+		sprite = 10
+		political_power_factor = 0.1
+		political_advisor_cost_factor = -0.25
+		trade_laws_cost_factor = -0.25
+		mobilization_laws_cost_factor = -0.25
+		economy_cost_factor = -0.25
+		high_command_cost_factor = -0.25
+		neutrality_drift = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	absolute_regent_fascism = {
+		random = no
+		sprite = 10
+		political_power_factor = 0.1
+		political_advisor_cost_factor = -0.25
+		trade_laws_cost_factor = -0.25
+		mobilization_laws_cost_factor = -0.25
+		economy_cost_factor = -0.25
+		high_command_cost_factor = -0.25
+		fascism_drift = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	servant_of_god = {
+		random = no
+		sprite = 10
+		drift_defence_factor = 0.5
+		war_support_factor = 0.1
+		political_power_factor = 0.2
+		army_morale_factor = 0.1
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	race_unifier = { 
+		random = no
+		sprite = 10
+		political_power_factor = 0.1
+		stability_factor = 0.1
+		army_core_attack_factor = 0.05
+		army_org_factor = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	albanian_connections = { # Héjjas
+		random = no
+		modifier_army_sub_unit_militia_attack_factor = 0.05
+		modifier_army_sub_unit_militia_defence_factor = 0.05
+	}
+	
+	aviation_hero_hejjas = { # Héjjas
+		random = no
+		political_power_factor = 0.05
+		equipment_bonus = {
+			small_plane_airframe = {
+				build_cost_ic = -0.1
+			}
+		}
+	}
+	
+	white_guard_leader = { # Prónay
+		random = no
+		war_support_factor = 0.05
+		army_core_attack_factor = 0.10
+	}
+	
+	garda_recruiter = { # After focus Expand the Gárda
+		random = no
+		sprite = 13 
+		stability_factor = -0.1
+		war_support_factor = 0.1
+		conscription = 0.015
+	}
+	
+	finance_minister = { 
+		random = no
+		sprite = 13
+		consumer_goods_factor = -0.1
+		economy_cost_factor = -0.1
+		stability_factor = 0.05
+	}
+	
+	finance_minister_2 = { 
+		random = no
+		sprite = 13
+		consumer_goods_factor = -0.15
+		economy_cost_factor = -0.3
+		stability_factor = 0.1
+		min_export = 0.2
+	}
+	
+	anti_hungarist_priest = { 
+		random = no
+		sprite = 13
+		stability_factor = 0.05
+		fascism_drift = -0.05
+		power_balance_daily = 0.001
+		political_power_factor = 0.05
+	}
+	
+	connationalist_journalist = { 
+		random = no
+		sprite = 13
+		boost_ideology_mission_factor = 0.5
+		political_power_gain = 0.2
+		opinion_gain_monthly_factor = 0.3
+		stability_factor = 0.1
+		custom_modifier_tooltip = HUN_connationalism_acceptance_more_tt
+	}
+	
+	industrial_minister = { 
+		random = no
+		sprite = 13
+		production_speed_industrial_complex_factor = 0.1
+		production_speed_infrastructure_factor = 0.1
+		production_speed_rail_way_factor = 0.1
+		economy_cost_factor = -0.05
+	}
+	
+	industrial_minister_2 = { 
+		random = no
+		sprite = 13
+		production_speed_industrial_complex_factor = 0.15
+		production_speed_infrastructure_factor = 0.15
+		production_speed_rail_way_factor = 0.2
+		economy_cost_factor = -0.15
+		fuel_gain_factor = 0.20
+	}
+	
+	warcare_minister = { 
+        random = no
+        sprite = 13
+		conversion_cost_civ_to_mil_factor = -0.2
+		line_change_production_efficiency_factor = 0.1 
+        production_factory_max_efficiency_factor = 0.05
+        production_factory_efficiency_gain_factor = 0.05 
+        equipment_conversion_speed = 0.15 
+    }
+	
+	tenacious_negotiator_LH = {
+		random = yes
+		sprite = 13
+		political_power_factor = 0.1
+		trade_opinion_factor = 0.25
+		opinion_gain_monthly_factor = 0.25
+	}
+	
+	deputy_party_leader = {
+		random = no
+		sprite = 13
+		political_power_factor = 0.1
+		neutrality_drift = 0.05
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	interior_minister = {
+		random = no
+		sprite = 13
+		party_popularity_stability_factor = 0.1
+		stability_factor = 0.05
+		research_speed_factor = 0.02
+		drift_defence_factor = 0.15
+	}
+	
+	president_tnsz = {
+		random = no
+		sprite = 10
+		political_power_factor = -0.1
+		stability_factor = 0.05
+		neutrality_drift = 0.05
+		consumer_goods_factor = -0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	militant_nationalist = {
+		random = no
+		war_support_factor = 0.05
+		targeted_modifier = {
+			tag = SOV
+			attack_bonus_against = 0.1
+			defense_bonus_against = 0.1
+		}
+	}
+	
+	nkvd_agent = {
+		random = no
+		sprite = 13
+		fascism_drift = -0.03
+		neutrality_drift = -0.03
+		party_popularity_stability_factor = 0.1
+		resistance_activity = -0.25
+	}
+	
+	anti_communist_priest = {
+		random = no
+		sprite = 13
+		neutrality_drift = 0.05
+		resistance_activity = 0.25
+		power_balance_daily = -0.001
+	}
+	
+	german_puppet = {
+		random = no
+		sprite = 13
+		fascism_acceptance = 70
+		fascism_drift = 0.05
+		opinion_gain_monthly = 5
+		targeted_modifier = {
+			tag = GER
+			trade_cost_for_target_factor = -0.15
+			trade_opinion_factor = 0.5
+			opinion_gain_monthly_factor = 0.3
+			generate_wargoal_tension_against = 0.5
+			attack_bonus_against = 0.1
+		}
+	}
+	
+	cartographic_genius = {
+		random = no
+		sprite = 13
+		recon_factor = 0.1
+		conscription_factor = 0.1
+		encryption_factor = 0.05
+		decryption_factor = 0.05
+		terrain_penalty_reduction = 0.05
+	}
+	
+	resistance_broker = {
+		random = no
+		sprite = 13
+		conscription_factor = 0.05
+		resistance_target_on_our_occupied_states = 0.20
+		command_power_gain = 0.1
+	}
+	
+	economic_reformer_LH = {
+		random = no
+		sprite = 13
+		trade_laws_cost_factor = -0.33
+		economy_cost_factor = -0.33
+		consumer_goods_factor = -0.05
+		democratic_drift = 0.05
+	}
+	
+	LH_liberal_democratic_paragon = { 
+		random = no
+		sprite = 13
+		political_power_gain = 0.05
+		drift_defence_factor = 0.33
+		opinion_gain_monthly_factor = 0.25
+		trade_opinion_factor = 0.25
+	}
+	
+	rightful_heir = {
+		random = no
+		sprite = 10
+		political_advisor_cost_factor = -0.2
+		trade_laws_cost_factor = -0.2
+		mobilization_laws_cost_factor = -0.2
+		economy_cost_factor = -0.2
+		stability_factor = 0.1
+		political_power_gain = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	
+	
+	soft_dictator = {
+		sprite = 13
+		random = no
+		political_power_gain = 0.05
+		stability_factor = 0.05
+		army_morale_factor = 0.1
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	
+	
+	german_agent = {
+		sprite = 13
+		random = no
+		root_out_resistance_effectiveness_factor = 0.3
+		resistance_target = -0.3
+		agency_upgrade_time = -0.1
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	greenshirt_leader = {
+		sprite = 13
+		random = no
+		non_core_manpower = 0.25
+		conscription = 0.015
+		training_time_factor = -0.1
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	fascist_noble = {
+		sprite = 10
+		random = no
+		industrial_capacity_factory = 0.2
+		global_building_slots_factor = 0.1
+		production_speed_buildings_factor = 0.15
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	gendarme_leader = {
+		sprite = 10
+		random = no
+		resistance_target = -0.3
+		non_core_manpower = 0.2
+		fascism_drift = 0.03
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	cool_headed = {
+		sprite = 13
+		random = no
+		democratic_acceptance = 70
+		fascism_acceptance = -30
+		democratic_drift = 0.05
+		neutrality_drift = 0.05
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	printing_and_trade_union_leader = {
+		random = no
+		sprite = 13
+		democratic_drift = 0.05
+		political_power_factor = 0.1
+		global_building_slots_factor = 0.1
+		trade_laws_cost_factor = -0.25
+		min_export = -0.1
+	}
+	
+	agcricultural_peasant_leader = {
+		random = no
+		sprite = 13
+		democratic_drift = 0.05
+		industrial_capacity_factory = -0.1
+		conscription_factor = 0.15
+		stability_factor = 0.05
+		global_building_slots_factor = 0.05
+	}
+	
+	economic_reformer_LH = {
+		random = no
+		sprite = 13
+		trade_laws_cost_factor = -0.33
+		economy_cost_factor = -0.33
+		consumer_goods_factor = -0.05
+	}
+	
+	head_of_the_avh = {
+		random = no
+		sprite = 13
+		stability_factor = -0.1
+		enemy_operative_detection_chance_factor = 0.10
+		enemy_operative_capture_chance_factor = 0.15
+		intel_network_gain_factor = 0.1
+		civilian_intel_to_others = -10
+		
+	}
+
+	anglophile_diplomat = {
+		sprite = 13
+		random = no
+		democratic_acceptance = 40
+		democratic_drift = 0.02
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	conservative_appeaser = {
+		sprite = 13
+		random = no
+		democratic_drift = 0.1
+		communism_drift = -0.02
+		war_support_factor = -0.05
+		stability_factor = 0.1
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	prime_minister_appeaser = {
+		sprite = 13
+		random = no
+		fascism_drift = 0.05
+		stability_factor = 0.05
+		improve_relations_maintain_cost_factor = -1
+		fascism_acceptance = 75
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	minister_of_education = {
+		sprite = 13
+		random = no
+		research_speed_factor = 0.03
+		non_core_manpower = 0.05
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	minister_of_defense = {  
+		sprite = 13
+		random = no
+		army_defence_against_major_factor = 0.2
+		non_core_manpower = 0.05
+		production_speed_arms_factory_factor = 0.05
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	head_of_rev_council = {   
+		sprite = 13
+		random = no
+		political_power_gain = 0.1
+		stability_factor = 0.1
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	commissar_of_agriculture = {   
+		sprite = 13
+		random = no
+		consumer_goods_factor = -0.05
+		production_speed_industrial_complex_factor = 0.1
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	minister_of_agriculture = {   
+		sprite = 13
+		random = no
+		consumer_goods_factor = -0.05
+		production_speed_industrial_complex_factor = 0.1
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	commissar_of_war = {    
+		sprite = 13
+		random = no
+		equipment_capture_factor = 0.1
+		production_factory_max_efficiency_factor = 0.1
+		conscription_factor = 0.1
+		army_core_attack_factor = 0.05
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	commissar_of_education = {     
+		sprite = 13
+		random = no
+		research_speed_factor = 0.03
+		tech_air_damage_factor = -0.1
+		drift_defence_factor = 0.2
+		monthly_population = 0.1
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	minister_of_culture = {     
+		sprite = 13
+		random = no
+		research_speed_factor = 0.03
+		tech_air_damage_factor = -0.1
+		drift_defence_factor = 0.2
+		monthly_population = 0.1
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	commissar_of_internal_affairs = {     
+		sprite = 13
+		random = no
+		stability_factor = 0.1
+		surrender_limit = 0.15
+		improve_relations_maintain_cost_factor = -0.2
+		party_popularity_stability_factor = 0.2
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	communist_editor = {     
+		sprite = 13
+		random = no
+		political_power_factor = 0.05
+		stability_factor = 0.05
+		communism_drift = 0.03
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	deputy_communist_party_leader = {
+		random = no
+		sprite = 13
+		political_power_factor = 0.1
+		communism_drift = 0.05
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	militant_revolutionary = {
+		random = no
+		sprite = 13
+		subversive_activites_upkeep = -0.1
+		conscription_factor = 0.15
+		resistance_target = -0.1
+		power_balance_daily = 0.001
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	rakosi_quadrumvirate_trait = {
+		sprite = 13
+		resistance_damage_to_garrison = -0.25
+		foreign_subversive_activites = -0.3
+		non_core_manpower = 0.02
+		HUN_quad_increase_daily = 0.05
+		power_balance_daily = 0.001
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	farkas_quadrumvirate_trait = {
+		sprite = 10
+		random = yes
+		production_speed_arms_factory_factor = 0.1
+		production_speed_dockyard_factor = 0.1
+		production_speed_fuel_silo_factor = 0.1
+		HUN_quad_increase_daily = 0.05
+		power_balance_daily = 0.001
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+	
+	revai_quadrumvirate_trait = {     
+		sprite = 13
+		random = no
+		political_power_factor = 0.05
+		stability_factor = 0.05
+		communism_drift = 0.03
+		HUN_quad_increase_daily = 0.05
+		power_balance_daily = 0.001
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	gero_quadrumvirate_trait = {
+		random = no
+		sprite = 13
+		fascism_drift = -0.03
+		neutrality_drift = -0.03
+		party_popularity_stability_factor = 0.1
+		resistance_activity = -0.25
+		HUN_quad_increase_daily = 0.05
+		power_balance_daily = 0.001
+	}
+	
+	military_modernizer_LH = {
+		random = no
+		sprite = 14
+		air_doctrine_cost_factor = -0.15
+		land_doctrine_cost_factor = -0.15
+		coordination_bonus = 0.02
+		command_power_gain = 0.1
+	}
+	
+	deputy_leader = {
+		sprite = 13
+		random = no
+		political_power_factor = 0.05
+		stability_factor = 0.05
+		justify_war_goal_time = -0.25
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	state_secreatary = {
+		sprite = 13
+		random = no
+		political_power_factor = 0.05
+		stability_factor = 0.05
+		justify_war_goal_time = -0.25
+		fascism_drift = 0.05
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	anti_extremist_crusader = {
+		sprite = 13
+		random = no
+		stability_factor = 0.03
+		fascism_drift = -0.01
+		communism_drift = -0.01		
+		ai_will_do = {
+			factor = 0
+		}
+	} 
+
+	arrow_cross_priest = {
+		sprite = 13
+		random = no
+		war_support_factor = 0.05
+		army_attack_factor = 0.05
+		drift_defence_factor = 0.3
+		resistance_target = -0.1
+		ai_will_do = {
+			factor = 0
+		}
+	} 
+
+	turul_alliance_leader = {
+		sprite = 13
+		random = no
+		war_support_factor = 0.05
+		drift_defence_factor = 0.3
+		recruitable_population_factor = 0.3
+		research_speed_factor = 0.05
+		ai_will_do = {
+			factor = 0
+		}
+	} 
+
+	scythe_cross_leader = {
+		sprite = 13
+		random = no
+		fascism_drift = 0.05
+		justify_war_goal_time = -0.1
+		army_morale_factor = 0.1
+		ai_will_do = {
+			factor = 0
+		}
+	} 
+
+	jet_pioneer = {
+		random = no
+		sprite = 14
+		
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	tank_pioneer = {
+		random = no
+		sprite = 14
+		#experience_gain_army = 0.05
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+#	computer_pioneer = {
+#		random = no
+#		sprite = 14
+#		
+#		ai_will_do = {
+#			factor = 0
+#		}
+#	}
+
+	radar_pioneer = {
+		random = no
+		sprite = 14
+		production_speed_radar_station_factor = 0.1
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	army_chief_homeland_defender = { 
+		sprite = 9
+		army_core_attack_factor = 0.05
+		army_core_defence_factor = 0.15
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+
+	tebe_secretary = {
+		random = no
+		sprite = 13
+		
+		industrial_capacity_factory = 0.05
+		production_factory_efficiency_gain_factor = 0.05
+		consumer_goods_factor = -0.03
+	}	
+	
+	prime_minister_gombos = {
+		random = no
+		sprite = 13
+
+		fascism_drift = 0.1
+		opinion_gain_monthly_same_ideology_factor = 0.75
+	}	
+	
+	prime_minister_daranyi = {
+		random = no
+		sprite = 13
+
+		stability_factor = 0.05
+		production_speed_industrial_complex_factor = 0.05
+		mobilization_laws_cost_factor = -0.15
+		political_power_factor = 0.1
+	}
+	
+	prime_minister_daranyi_2 = {
+		random = no
+		sprite = 13
+
+		stability_factor = 0.1
+		production_speed_industrial_complex_factor = 0.1
+		mobilization_laws_cost_factor = -0.25
+		political_power_factor = 0.15
+	}
+	
+	prime_minister_bethlen = {
+		random = no
+		sprite = 13
+
+		consumer_goods_factor = -0.03
+		political_power_factor = 0.1
+		economy_cost_factor = -0.15
+	}
+	
+	prime_minister_bethlen_2 = {
+		random = no
+		sprite = 13
+
+		consumer_goods_factor = -0.07
+		political_power_factor = 0.15
+		economy_cost_factor = -0.25
+		industrial_capacity_factory = 0.1
+	}
+	
+	prime_minister_imredy = {
+		random = no
+		sprite = 13
+		
+		production_speed_arms_factory_factor = 0.05
+		war_support_factor = 0.05
+		fascism_drift = 0.1
+		political_power_factor = 0.1
+	}
+	
+	prime_minister_imredy_historical = {
+		random = no
+		sprite = 13
+		
+		production_speed_arms_factory_factor = 0.05
+		war_support_factor = 0.05
+		political_power_factor = 0.1
+	}
+	
+	prime_minister_teleki = {
+		random = no
+		sprite = 13
+		
+		political_power_factor = 0.1
+		consumer_goods_factor = -0.07
+		production_speed_industrial_complex_factor = 0.1
+	}
+	
+	prime_minister_kallay = {
+		random = no
+		sprite = 13
+
+		stability_factor = 0.05
+		fascism_drift = -0.05
+		political_power_factor = 0.1
+	}
+	
+	prime_minister_fischer = {
+		random = no
+		sprite = 13
+
+		stability_factor = 0.05
+		drift_defence_factor = 0.4
+		political_power_factor = 0.1
+	}
+	
+	prime_minister_bardossy = {
+		random = no
+		sprite = 13
+		
+		political_power_factor = 0.1
+		trade_opinion_factor = 0.15
+		offensive_war_stability_factor = 0.3 
+	}
+	
+	prime_minister_lakatos = {
+		random = no
+		sprite = 13
+		
+		political_power_factor = 0.1
+		command_power_gain = 0.2
+		weekly_manpower = 500 
+	}
+	
+	prime_minister_szalasi = {
+		random = no
+		sprite = 13
+		
+		justify_war_goal_time = -0.25
+		non_core_manpower = 0.05
+		fascism_drift = 0.1
+		political_power_factor = 0.1
+	}
+	
+	prime_minister_hejjas = {
+		random = no
+		sprite = 13
+		
+		command_power_gain_mult = 0.1
+		political_power_factor = 0.1
+		fascism_drift = 0.1
+	}
+	
+	prime_minister_szakasits = {
+		random = no
+		sprite = 13
+		
+		production_speed_industrial_complex_factor = 0.15 
+		political_power_factor = 0.1
+		democratic_drift = 0.05
+	}
+	
+	prime_minister_szakasits_2 = {
+		random = no
+		sprite = 13
+		
+		production_speed_industrial_complex_factor = 0.15 
+		political_power_gain = 0.05
+	}
+	
+	prime_minister_peyer = {
+		random = no
+		sprite = 13
+		
+		consumer_goods_factor = -0.03
+		political_power_factor = 0.1
+		democratic_drift = 0.05
+	}
+	
+	prime_minister_bajcsy = {
+		random = no
+		sprite = 13
+		
+		political_power_factor = 0.1
+		industrial_capacity_factory = 0.1
+		democratic_drift = 0.05
+	}
+	
+	prime_minister_bajcsy_2 = {
+		random = no
+		sprite = 13
+		
+		political_power_factor = 0.1
+		industrial_capacity_factory = 0.1
+	}
+	
+	prime_minister_szell = {
+		random = no
+		sprite = 13
+		
+		conscription_factor = 0.15
+		enemy_justify_war_goal_time = 0.1
+		stability_factor = 0.05
+		political_power_factor = 0.1
+	}
+	
+	prime_minister_szell_2 = {
+		random = no
+		sprite = 13
+		
+		conscription_factor = 0.25
+		enemy_justify_war_goal_time = 0.20
+		stability_factor = 0.1
+		political_power_factor = 0.15
+	}
+	
+	figurehead_monarch = {
+		random = no
+		stability_factor = 0.1
+		#political_power_factor = 0.1
+		consumer_goods_factor = 0.05
+		democratic_drift = 0.02
+	}
+	
+	figurehead_monarch_2 = {
+		random = no
+		stability_factor = 0.1
+	}
+	
+	figurehead_monarch_3 = {
+		random = no
+		stability_factor = 0.1
+		#political_power_factor = -0.1
+	}
+	
+	head_of_the_imperial_diet = { 
+		random = no
+		party_popularity_stability_factor = 0.2
+		drift_defence_factor = 0.35
+		guarantee_cost = -0.3
+	}
+	
+	traditional_monarch = {
+		random = no
+		stability_factor = 0.05
+		political_power_factor = 0.1
+		war_support_factor = 0.05
+	}
+	
+	vezer = {
+		random = no
+		war_support_factor = 0.1
+		command_power_gain_mult = 0.1
+		mobilization_laws_cost_factor = -0.1
+		political_power_factor = 0.05
+		army_attack_factor = 0.05
+	}
+	
+	interim_management = {
+		random = no
+		political_advisor_cost_factor = 0.5
+		trade_laws_cost_factor = 0.5
+		mobilization_laws_cost_factor = 0.5
+		economy_cost_factor = 0.5
+		political_power_factor = -0.2
+		production_speed_buildings_factor = 0.3 
+	}
+	
+	autocratic_monarch = {
+		random = no
+		political_power_factor = 0.15
+		war_support_factor = 0.1
+		political_advisor_cost_factor = -0.15
+		high_command_cost_factor = -0.15
+		air_chief_cost_factor = -0.15
+		army_chief_cost_factor = -0.15
+		navy_chief_cost_factor = -0.15
+	}
+
+	absolute_monarch = {
+		random = no
+		political_advisor_cost_factor = -0.15
+		high_command_cost_factor = -0.15
+		air_chief_cost_factor = -0.15
+		army_chief_cost_factor = -0.15
+		navy_chief_cost_factor = -0.15
+	}
+	
+	absolute_monarch_2 = {
+		random = no
+		political_power_factor = 0.1
+		political_advisor_cost_factor = -0.15
+		high_command_cost_factor = -0.15
+		air_chief_cost_factor = -0.15
+		army_chief_cost_factor = -0.15
+		navy_chief_cost_factor = -0.15
+	}
+
+	absolute_monarch_3 = {
+		random = no
+		political_power_factor = 0.1
+	}
+
+
+}

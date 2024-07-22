@@ -1,0 +1,898 @@
+#sample_category = {
+#	icon = generic_crisis
+#	
+#	picture = GFX_decision_cat_picture_ger_case_anton
+#	
+#	priority = 100
+#	
+#	allowed = {
+#		has_dlc = "Waking the Tiger"
+#	}
+#	
+#	visible = {
+#		has_war = no
+#	}
+#}
+
+HUN_habsburg_empire_absolutism = {
+	icon = generic_monarchism
+	
+	allowed = {
+		original_tag = HUN		#less checks for better performance
+	}
+	
+	visible = {
+		has_completed_focus = HUN_restoration_aus_hun
+		has_completed_focus = HUN_populist_habsburg
+		NOT = { has_country_flag = HUN_solidify_control_flag }
+	}
+	
+	picture = GFX_decision_cat_generic_austria_hungary
+	
+	priority = 100
+
+}
+
+HUN_habsburg_democratic_empire = {
+	icon = generic_democracy
+	
+	allowed = {
+		original_tag = HUN		#less checks for better performance
+	}
+	
+	visible = {
+		has_completed_focus = HUN_formalize_treaty
+		has_completed_focus = HUN_hms_responsible_government
+	}
+	
+	picture = GFX_decision_cat_generic_austria_hungary
+	
+	priority = 100
+
+}
+
+HUN_12_points_cat = {
+	icon = category_generic
+	
+	allowed = {
+		original_tag = HUN		#less checks for better performance
+	}
+	
+	visible = {
+		has_country_flag = HUN_12_points_flag
+	}
+	
+	picture = GFX_decision_cat_picture_chi_political_support
+	
+	priority = 100
+
+}
+
+HUN_ukraine_uprising_cat = {
+	icon = category_eng_move_to_secure_the_dominions
+	
+	allowed = {
+		OR = {
+			original_tag = HUN		#less checks for better performance
+			original_tag = SOV		#less checks for better performance
+		}
+	}
+	
+	visible = {
+		OR = {
+			AND = {
+				tag = SOV
+				any_other_country = {
+					has_completed_focus = HUN_ukrainean_uprising
+				}
+			}
+			AND = {
+				has_completed_focus = HUN_ukrainean_uprising
+			}
+		}
+	}
+	
+	#picture = GFX_decision_cat_picture_chi_political_support
+	
+	priority = 90
+
+}
+
+HUN_regency_powers = {
+	icon = generic_political_actions
+	
+	allowed = {
+		original_tag = HUN		#less checks for better performance
+	}
+	
+	visible = {
+		OR = {
+			has_completed_focus = HUN_consolidate_horthys_power_monarch
+			has_completed_focus = HUN_consolidate_horthys_power
+		}
+		NOT = {
+			OR = {
+				has_completed_focus = HUN_announce_horthys_permanent_regency_monarch
+				has_completed_focus = HUN_announce_horthys_permanent_regency
+			}
+		}
+	}
+	
+	picture = GFX_decision_cat_picture_horthy_bevonulas
+	
+	priority = 100
+
+}
+
+HUN_15_points_cat = {
+	icon = generic_communism
+	
+	allowed = {
+		original_tag = HUN		#less checks for better performance
+	}
+	
+	visible = {
+		has_completed_focus = HUN_15_point_programme
+	}
+	
+	picture = GFX_decision_cat_picture_chi_political_support
+	
+	priority = 100
+
+}
+
+HUN_spread_democracy_cat = {
+	icon = generic_democracy
+	
+	allowed = {
+		original_tag = HUN		#less checks for better performance
+	}
+	
+	visible = {
+		has_country_flag = HUN_spread_democracy_flag
+	}
+	
+	picture = GFX_decision_cat_picture_balkan_faction
+	
+	priority = 100
+
+}
+
+HUN_allied_imports = {
+	icon = generic_arms_trade
+	
+	allowed = {
+		original_tag = HUN		#less checks for better performance
+	}
+	
+	visible = {
+		
+		has_completed_focus = HUN_british_imports
+			
+		
+	}
+	
+	picture = GFX_decision_cat_picture_naval_treaties
+	
+	priority = 80
+
+}
+
+
+HUN_habsburg_empire_uprisings = {
+	icon = generic_monarchism
+	
+	allowed = {
+		original_tag = HUN		#less checks for better performance
+	}
+	
+	visible = {
+		has_country_flag = HUN_empire_restored_flag
+	}
+	
+	picture = GFX_decision_cat_generic_austria_hungary
+	
+	priority = 100
+
+}
+
+HUN_habsburg_empire_viribus_unitis = {	# Austria-Hungary
+	icon = generic_monarchism
+	
+	allowed = {
+		original_tag = HUN		#less checks for better performance
+	}
+	
+	visible = {
+		has_completed_focus = HUN_restoration_aus_hun
+		has_country_flag = HUN_autocratic_model_flag
+		OR = {
+			has_idea = HUN_multiethnic_nation_idea
+			has_idea = HUN_multiethnic_nation_2_idea
+		}
+		
+	}
+	
+	picture = GFX_decision_cat_generic_austria_hungary
+	
+	priority = 100
+
+}
+
+HUN_habsburg_empire_danubian_confederation = {
+	icon = hun_imperial_confederation
+	
+	allowed = {
+		original_tag = HUN		#less checks for better performance
+	}
+	
+	visible = {
+		OR = {
+			has_completed_focus = HUN_restoration_aus_hun
+			has_completed_focus = HUN_formalize_treaty
+		}
+		has_completed_focus = HUN_habsburg_middle
+		has_country_flag = HUN_traditional_model_flag
+		has_completed_focus = HUN_establish_imperial_diet
+	}
+	
+	picture = GFX_decision_cat_generic_austria_hungary
+	
+	priority = 100
+
+}
+
+HUN_change_side_decisions = {
+	icon = GFX_decision_category_foreign_policy
+	
+	allowed = {
+		original_tag = HUN		#less checks for better performance
+	}
+	
+	visible = {
+		has_war_with = SOV
+		has_war_with = ENG
+		is_in_faction_with = GER
+		NOT = {
+			has_government = fascism
+		}
+		has_completed_focus = HUN_continue_bethlens_consolidation
+		has_country_flag = HUN_peace_can_commence_flag
+	}
+	
+	picture = GFX_decision_cat_picture_concessions_to_the_trade_unions
+	
+	priority = 100
+
+}
+
+HUN_economic_crisis = {
+	icon = generic_trade
+	
+	allowed = {
+		original_tag = HUN		#less checks for better performance
+	}
+	
+	visible = {
+		has_completed_focus = HUN_improve_pengo
+			
+		OR = {
+			has_completed_focus = HUN_continue_bethlens_consolidation	
+			has_completed_focus = HUN_utilize_the_march_front	
+			has_completed_focus = HUN_council_of_commisars	
+			has_completed_focus = HUN_empower_the_far_right	
+			
+		}
+		
+		NOT = {
+			has_country_flag = HUN_italy_leaning
+		}
+		
+	}
+	
+	picture = GFX_decision_cat_generic_mefo_bills
+	
+	priority = 100
+
+}
+
+HUN_red_terror = {
+	icon = eng_move_to_secure_the_dominions
+	
+	allowed = {
+		original_tag = HUN		#less checks for better performance
+	}
+	
+	visible = {
+		NOT = {
+			has_completed_focus = HUN_council_of_commisars
+			has_country_flag = HUN_italy_leaning
+		}
+	}
+	
+	picture = GFX_decision_cat_picture_red_terror 
+	
+	on_map_area = {
+		targets = { 155 972 }
+		name = HUN_red_terror_strip_loc
+		zoom = 100
+	}
+	
+	
+	priority = 60
+
+}
+
+HUN_red_terror_com = {
+	icon = generic_communism
+	
+	picture = GFX_decision_cat_picture_red_terror
+	
+	allowed = {
+		original_tag = HUN		#less checks for better performance
+	}
+	
+	visible = {
+		has_completed_focus = HUN_council_of_commisars
+		NOT = {
+			has_government = communism
+		}
+		has_country_flag = HUN_communism_explained_flag
+	}
+	
+	on_map_area = {
+		targets = { 155 972 973 43 154 }
+		name = HUN_red_terror_com_strip_loc
+		zoom = 100
+	}
+	
+	priority = 90
+}
+
+HUN_kun_civil_wars = {
+	icon = generic_communism
+	
+	picture = GFX_decision_cat_picture_red_terror
+	
+	allowed = {
+		original_tag = HUN		#less checks for better performance
+	}
+	
+	visible = {
+		has_completed_focus = HUN_repeat_the_1919_northern_campaign
+		has_government = communism
+	}
+	
+	priority = 90
+}
+
+
+
+HUN_rome_protocols = {
+	icon = rome_protocols
+	
+	allowed = {
+		original_tag = HUN		#less checks for better performance
+	}
+	
+	priority = 90
+}
+ 
+HUN_bop_communism_decision_cat = {
+	icon = generic_communism
+	
+	allowed = {
+		original_tag = HUN		#less checks for better performance
+	}
+	
+	visible = {
+		always = yes
+	}
+	
+	priority = 90
+}
+
+HUN_kun_bop_decision_cat = {
+	icon = generic_communism
+	
+	allowed = {
+		original_tag = HUN		#less checks for better performance
+	}
+	
+	visible = {
+		always = yes
+	}
+	
+	priority = 90
+}
+
+HUN_rakosi_tree_decision_cat = {
+	icon = generic_communism
+	
+	allowed = {
+		original_tag = HUN		#less checks for better performance
+	}
+	
+	visible = {
+		always = yes
+	}
+	
+	priority = 90
+}
+
+
+HUN_hun_alignment = {
+	
+	icon = hun_alignment
+	
+	picture = GFX_decision_cat_picture_hun_alignment_picture
+	
+	allowed = {
+		original_tag = HUN		#less checks for better performance
+	}
+	
+	visible = {
+		
+		OR = {
+			if = {
+				limit = {
+					has_completed_focus = HUN_elect_king
+				}
+				NOT = {
+					has_completed_focus = HUN_accept_the_habsburg_prince
+				}
+			}
+			AND = {
+				has_completed_focus = HUN_accept_the_habsburg_prince
+				has_completed_focus = HUN_call_for_a_revisionist_king
+			}
+			has_completed_focus = HUN_strengthen_the_regency_monarch
+		}
+		
+		NOT = {
+			has_completed_focus = HUN_council_of_commisars
+		}
+		GER = {
+			has_government = fascism
+		}
+	}
+	
+	priority = 70
+	
+	custom_icon = {
+		tag = GER
+		value = ger_alignment_icon_value
+		desc = ger_alignment_full_influence_breakdown
+
+		visible = {
+			country_exists = GER
+		}
+	}	
+	
+	custom_icon = {
+		tag = GER
+		value = ger_agitation_icon_value
+		desc = ger_agitation_full_breakdown
+
+		visible = {
+			country_exists = GER
+		}
+	}	
+	
+	visible_when_empty = yes
+	
+	
+}
+
+HUN_succession = {
+
+	icon = generic_monarchism
+	
+	picture = GFX_decision_cat_picture_1936_election
+	
+	visible = {
+		NOT = {
+			has_country_flag = HUN_german_ultimatum_received
+		}
+		OR = {
+			has_completed_focus = HUN_crown_king
+			has_country_flag = HUN_istvan_as_king_flag
+			has_country_flag = HUN_miklos_as_king_flag
+			has_completed_focus = HUN_announce_horthys_permanent_regency
+			
+		}
+	}
+	
+	allowed = {
+		original_tag = HUN		#less checks for better performance
+	}
+	
+	priority = 90
+	
+}
+
+HUN_wedding_alliance = {
+
+	icon = eng_appeal_to_imperial_loyalists
+	
+	picture = GFX_decision_cat_picture_1936_election
+	
+	visible = {
+			has_completed_focus = HUN_accept_the_habsburg_prince
+		
+	}
+	
+	allowed = {
+		original_tag = HUN		#less checks for better performance
+	}
+	
+	priority = 90
+	
+}
+
+
+HUN_army_decisions = {
+	icon = military_operation
+	
+	allowed = {
+		original_tag = HUN		#less checks for better performance
+	}
+	
+	priority = 50
+	
+	picture = GFX_decision_cat_picture_fatherland_front
+
+}
+
+HUN_immigration_decisions = {
+	icon = eng_organize_the_blackshirts
+	
+	allowed = {
+		original_tag = HUN		#less checks for better performance
+	}
+	
+	priority = 80
+	picture = GFX_decision_cat_picture_carte_rouge_picture 
+	#picture = GFX_decision_cat_picture_hun_alignment_picture
+
+}
+
+form_carpathia_category = {
+
+	icon = generic_formable_nations
+	
+	picture = GFX_decision_cat_generic_austria_hungary
+
+	allowed = {
+		original_tag = HUN		#less checks for better performance
+	}
+}
+
+HUN_regnum_marianum_category = {
+
+	icon = generic_propaganda
+	
+	priority = 80
+	
+	picture = GFX_decision_cat_picture_hun_marianum_picture
+
+	allowed = {
+		original_tag = HUN		#less checks for better performance
+	}
+	
+	visible = {
+		has_completed_focus = HUN_regnum_marianum
+	}
+}
+
+HUN_gyori_program_new_category = {
+	icon = army_reform
+	
+	priority = 90
+	
+	picture = GFX_decision_cat_generic_mefo_bills
+	
+	visible = {
+		has_completed_focus = HUN_gyor_program
+	}
+	
+	allowed = {
+		original_tag = HUN		#less checks for better performance
+	}
+}
+
+HUN_airforce_category = {
+	icon = hun_air
+	
+	priority = 100
+	
+	#picture = GFX_decision_cat_generic_mefo_bills
+	
+	allowed = {
+		original_tag = HUN		#less checks for better performance
+	}
+	
+	visible = {
+		has_completed_focus = HUN_establish_airforce
+	}
+}
+
+HUN_reforms_category = {
+	icon = generic_industry
+	
+	priority = 100
+	
+	#picture = GFX_decision_cat_generic_mefo_bills
+	
+	allowed = {
+		original_tag = HUN		#less checks for better performance
+	}
+	
+	visible = {
+		has_completed_focus = HUN_new_economical_mechanism
+	}
+}
+
+
+HUN_territories_category = {
+	icon = border_war
+	
+	priority = 100
+	
+	#picture = GFX_decision_cat_generic_mefo_bills
+	
+	allowed = {
+		original_tag = HUN		#less checks for better performance
+	}
+	
+	visible = {
+		has_completed_focus = HUN_develop_regained_territories
+	}
+}
+
+HUN_navy_category = {
+	icon = MTG_naval_treaties
+	
+	priority = 100
+	
+	picture = GFX_decision_cat_picture_naval_treaties
+	
+	allowed = {
+		original_tag = HUN		#less checks for better performance
+	}
+	
+	visible = {
+		has_completed_focus = HUN_naval_war
+	}
+}
+
+
+HUN_purchase_weapons_and_equipment_category = {
+	icon = generic_political_actions
+	
+	picture = GFX_decision_cat_picture_soviet_comecon
+	
+	priority = 100
+	
+	allowed = {
+		original_tag = HUN		#less checks for better performance
+	}
+	
+	visible = {
+		OR = {
+			has_completed_focus = HUN_german_equipment
+			has_completed_focus = HUN_german_equipment_monarch
+			has_completed_focus = HUN_secret_armament
+		}
+		
+	}
+}
+
+HUN_fascist_insurgency = {
+	icon = GFX_decision_category_generic_fascism
+	
+	priority = 200
+	
+	#picture = GFX_decision_cat_picture_naval_treaties
+	
+	allowed = {
+		original_tag = HUN		#less checks for better performance
+	}
+	
+	visible = {
+		NOT = { has_completed_focus = HUN_empower_the_far_right }
+	}
+}
+
+HUN_rongyos_garda_decisions = {
+	icon = GFX_decision_category_military_operation
+	
+	priority = 200
+	
+	picture = GFX_decision_cat_picture_rongyos_garda
+	
+	allowed = {
+		original_tag = HUN		#less checks for better performance
+	}
+	
+	visible = {
+		OR = {
+			has_completed_focus = HUN_give_hejjas_absolute_power_1 ### THIS IS INTENTIONAL, SORT OF A DEBUG TO ACTIVATE DECISIONS WITHOUT HAVING TO GO THROUGH THE ENTIRE FOCUS TREE!!
+			has_completed_focus = HUN_the_move_convention
+		}
+		NOT = {
+			has_country_flag = HUN_germany_leaning
+		}
+	}
+}
+
+HUN_rongyos_garda_vs_army_decisions = {
+	icon = GFX_decision_category_military_operation
+	
+	priority = 200
+	
+	picture = GFX_decision_cat_picture_rongyos_garda
+	
+	allowed = {
+		original_tag = HUN		#less checks for better performance
+	}
+	
+	visible = {
+		OR = {
+			has_completed_focus = HUN_give_hejjas_absolute_power_1 ### THIS IS INTENTIONAL, SORT OF A DEBUG TO ACTIVATE DECISIONS WITHOUT HAVING TO GO THROUGH THE ENTIRE FOCUS TREE!!
+			has_completed_focus = HUN_give_hejjas_absolute_power
+		}
+		NOT = {
+			has_country_flag = HUN_germany_leaning
+		}
+	}
+}
+
+HUN_fascist_fight_for_power_decisions = {
+	icon = GFX_decision_category_generic_fascism
+	
+	priority = 200
+	
+	picture = GFX_decision_cat_picture_chi_political_support
+	
+	allowed = {
+		original_tag = HUN		#less checks for better performance
+	}
+	
+	visible = {
+		OR = {
+			has_country_flag = HUN_imredy_decisions_flag
+			has_country_flag = HUN_szalasi_decisions_flag
+		}
+		#NOT = { has_completed_focus = HUN_strengthen_the_hungarist_movement }
+	}
+}
+
+HUN_eucharistic_congress_cat = {
+	icon = GFX_decision_category_SWI_imperial_council
+	
+	priority = 200
+	
+	picture = GFX_decision_cat_picture_eucharistic_congress
+	
+	allowed = {
+		original_tag = HUN		#less checks for better performance
+	}
+	
+	visible = {
+		has_completed_focus = HUN_vatican_guidance
+	}
+}
+
+HUN_organize_the_blackshirts = {
+
+	icon = eng_organize_the_blackshirts
+
+	picture = GFX_decision_cat_picture_organize_the_blackshirts
+	
+	priority = 100
+	
+	allowed = {
+		tag = HUN
+	}
+
+	on_map_area = {
+		state = 119
+		name = ENG_organize_the_blackshirts_map_category_name
+		zoom = 250
+	}
+
+	visible = {
+		has_completed_focus = HUN_infiltrate_britain
+		ENG = {
+			OR = {
+				NOT = { has_government = fascism }
+				has_country_flag = won_british_civil_war
+				has_decision = ENG_the_mosley_plan
+			}
+		}
+	}
+}
+
+HUN_falangism_abroad_category = {
+
+	icon = SWI_imperial_council
+
+	picture = GFX_decision_cat_picture_eucharistic_congress
+	
+	priority = 50
+	
+	allowed = {
+		tag = HUN
+	}
+	
+	visible = {
+		has_completed_focus = HUN_promote_catholicism_abroad
+	}
+}
+
+HUN_plan_for_the_building_of_the_hungarian_state_cat = {
+
+	icon = generic_economy
+
+	picture = GFX_decision_cat_picture_NOR_preparedness
+	
+	priority = 50
+	
+	allowed = {
+		tag = HUN
+	}
+	
+	visible = {
+		has_completed_focus = HUN_plan_for_the_building_of_the_hungarian_state
+	}
+}
+
+HUN_designers_projects_category = {
+	icon = GFX_decision_category_generic_industry
+	
+	priority = 80
+	
+	#picture = GFX_decision_cat_picture_chi_political_support
+	
+	allowed = {
+		original_tag = HUN		#less checks for better performance
+	}
+	
+	visible = {
+		has_country_flag = HUN_mavag_expanded_flag
+	}
+}
+
+HUN_foreign_industrial_aid_category = {
+	icon = GFX_decision_category_eng_concessions_to_the_trade_unions
+	
+	priority = 50
+	
+	#picture = GFX_decision_cat_picture_chi_political_support
+	
+	allowed = {
+		original_tag = HUN		#less checks for better performance
+	}
+	
+	visible = {
+		has_completed_focus = HUN_seek_guidance_from_titans
+	}
+}
+
+HUN_habsburg_poland_category = {
+	icon = GFX_decision_category_generic_monarchism
+	
+	priority = 80
+	
+	#picture = GFX_decision_cat_picture_chi_political_support
+	
+	allowed = {
+		original_tag = HUN		#less checks for better performance
+	}
+	
+	visible = {
+		has_completed_focus = HUN_habsburg_poland
+	}
+}
+
