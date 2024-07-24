@@ -1,0 +1,41 @@
+﻿division_template = {
+	name = "Önkéntes Hadosztály"
+	is_locked = yes
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+}
+
+units = {
+
+	division = {
+		name = "1 Önkéntes Hadosztály"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 3713	#Miskolc
+		division_template = "Önkéntes Hadosztály"
+	}
+	division = {
+		name = "2 Önkéntes Hadosztály"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 3713	#Miskolc
+		division_template = "Önkéntes Hadosztály"
+	}
+	division = {
+		name = "3 Önkéntes Hadosztály"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 3713	#Miskolc
+		division_template = "Önkéntes Hadosztály"
+	}
+}
