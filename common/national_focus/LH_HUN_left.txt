@@ -3772,7 +3772,7 @@ focus_tree = {
 			add_state_claim = 764
 			add_state_claim = 45
 			add_state_claim = 109
-			add_state_claim = 970
+			add_state_claim = 974
 			add_state_claim = 971
 			add_state_claim = 975
 			
@@ -3948,7 +3948,7 @@ focus_tree = {
 					}
 				}
 				any_country = {
-					has_full_control_of_state = 970
+					has_full_control_of_state = 974
 					OR = {
 						is_in_faction_with = ROOT
 						is_puppet_of = ROOT

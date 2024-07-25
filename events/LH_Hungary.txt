@@ -86,7 +86,7 @@ country_event = {
 		HUN = {
 			transfer_state = 45
 			transfer_state = 109
-			transfer_state = 970
+			transfer_state = 974
 			transfer_state = 971
 			transfer_state = 764
 		}
@@ -127,7 +127,7 @@ country_event = {
 			
 		}
 		
-		970 = {
+		974 = {
 			
 			add_building_construction = {
 				type = dockyard
@@ -578,11 +578,11 @@ country_event = {
 			if = {
 				limit = {
 					YUG = {
-						has_full_control_of_state = 970
+						has_full_control_of_state = 974
 					}
 				}
 				HUN = {
-					transfer_state = 970
+					transfer_state = 974
 				}
 			}
 			if = {
@@ -620,11 +620,11 @@ country_event = {
 				limit = {
 					country_exists = CRO
 					CRO = {
-						has_full_control_of_state = 970
+						has_full_control_of_state = 971
 					}
 				}
 				HUN = {
-					transfer_state = 970
+					transfer_state = 971
 				}
 			}
 			if = {
@@ -4467,16 +4467,16 @@ country_event = {
 				limit = {
 					OR = {
 						YUG = {
-							controls_state = 970
+							controls_state = 974
 						}
 						any_other_country = {
 							is_subject_of = YUG
-							controls_state = 970
+							controls_state = 974
 						}
 					}			
 				}
-				transfer_state = 970
-				add_state_core = 970
+				transfer_state = 974
+				add_state_core = 974
 			}
 			
 			
@@ -4669,12 +4669,13 @@ country_event = {
 			add_state_core = 804
 			add_state_core = 971
 			add_state_core = 970
+			add_state_core = 974
 			add_state_core = 736
 			add_state_core = 45
 		create_wargoal = {
 				type = take_state_focus
 				target = YUG
-				generator = { 102 103 109 104 163 764 804 971 970 736 45}
+				generator = { 102 103 109 104 163 764 804 971 970 974 736 45}
 			}
 	}
 
@@ -5805,7 +5806,7 @@ country_event = { #Allied Imports Naval access
 		create_wargoal = {
 			type = take_state_focus
 			target = YUG
-			generator = { 970 109 }
+			generator = { 974 109 }
 		}
 	}
 	
@@ -10785,6 +10786,7 @@ country_event = { # Final Revision: Southern Slovakia, Ukraine, Slovakia, Northe
 		has_full_control_of_state = 764
 		has_full_control_of_state = 109
 		has_full_control_of_state = 970
+		has_full_control_of_state = 974
 		has_full_control_of_state = 971
 		
 		has_idea = HUN_sixth_revision_ss_u_s_nt_t_v_b		
@@ -10955,6 +10957,16 @@ country_event = { # Final Revision: Southern Slovakia, Ukraine, Slovakia, Northe
 				}
 			}
 			add_state_core = 109
+		}
+		if = { 
+			limit = { 
+				NOT = { 
+					109 = { 
+						is_core_of = HUN 
+					} 
+				}
+			}
+			add_state_core = 974
 		}
 		
 	}
@@ -19270,7 +19282,8 @@ country_event = {
 	
 	trigger = {
 		has_full_control_of_state = 109
-		has_full_control_of_state = 970
+		has_full_control_of_state = 971
+		has_full_control_of_state = 974
 		original_tag = HUN
 		has_completed_focus = HUN_proclaim_szlasi_the_leader_of_the_nation_fascism
 	}
@@ -21990,7 +22003,7 @@ country_event = {	### RELEASE YUGOSLAVIA KUN PATH
 		OR = {
 			AND = {
 				has_full_control_of_state = 109
-				has_full_control_of_state = 970
+				has_full_control_of_state = 974
 				has_full_control_of_state = 45
 				has_full_control_of_state = 764
 			}
@@ -22001,7 +22014,7 @@ country_event = {	### RELEASE YUGOSLAVIA KUN PATH
 				}
 				AND = {
 					has_full_control_of_state = 109
-					has_full_control_of_state = 970
+					has_full_control_of_state = 974
 					has_full_control_of_state = 45
 					has_full_control_of_state = 764
 				}
@@ -22019,14 +22032,16 @@ country_event = {	### RELEASE YUGOSLAVIA KUN PATH
 					ROOT = {
 						AND = {
 							has_full_control_of_state = 109
-							has_full_control_of_state = 970
+							has_full_control_of_state = 974
+							has_full_control_of_state = 971
 							has_full_control_of_state = 45
 						}
 					}
 				}
 				109 = { remove_core_of = YUG }
 				103 = { remove_core_of = YUG }
-				970 = { remove_core_of = YUG }
+				974 = { remove_core_of = YUG }
+				971 = { remove_core_of = YUG }
 				45 = { remove_core_of = YUG }
 				release_puppet = CRO
 				CRO = {
@@ -22049,7 +22064,8 @@ country_event = {	### RELEASE YUGOSLAVIA KUN PATH
 					CRO = {
 						AND = {
 							has_full_control_of_state = 109
-							has_full_control_of_state = 970
+							has_full_control_of_state = 974
+							has_full_control_of_state = 971
 							has_full_control_of_state = 103
 						}
 					}
@@ -22429,6 +22445,7 @@ country_event = {	# Event to decide if war goal or communist infiltration Yugosl
 		name = LH.379.a
 		remove_state_claim = 109
 		remove_state_claim = 970
+		remove_state_claim = 974
 		remove_state_claim = 764
 		remove_state_claim = 45
 		remove_state_claim = 971
@@ -22442,7 +22459,7 @@ country_event = {	# Event to decide if war goal or communist infiltration Yugosl
 			type = take_state_focus
 			target = YUG
 			expire = 0
-			generator = { 764 45 109 970 971 }
+			generator = { 764 45 109 970 971 974 }
 		}
 	}
 }
@@ -25213,7 +25230,7 @@ country_event = {	# PARTITIONING OF COUNTRY AFTER THEY REFUSE AND HUNGARY ATTACK
 			}
 			BUL = { 
 				transfer_state = 77 
-				transfer_state = 974 
+				transfer_state = 972
 				transfer_state = 46 
 				transfer_state = 81 
 			}

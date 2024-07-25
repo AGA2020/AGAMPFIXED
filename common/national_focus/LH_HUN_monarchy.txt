@@ -2135,7 +2135,7 @@ focus_tree = {
 		}
 		
 		bypass = {
-			has_full_control_of_state = 970
+			has_full_control_of_state = 974
 			has_country_flag = HUN_yug_friendship_pact_signed
 		}
 

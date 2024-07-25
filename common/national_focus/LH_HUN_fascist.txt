@@ -5077,7 +5077,8 @@ focus_tree = {
 				add_state_claim = 103
 				add_state_claim = 104
 				add_state_claim = 804
-				add_state_claim = 970
+				add_state_claim = 974
+				add_state_claim = 971
 				add_state_claim = 764
 				add_state_claim = 82
 				add_state_claim = 83
@@ -6735,12 +6736,12 @@ focus_tree = {
 				declare_war_on = {
 					type = take_state_focus
 					target = YUG
-					generator = { 45 109 764 970 971 }
+					generator = { 45 109 764 974 971 }
 				}
 				add_state_claim = 45
 				add_state_claim = 109
 				add_state_claim = 764
-				add_state_claim = 970
+				add_state_claim = 974
 				add_state_claim = 971
 				AUS = {
 					If = {
@@ -7187,7 +7188,7 @@ focus_tree = {
 							declare_war_on = {
 							type = take_state_focus
 							target = ROM
-							generator = { 77 974 46 81 }
+							generator = { 77 972 46 81 }
 						}
 					}
 				}
@@ -8625,7 +8626,7 @@ focus_tree = {
 				add_state_claim = 79
 				add_state_claim = 80
 				add_state_claim = 46
-				add_state_claim = 974
+				add_state_claim = 972
 				add_state_claim = 766
 			}
 			else_if = {
