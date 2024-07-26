@@ -6291,7 +6291,7 @@ focus_tree = {
 			#add_state_core = 764
 			add_state_core = 971
 			#add_state_core = 82
-			add_state_core = 975
+			add_state_core = 978
 			
 			custom_effect_tooltip = HUN_more_territories_core_tt
 		}
@@ -6311,17 +6311,17 @@ focus_tree = {
 
 		available = {
 			if = {
-				limit = { AUS = { has_full_control_of_state = 975 } }
+				limit = { AUS = { has_full_control_of_state = 978 } }
 				has_army_manpower = { size > 120000 }
 			}
 			else = {
-				limit = { AUS = { has_full_control_of_state = 975 } }
+				limit = { AUS = { has_full_control_of_state = 978 } }
 				has_army_manpower = { size > 170000 }
 			}
 		}
 		
 		bypass = {
-			has_full_control_of_state = 975
+			has_full_control_of_state = 978
 		}
 
 		cancel_if_invalid = yes
@@ -6337,7 +6337,7 @@ focus_tree = {
 			every_country = {
 				limit = {
 					NOT = { tag = HUN }
-					has_full_control_of_state = 975
+					has_full_control_of_state = 978
 				}
 				country_event = { id = LH.262 days = 2 }
 			}
@@ -6819,7 +6819,7 @@ focus_tree = {
 					name = CITY_9692
 				}
 			}
-			if = { limit = { has_full_control_of_state = 975 } 
+			if = { limit = { has_full_control_of_state = 978 } 
 				set_province_name = {
 					id = 13238
 					name = CITY_13238
@@ -11801,7 +11801,7 @@ focus_tree = {
 			664 = { add_core_of = ROOT }
 			71 = { add_core_of = ROOT }
 			73 = { add_core_of = ROOT }
-			975 = { add_core_of = ROOT }
+			978 = { add_core_of = ROOT }
 			if = {
 				limit = { CZE = { is_puppet_of = HUN}}
 				HUN = { 
@@ -13386,7 +13386,7 @@ focus_tree = {
 					}
 				}
 				annex_country = { target = AUS transfer_troops = yes }
-				add_state_core = 975
+				add_state_core = 978
 				add_state_core = 4
 				add_state_core = 152
 				add_state_core = 153
@@ -13425,7 +13425,7 @@ focus_tree = {
 				add_state_core = 72
 				add_state_core = 73
 				add_state_core = 70
-				add_state_core = 975
+				add_state_core = 978
 				add_state_core = 4
 				add_state_core = 152
 				add_state_core = 153
@@ -18724,7 +18724,7 @@ focus_tree = {
 			add_state_claim = 109
 			add_state_claim = 974
 			add_state_claim = 971
-			add_state_claim = 975
+			add_state_claim = 978
 			
 			country_event = LH.378
 			country_event = { id = LH.379 days = 2 }

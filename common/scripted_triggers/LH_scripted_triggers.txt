@@ -75,7 +75,7 @@ HUN_has_available_trade_route_fra = {
 	OR = {
 		### AUSTRIA ROUTE
 		AND = {	### MAIN ROUTE + SUBROUTE
-			975 = {	### AUSTRIA
+			978 = {	### AUSTRIA
 				CONTROLLER = {
 					HUN_has_war_with_hun = no
 				}
@@ -352,7 +352,7 @@ HUN_has_available_trade_route_ger = {
 	}
 	OR = {
 		AND = {	### AUSTRIA ROUTE
-			975 = {	### AUSTRIA
+			978 = {	### AUSTRIA
 				CONTROLLER = {
 					HUN_has_war_with_hun = no
 				}
@@ -592,7 +592,7 @@ HUN_has_available_trade_route_ita = {
 			}
 		}
 		AND = {	### AUSTRIA ROUTE
-			975 = {	### AUSTRIA
+			978 = {	### AUSTRIA
 				CONTROLLER = {
 					HUN_has_war_with_hun = no
 				}

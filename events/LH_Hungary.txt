@@ -6876,7 +6876,7 @@ country_event = {	# annex aus after capitulating them
 			has_country_flag = HUN_traditional_model_flag
 			has_country_flag = HUN_democratic_model_flag
 		}
-		has_full_control_of_state = 975
+		has_full_control_of_state = 978
 		has_full_control_of_state = 4
 		has_full_control_of_state = 153
 		has_full_control_of_state = 152
@@ -6888,7 +6888,7 @@ country_event = {	# annex aus after capitulating them
 	
 	option = { #Yes
 		name = LH.129.a
-		#add_state_core = 975
+		#add_state_core = 978
 		#add_state_core = 4
 		#add_state_core = 152
 		#add_state_core = 153
@@ -8000,7 +8000,7 @@ country_event = { # First Revision: Burgenland
 	
 	trigger = {
 		has_idea = HUN_split_nation
-		has_full_control_of_state = 975
+		has_full_control_of_state = 978
 	}
 	
 	mean_time_to_happen = {
@@ -8016,12 +8016,12 @@ country_event = { # First Revision: Burgenland
 		if = { 
 			limit = { 
 				NOT = { 
-					975 = { 
+					978 = { 
 						is_core_of = HUN 
 					} 
 				}
 			}
-			add_state_core = 975
+			add_state_core = 978
 		}
 	}
 }
@@ -8156,7 +8156,7 @@ country_event = { # Second Revision: Burgenland and Southern Slovakia
 	
 	trigger = {
 		has_full_control_of_state = 664
-		has_full_control_of_state = 975
+		has_full_control_of_state = 978
 		OR = {
 			has_idea = HUN_first_revision_b
 			has_idea = HUN_first_revision_ss
@@ -8213,12 +8213,12 @@ country_event = { # Second Revision: Burgenland and Southern Slovakia
 		if = { 
 			limit = { 
 				NOT = { 
-					975 = { 
+					978 = { 
 						is_core_of = HUN 
 					} 
 				}
 			}
-			add_state_core = 975
+			add_state_core = 978
 		}
 		
 	}
@@ -8236,7 +8236,7 @@ country_event = { # Second Revision: Burgenland and Vojvodina
 	
 	trigger = {
 		has_full_control_of_state = 45
-		has_full_control_of_state = 975
+		has_full_control_of_state = 978
 		OR = {
 			has_idea = HUN_first_revision_b
 			has_idea = HUN_first_revision_ss
@@ -8294,12 +8294,12 @@ country_event = { # Second Revision: Burgenland and Vojvodina
 		if = { 
 			limit = { 
 				NOT = { 
-					975 = { 
+					978 = { 
 						is_core_of = HUN 
 					} 
 				}
 			}
-			add_state_core = 975
+			add_state_core = 978
 		}
 		
 	}
@@ -8317,7 +8317,7 @@ country_event = { # Second Revision: Burgenland and Northern Transylvania
 	
 	trigger = {
 		has_full_control_of_state = 76
-		has_full_control_of_state = 975
+		has_full_control_of_state = 978
 		OR = {
 			has_idea = HUN_first_revision_b
 			has_idea = HUN_first_revision_ss
@@ -8375,12 +8375,12 @@ country_event = { # Second Revision: Burgenland and Northern Transylvania
 		if = { 
 			limit = { 
 				NOT = { 
-					975 = { 
+					978 = { 
 						is_core_of = HUN 
 					} 
 				}
 			}
-			add_state_core = 975
+			add_state_core = 978
 		}
 		
 	}
@@ -8723,7 +8723,7 @@ country_event = { # Third Revision: Burgenland, Southern Slovakia and Ukraine
 	fire_only_once = yes 
 	
 	trigger = {
-		has_full_control_of_state = 975
+		has_full_control_of_state = 978
 		has_full_control_of_state = 664
 		has_full_control_of_state = 73
 		OR = {
@@ -8807,12 +8807,12 @@ country_event = { # Third Revision: Burgenland, Southern Slovakia and Ukraine
 		if = { 
 			limit = { 
 				NOT = { 
-					975 = { 
+					978 = { 
 						is_core_of = HUN 
 					} 
 				}
 			}
-			add_state_core = 975
+			add_state_core = 978
 		}
 		if = { 
 			limit = { 
@@ -8840,7 +8840,7 @@ country_event = { # Third Revision: Burgenland, Southern Slovakia and Northern T
 	fire_only_once = yes 
 	
 	trigger = {
-		has_full_control_of_state = 975
+		has_full_control_of_state = 978
 		has_full_control_of_state = 664
 		has_full_control_of_state = 76
 		OR = {
@@ -8924,12 +8924,12 @@ country_event = { # Third Revision: Burgenland, Southern Slovakia and Northern T
 		if = { 
 			limit = { 
 				NOT = { 
-					975 = { 
+					978 = { 
 						is_core_of = HUN 
 					} 
 				}
 			}
-			add_state_core = 975
+			add_state_core = 978
 		}
 		if = { 
 			limit = { 
@@ -8957,7 +8957,7 @@ country_event = { # Third Revision: Burgenland, Southern Slovakia and Vojvodina
 	fire_only_once = yes 
 	
 	trigger = {
-		has_full_control_of_state = 975
+		has_full_control_of_state = 978
 		has_full_control_of_state = 664
 		has_full_control_of_state = 45
 		OR = {
@@ -9041,12 +9041,12 @@ country_event = { # Third Revision: Burgenland, Southern Slovakia and Vojvodina
 		if = { 
 			limit = { 
 				NOT = { 
-					975 = { 
+					978 = { 
 						is_core_of = HUN 
 					} 
 				}
 			}
-			add_state_core = 975
+			add_state_core = 978
 		}
 		if = { 
 			limit = { 
@@ -9075,7 +9075,7 @@ country_event = { # Third Revision: Burgenland, Vojvodina and Northern Transylva
 	fire_only_once = yes 
 	
 	trigger = {
-		has_full_control_of_state = 975
+		has_full_control_of_state = 978
 		has_full_control_of_state = 76
 		has_full_control_of_state = 45
 		OR = {
@@ -9159,12 +9159,12 @@ country_event = { # Third Revision: Burgenland, Vojvodina and Northern Transylva
 		if = { 
 			limit = { 
 				NOT = { 
-					975 = { 
+					978 = { 
 						is_core_of = HUN 
 					} 
 				}
 			}
-			add_state_core = 975
+			add_state_core = 978
 		}
 		if = { 
 			limit = { 
@@ -9544,7 +9544,7 @@ country_event = { # Fourth Revision: Burgenland, Southern Slovakia, Ukraine and 
 	fire_only_once = yes 
 	
 	trigger = {
-		has_full_control_of_state = 975
+		has_full_control_of_state = 978
 		has_full_control_of_state = 664
 		has_full_control_of_state = 73
 		has_full_control_of_state = 76
@@ -9628,12 +9628,12 @@ country_event = { # Fourth Revision: Burgenland, Southern Slovakia, Ukraine and 
 		if = { 
 			limit = { 
 				NOT = { 
-					975 = { 
+					978 = { 
 						is_core_of = HUN 
 					} 
 				}
 			}
-			add_state_core = 975
+			add_state_core = 978
 		}
 		if = { 
 			limit = { 
@@ -9672,7 +9672,7 @@ country_event = { # Fourth Revision: Burgenland, Southern Slovakia, Ukraine and 
 	fire_only_once = yes 
 	
 	trigger = {
-		has_full_control_of_state = 975
+		has_full_control_of_state = 978
 		has_full_control_of_state = 664
 		has_full_control_of_state = 73
 		has_full_control_of_state = 45
@@ -9756,12 +9756,12 @@ country_event = { # Fourth Revision: Burgenland, Southern Slovakia, Ukraine and 
 		if = { 
 			limit = { 
 				NOT = { 
-					975 = { 
+					978 = { 
 						is_core_of = HUN 
 					} 
 				}
 			}
-			add_state_core = 975
+			add_state_core = 978
 		}
 		if = { 
 			limit = { 
@@ -9800,7 +9800,7 @@ country_event = { # Fourth Revision: Burgenland, Southern Slovakia, Northern Tra
 	fire_only_once = yes 
 	
 	trigger = {
-		has_full_control_of_state = 975
+		has_full_control_of_state = 978
 		has_full_control_of_state = 664
 		has_full_control_of_state = 76
 		has_full_control_of_state = 45
@@ -9884,12 +9884,12 @@ country_event = { # Fourth Revision: Burgenland, Southern Slovakia, Northern Tra
 		if = { 
 			limit = { 
 				NOT = { 
-					975 = { 
+					978 = { 
 						is_core_of = HUN 
 					} 
 				}
 			}
-			add_state_core = 975
+			add_state_core = 978
 		}
 		if = { 
 			limit = { 
@@ -10194,7 +10194,7 @@ country_event = { # Fifth Revision: Burgenland, Southern Slovakia, Ukraine, Nort
 	fire_only_once = yes 
 	
 	trigger = {
-		has_full_control_of_state = 975
+		has_full_control_of_state = 978
 		has_full_control_of_state = 664
 		has_full_control_of_state = 73
 		has_full_control_of_state = 76
@@ -10261,12 +10261,12 @@ country_event = { # Fifth Revision: Burgenland, Southern Slovakia, Ukraine, Nort
 		if = { 
 			limit = { 
 				NOT = { 
-					975 = { 
+					978 = { 
 						is_core_of = HUN 
 					} 
 				}
 			}
-			add_state_core = 975
+			add_state_core = 978
 		}
 		if = { 
 			limit = { 
@@ -10382,13 +10382,13 @@ country_event = { # Fifth Revision: Burgenland, Southern Slovakia, Ukraine, Nort
 		if = { 
 			limit = { 
 				NOT = { 
-					975 = { 
+					978 = { 
 						is_core_of = HUN 
 					} 
 					has_country_flag = HUN_nt_evacuated_flag
 				}
 			}
-			add_state_core = 975
+			add_state_core = 978
 		}
 		if = { 
 			limit = { 
@@ -10500,12 +10500,12 @@ country_event = { # Sixth Revision: Southern Slovakia, Ukraine, Slovakia, Northe
 		if = { 
 			limit = { 
 				NOT = { 
-					975 = { 
+					978 = { 
 						is_core_of = HUN 
 					} 
 				}
 			}
-			add_state_core = 975
+			add_state_core = 978
 		}
 		if = { 
 			limit = { 
@@ -10629,12 +10629,12 @@ country_event = { # Sixth Revision: Southern Slovakia, Ukraine, Slovakia, Northe
 		if = { 
 			limit = { 
 				NOT = { 
-					975 = { 
+					978 = { 
 						is_core_of = HUN 
 					} 
 				}
 			}
-			add_state_core = 975
+			add_state_core = 978
 		}
 		if = { 
 			limit = { 
@@ -10820,12 +10820,12 @@ country_event = { # Final Revision: Southern Slovakia, Ukraine, Slovakia, Northe
 		if = { 
 			limit = { 
 				NOT = { 
-					975 = { 
+					978 = { 
 						is_core_of = HUN 
 					} 
 				}
 			}
-			add_state_core = 975
+			add_state_core = 978
 		}
 		if = { 
 			limit = { 
@@ -12034,13 +12034,13 @@ country_event = {	# GER should get core on Burgenland if Anschluss succeeds.
 	trigger = {
 		GER = {
 			has_completed_focus = GER_anschluss
-			has_full_control_of_state = 975
+			has_full_control_of_state = 978
 		}
 	}
 	
 	immediate = { 
 		GER = {
-			add_state_core = 975
+			add_state_core = 978
 		}
 	}
 	
@@ -16456,7 +16456,7 @@ country_event = {
 	
 	trigger = {
 		original_tag = HUN
-		owns_state = 975
+		owns_state = 978
 		NOT = {
 			has_completed_focus = HUN_accept_the_habsburg_prince
 		}
@@ -16469,7 +16469,7 @@ country_event = {
 	
 	option = {
 		name = LH.260.a 
-		975 = { set_state_name = "Nyugat-Gyepü" }
+		978 = { set_state_name = "Nyugat-Gyepü" }
 	}
 }
 
@@ -16566,7 +16566,7 @@ country_event = {
 
 	option = {# great
 		name = LH.263.a
-		transfer_state = 975
+		transfer_state = 978
 		
 	}
 }
@@ -16612,27 +16612,27 @@ country_event = {
 		if = {
 			limit = { 
 				AUS = {
-					owns_state = 975
+					owns_state = 978
 				}
 			}
 
 			create_wargoal = {
 				type = take_state_focus
 				target = AUS
-				generator = { 975 }
+				generator = { 978 }
 			}
 		}
 		if = {
 			limit = { 
 				GER = {
-					owns_state = 975
+					owns_state = 978
 				}
 			}
 
 			create_wargoal = {
 				type = take_state_focus
 				target = GER
-				generator = { 975 }
+				generator = { 978 }
 			}
 		}
 	}
@@ -16652,7 +16652,7 @@ country_event = {	# Set global flag so Germany doesnt annex AUS
 	trigger = {
 		OR = {
 			HUN = {
-				has_full_control_of_state = 975
+				has_full_control_of_state = 978
 				has_full_control_of_state = 4
 				has_full_control_of_state = 152
 				has_full_control_of_state = 153
@@ -24569,7 +24569,7 @@ country_event = {	# Austria helps Hungary in civil war if we help them later and
 			target = AUS 
 			modifier = HUN_AUS_helped_cw
 		}
-		remove_state_claim = 975
+		remove_state_claim = 978
 	}
 	
 	option = {# We do not want that

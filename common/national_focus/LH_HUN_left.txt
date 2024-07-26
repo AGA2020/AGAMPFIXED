@@ -3774,13 +3774,13 @@ focus_tree = {
 			add_state_claim = 109
 			add_state_claim = 974
 			add_state_claim = 971
-			add_state_claim = 975
+			add_state_claim = 978
 			
 			country_event = LH.378
 			country_event = { id = LH.379 days = 2 }
 			
 			
-		}
+13238		}
 	}
 	
 	focus = {
