@@ -3780,7 +3780,7 @@ focus_tree = {
 			country_event = { id = LH.379 days = 2 }
 			
 			
-13238		}
+		}
 	}
 	
 	focus = {
