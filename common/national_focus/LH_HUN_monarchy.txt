@@ -107,9 +107,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			#add_political_power = 120
@@ -148,9 +146,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			
@@ -229,9 +225,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			swap_ideas = {
@@ -276,9 +270,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			add_popularity = { ideology = neutrality popularity = 0.05 }
@@ -362,9 +354,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			add_political_power = -70
@@ -446,9 +436,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			add_political_power = 150
@@ -524,9 +512,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			country_event = LH.277
@@ -563,9 +549,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			every_unit_leader = {
@@ -627,9 +611,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			add_political_power = -30
@@ -662,9 +644,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			add_popularity = { ideology = democratic popularity = 0.1 }
@@ -706,9 +686,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			if = {
@@ -751,9 +729,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			
@@ -790,9 +766,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			add_political_power = 50
@@ -827,9 +801,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			
@@ -860,9 +832,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			country_event = LH.306
@@ -893,9 +863,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			hidden_effect = {
@@ -950,9 +918,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			add_opinion_modifier = { modifier = HUN_GER_diplomacy target = GER }
@@ -1002,9 +968,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			add_popularity = { ideology = neutrality popularity = 0.05 }
@@ -1045,9 +1009,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			country_event = LHelections.5
@@ -1081,9 +1043,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			if = { limit = { has_idea = disarmed_nation } add_ideas = volunteer_only }
@@ -1119,9 +1079,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			add_manpower = -20000
@@ -1170,9 +1128,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			country_event = LHelections.8
@@ -1203,9 +1159,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			add_popularity = { ideology = democratic popularity = 0.15 }
@@ -1246,9 +1200,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			custom_effect_tooltip = HUN_peace_can_commence_tt
@@ -1280,9 +1232,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			add_popularity = { ideology = fascism popularity = -0.1 }
@@ -1313,9 +1263,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			add_stability = 0.05
@@ -1376,9 +1324,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			add_popularity = { ideology = neutrality popularity = 0.10 }
@@ -1415,9 +1361,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			add_ideas = HUN_bulwark_of_Catholicism_1
@@ -1451,9 +1395,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			add_state_claim = 4
@@ -1491,9 +1433,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			add_state_claim = 117
@@ -1528,9 +1468,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			add_state_claim = 455
@@ -1561,9 +1499,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			custom_effect_tooltip = HUN_regnum_marianum_tt
@@ -1594,9 +1530,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			if = {
@@ -1643,9 +1577,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			if = {
@@ -1708,9 +1640,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			if = {
@@ -1773,9 +1703,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			add_to_tech_sharing_group = research_allies_monarchy
@@ -1811,9 +1739,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			add_political_power = 200
@@ -1884,9 +1810,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			add_stability = 0.1
@@ -1941,9 +1865,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			
@@ -1980,9 +1902,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			set_rule = { can_create_factions = yes } 
@@ -2025,9 +1945,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			POL = { country_event = LH_POL.1 }
@@ -2064,9 +1982,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			#if = {
@@ -2107,9 +2023,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			YUG = {country_event = LH.13 }
@@ -2143,9 +2057,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			YUG = {
@@ -2179,9 +2091,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			every_other_country = {
@@ -2225,9 +2135,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			BUL = {
@@ -2293,9 +2201,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			create_wargoal = {
@@ -2347,9 +2253,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			TUR = {
@@ -2420,9 +2324,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			
@@ -2460,9 +2362,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			add_political_power = 120
@@ -2499,9 +2399,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			add_timed_idea = { idea = HUN_brothers_alliance days = 365} 
@@ -2759,9 +2657,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			remove_ideas = HUN_monarchy_without_monarch
@@ -2800,9 +2696,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			add_command_power = 20
@@ -2871,9 +2765,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {	
 			add_war_support = 0.05
@@ -2907,9 +2799,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			swap_ideas = {
@@ -2977,9 +2867,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			add_threat = 1
@@ -3061,9 +2949,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			add_state_core = 76
@@ -3124,9 +3010,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			custom_effect_tooltip = HUN_demands_tt
@@ -3206,9 +3090,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 		
@@ -3275,9 +3157,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			custom_effect_tooltip = HUN_demands_tt
@@ -3379,9 +3259,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			custom_effect_tooltip = HUN_demands_tt		
@@ -3447,9 +3325,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			custom_effect_tooltip = HUN_demands_tt
@@ -3538,9 +3414,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			#custom_effect_tooltip = HUN_GREATER_tt
@@ -3824,9 +3698,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			add_opinion_modifier = { target = GER modifier = HUN_trade_deal_with_germany }
@@ -3877,9 +3749,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			43 = {
@@ -3917,9 +3787,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			if = {
@@ -3961,9 +3829,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			add_war_support = 0.1
@@ -4029,9 +3895,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -4087,9 +3951,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			if = {
@@ -4230,9 +4092,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			GER = {
@@ -4274,9 +4134,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			add_ideas = HUN_technology_sharing
@@ -4333,9 +4191,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			custom_effect_tooltip = ROM_vanatori_de_munte_unit_tt
@@ -4437,9 +4293,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			if = {
@@ -4549,9 +4403,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			add_to_tech_sharing_group = continuous_tech_share
@@ -4590,9 +4442,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -4637,9 +4487,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -4684,9 +4532,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			custom_effect_tooltip = HUN_equipment_purchases_tt
@@ -4722,9 +4568,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -4767,9 +4611,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			add_manpower = 50000
@@ -4805,9 +4647,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			add_equipment_to_stockpile = {
@@ -4852,9 +4692,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			air_experience = 25
@@ -4904,9 +4742,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			add_opinion_modifier = { target = SOV modifier = HUN_trade_deal_with_germany }
@@ -4952,9 +4788,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			remove_country_leader_trait = anti_communist
@@ -4992,9 +4826,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			if = {
@@ -5029,9 +4861,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			add_popularity = { ideology = communism popularity = 0.1 }
@@ -5087,9 +4917,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			if = {
@@ -5237,9 +5065,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			set_country_flag = HUN_habsburg_focus_tree_load_flag
@@ -5322,9 +5148,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			set_politics = { ruling_party = democratic }
@@ -5465,9 +5289,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			swap_ideas = {
@@ -5520,9 +5342,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			swap_ideas = {
@@ -5568,9 +5388,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			add_war_support = 0.05
@@ -5625,9 +5443,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			swap_ideas = {
@@ -5666,9 +5482,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			if = {
@@ -5718,9 +5532,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			
@@ -5763,9 +5575,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			add_popularity = { ideology = fascism popularity = -0.15}
@@ -5816,9 +5626,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			add_popularity = { ideology = democratic popularity = 0.05}
@@ -5867,9 +5675,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			ENG = {
@@ -5908,9 +5714,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			custom_effect_tooltip = HUN_focus_under_construction_tt
@@ -5941,9 +5745,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			custom_effect_tooltip = HUN_focus_under_construction_tt
@@ -5979,9 +5781,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			if = {
@@ -6030,9 +5830,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			add_ideas = HUN_front_against_extremism
@@ -6067,9 +5865,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			add_ideas = extensive_conscription
@@ -6101,9 +5897,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			custom_effect_tooltip = HUN_receive_60_pengos_tt
@@ -6167,9 +5961,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			if = { 
@@ -6221,9 +6013,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			random_country = {
@@ -6286,9 +6076,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			if = { 
@@ -6350,9 +6138,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			POL = { country_event = { id = LH.69 } } 
@@ -6390,9 +6176,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			add_state_core = 76
@@ -6468,9 +6252,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			
@@ -6635,9 +6417,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			YUG = { country_event = { id = LH.66 } }
@@ -6670,9 +6450,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			add_country_leader_trait = the_sacred_king
@@ -6715,9 +6493,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			custom_effect_tooltip = HUN_AUH_companies_available_tt
@@ -6767,9 +6543,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			set_rule = { can_create_factions = yes }
@@ -6849,9 +6623,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			set_rule = { can_create_factions = yes }
@@ -6884,9 +6656,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			add_political_power = 50
@@ -6921,9 +6691,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			POL = { country_event = LH.250 }
@@ -6957,9 +6725,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			POL = { country_event = generic.5 }
@@ -6990,9 +6756,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			add_political_power = 50
@@ -7031,9 +6795,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			SPR = { country_event = LH.367 }
@@ -7654,9 +7416,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			add_state_claim = 736
@@ -7699,9 +7459,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			736 = {
@@ -7769,9 +7527,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 		
@@ -8032,9 +7788,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			custom_effect_tooltip = HUN_build_railways_between_cis_trans_tt
@@ -8144,9 +7898,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			if = {
@@ -8191,9 +7943,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			add_timed_idea = { idea = HUN_joint_development days = 365}
@@ -8229,9 +7979,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			add_ideas = HUN_tax_reform_idea
@@ -8265,9 +8013,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			add_to_tech_sharing_group = HUN_joint_oil_exploitation_company_tech_group
@@ -8298,9 +8044,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			swap_ideas = {
@@ -8340,9 +8084,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			if = {
@@ -8409,9 +8151,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			country_event = LH.102
@@ -8441,9 +8181,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			custom_effect_tooltip = HUN_naval_expertise_decision_unlock_tt
@@ -8479,9 +8217,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			custom_effect_tooltip = HUN_motorized_decision_unlock_tt
@@ -8512,9 +8248,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -8555,9 +8289,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			add_ideas = { FRA_firepower }
@@ -8588,9 +8320,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			add_ideas = HUN_defensive_effort_idea
@@ -8622,9 +8352,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			swap_ideas = {
@@ -8657,9 +8385,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			swap_ideas = {
@@ -8695,9 +8421,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			add_research_slot = 1
@@ -8727,9 +8451,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			#custom_effect_tooltip = HUN_joint_research_tt
@@ -8768,9 +8490,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -8817,9 +8537,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			set_rule = { can_create_factions = yes } 
@@ -8850,9 +8568,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			add_political_power = 100
@@ -8899,9 +8615,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			ROM = { country_event = generic.5 }
@@ -8946,9 +8660,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			YUG = { country_event = generic.5 }
@@ -8993,9 +8705,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			POL = { country_event = generic.5 }
@@ -9068,9 +8778,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			LIT = { country_event = generic.5 }
@@ -9105,9 +8813,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			if = {
@@ -9246,9 +8952,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			ALB = { country_event = generic.5 }
@@ -9293,9 +8997,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			BUL = { country_event = generic.5 }
@@ -9325,9 +9027,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			add_timed_idea = { idea = HUN_joint_development days = 365}
@@ -9449,9 +9149,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			ROM = { country_event = LH.103 }
@@ -9494,9 +9192,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			GRE = { country_event = generic.5 }
@@ -9530,9 +9226,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+ 
 
 		completion_reward = {
 			

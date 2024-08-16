@@ -137,9 +137,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+  
 
 		completion_reward = {
 		
@@ -657,9 +655,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+  
 
 		completion_reward = {
 			add_ideas = HUN_old_factories
@@ -780,9 +776,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+  
 
 		completion_reward = {
 			swap_ideas = {
@@ -838,9 +832,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+  
 
 		completion_reward = {
 			custom_effect_tooltip = HUN_focus_under_construction_tt
@@ -873,9 +865,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+  
 
 		completion_reward = {
 			add_research_slot = 1
@@ -980,9 +970,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+  
 
 		completion_reward = {
 			### MODIFY ECONOMIC CRISIS ###
@@ -1061,9 +1049,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+  
 
 		completion_reward = {
 			add_political_power = 100
@@ -1121,9 +1107,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+  
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -1169,9 +1153,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+  
 
 		completion_reward = {
 			if = {
@@ -1223,9 +1205,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+  
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -1270,9 +1250,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+  
 
 		completion_reward = {
 			add_ideas = HUN_invite_foreign_investors
@@ -1316,9 +1294,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+  
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -1416,9 +1392,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+  
 
 		completion_reward = {
 			add_resource = {
@@ -1524,9 +1498,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+  
 
 		completion_reward = {
 			973 = {
@@ -1571,9 +1543,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+  
 
 		completion_reward = {
 			43 = {
@@ -1741,9 +1711,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+  
 
 		completion_reward = {
 			modify_building_resources = {
@@ -1812,9 +1780,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+  
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -1964,9 +1930,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+  
 
 		completion_reward = {
 			country_event = LH.421
@@ -2010,9 +1974,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+  
 
 		completion_reward = {
 			mio:HUN_femaru_fegyver_es_gepgyar_organization = {
@@ -2091,9 +2053,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+  
 
 		completion_reward = {
 			if = {
@@ -2141,9 +2101,7 @@
 
 		}
 
-		complete_tooltip = {
-
-		}
+  
 
 		completion_reward = {
 			army_experience = 20
@@ -2188,9 +2146,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+  
 
 		completion_reward = {
 			add_timed_idea = {idea = HUN_expand_regained_territories days = 365}
@@ -2225,9 +2181,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+  
 
 		completion_reward = {
 			45 = {
@@ -2278,9 +2232,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+  
 
 		completion_reward = {
 			custom_effect_tooltip = HUN_airforce_decisions_tt
@@ -2333,9 +2285,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+  
 
 		completion_reward = {
 			air_experience = 25
@@ -2476,9 +2426,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+  
 
 		completion_reward = {
 			972 = {
@@ -2581,9 +2529,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+  
 
 		completion_reward = {
 			custom_effect_tooltip = HUN_titans_decisions_available_tt
@@ -2615,9 +2561,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+  
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -2792,9 +2736,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+  
 
 		completion_reward = {
 			army_experience = 50
@@ -2897,9 +2839,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+  
 
 		completion_reward = {
 			mio:HUN_mw_aircraft_organization = {
@@ -2983,9 +2923,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+  
 
 		completion_reward = {
 			mio:HUN_ganz_tank_organization = {
@@ -3223,9 +3161,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+  
 
 		completion_reward = {
 			add_doctrine_cost_reduction = {
@@ -3266,9 +3202,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+  
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -3303,9 +3237,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+  
 
 		completion_reward = {
 			add_ideas = HUN_cavalry_focus
@@ -3335,9 +3267,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+  
 
 		completion_reward = {
 			add_ideas = HUN_assault_gun_focus
@@ -3369,9 +3299,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+  
 
 		completion_reward = {
 			add_to_tech_sharing_group = HUN_joint_tank_development_group
@@ -3409,9 +3337,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+  
 
 		completion_reward = {
 			add_ideas = HUN_small_arms_idea
@@ -3451,9 +3377,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+  
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -3495,9 +3419,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+  
 
 		completion_reward = {
 			custom_effect_tooltip = HUN_the_arpad_line_tt
@@ -3565,9 +3487,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+  
 
 		completion_reward = {
 			custom_effect_tooltip = ROM_mountain_artillery_tech_tt
@@ -3657,9 +3577,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+  
 
 		completion_reward = {
 			custom_effect_tooltip = ROM_vanatori_de_munte_unit_tt
@@ -3720,9 +3638,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+  
 
 		completion_reward = {
 			custom_effect_tooltip = HUN_light_infantry_divisions_doctrine_tech_tt
@@ -3809,9 +3725,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+  
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -3847,9 +3761,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+  
 
 		completion_reward = {
 			add_research_slot = 1
@@ -3884,9 +3796,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+  
 
 		completion_reward = {
 			air_experience = 25
@@ -3953,9 +3863,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+  
 
 		completion_reward = {
 			custom_effect_tooltip = HUN_airforce_decisions_tt
@@ -3987,9 +3895,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+  
 
 		completion_reward = {
 			add_to_tech_sharing_group = HUN_joint_air_development_group
@@ -4026,9 +3932,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+  
 
 		completion_reward = {
 			custom_effect_tooltip = HUN_airforce_decisions_tt
@@ -4076,9 +3980,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+  
 
 		completion_reward = {
 			navy_experience = 50
@@ -4166,9 +4068,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+  
 
 		completion_reward = {
 			974 = {
@@ -4205,9 +4105,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+  
 
 		completion_reward = {
 			103 = {
@@ -4245,9 +4143,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+  
 
 		completion_reward = {
 			navy_experience = 15
@@ -4284,9 +4180,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+  
 
 		completion_reward = {
 			navy_experience = 15
@@ -4326,9 +4220,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+  
 
 		completion_reward = {
 			navy_experience = 15
@@ -4367,9 +4259,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+  
 
 		completion_reward = {
 			navy_experience = 15
@@ -4405,9 +4295,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+  
 
 		completion_reward = {
 			navy_experience = 15
@@ -4445,9 +4333,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+  
 
 		completion_reward = {
 			navy_experience = 15
@@ -4489,9 +4375,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+  
 
 		completion_reward = {
 			add_ideas = HUN_convoy_focus
@@ -4522,9 +4406,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
+  
 
 		completion_reward = {
 			add_ideas = escort_effort_focus
