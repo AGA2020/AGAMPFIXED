@@ -1,6 +1,0 @@
-SpriteTypes = {
-	spriteType = {
-		name = "GFX_news_event_fdr_radio"
-		texturefile = "gfx/event_pictures/news_event_fdr_radio.tga"
-	}
-}

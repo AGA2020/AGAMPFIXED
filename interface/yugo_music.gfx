@@ -1,7 +1,0 @@
-spriteTypes = {
-	spriteType = {
-		name = "GFX_yugo_station_cover"
-		textureFile = "gfx/yugo_station_cover.dds"
-		noOfFrames = 2
-	}
-}

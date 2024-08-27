@@ -1,3 +1,0 @@
-RUT = "countries/Ruthenia.txt"
-GAL = "countries/Galicia.txt"
-HCO = "countries/Commune.txt"

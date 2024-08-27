@@ -1,6 +1,0 @@
-spriteTypes = {
-	spriteType = {
-		name = "GFX_rename_country_leader_button"
-		textureFile = "gfx/interface/rename_country_leader_button.dds"
-	}
-}
